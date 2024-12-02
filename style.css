@@ -484,12 +484,6 @@ p {
   }
 }
 
-#projects .project-img2 {
-  flex-basis: 50%;
-  height: 100px;
-  overflow: hidden;
-  position: relative;
-}
 
 /* Footer */
 #footer {
