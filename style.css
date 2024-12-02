@@ -265,7 +265,7 @@ p {
 
 #intro {
   background-image: url(./assets/images/logoICCAT.jpg);
-  background-size: cover;
+  background-size: contain;
   background-position: top center;
   position: relative;
   z-index: 1;
@@ -283,7 +283,7 @@ p {
   z-index: -1;
 }
 
-#intro .hero {
+#intro .intro {
   max-width: 1200px;
   justify-content: flex-start;
   margin: 0 auto;
@@ -293,11 +293,10 @@ p {
 #intro h1 {
   display: block;
   width: fit-content;
-  font-size: 4rem;
+  font-size: 3rem;
   position: relative;
   color: transparent;
-  animation: text-reveal 1s ease forwards;
-  animation-delay: 1s;
+
 }
 
 @keyframes text-reveal {
