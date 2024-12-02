@@ -367,12 +367,12 @@ p {
   }
 
   h1.section-title {
-    font-size: 6rem;
+    font-size: 3rem;
     font-weight: 270;
   }
 
   #intro h1 {
-    font-size: 7rem;
+    font-size: 4rem;
     font-weight: 400;
   }
 }
@@ -422,7 +422,7 @@ p {
 }
 
 #projects .project-info h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 500;
 }
 
