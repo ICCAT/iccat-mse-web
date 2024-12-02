@@ -17,7 +17,7 @@ a {
 }
 
 .container {
-  min-height: 100vh;
+  min-height: 30vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -83,11 +83,8 @@ p {
   color: crimson;
 }
 
-.brand h2 {
-  font-size: 2.6rem;
-  text-transform: uppercase;
-  color: white;
-}
+
+
 /* header  */
 
 #header {
