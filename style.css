@@ -18,15 +18,15 @@ a {
 
 .container {
   min-height: 100vh;
-  width: 100%;
+  width: 40%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 img {
-  width: 80%;
-  height: 80%;
+  width: 50%;
+  height: 50%;
   object-fit: cover;
 }
 
