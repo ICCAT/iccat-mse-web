@@ -78,10 +78,16 @@ p {
   color: white;
 }
 
+
 .brand h1 span {
   color: crimson;
 }
 
+.brand h2 {
+  font-size: 2.6rem;
+  text-transform: uppercase;
+  color: white;
+}
 /* header  */
 
 #header {
