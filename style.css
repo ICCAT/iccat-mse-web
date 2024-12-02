@@ -17,11 +17,11 @@ a {
 }
 
 .container {
-  min-height: 25vh;
+  min-height: 30vh;
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: center;
 }
 
 img {
@@ -47,6 +47,7 @@ p {
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   text-align: center;
+  
 }
 
 .section-title span {
