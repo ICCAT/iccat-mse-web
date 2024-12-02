@@ -263,7 +263,7 @@ p {
 
 /* intro section */
 
-#hero {
+#intro {
   background-image: url(./assets/images/logoICCAT.jpg);
   background-size: cover;
   background-position: top center;
@@ -271,7 +271,7 @@ p {
   z-index: 1;
 }
 
-#hero::after {
+#intro::after {
   content: "";
   position: absolute;
   left: 0;
@@ -283,14 +283,14 @@ p {
   z-index: -1;
 }
 
-#hero .hero {
+#intro .intro {
   max-width: 1200px;
   justify-content: flex-start;
   margin: 0 auto;
   padding: 0 50px;
 }
 
-#hero h1 {
+#intro h1 {
   display: block;
   width: fit-content;
   font-size: 4rem;
@@ -306,15 +306,15 @@ p {
   }
 }
 
-#hero h1:nth-child(1) {
+#intro h1:nth-child(1) {
   animation-delay: 1s;
 }
 
-#hero h1:nth-child(2) {
+#intro h1:nth-child(2) {
   animation-delay: 2s;
 }
 
-#hero h1:nth-child(3) {
+#intro h1:nth-child(3) {
   animation: text-reveal-name 0.5s ease 1.5s forwards;
   animation-delay: 3s;
 }
@@ -326,7 +326,7 @@ p {
   }
 }
 
-#hero h1 span {
+#intro h1 span {
   background-color: crimson;
   height: 100%;
   width: 0;
@@ -348,15 +348,15 @@ p {
   }
 }
 
-#hero h1:nth-child(1) span {
+#intro h1:nth-child(1) span {
   animation-delay: 0.5s;
 }
 
-#hero h1:nth-child(2) span {
+#intro h1:nth-child(2) span {
   animation-delay: 1.5s;
 }
 
-#hero h1:nth-child(3) span {
+#intro h1:nth-child(3) span {
   animation-delay: 2.5s;
 }
 
@@ -371,92 +371,12 @@ p {
     font-weight: 270;
   }
 
-  #hero h1 {
+  #intro h1 {
     font-size: 7rem;
     font-weight: 400;
   }
 }
 
-/* services section */
-
-#services .services {
-  flex-direction: column;
-  text-align: center;
-  max-width: 1500px;
-  margin: 0 auto; /* Center the element horizontally */
-  padding: 100px 0;
-}
-
-#services .service-bottom .icon {
-  height: 80px;
-  width: 80px;
-  margin-bottom: 20px;
-}
-
-#services .service-item h2 {
-  font-size: 2rem;
-  color: white;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-}
-
-#services .service-item p {
-  color: white;
-  text-align: left;
-}
-
-#services .service-top {
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-#services .service-bottom {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 50px;
-}
-
-#services .service-item {
-  flex-basis: 80%; /*flex-basis defines the initial size of a flex item */
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
-  padding: 30px;
-  border-radius: 10px;
-  margin: 10px 5%;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-}
-
-#services .service-item::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-  opacity: 0.9;
-  z-index: -1;
-}
-
-@media only screen and (min-width: 768px) {
-  #services .service-bottom .service-item {
-    flex-basis: 45%;
-    margin: 2.5%;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  #services .service-bottom .service-item {
-    flex-basis: 22%;
-    margin: 1.5%;
-  }
-}
 
 /* project section  */
 
