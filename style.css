@@ -17,7 +17,7 @@ a {
 }
 
 .container {
-  min-height: 30vh;
+  min-height: 20vh;
   width: 100%;
   display: flex;
   justify-content: center;
