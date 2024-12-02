@@ -25,8 +25,8 @@ a {
 }
 
 img {
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
   object-fit: cover;
 }
 
@@ -261,7 +261,7 @@ p {
   }
 }
 
-/* hero section */
+/* intro section */
 
 #hero {
   background-image: url(./assets/images/logoICCAT.jpg);
