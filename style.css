@@ -16,6 +16,10 @@ a {
   text-decoration: none;
 }
 
+/* visited link */
+a:visited {
+  color: green;
+}
 .container {
   min-height: 25vh;
   width: 100%;
