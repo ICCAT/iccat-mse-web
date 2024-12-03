@@ -1,2 +1,2 @@
 # iccat-mse
-ICCAT MSE information
+ICCAT MSE information https://iccat.github.io/iccat-mse/
