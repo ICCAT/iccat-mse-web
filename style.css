@@ -51,28 +51,13 @@ p {
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   text-align: center;
-  text-decoration: underline;
-  text-underline-position: auto;
-  text-decoration-color: #29323c;
+
 }
 
 .section-title span {
   color: crimson;
 }
 
-.section-news {
-  font-size: 2rem;
-  font-family: 300;
-  color: #29323c;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  text-align: center;
-}
-
-.section-news span {
-  color: crimson;
-}
 
 .cta {
   display: inline-block;
