@@ -53,6 +53,7 @@ p {
   text-align: center;
   text-decoration: underline;
   text-underline-position: auto;
+  text-decoration-color: #29323c;
 }
 
 .section-title span {
