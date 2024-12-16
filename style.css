@@ -55,6 +55,10 @@ p {
   text-underline-position: auto;
 }
 
+.section-title span {
+  color: crimson;
+}
+
 .section-news {
   font-size: 2rem;
   font-family: 300;
@@ -65,7 +69,7 @@ p {
   text-align: center;
 }
 
-.section-title span {
+.section-news span {
   color: crimson;
 }
 
@@ -389,14 +393,7 @@ p {
     font-weight: 270;
   }
 
-  h1.section-news {
-    font-size: 4rem;
-    font-weight: 270;
-  }
-  h2.section-news {
-    font-size: 3rem;
-    font-weight: 270;
-  }
+
   #hero h1 {
     font-size: 7rem;
     font-weight: 400;
