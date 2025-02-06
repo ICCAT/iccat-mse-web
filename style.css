@@ -89,6 +89,18 @@ p {
   color: crimson;
 }
 
+.btn {
+    border-radius: 0;
+    text-transform: uppercase;
+    padding: 12px 47px;
+    font-size: 1.15rem;
+}
+
+.btn-primary {
+    background: #993333;
+    border-color: #993333;
+}
+
 
 
 /* header  */
