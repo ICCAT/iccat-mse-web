@@ -18,7 +18,7 @@ a {
 
 /* visited link */
 a:visited {
-  color: AliceBlue;
+  color: DimGray;
 }
 .container {
   min-height: 25vh;
