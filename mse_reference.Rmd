@@ -5,7 +5,9 @@ output:
   flexdashboard::flex_dashboard:
     vertical_layout: scroll
     self_contained: true
-
+  
+params:
+  dir: "directory"    
 ---
 
 ```{r setup, include=FALSE}
@@ -17,7 +19,7 @@ library(knitr)
 library(readxl)
 library(glue)
 
-dir <- "C:/Users/Ai Kimoto/Documents/GitHub/iccat-mse-web/"
+#dir <- "C:/Users/Ai Kimoto/Documents/GitHub/iccat-mse-web/"
 txtref = data.frame(read_excel(paste0(dir,"ICCAT MSE Web TEXT_read.xlsx"), sheet = "references", col_names = TRUE))
 txt = read_excel(paste0(dir,"ICCAT MSE Web TEXT_read.xlsx"), sheet = "NALB", col_names = TRUE)
 
