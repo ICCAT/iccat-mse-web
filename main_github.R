@@ -7,7 +7,7 @@ dirSp <- paste0(dir,"species/")
 setwd(dir)
 
 #General page
-rmarkdown::render("mse_general.Rmd",params = list(dir= dir), output_file = paste0(dir,"species/general/index.html"), run_pandoc = TRUE)
+rmarkdown::render("mse_general.Rmd",params = list(dir= dir), output_file = paste0(dir,"index.html"), run_pandoc = TRUE)
 
 #individual species
 sp_list <- c("NALB","BFT","NSWO","WSKJ","multiTT")
