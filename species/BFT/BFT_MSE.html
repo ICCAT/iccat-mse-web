@@ -1964,17 +1964,19 @@ Other Species</a><br /></p>
 </div>
 <style type="text/css">
 
-nav.section.sidebar {
-background-color: #001A3E !important; 
+.navbar {
+background-color: rgba(0, 26, 62, 0.8) !important; border: none !important;
+backdrop-filter: blur(4px); }
+
+.navbar .navbar-nav > li > a,
+.navbar .navbar-brand {
 color: #ffffff !important;
 }
 
-nav.section.sidebar a {
+.navbar .navbar-nav > .active > a {
+background-color: rgba(0, 51, 102, 0.9) !important;
 color: #ffffff !important;
 }
-
-nav.section.sidebar h3 {
-color: #ffffff !important;
 </style>
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
@@ -1983,11 +1985,17 @@ color: #ffffff !important;
 .section.level3 {
 margin: 0 !important;
 padding: 0 !important;
+background-color: #f8f2e2 !important;
+}
+body {
+margin: 0 !important;
+padding: 0 !important;
+background-color: #f8f2e2 !important;
 }
 .chart-stage {
 margin: 0 !important;
 padding: 0 !important;
-}
+background-color: #001A3E !important; }
 .chart-wrapper {
 margin: 0 !important;
 padding: 0 !important;
@@ -1997,11 +2005,14 @@ padding: 0 !important;
 .section.level3 {
 border: none !important;
 box-shadow: none !important;}
-.chart-stage {
-background-color: #001A3E !important; }
+.main-container {
+background-color: #001A3E; }
 </style>
 </div>
-<div id="row" class="section level2" data-height="230">
+<div id="row" class="section level2" data-height="40">
+<h2>Row</h2>
+</div>
+<div id="row-1" class="section level2" data-height="230">
 <h2>Row</h2>
 <div id="section" class="section level3">
 <h3></h3>
@@ -2019,7 +2030,7 @@ Atlantic Bluefin Tuna MSE
 </div>
 </div>
 </div>
-<div id="row-1" class="section level2" data-height="75">
+<div id="row-2" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="Overview_eng" class="section level3">
 <h3></h3>
@@ -2033,7 +2044,7 @@ Overview
 </div>
 </div>
 </div>
-<div id="row-2" class="section level2" data-height="250">
+<div id="row-3" class="section level2" data-height="250">
 <h2>Row</h2>
 <div id="section-1" class="section level3">
 <h3></h3>
@@ -2054,14 +2065,14 @@ West: Rec. 22-10).<br><br>The Commission also adopted the Exceptional
 Circumstances (EC) protocol in 2023 (Rec. 23-07, Annex 4), which
 includes annual evaluation of ECs by the SCRS. No ECs have been invoked
 since its adoption.<br><br>The SCRS has scheduled the application of the
-MP in 2025 to set TACs for the period beyond 2026. In addition, the SCRS
-plans to conduct a stock assessment and review the Operating Models
-(OMs) and the MP after 2026.
+MP in 2025 to set TACs for the period 2026-2028. In addition, the
+Commission plans to conduct a stock assessment and review the Operating
+Models (OMs) and the MP over 2026-2028.
 </h2>
 </div>
 </div>
 </div>
-<div id="row-3" class="section level2" data-height="270">
+<div id="row-4" class="section level2" data-height="270">
 <h2>Row</h2>
 <div id="section-2" class="section level3" data-width="23%">
 <h3></h3>
@@ -2077,7 +2088,7 @@ OM Developed <br>in 2014-2021
 </h2>
 <img role="img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAACQCAMAAADQmBKKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADAUExURQAAAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAI67otMAAAA/dFJOUwAECAwQGBwgJCgsMDRASExcYGRocIeLk5ujpKeoq6yvsre4u7y/wMPEz9LT1dbZ3t/i5evt7/Hy9fn6+/z9/nOJKVsAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAL/SURBVHhe7ZtrX9MwFIc7ZWyCU2ATnFqU6cSJ4BXRXcj3/1a2yZ82bZOmw/RkwHle9SRZ8vzCcmkWIoZhGIZhmLtJv4+HzeDpVyG+DxBsANtXSyGWf58gDM9h4iPE4ghheE5WqdDqPcLwTFMfIaYIPdMfrM1MCc0QroF7bKbjhRLX2JTjhRLX2FTjhRLH2HxLL3SCps0cLlCODEcP9f4Qd9FiuYumLTz7gZJE/HqOhq10drJ5pW2SeWung2brwczbNs1ndhZykQtdTr1ziapvJ9TCAn6bylnIBQu5WOMzW9j6ZWwhw0rLQgMUzHC+nbEQMqywEDKssBAyrLAQMqw8NCG1dBzMEg7kY+ilQyH7ydk3ChZywUIu7rvQrhzbZUZp2RGCIpXDDc9CeVZDampgIcmDFKoekFu+1OnBF4VQtSLLsDcWZiENFspgoRS1isXJXjWWT2qRsmxhzYUl3oTyRIXKkn2jo/rJXFjCQjKZhRJYSMJCZljIhfEz5RcgfenQ0JeOnDaWDl+wkAsWcvF/Qhv3I3Cr3FGhvbHeq62SfB/G+2jWyitBeoNoISb111H2UJCQIZo2Mya/YTWP0bSZ8RzlyHAI7aMYISM0bWEiSPtoLj457lh1hjFm1Cacot4Cp8hsQjxqduerIZ1jOBQ49trGOph9whnlPrj7mF2BDGNU8QlspPlcnKmHs4uARrpPF7uDaTecUcHnZrsyjYIZFX1yoVBGJR9NKIxR2UcXCmFU8SkI0RtVfYpC1EYGn5IQrZHJpyxEaWT0qQjRGZl9qkJURhYfgxCNkc3HJERhZPUxCrVvZPcxC7VtVONjEWrZ6A2qNvjYhApGSPJG9gZp8LEK6Ub1r/Dr8+Fa1WvysQvlRtcfkeKLc1Wv0adGKDf6jARfjGW9Zp86oRujxUvEvuil/7y4MvvUCkXdL8lfe/l7G6E3eu+ufh49RlCiVih69OL82+seAhrqhQKgjrkcR0+UYJJyHD1RMhFz99ETJZ1h7PnoiWEYhmGYe0oU/QNaYhpxiDtTDAAAAABJRU5ErkJggg==" width="100" />
 <h2 style="font-size:1.5em; color:#ffffff; ">
-Recondition<br>in 2025
+Recondition<br>in 2028
 </h2>
 </div>
 </div>
@@ -2115,7 +2126,7 @@ EC evaluation<br>No EC since 2023
 <h3></h3>
 </div>
 </div>
-<div id="row-4" class="section level2" data-height="75">
+<div id="row-5" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="History_eng" class="section level3">
 <h3></h3>
@@ -2129,7 +2140,7 @@ History
 </div>
 </div>
 </div>
-<div id="row-5" class="section level2" data-height="300">
+<div id="row-6" class="section level2" data-height="300">
 <h2>Row</h2>
 <div id="section-7" class="section level3">
 <h3></h3>
@@ -2160,7 +2171,7 @@ operationally viable management framework for Atlantic bluefin tuna.
 </div>
 </div>
 </div>
-<div id="row-6" class="section level2" data-height="75">
+<div id="row-7" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="Contents_eng" class="section level3">
 <h3></h3>
@@ -2174,7 +2185,7 @@ Contents
 </div>
 </div>
 </div>
-<div id="row-7" class="section level2" data-height="230">
+<div id="row-8" class="section level2" data-height="230">
 <h2>Row</h2>
 <div id="section-8" class="section level3" data-width="14%">
 <h3></h3>
@@ -2262,7 +2273,7 @@ Procedure</a>
 <h3></h3>
 </div>
 </div>
-<div id="row-8" class="section level2" data-height="75">
+<div id="row-9" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="OM_eng" class="section level3">
 <h3></h3>
@@ -2276,7 +2287,7 @@ Operating Models
 </div>
 </div>
 </div>
-<div id="row-9" class="section level2" data-height="200">
+<div id="row-10" class="section level2" data-height="200">
 <h2>Row</h2>
 <div id="section-16" class="section level3">
 <h3></h3>
@@ -2294,15 +2305,15 @@ framework required several years of effort, beginning around 2015, and
 culminating in the adoption of the OMs in 2021. Progress was partly
 constrained by the need for the SCRS to also conduct full stock
 assessments for the eastern and western Atlantic bluefin tuna stocks in
-2017, 2020, and 2021. The adoption of these OMs in 2021 represented a
-significant milestone in addressing the complexities associated with
-stock mixing, achieved despite the concurrent demands of multiple
-assessment cycles.
+2017 (E/W), 2020 (E/W), 2021 (W), and 2022 (E). The adoption of these
+OMs in 2021 represented a significant milestone in addressing the
+complexities associated with stock mixing, achieved despite the
+concurrent demands of multiple assessment cycles.
 </h2>
 </div>
 </div>
 </div>
-<div id="row-10" class="section level2" data-height="100">
+<div id="row-11" class="section level2" data-height="100">
 <h2>Row</h2>
 <div id="section-17" class="section level3">
 <h3></h3>
@@ -2320,7 +2331,7 @@ found in Reference </a>
 </div>
 </div>
 </div>
-<div id="row-11" class="section level2" data-height="150">
+<div id="row-12" class="section level2" data-height="150">
 <h2>Row</h2>
 <div id="section-18" class="section level3" data-width="20%">
 <h3></h3>
@@ -2371,7 +2382,7 @@ Shiny App</a>
 <h3></h3>
 </div>
 </div>
-<div id="row-12" class="section level2" data-height="120">
+<div id="row-13" class="section level2" data-height="120">
 <h2>Row</h2>
 <div id="MO_eng" class="section level3">
 <h3></h3>
@@ -2389,7 +2400,7 @@ Management Objectives
 </div>
 </div>
 </div>
-<div id="row-13" class="section level2" data-height="270">
+<div id="row-14" class="section level2" data-height="270">
 <h2>Row</h2>
 <div id="section-23" class="section level3" data-width="10%">
 <h3></h3>
@@ -2458,7 +2469,7 @@ TAC changes between periods +20%/-35%
 <h3></h3>
 </div>
 </div>
-<div id="row-14" class="section level2" data-height="75">
+<div id="row-15" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="CMP_eng" class="section level3">
 <h3></h3>
@@ -2472,7 +2483,7 @@ Candidate Management Procedure
 </div>
 </div>
 </div>
-<div id="row-15" class="section level2" data-height="180">
+<div id="row-16" class="section level2" data-height="180">
 <h2>Row</h2>
 <div id="section-29" class="section level3">
 <h3></h3>
@@ -2489,7 +2500,7 @@ CMP-LW by Lauretta et al.
 </div>
 </div>
 </div>
-<div id="row-16" class="section level2" data-height="75">
+<div id="row-17" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="MP_eng" class="section level3">
 <h3></h3>
@@ -2503,7 +2514,7 @@ Management Procedure
 </div>
 </div>
 </div>
-<div id="row-17" class="section level2" data-height="75">
+<div id="row-18" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="section-30" class="section level3">
 <h3></h3>
@@ -2518,7 +2529,7 @@ Annex 2).
 </div>
 </div>
 </div>
-<div id="row-18" class="section level2" data-height="180">
+<div id="row-19" class="section level2" data-height="180">
 <h2>Row</h2>
 <div id="section-31" class="section level3" data-width="5%">
 <h3></h3>
@@ -2535,7 +2546,7 @@ standardized abundance indices as its primary input. These indices are
 initially standardized for magnitude and subsequently aggregated using a
 weighted average of ten indices representing both the eastern and
 western Atlantic areas. The resulting composite index is then smoothed
-over multiple years to reduce the influence of observation error and
+over three years to reduce the influence of observation error and
 interannual variability. Total Allowable Catches (TACs) are determined
 by applying a fixed harvest rate to the estimated abundance, as derived
 from the aggregated and smoothed indices.
@@ -2557,7 +2568,7 @@ Rec. 22-09 <br>Annex 2</a>
 </div>
 </div>
 </div>
-<div id="row-19" class="section level2" data-height="75">
+<div id="row-20" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="EC_eng" class="section level3">
 <h3></h3>
@@ -2571,7 +2582,7 @@ Exceptional Circumstances
 </div>
 </div>
 </div>
-<div id="row-20" class="section level2" data-height="120">
+<div id="row-21" class="section level2" data-height="120">
 <h2>Row</h2>
 <div id="section-34" class="section level3">
 <h3></h3>
@@ -2584,13 +2595,13 @@ The Commission adopted the Exceptional Circumstances Protocol in 2023
 (Rec.23-07 Annex 4).
 </h2>
 <h2 style="font-size:1.5em; color:#ffffff; ">
-The SCRS have evaluated annually, and there have been no Exceptional
-Circumstances since 2023.
+The SCRS have evaluated Exceptional Circumstances annually since 2023,
+and there have been no Exceptional Circumstances declared yet.
 </h2>
 </div>
 </div>
 </div>
-<div id="row-21" class="section level2" data-height="240">
+<div id="row-22" class="section level2" data-height="240">
 <h2>Row</h2>
 <div id="section-35" class="section level3" data-width="5%">
 <h3></h3>
@@ -2631,7 +2642,7 @@ EC Protcol: <br>Rec. 23-07, Annex 4</a>
 </div>
 </div>
 </div>
-<div id="row-22" class="section level2" data-height="70">
+<div id="row-23" class="section level2" data-height="70">
 <h2>Row</h2>
 <div id="References_eng" class="section level3">
 <h3></h3>
@@ -2645,7 +2656,7 @@ References
 </div>
 </div>
 </div>
-<div id="row-23" class="section level2" data-height="180">
+<div id="row-24" class="section level2" data-height="180">
 <h2>Row</h2>
 <div id="section-38" class="section level3" data-width="15%">
 <h3></h3>
@@ -2719,7 +2730,7 @@ Others
 <h3></h3>
 </div>
 </div>
-<div id="row-24" class="section level2" data-height="240">
+<div id="row-25" class="section level2" data-height="240">
 <h2>Row</h2>
 <div id="section-45" class="section level3">
 <h3></h3>
@@ -2763,7 +2774,8 @@ opérationnels</a><br /> <a href="#MO_fra">Objectifs de gestion</a><br />
 <!-- Column 2 -->
 <div>
 <p><strong>Liens ICCAT MSE</strong><br />
-<a href="https://iccat.github.io/iccat-mse-web/"> Résumé de l’MSE</a><br />
+<a href="https://iccat.github.io/iccat-mse-web/#fra"> Résumé de
+l’MSE</a><br />
 <a href="https://iccat.github.io/iccat-mse-web/species/NALB/NALB_MSE.html#fra">
 Germon de l’Atlantique Nord</a><br />
 <a href="https://iccat.github.io/iccat-mse-web/species/BFT/BFT_MSE.html#fra">
@@ -2819,7 +2831,7 @@ box-shadow: none !important;}
 background-color: #001A3E !important; }
 </style>
 </div>
-<div id="row-25" class="section level2" data-height="230">
+<div id="row-26" class="section level2" data-height="230">
 <h2>Row</h2>
 <div id="section-46" class="section level3">
 <h3></h3>
@@ -2837,7 +2849,7 @@ Thon rouge de l’Atlantique MSE
 </div>
 </div>
 </div>
-<div id="row-26" class="section level2" data-height="75">
+<div id="row-27" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="Overview_fra" class="section level3">
 <h3></h3>
@@ -2851,7 +2863,7 @@ Aperçu
 </div>
 </div>
 </div>
-<div id="row-27" class="section level2" data-height="250">
+<div id="row-28" class="section level2" data-height="250">
 <h2>Row</h2>
 <div id="section-47" class="section level3">
 <h3></h3>
@@ -2873,14 +2885,14 @@ protocole de Circonstances Exceptionnelles (CE) en 2023 (Rec. 23-07,
 Annexe 4), qui inclut une évaluation annuelle des CE par le SCRS. Aucune
 CE n’a été invoquée depuis 2023. Le SCRS a programmé l’application de la
 PG en 2025 pour fixer les Totaux Admissibles de Captures (TAC) pour la
-période après 2026. De plus, le SCRS prévoit de réaliser une évaluation
-ainsi qu’un examen des Modèles Opérationnels (MO) et de la PG après
-2026.
+période 2026-2028. De plus, le SCRS prévoit de réaliser une évaluation
+ainsi qu’un examen des Modèles Opérationnels (MO) et le MP sur la
+période 2026-2028.
 </h2>
 </div>
 </div>
 </div>
-<div id="row-28" class="section level2" data-height="270">
+<div id="row-29" class="section level2" data-height="270">
 <h2>Row</h2>
 <div id="section-48" class="section level3" data-width="23%">
 <h3></h3>
@@ -2896,7 +2908,7 @@ Modèle opérationnel développé<br>en 2014-2021
 </h2>
 <img role="img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAACQCAMAAADQmBKKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADAUExURQAAAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAI67otMAAAA/dFJOUwAECAwQGBwgJCgsMDRASExcYGRocIeLk5ujpKeoq6yvsre4u7y/wMPEz9LT1dbZ3t/i5evt7/Hy9fn6+/z9/nOJKVsAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAL/SURBVHhe7ZtrX9MwFIc7ZWyCU2ATnFqU6cSJ4BXRXcj3/1a2yZ82bZOmw/RkwHle9SRZ8vzCcmkWIoZhGIZhmLtJv4+HzeDpVyG+DxBsANtXSyGWf58gDM9h4iPE4ghheE5WqdDqPcLwTFMfIaYIPdMfrM1MCc0QroF7bKbjhRLX2JTjhRLX2FTjhRLH2HxLL3SCps0cLlCODEcP9f4Qd9FiuYumLTz7gZJE/HqOhq10drJ5pW2SeWung2brwczbNs1ndhZykQtdTr1ziapvJ9TCAn6bylnIBQu5WOMzW9j6ZWwhw0rLQgMUzHC+nbEQMqywEDKssBAyrLAQMqw8NCG1dBzMEg7kY+ilQyH7ydk3ChZywUIu7rvQrhzbZUZp2RGCIpXDDc9CeVZDampgIcmDFKoekFu+1OnBF4VQtSLLsDcWZiENFspgoRS1isXJXjWWT2qRsmxhzYUl3oTyRIXKkn2jo/rJXFjCQjKZhRJYSMJCZljIhfEz5RcgfenQ0JeOnDaWDl+wkAsWcvF/Qhv3I3Cr3FGhvbHeq62SfB/G+2jWyitBeoNoISb111H2UJCQIZo2Mya/YTWP0bSZ8RzlyHAI7aMYISM0bWEiSPtoLj457lh1hjFm1Cacot4Cp8hsQjxqduerIZ1jOBQ49trGOph9whnlPrj7mF2BDGNU8QlspPlcnKmHs4uARrpPF7uDaTecUcHnZrsyjYIZFX1yoVBGJR9NKIxR2UcXCmFU8SkI0RtVfYpC1EYGn5IQrZHJpyxEaWT0qQjRGZl9qkJURhYfgxCNkc3HJERhZPUxCrVvZPcxC7VtVONjEWrZ6A2qNvjYhApGSPJG9gZp8LEK6Ub1r/Dr8+Fa1WvysQvlRtcfkeKLc1Wv0adGKDf6jARfjGW9Zp86oRujxUvEvuil/7y4MvvUCkXdL8lfe/l7G6E3eu+ufh49RlCiVih69OL82+seAhrqhQKgjrkcR0+UYJJyHD1RMhFz99ETJZ1h7PnoiWEYhmGYe0oU/QNaYhpxiDtTDAAAAABJRU5ErkJggg==" width="100" />
 <h2 style="font-size:1.5em; color:#ffffff; ">
-Reconditionné<br>en 2025
+Reconditionné<br>en 2028
 </h2>
 </div>
 </div>
@@ -2935,7 +2947,7 @@ exceptionnelles depuis 2023
 <h3></h3>
 </div>
 </div>
-<div id="row-29" class="section level2" data-height="75">
+<div id="row-30" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="History_fra" class="section level3">
 <h3></h3>
@@ -2949,7 +2961,7 @@ Histoire
 </div>
 </div>
 </div>
-<div id="row-30" class="section level2" data-height="300">
+<div id="row-31" class="section level2" data-height="300">
 <h2>Row</h2>
 <div id="section-53" class="section level3">
 <h3></h3>
@@ -2981,7 +2993,7 @@ pour le thon rouge de l’Atlantique.
 </div>
 </div>
 </div>
-<div id="row-31" class="section level2" data-height="75">
+<div id="row-32" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="Contents_fra" class="section level3">
 <h3></h3>
@@ -2995,7 +3007,7 @@ Contenu
 </div>
 </div>
 </div>
-<div id="row-32" class="section level2" data-height="230">
+<div id="row-33" class="section level2" data-height="230">
 <h2>Row</h2>
 <div id="section-54" class="section level3" data-width="14%">
 <h3></h3>
@@ -3084,7 +3096,7 @@ exceptionnelles</a>
 <h3></h3>
 </div>
 </div>
-<div id="row-33" class="section level2" data-height="75">
+<div id="row-34" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="OM_fra" class="section level3">
 <h3></h3>
@@ -3098,7 +3110,7 @@ Modèles opérationnels
 </div>
 </div>
 </div>
-<div id="row-34" class="section level2" data-height="200">
+<div id="row-35" class="section level2" data-height="200">
 <h2>Row</h2>
 <div id="section-62" class="section level3">
 <h3></h3>
@@ -3114,16 +3126,17 @@ utilisant la microchimie des otolithes, les données génétiques et les
 données de marquage électronique. Ce défi a duré plusieurs années
 (depuis environ 2015) jusqu’à l’adoption des MO en 2021. Cela s’explique
 en partie par le fait que le SCRS a également dû travailler sur les
-évaluations des stocks Est et Ouest du thon rouge en 2017, 2020 et 2021.
-L’adoption de ces Modèles Opérationnels en 2021 a marqué une étape
-majeure dans la prise en compte des complexités liées au mélange des
-stocks, et ce malgré les exigences parallèles liées à la réalisation de
-plusieurs évaluations des stocks durant la même période.
+évaluations des stocks Est et Ouest du thon rouge en 2017 (E/O), 2020
+(E/O), 2021 (O), et 2022 (E). L’adoption de ces Modèles Opérationnels en
+2021 a marqué une étape majeure dans la prise en compte des complexités
+liées au mélange des stocks, et ce malgré les exigences parallèles liées
+à la réalisation de plusieurs évaluations des stocks durant la même
+période.
 </h2>
 </div>
 </div>
 </div>
-<div id="row-35" class="section level2" data-height="100">
+<div id="row-36" class="section level2" data-height="100">
 <h2>Row</h2>
 <div id="section-63" class="section level3">
 <h3></h3>
@@ -3141,7 +3154,7 @@ sont disponibles dans les références </a>
 </div>
 </div>
 </div>
-<div id="row-36" class="section level2" data-height="150">
+<div id="row-37" class="section level2" data-height="150">
 <h2>Row</h2>
 <div id="section-64" class="section level3" data-width="20%">
 <h3></h3>
@@ -3192,7 +3205,7 @@ Shiny App</a>
 <h3></h3>
 </div>
 </div>
-<div id="row-37" class="section level2" data-height="120">
+<div id="row-38" class="section level2" data-height="120">
 <h2>Row</h2>
 <div id="MO_fra" class="section level3">
 <h3></h3>
@@ -3210,7 +3223,7 @@ Objectifs de gestion
 </div>
 </div>
 </div>
-<div id="row-38" class="section level2" data-height="270">
+<div id="row-39" class="section level2" data-height="270">
 <h2>Row</h2>
 <div id="section-69" class="section level3" data-width="10%">
 <h3></h3>
@@ -3280,7 +3293,7 @@ Variation du TAC entre les périodes : +20 % / -35 %
 <h3></h3>
 </div>
 </div>
-<div id="row-39" class="section level2" data-height="75">
+<div id="row-40" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="CMP_fra" class="section level3">
 <h3></h3>
@@ -3294,7 +3307,7 @@ Procédure de gestion candidate
 </div>
 </div>
 </div>
-<div id="row-40" class="section level2" data-height="180">
+<div id="row-41" class="section level2" data-height="180">
 <h2>Row</h2>
 <div id="section-75" class="section level3">
 <h3></h3>
@@ -3311,7 +3324,7 @@ Butterworth Rademeyer <br>- CMP-LW par Lauretta et al.
 </div>
 </div>
 </div>
-<div id="row-41" class="section level2" data-height="75">
+<div id="row-42" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="MP_fra" class="section level3">
 <h3></h3>
@@ -3325,7 +3338,7 @@ Procédure de gestion
 </div>
 </div>
 </div>
-<div id="row-42" class="section level2" data-height="75">
+<div id="row-43" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="section-76" class="section level3">
 <h3></h3>
@@ -3340,7 +3353,7 @@ La Commission a adopté la procédure de gestion du BR en 2022 (Rec.
 </div>
 </div>
 </div>
-<div id="row-43" class="section level2" data-height="180">
+<div id="row-44" class="section level2" data-height="180">
 <h2>Row</h2>
 <div id="section-77" class="section level3" data-width="5%">
 <h3></h3>
@@ -3355,8 +3368,8 @@ La Commission a adopté la procédure de gestion du BR en 2022 (Rec.
 La procédure de gestion BR est empirique, basée sur des données
 relatives aux indices d’abondance qui sont d’abord standardisés selon
 leur amplitude, puis agrégés par une moyenne pondérée de 10 indices
-disponibles pour les zones Est et Ouest, et enfin lissés sur plusieurs
-années afin de réduire les effets de la variabilité due aux erreurs
+disponibles pour les zones Est et Ouest, et enfin lissés sur trois ans
+afin de réduire les effets de la variabilité due aux erreurs
 d’observation. Les TAC sont ensuite fixés sur la base du concept de
 prise d’une proportion fixe de l’abondance présente, telle qu’indiquée
 par ces indices d’abondance agrégés et lissés.
@@ -3378,7 +3391,7 @@ character(0)</a>
 </div>
 </div>
 </div>
-<div id="row-44" class="section level2" data-height="75">
+<div id="row-45" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="EC_fra" class="section level3">
 <h3></h3>
@@ -3392,7 +3405,7 @@ Circonstances exceptionnelles
 </div>
 </div>
 </div>
-<div id="row-45" class="section level2" data-height="120">
+<div id="row-46" class="section level2" data-height="120">
 <h2>Row</h2>
 <div id="section-80" class="section level3">
 <h3></h3>
@@ -3405,13 +3418,13 @@ La Commission a adopté le protocole des Circonstances Exceptionnelles en
 2023 (Rec. 23-07, Annexe 4).
 </h2>
 <h2 style="font-size:1.5em; color:#ffffff; ">
-Le SCRS l’évalue chaque année, et aucune Circonstance Exceptionnelle n’a
-été constatée depuis 2023.
+Le SCRS évalue les circonstances exceptionnelles chaque année depuis
+2023, et aucune circonstance exceptionnelle n’a encore été déclarée.
 </h2>
 </div>
 </div>
 </div>
-<div id="row-46" class="section level2" data-height="240">
+<div id="row-47" class="section level2" data-height="240">
 <h2>Row</h2>
 <div id="section-81" class="section level3" data-width="5%">
 <h3></h3>
@@ -3453,7 +3466,7 @@ Protocole CE :<br>Rec. 23-07, Annexe 4</a>
 </div>
 </div>
 </div>
-<div id="row-47" class="section level2" data-height="70">
+<div id="row-48" class="section level2" data-height="70">
 <h2>Row</h2>
 <div id="References_fra" class="section level3">
 <h3></h3>
@@ -3467,7 +3480,7 @@ Références
 </div>
 </div>
 </div>
-<div id="row-48" class="section level2" data-height="180">
+<div id="row-49" class="section level2" data-height="180">
 <h2>Row</h2>
 <div id="section-84" class="section level3" data-width="15%">
 <h3></h3>
@@ -3541,7 +3554,7 @@ Autres
 <h3></h3>
 </div>
 </div>
-<div id="row-49" class="section level2" data-height="240">
+<div id="row-50" class="section level2" data-height="240">
 <h2>Row</h2>
 <div id="section-91" class="section level3">
 <h3></h3>
@@ -3585,7 +3598,8 @@ operativos</a><br /> <a href="#MO_esp">Objetivos de gestión</a><br />
 <!-- Column 2 -->
 <div>
 <p><strong>Enlaces ICCAT MSE</strong><br />
-<a href="https://iccat.github.io/iccat-mse-web/"> Resumen de MSE</a><br />
+<a href="https://iccat.github.io/iccat-mse-web/#esp"> Resumen de
+MSE</a><br />
 <a href="https://iccat.github.io/iccat-mse-web/species/NALB/NALB_MSE.html#spa">
 Atún blanco del Atlántico Norte</a><br />
 <a href="https://iccat.github.io/iccat-mse-web/species/BFT/BFT_MSE.html#spa">
@@ -3641,7 +3655,7 @@ box-shadow: none !important;}
 background-color: #001A3E !important; }
 </style>
 </div>
-<div id="row-50" class="section level2" data-height="230">
+<div id="row-51" class="section level2" data-height="230">
 <h2>Row</h2>
 <div id="section-92" class="section level3">
 <h3></h3>
@@ -3659,7 +3673,7 @@ Atún rojo del Atlántico MSE
 </div>
 </div>
 </div>
-<div id="row-51" class="section level2" data-height="75">
+<div id="row-52" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="Overview_esp" class="section level3">
 <h3></h3>
@@ -3673,7 +3687,7 @@ Resumen
 </div>
 </div>
 </div>
-<div id="row-52" class="section level2" data-height="250">
+<div id="row-53" class="section level2" data-height="250">
 <h2>Row</h2>
 <div id="section-93" class="section level3">
 <h3></h3>
@@ -3693,15 +3707,15 @@ para 2023-2025 para ambos stocks usando este PM (Este: Rec. 22-08 y
 Oeste: Rec. 22-10). La Comisión también adoptó el protocolo de
 Circunstancias Excepcionales (CE) en 2023 (Rec. 23-07, Anexo 4), que
 incluye la evaluación anual de las CE por el SCRS. No se han invocado CE
-desde 2023. El SCRS programó la aplicación del PM en 2025 para
-establecer las Capturas Totales Permisibles (TAC) para el período
-posterior a 2026. Además, el SCRS planea realizar una evaluación, así
-como revisar los Modelos Operativos (MO) y el PM, después de 2026.
+desde 2023. El SCRS ha programado la aplicación del PM en 2025 para
+establecer los TAC para el período 2026-2028. Además, la Comisión prevé
+realizar una evaluación de las poblaciones y revisar los Modelos
+Operativos (MO) y el PM durante el período 2026-2028.
 </h2>
 </div>
 </div>
 </div>
-<div id="row-53" class="section level2" data-height="270">
+<div id="row-54" class="section level2" data-height="270">
 <h2>Row</h2>
 <div id="section-94" class="section level3" data-width="23%">
 <h3></h3>
@@ -3717,7 +3731,7 @@ Modelo operacional desarrollado<br>en 2014-2021
 </h2>
 <img role="img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAACQCAMAAADQmBKKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADAUExURQAAAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAI67otMAAAA/dFJOUwAECAwQGBwgJCgsMDRASExcYGRocIeLk5ujpKeoq6yvsre4u7y/wMPEz9LT1dbZ3t/i5evt7/Hy9fn6+/z9/nOJKVsAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAL/SURBVHhe7ZtrX9MwFIc7ZWyCU2ATnFqU6cSJ4BXRXcj3/1a2yZ82bZOmw/RkwHle9SRZ8vzCcmkWIoZhGIZhmLtJv4+HzeDpVyG+DxBsANtXSyGWf58gDM9h4iPE4ghheE5WqdDqPcLwTFMfIaYIPdMfrM1MCc0QroF7bKbjhRLX2JTjhRLX2FTjhRLH2HxLL3SCps0cLlCODEcP9f4Qd9FiuYumLTz7gZJE/HqOhq10drJ5pW2SeWung2brwczbNs1ndhZykQtdTr1ziapvJ9TCAn6bylnIBQu5WOMzW9j6ZWwhw0rLQgMUzHC+nbEQMqywEDKssBAyrLAQMqw8NCG1dBzMEg7kY+ilQyH7ydk3ChZywUIu7rvQrhzbZUZp2RGCIpXDDc9CeVZDampgIcmDFKoekFu+1OnBF4VQtSLLsDcWZiENFspgoRS1isXJXjWWT2qRsmxhzYUl3oTyRIXKkn2jo/rJXFjCQjKZhRJYSMJCZljIhfEz5RcgfenQ0JeOnDaWDl+wkAsWcvF/Qhv3I3Cr3FGhvbHeq62SfB/G+2jWyitBeoNoISb111H2UJCQIZo2Mya/YTWP0bSZ8RzlyHAI7aMYISM0bWEiSPtoLj457lh1hjFm1Cacot4Cp8hsQjxqduerIZ1jOBQ49trGOph9whnlPrj7mF2BDGNU8QlspPlcnKmHs4uARrpPF7uDaTecUcHnZrsyjYIZFX1yoVBGJR9NKIxR2UcXCmFU8SkI0RtVfYpC1EYGn5IQrZHJpyxEaWT0qQjRGZl9qkJURhYfgxCNkc3HJERhZPUxCrVvZPcxC7VtVONjEWrZ6A2qNvjYhApGSPJG9gZp8LEK6Ub1r/Dr8+Fa1WvysQvlRtcfkeKLc1Wv0adGKDf6jARfjGW9Zp86oRujxUvEvuil/7y4MvvUCkXdL8lfe/l7G6E3eu+ufh49RlCiVih69OL82+seAhrqhQKgjrkcR0+UYJJyHD1RMhFz99ETJZ1h7PnoiWEYhmGYe0oU/QNaYhpxiDtTDAAAAABJRU5ErkJggg==" width="100" />
 <h2 style="font-size:1.5em; color:#ffffff; ">
-Reacondicionado<br>en 2025
+Reacondicionado<br>en 2028
 </h2>
 </div>
 </div>
@@ -3756,7 +3770,7 @@ circunstancias excepcionales desde 2023
 <h3></h3>
 </div>
 </div>
-<div id="row-54" class="section level2" data-height="75">
+<div id="row-55" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="History_esp" class="section level3">
 <h3></h3>
@@ -3770,7 +3784,7 @@ Historia
 </div>
 </div>
 </div>
-<div id="row-55" class="section level2" data-height="300">
+<div id="row-56" class="section level2" data-height="300">
 <h2>Row</h2>
 <div id="section-99" class="section level3">
 <h3></h3>
@@ -3802,7 +3816,7 @@ rojo del Atlántico.
 </div>
 </div>
 </div>
-<div id="row-56" class="section level2" data-height="75">
+<div id="row-57" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="Contents_esp" class="section level3">
 <h3></h3>
@@ -3816,7 +3830,7 @@ Contenido
 </div>
 </div>
 </div>
-<div id="row-57" class="section level2" data-height="230">
+<div id="row-58" class="section level2" data-height="230">
 <h2>Row</h2>
 <div id="section-100" class="section level3" data-width="14%">
 <h3></h3>
@@ -3905,7 +3919,7 @@ excepcionales</a>
 <h3></h3>
 </div>
 </div>
-<div id="row-58" class="section level2" data-height="75">
+<div id="row-59" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="OM_esp" class="section level3">
 <h3></h3>
@@ -3919,7 +3933,7 @@ Modelos operativos
 </div>
 </div>
 </div>
-<div id="row-59" class="section level2" data-height="200">
+<div id="row-60" class="section level2" data-height="200">
 <h2>Row</h2>
 <div id="section-108" class="section level3">
 <h3></h3>
@@ -3935,15 +3949,16 @@ otolitos, datos genéticos y datos de marcado electrónico. Este desafío
 tomó varios años (desde aproximadamente 2015) hasta la adopción de los
 MO en 2021. Esto se debió en parte a que el SCRS también tuvo que
 trabajar en las evaluaciones de stock de los stocks Este y Oeste del
-atún rojo en 2017, 2020 y 2021. La adopción de estos Modelos Operativos
-en 2021 marcó un hito importante en el abordaje de las complejidades del
-mezclado de stocks y se logró a pesar de las demandas paralelas de
-completar múltiples evaluaciones de stock durante el mismo período.
+atún rojo en 2017 (E/O), 2020 (E/O), 2021 (O), y 2022 (E). La adopción
+de estos Modelos Operativos en 2021 marcó un hito importante en el
+abordaje de las complejidades del mezclado de stocks y se logró a pesar
+de las demandas paralelas de completar múltiples evaluaciones de stock
+durante el mismo período.
 </h2>
 </div>
 </div>
 </div>
-<div id="row-60" class="section level2" data-height="100">
+<div id="row-61" class="section level2" data-height="100">
 <h2>Row</h2>
 <div id="section-109" class="section level3">
 <h3></h3>
@@ -3961,7 +3976,7 @@ pueden encontrar en las referencias</a>
 </div>
 </div>
 </div>
-<div id="row-61" class="section level2" data-height="150">
+<div id="row-62" class="section level2" data-height="150">
 <h2>Row</h2>
 <div id="section-110" class="section level3" data-width="20%">
 <h3></h3>
@@ -4012,7 +4027,7 @@ Shiny App</a>
 <h3></h3>
 </div>
 </div>
-<div id="row-62" class="section level2" data-height="120">
+<div id="row-63" class="section level2" data-height="120">
 <h2>Row</h2>
 <div id="MO_esp" class="section level3">
 <h3></h3>
@@ -4030,7 +4045,7 @@ Objetivos de gestión
 </div>
 </div>
 </div>
-<div id="row-63" class="section level2" data-height="270">
+<div id="row-64" class="section level2" data-height="270">
 <h2>Row</h2>
 <div id="section-115" class="section level3" data-width="10%">
 <h3></h3>
@@ -4099,7 +4114,7 @@ Cambios en la TAC entre periodos: +20 % / -35 %
 <h3></h3>
 </div>
 </div>
-<div id="row-64" class="section level2" data-height="75">
+<div id="row-65" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="CMP_esp" class="section level3">
 <h3></h3>
@@ -4113,7 +4128,7 @@ Procedimiento de gestión candidato
 </div>
 </div>
 </div>
-<div id="row-65" class="section level2" data-height="180">
+<div id="row-66" class="section level2" data-height="180">
 <h2>Row</h2>
 <div id="section-121" class="section level3">
 <h3></h3>
@@ -4130,7 +4145,7 @@ CMP-LW by Lauretta et al.
 </div>
 </div>
 </div>
-<div id="row-66" class="section level2" data-height="75">
+<div id="row-67" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="MP_esp" class="section level3">
 <h3></h3>
@@ -4144,7 +4159,7 @@ Procedimiento de gestión
 </div>
 </div>
 </div>
-<div id="row-67" class="section level2" data-height="75">
+<div id="row-68" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="section-122" class="section level3">
 <h3></h3>
@@ -4159,7 +4174,7 @@ La Comisión adoptó el procedimiento de manejo del BR en 2022 (Rec.
 </div>
 </div>
 </div>
-<div id="row-68" class="section level2" data-height="180">
+<div id="row-69" class="section level2" data-height="180">
 <h2>Row</h2>
 <div id="section-123" class="section level3" data-width="5%">
 <h3></h3>
@@ -4175,7 +4190,7 @@ El procedimiento de manejo BR es empírico, basado en insumos
 relacionados con índices de abundancia que primero se estandarizan por
 magnitud, luego se agregan mediante un promedio ponderado de 10 índices
 disponibles para las áreas Este y Oeste, y finalmente se suavizan a lo
-largo de los años para reducir los efectos de la variabilidad del error
+largo de tres años para reducir los efectos de la variabilidad del error
 de observación. Los TAC se establecen entonces basándose en el concepto
 de tomar una proporción fija de la abundancia presente, tal como lo
 indican estos índices de abundancia agregados y suavizados.
@@ -4197,7 +4212,7 @@ Rec. 22-09 <br>Anexo 2</a>
 </div>
 </div>
 </div>
-<div id="row-69" class="section level2" data-height="75">
+<div id="row-70" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="EC_esp" class="section level3">
 <h3></h3>
@@ -4211,7 +4226,7 @@ Circunstancias excepcionales
 </div>
 </div>
 </div>
-<div id="row-70" class="section level2" data-height="120">
+<div id="row-71" class="section level2" data-height="120">
 <h2>Row</h2>
 <div id="section-126" class="section level3">
 <h3></h3>
@@ -4224,13 +4239,13 @@ La Comisión adoptó el Protocolo de Circunstancias Excepcionales en 2023
 (Rec. 23-07, Anexo 4).
 </h2>
 <h2 style="font-size:1.5em; color:#ffffff; ">
-El SCRS lo evalúa anualmente, y no se han registrado Circunstancias
-Excepcionales desde 2023.
+El SCRS ha evaluado las circunstancias excepcionales anualmente desde
+2023, y aún no se han declarado circunstancias excepcionales.
 </h2>
 </div>
 </div>
 </div>
-<div id="row-71" class="section level2" data-height="240">
+<div id="row-72" class="section level2" data-height="240">
 <h2>Row</h2>
 <div id="section-127" class="section level3" data-width="5%">
 <h3></h3>
@@ -4272,7 +4287,7 @@ Protocolo CE:<br>Rec. 23-07, Anexo 4</a>
 </div>
 </div>
 </div>
-<div id="row-72" class="section level2" data-height="70">
+<div id="row-73" class="section level2" data-height="70">
 <h2>Row</h2>
 <div id="References_esp" class="section level3">
 <h3></h3>
@@ -4286,7 +4301,7 @@ Referencias
 </div>
 </div>
 </div>
-<div id="row-73" class="section level2" data-height="180">
+<div id="row-74" class="section level2" data-height="180">
 <h2>Row</h2>
 <div id="section-130" class="section level3" data-width="15%">
 <h3></h3>
@@ -4360,7 +4375,7 @@ Otros
 <h3></h3>
 </div>
 </div>
-<div id="row-74" class="section level2" data-height="240">
+<div id="row-75" class="section level2" data-height="240">
 <h2>Row</h2>
 <div id="section-137" class="section level3">
 <h3></h3>
