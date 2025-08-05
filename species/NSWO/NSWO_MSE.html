@@ -1964,17 +1964,19 @@ Other Species</a><br /></p>
 </div>
 <style type="text/css">
 
-nav.section.sidebar {
-background-color: #001A3E !important; 
+.navbar {
+background-color: rgba(0, 26, 62, 0.8) !important; border: none !important;
+backdrop-filter: blur(4px); }
+
+.navbar .navbar-nav > li > a,
+.navbar .navbar-brand {
 color: #ffffff !important;
 }
 
-nav.section.sidebar a {
+.navbar .navbar-nav > .active > a {
+background-color: rgba(0, 51, 102, 0.9) !important;
 color: #ffffff !important;
 }
-
-nav.section.sidebar h3 {
-color: #ffffff !important;
 </style>
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
@@ -1983,11 +1985,17 @@ color: #ffffff !important;
 .section.level3 {
 margin: 0 !important;
 padding: 0 !important;
+background-color: #f8f2e2 !important;
+}
+body {
+margin: 0 !important;
+padding: 0 !important;
+background-color: #f8f2e2 !important;
 }
 .chart-stage {
 margin: 0 !important;
 padding: 0 !important;
-}
+background-color: #001A3E !important; }
 .chart-wrapper {
 margin: 0 !important;
 padding: 0 !important;
@@ -1997,11 +2005,14 @@ padding: 0 !important;
 .section.level3 {
 border: none !important;
 box-shadow: none !important;}
-.chart-stage {
-background-color: #001A3E !important; }
+.main-container {
+background-color: #001A3E; }
 </style>
 </div>
-<div id="row" class="section level2" data-height="220">
+<div id="row" class="section level2" data-height="40">
+<h2>Row</h2>
+</div>
+<div id="row-1" class="section level2" data-height="220">
 <h2>Row</h2>
 <div id="section" class="section level3">
 <h3></h3>
@@ -2019,7 +2030,7 @@ North Atlantic Swordfish MSE
 </div>
 </div>
 </div>
-<div id="row-1" class="section level2" data-height="75">
+<div id="row-2" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="Overview_eng" class="section level3">
 <h3></h3>
@@ -2033,7 +2044,7 @@ Overview
 </div>
 </div>
 </div>
-<div id="row-2" class="section level2" data-height="150">
+<div id="row-3" class="section level2" data-height="150">
 <h2>Row</h2>
 <div id="section-1" class="section level3">
 <h3></h3>
@@ -2053,7 +2064,7 @@ Procedure for the Northern Atlantic Swordfish stock in Rec. 24‑10.
 </div>
 </div>
 </div>
-<div id="row-3" class="section level2" data-height="270">
+<div id="row-4" class="section level2" data-height="270">
 <h2>Row</h2>
 <div id="section-2" class="section level3" data-width="23%">
 <h3></h3>
@@ -2107,7 +2118,7 @@ EC evaluation<br>not started
 <h3></h3>
 </div>
 </div>
-<div id="row-4" class="section level2" data-height="75">
+<div id="row-5" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="History_eng" class="section level3">
 <h3></h3>
@@ -2121,7 +2132,7 @@ History
 </div>
 </div>
 </div>
-<div id="row-5" class="section level2" data-height="350">
+<div id="row-6" class="section level2" data-height="350">
 <h2>Row</h2>
 <div id="section-7" class="section level3">
 <h3></h3>
@@ -2151,7 +2162,7 @@ conditioning Operating Models (OMs).
 </div>
 </div>
 </div>
-<div id="row-6" class="section level2" data-height="75">
+<div id="row-7" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="Contents_eng" class="section level3">
 <h3></h3>
@@ -2165,7 +2176,7 @@ Contents
 </div>
 </div>
 </div>
-<div id="row-7" class="section level2" data-height="230">
+<div id="row-8" class="section level2" data-height="230">
 <h2>Row</h2>
 <div id="section-8" class="section level3" data-width="14%">
 <h3></h3>
@@ -2253,7 +2264,7 @@ Procedure</a>
 <h3></h3>
 </div>
 </div>
-<div id="row-8" class="section level2" data-height="75">
+<div id="row-9" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="OM_eng" class="section level3">
 <h3></h3>
@@ -2267,7 +2278,7 @@ Operating Models
 </div>
 </div>
 </div>
-<div id="row-9" class="section level2" data-height="180">
+<div id="row-10" class="section level2" data-height="180">
 <h2>Row</h2>
 <div id="section-16" class="section level3">
 <h3></h3>
@@ -2290,7 +2301,7 @@ SWOMSE package, built on openMSE.
 </div>
 </div>
 </div>
-<div id="row-10" class="section level2" data-height="100">
+<div id="row-11" class="section level2" data-height="100">
 <h2>Row</h2>
 <div id="section-17" class="section level3">
 <h3></h3>
@@ -2308,7 +2319,7 @@ found in Reference </a>
 </div>
 </div>
 </div>
-<div id="row-11" class="section level2" data-height="150">
+<div id="row-12" class="section level2" data-height="150">
 <h2>Row</h2>
 <div id="section-18" class="section level3" data-width="20%">
 <h3></h3>
@@ -2359,7 +2370,7 @@ Shiny App</a>
 <h3></h3>
 </div>
 </div>
-<div id="row-12" class="section level2" data-height="120">
+<div id="row-13" class="section level2" data-height="120">
 <h2>Row</h2>
 <div id="MO_eng" class="section level3">
 <h3></h3>
@@ -2377,7 +2388,7 @@ Management Objectives
 </div>
 </div>
 </div>
-<div id="row-13" class="section level2" data-height="270">
+<div id="row-14" class="section level2" data-height="270">
 <h2>Row</h2>
 <div id="section-23" class="section level3" data-width="10%">
 <h3></h3>
@@ -2446,7 +2457,7 @@ Minimize TAC changes between periods
 <h3></h3>
 </div>
 </div>
-<div id="row-14" class="section level2" data-height="75">
+<div id="row-15" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="CMP_eng" class="section level3">
 <h3></h3>
@@ -2460,7 +2471,7 @@ Candidate Management Procedure
 </div>
 </div>
 </div>
-<div id="row-15" class="section level2" data-height="180">
+<div id="row-16" class="section level2" data-height="180">
 <h2>Row</h2>
 <div id="section-29" class="section level3">
 <h3></h3>
@@ -2477,7 +2488,7 @@ the Commission for their final selection in 2024.<br>- MCC9 and MCC11
 </div>
 </div>
 </div>
-<div id="row-16" class="section level2" data-height="75">
+<div id="row-17" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="MP_eng" class="section level3">
 <h3></h3>
@@ -2491,7 +2502,7 @@ Management Procedure
 </div>
 </div>
 </div>
-<div id="row-17" class="section level2" data-height="75">
+<div id="row-18" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="section-30" class="section level3">
 <h3></h3>
@@ -2506,7 +2517,7 @@ The Commission adopted the MCC11 Management Procedure in 2024
 </div>
 </div>
 </div>
-<div id="row-18" class="section level2" data-height="180">
+<div id="row-19" class="section level2" data-height="180">
 <h2>Row</h2>
 <div id="section-31" class="section level3" data-width="5%">
 <h3></h3>
@@ -2544,7 +2555,7 @@ Rec. 24-10 <br>Annex 1</a>
 </div>
 </div>
 </div>
-<div id="row-19" class="section level2" data-height="75">
+<div id="row-20" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="EC_eng" class="section level3">
 <h3></h3>
@@ -2558,7 +2569,7 @@ Exceptional Circumstances
 </div>
 </div>
 </div>
-<div id="row-20" class="section level2" data-height="60">
+<div id="row-21" class="section level2" data-height="60">
 <h2>Row</h2>
 <div id="section-34" class="section level3">
 <h3></h3>
@@ -2576,7 +2587,7 @@ character(0)
 </div>
 </div>
 </div>
-<div id="row-21" class="section level2" data-height="1">
+<div id="row-22" class="section level2" data-height="1">
 <h2>Row</h2>
 <div id="section-35" class="section level3" data-width="5%">
 <h3></h3>
@@ -2609,7 +2620,7 @@ character(0)
 </div>
 </div>
 </div>
-<div id="row-22" class="section level2" data-height="70">
+<div id="row-23" class="section level2" data-height="70">
 <h2>Row</h2>
 <div id="References_eng" class="section level3">
 <h3></h3>
@@ -2623,7 +2634,7 @@ References
 </div>
 </div>
 </div>
-<div id="row-23" class="section level2" data-height="180">
+<div id="row-24" class="section level2" data-height="180">
 <h2>Row</h2>
 <div id="section-38" class="section level3" data-width="15%">
 <h3></h3>
@@ -2697,7 +2708,7 @@ Others
 <h3></h3>
 </div>
 </div>
-<div id="row-24" class="section level2" data-height="240">
+<div id="row-25" class="section level2" data-height="240">
 <h2>Row</h2>
 <div id="section-45" class="section level3">
 <h3></h3>
@@ -2741,7 +2752,8 @@ opérationnels</a><br /> <a href="#MO_fra">Objectifs de gestion</a><br />
 <!-- Column 2 -->
 <div>
 <p><strong>Liens ICCAT MSE</strong><br />
-<a href="https://iccat.github.io/iccat-mse-web/"> Résumé de l’MSE</a><br />
+<a href="https://iccat.github.io/iccat-mse-web/#fra"> Résumé de
+l’MSE</a><br />
 <a href="https://iccat.github.io/iccat-mse-web/species/NALB/NALB_MSE.html#fra">
 Germon de l’Atlantique Nord</a><br />
 <a href="https://iccat.github.io/iccat-mse-web/species/BFT/BFT_MSE.html#fra">
@@ -2797,7 +2809,7 @@ box-shadow: none !important;}
 background-color: #001A3E !important; }
 </style>
 </div>
-<div id="row-25" class="section level2" data-height="220">
+<div id="row-26" class="section level2" data-height="220">
 <h2>Row</h2>
 <div id="section-46" class="section level3">
 <h3></h3>
@@ -2815,7 +2827,7 @@ Espadon de l’Atlantique Nord MSE
 </div>
 </div>
 </div>
-<div id="row-26" class="section level2" data-height="75">
+<div id="row-27" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="Overview_fra" class="section level3">
 <h3></h3>
@@ -2829,7 +2841,7 @@ Aperçu
 </div>
 </div>
 </div>
-<div id="row-27" class="section level2" data-height="150">
+<div id="row-28" class="section level2" data-height="150">
 <h2>Row</h2>
 <div id="section-47" class="section level3">
 <h3></h3>
@@ -2851,7 +2863,7 @@ l’Atlantique dans la Recommandation 24-10.
 </div>
 </div>
 </div>
-<div id="row-28" class="section level2" data-height="270">
+<div id="row-29" class="section level2" data-height="270">
 <h2>Row</h2>
 <div id="section-48" class="section level3" data-width="23%">
 <h3></h3>
@@ -2905,7 +2917,7 @@ Adoption du PCE<br>en 2025
 <h3></h3>
 </div>
 </div>
-<div id="row-29" class="section level2" data-height="75">
+<div id="row-30" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="History_fra" class="section level3">
 <h3></h3>
@@ -2919,7 +2931,7 @@ Histoire
 </div>
 </div>
 </div>
-<div id="row-30" class="section level2" data-height="350">
+<div id="row-31" class="section level2" data-height="350">
 <h2>Row</h2>
 <div id="section-53" class="section level3">
 <h3></h3>
@@ -2951,7 +2963,7 @@ conditionnement des Modèles Opérationnels (MO).
 </div>
 </div>
 </div>
-<div id="row-31" class="section level2" data-height="75">
+<div id="row-32" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="Contents_fra" class="section level3">
 <h3></h3>
@@ -2965,7 +2977,7 @@ Contenu
 </div>
 </div>
 </div>
-<div id="row-32" class="section level2" data-height="230">
+<div id="row-33" class="section level2" data-height="230">
 <h2>Row</h2>
 <div id="section-54" class="section level3" data-width="14%">
 <h3></h3>
@@ -3054,7 +3066,7 @@ exceptionnelles</a>
 <h3></h3>
 </div>
 </div>
-<div id="row-33" class="section level2" data-height="75">
+<div id="row-34" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="OM_fra" class="section level3">
 <h3></h3>
@@ -3068,7 +3080,7 @@ Modèles opérationnels
 </div>
 </div>
 </div>
-<div id="row-34" class="section level2" data-height="180">
+<div id="row-35" class="section level2" data-height="180">
 <h2>Row</h2>
 <div id="section-62" class="section level3">
 <h3></h3>
@@ -3092,7 +3104,7 @@ sont implémentés dans le package SWOMSE, basé sur openMSE.
 </div>
 </div>
 </div>
-<div id="row-35" class="section level2" data-height="100">
+<div id="row-36" class="section level2" data-height="100">
 <h2>Row</h2>
 <div id="section-63" class="section level3">
 <h3></h3>
@@ -3110,7 +3122,7 @@ sont disponibles dans les références </a>
 </div>
 </div>
 </div>
-<div id="row-36" class="section level2" data-height="150">
+<div id="row-37" class="section level2" data-height="150">
 <h2>Row</h2>
 <div id="section-64" class="section level3" data-width="20%">
 <h3></h3>
@@ -3161,7 +3173,7 @@ Shiny App</a>
 <h3></h3>
 </div>
 </div>
-<div id="row-37" class="section level2" data-height="120">
+<div id="row-38" class="section level2" data-height="120">
 <h2>Row</h2>
 <div id="MO_fra" class="section level3">
 <h3></h3>
@@ -3179,7 +3191,7 @@ Objectifs de gestion
 </div>
 </div>
 </div>
-<div id="row-38" class="section level2" data-height="270">
+<div id="row-39" class="section level2" data-height="270">
 <h2>Row</h2>
 <div id="section-69" class="section level3" data-width="10%">
 <h3></h3>
@@ -3248,7 +3260,7 @@ Minimiser les variations du TAC entre les périodes
 <h3></h3>
 </div>
 </div>
-<div id="row-39" class="section level2" data-height="75">
+<div id="row-40" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="CMP_fra" class="section level3">
 <h3></h3>
@@ -3262,7 +3274,7 @@ Procédure de gestion candidate
 </div>
 </div>
 </div>
-<div id="row-40" class="section level2" data-height="180">
+<div id="row-41" class="section level2" data-height="180">
 <h2>Row</h2>
 <div id="section-75" class="section level3">
 <h3></h3>
@@ -3279,7 +3291,7 @@ sélection finale en 2024.<br>- MCC9 et MCC11 <br>- CE et SPSSFox
 </div>
 </div>
 </div>
-<div id="row-41" class="section level2" data-height="75">
+<div id="row-42" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="MP_fra" class="section level3">
 <h3></h3>
@@ -3293,7 +3305,7 @@ Procédure de gestion
 </div>
 </div>
 </div>
-<div id="row-42" class="section level2" data-height="75">
+<div id="row-43" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="section-76" class="section level3">
 <h3></h3>
@@ -3308,7 +3320,7 @@ Annexe 1).
 </div>
 </div>
 </div>
-<div id="row-43" class="section level2" data-height="180">
+<div id="row-44" class="section level2" data-height="180">
 <h2>Row</h2>
 <div id="section-77" class="section level3" data-width="5%">
 <h3></h3>
@@ -3345,7 +3357,7 @@ Rec. 24-10 <br>Annexe 1</a>
 </div>
 </div>
 </div>
-<div id="row-44" class="section level2" data-height="75">
+<div id="row-45" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="EC_fra" class="section level3">
 <h3></h3>
@@ -3359,7 +3371,7 @@ Circonstances exceptionnelles
 </div>
 </div>
 </div>
-<div id="row-45" class="section level2" data-height="60">
+<div id="row-46" class="section level2" data-height="60">
 <h2>Row</h2>
 <div id="section-80" class="section level3">
 <h3></h3>
@@ -3377,7 +3389,7 @@ character(0)
 </div>
 </div>
 </div>
-<div id="row-46" class="section level2" data-height="1">
+<div id="row-47" class="section level2" data-height="1">
 <h2>Row</h2>
 <div id="section-81" class="section level3" data-width="5%">
 <h3></h3>
@@ -3410,7 +3422,7 @@ character(0)
 </div>
 </div>
 </div>
-<div id="row-47" class="section level2" data-height="70">
+<div id="row-48" class="section level2" data-height="70">
 <h2>Row</h2>
 <div id="References_fra" class="section level3">
 <h3></h3>
@@ -3424,7 +3436,7 @@ Références
 </div>
 </div>
 </div>
-<div id="row-48" class="section level2" data-height="180">
+<div id="row-49" class="section level2" data-height="180">
 <h2>Row</h2>
 <div id="section-84" class="section level3" data-width="15%">
 <h3></h3>
@@ -3498,7 +3510,7 @@ Autres
 <h3></h3>
 </div>
 </div>
-<div id="row-49" class="section level2" data-height="240">
+<div id="row-50" class="section level2" data-height="240">
 <h2>Row</h2>
 <div id="section-91" class="section level3">
 <h3></h3>
@@ -3542,7 +3554,8 @@ operativos</a><br /> <a href="#MO_esp">Objetivos de gestión</a><br />
 <!-- Column 2 -->
 <div>
 <p><strong>Enlaces ICCAT MSE</strong><br />
-<a href="https://iccat.github.io/iccat-mse-web/"> Resumen de MSE</a><br />
+<a href="https://iccat.github.io/iccat-mse-web/#esp"> Resumen de
+MSE</a><br />
 <a href="https://iccat.github.io/iccat-mse-web/species/NALB/NALB_MSE.html#spa">
 Atún blanco del Atlántico Norte</a><br />
 <a href="https://iccat.github.io/iccat-mse-web/species/BFT/BFT_MSE.html#spa">
@@ -3598,7 +3611,7 @@ box-shadow: none !important;}
 background-color: #001A3E !important; }
 </style>
 </div>
-<div id="row-50" class="section level2" data-height="220">
+<div id="row-51" class="section level2" data-height="220">
 <h2>Row</h2>
 <div id="section-92" class="section level3">
 <h3></h3>
@@ -3616,7 +3629,7 @@ Pez espada del Atlántico Norte MSE
 </div>
 </div>
 </div>
-<div id="row-51" class="section level2" data-height="75">
+<div id="row-52" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="Overview_esp" class="section level3">
 <h3></h3>
@@ -3630,7 +3643,7 @@ Resumen
 </div>
 </div>
 </div>
-<div id="row-52" class="section level2" data-height="150">
+<div id="row-53" class="section level2" data-height="150">
 <h2>Row</h2>
 <div id="section-93" class="section level3">
 <h3></h3>
@@ -3652,7 +3665,7 @@ Recomendación 24-10.
 </div>
 </div>
 </div>
-<div id="row-53" class="section level2" data-height="270">
+<div id="row-54" class="section level2" data-height="270">
 <h2>Row</h2>
 <div id="section-94" class="section level3" data-width="23%">
 <h3></h3>
@@ -3706,7 +3719,7 @@ Evaluación de CE<br>no iniciada
 <h3></h3>
 </div>
 </div>
-<div id="row-54" class="section level2" data-height="75">
+<div id="row-55" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="History_esp" class="section level3">
 <h3></h3>
@@ -3720,7 +3733,7 @@ Historia
 </div>
 </div>
 </div>
-<div id="row-55" class="section level2" data-height="350">
+<div id="row-56" class="section level2" data-height="350">
 <h2>Row</h2>
 <div id="section-99" class="section level3">
 <h3></h3>
@@ -3751,7 +3764,7 @@ acondicionamiento de Modelos Operativos (MO).
 </div>
 </div>
 </div>
-<div id="row-56" class="section level2" data-height="75">
+<div id="row-57" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="Contents_esp" class="section level3">
 <h3></h3>
@@ -3765,7 +3778,7 @@ Contenido
 </div>
 </div>
 </div>
-<div id="row-57" class="section level2" data-height="230">
+<div id="row-58" class="section level2" data-height="230">
 <h2>Row</h2>
 <div id="section-100" class="section level3" data-width="14%">
 <h3></h3>
@@ -3854,7 +3867,7 @@ excepcionales</a>
 <h3></h3>
 </div>
 </div>
-<div id="row-58" class="section level2" data-height="75">
+<div id="row-59" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="OM_esp" class="section level3">
 <h3></h3>
@@ -3868,7 +3881,7 @@ Modelos operativos
 </div>
 </div>
 </div>
-<div id="row-59" class="section level2" data-height="180">
+<div id="row-60" class="section level2" data-height="180">
 <h2>Row</h2>
 <div id="section-108" class="section level3">
 <h3></h3>
@@ -3892,7 +3905,7 @@ implementados en el paquete SWOMSE, construido sobre openMSE.
 </div>
 </div>
 </div>
-<div id="row-60" class="section level2" data-height="100">
+<div id="row-61" class="section level2" data-height="100">
 <h2>Row</h2>
 <div id="section-109" class="section level3">
 <h3></h3>
@@ -3910,7 +3923,7 @@ pueden encontrar en las referencias</a>
 </div>
 </div>
 </div>
-<div id="row-61" class="section level2" data-height="150">
+<div id="row-62" class="section level2" data-height="150">
 <h2>Row</h2>
 <div id="section-110" class="section level3" data-width="20%">
 <h3></h3>
@@ -3961,7 +3974,7 @@ Shiny App</a>
 <h3></h3>
 </div>
 </div>
-<div id="row-62" class="section level2" data-height="120">
+<div id="row-63" class="section level2" data-height="120">
 <h2>Row</h2>
 <div id="MO_esp" class="section level3">
 <h3></h3>
@@ -3979,7 +3992,7 @@ Objetivos de gestión
 </div>
 </div>
 </div>
-<div id="row-63" class="section level2" data-height="270">
+<div id="row-64" class="section level2" data-height="270">
 <h2>Row</h2>
 <div id="section-115" class="section level3" data-width="10%">
 <h3></h3>
@@ -4048,7 +4061,7 @@ Minimizar los cambios en la TAC entre periodos
 <h3></h3>
 </div>
 </div>
-<div id="row-64" class="section level2" data-height="75">
+<div id="row-65" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="CMP_esp" class="section level3">
 <h3></h3>
@@ -4062,7 +4075,7 @@ Procedimiento de gestión candidato
 </div>
 </div>
 </div>
-<div id="row-65" class="section level2" data-height="180">
+<div id="row-66" class="section level2" data-height="180">
 <h2>Row</h2>
 <div id="section-121" class="section level3">
 <h3></h3>
@@ -4079,7 +4092,7 @@ final en 2024.<br>- MCC9 y MCC11 <br>- CE y SPSSFox
 </div>
 </div>
 </div>
-<div id="row-66" class="section level2" data-height="75">
+<div id="row-67" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="MP_esp" class="section level3">
 <h3></h3>
@@ -4093,7 +4106,7 @@ Procedimiento de gestión
 </div>
 </div>
 </div>
-<div id="row-67" class="section level2" data-height="75">
+<div id="row-68" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="section-122" class="section level3">
 <h3></h3>
@@ -4108,7 +4121,7 @@ Anexo 1).
 </div>
 </div>
 </div>
-<div id="row-68" class="section level2" data-height="180">
+<div id="row-69" class="section level2" data-height="180">
 <h2>Row</h2>
 <div id="section-123" class="section level3" data-width="5%">
 <h3></h3>
@@ -4145,7 +4158,7 @@ Rec. 24-10 <br>Anexo 1</a>
 </div>
 </div>
 </div>
-<div id="row-69" class="section level2" data-height="75">
+<div id="row-70" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="EC_esp" class="section level3">
 <h3></h3>
@@ -4159,7 +4172,7 @@ Circunstancias excepcionales
 </div>
 </div>
 </div>
-<div id="row-70" class="section level2" data-height="60">
+<div id="row-71" class="section level2" data-height="60">
 <h2>Row</h2>
 <div id="section-126" class="section level3">
 <h3></h3>
@@ -4177,7 +4190,7 @@ character(0)
 </div>
 </div>
 </div>
-<div id="row-71" class="section level2" data-height="1">
+<div id="row-72" class="section level2" data-height="1">
 <h2>Row</h2>
 <div id="section-127" class="section level3" data-width="5%">
 <h3></h3>
@@ -4210,7 +4223,7 @@ character(0)
 </div>
 </div>
 </div>
-<div id="row-72" class="section level2" data-height="70">
+<div id="row-73" class="section level2" data-height="70">
 <h2>Row</h2>
 <div id="References_esp" class="section level3">
 <h3></h3>
@@ -4224,7 +4237,7 @@ Referencias
 </div>
 </div>
 </div>
-<div id="row-73" class="section level2" data-height="180">
+<div id="row-74" class="section level2" data-height="180">
 <h2>Row</h2>
 <div id="section-130" class="section level3" data-width="15%">
 <h3></h3>
@@ -4298,7 +4311,7 @@ Otros
 <h3></h3>
 </div>
 </div>
-<div id="row-74" class="section level2" data-height="240">
+<div id="row-75" class="section level2" data-height="240">
 <h2>Row</h2>
 <div id="section-137" class="section level3">
 <h3></h3>
