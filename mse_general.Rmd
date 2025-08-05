@@ -593,21 +593,25 @@ Column {.sidebar}
 </div>
 
 ```{css, echo=FALSE}
-/* This targets the actual sidebar container reliably */
-nav.section.sidebar {
-  background-color: #001A3E !important;
+/* Top navigation bar background color */
+.navbar {
+  background-color: rgba(0, 26, 62, 0.8) !important;  
+  border: none !important;
+  backdrop-filter: blur(4px);  
+}
+
+/* Top navigation text color */
+.navbar .navbar-nav > li > a,
+.navbar .navbar-brand {
   color: #ffffff !important;
 }
 
-/* Sidebar text and links */
-nav.section.sidebar,
-nav.section.sidebar a {
+/* Active tab color (optional) */
+.navbar .navbar-nav > .active > a {
+  background-color: rgba(0, 51, 102, 0.9) !important;
   color: #ffffff !important;
 }
 
-nav.section.sidebar h3 {
-  color: #ffffff !important;
-}
 ```
 
 ```{css, echo=FALSE}
@@ -615,11 +619,19 @@ nav.section.sidebar h3 {
 .section.level3 {
   margin: 0 !important;
   padding: 0 !important;
+  background-color: #f8f2e2 !important;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #f8f2e2 !important;
 }
 
 .chart-stage {
   margin: 0 !important;
   padding: 0 !important;
+  background-color: #001A3E !important;  
 }
 
 .chart-wrapper {
@@ -627,19 +639,19 @@ nav.section.sidebar h3 {
   padding: 0 !important;
 }
 
-
 .chart-stage,
 .chart-wrapper,
 .section.level3 {
   border: none !important;
   box-shadow: none !important;}
 
-
-.chart-stage {
-  background-color: #001A3E !important; 
+.main-container {
+  background-color: #001A3E; 
 }
-
 ```
+
+Row {data-height=40}
+-------------------------------------
 
 Row {data-height=100}
 -------------------------------------
@@ -1106,21 +1118,25 @@ Column {.sidebar}
 </div>
 
 ```{css, echo=FALSE}
-/* This targets the actual sidebar container reliably */
-nav.section.sidebar {
-  background-color: #001A3E !important;
+/* Top navigation bar background color */
+.navbar {
+  background-color: rgba(0, 26, 62, 0.8) !important;  
+  border: none !important;
+  backdrop-filter: blur(4px);  
+}
+
+/* Top navigation text color */
+.navbar .navbar-nav > li > a,
+.navbar .navbar-brand {
   color: #ffffff !important;
 }
 
-/* Sidebar text and links */
-nav.section.sidebar,
-nav.section.sidebar a {
+/* Active tab color (optional) */
+.navbar .navbar-nav > .active > a {
+  background-color: rgba(0, 51, 102, 0.9) !important;
   color: #ffffff !important;
 }
 
-nav.section.sidebar h3 {
-  color: #ffffff !important;
-}
 ```
 
 ```{css, echo=FALSE}
@@ -1128,11 +1144,19 @@ nav.section.sidebar h3 {
 .section.level3 {
   margin: 0 !important;
   padding: 0 !important;
+  background-color: #f8f2e2 !important;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #f8f2e2 !important;
 }
 
 .chart-stage {
   margin: 0 !important;
   padding: 0 !important;
+  background-color: #001A3E !important;  
 }
 
 .chart-wrapper {
@@ -1140,19 +1164,19 @@ nav.section.sidebar h3 {
   padding: 0 !important;
 }
 
-
 .chart-stage,
 .chart-wrapper,
 .section.level3 {
   border: none !important;
   box-shadow: none !important;}
 
-
-.chart-stage {
-  background-color: #001A3E !important; 
+.main-container {
+  background-color: #001A3E; 
 }
-
 ```
+
+Row {data-height=40}
+-------------------------------------
 
 Row {data-height=100}
 -------------------------------------
