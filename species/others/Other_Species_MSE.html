@@ -1961,16 +1961,17 @@ Other Species</a><br /></p>
 </div>
 <style type="text/css">
 
-nav.section.sidebar {
-background-color: #001A3E !important;
+.navbar {
+background-color: rgba(0, 26, 62, 0.8) !important; border: none !important;
+backdrop-filter: blur(4px); }
+
+.navbar .navbar-nav > li > a,
+.navbar .navbar-brand {
 color: #ffffff !important;
 }
 
-nav.section.sidebar,
-nav.section.sidebar a {
-color: #ffffff !important;
-}
-nav.section.sidebar h3 {
+.navbar .navbar-nav > .active > a {
+background-color: rgba(0, 51, 102, 0.9) !important;
 color: #ffffff !important;
 }
 </style>
@@ -1981,11 +1982,17 @@ color: #ffffff !important;
 .section.level3 {
 margin: 0 !important;
 padding: 0 !important;
+background-color: #f8f2e2 !important;
+}
+body {
+margin: 0 !important;
+padding: 0 !important;
+background-color: #f8f2e2 !important;
 }
 .chart-stage {
 margin: 0 !important;
 padding: 0 !important;
-}
+background-color: #001A3E !important; }
 .chart-wrapper {
 margin: 0 !important;
 padding: 0 !important;
@@ -1995,11 +2002,14 @@ padding: 0 !important;
 .section.level3 {
 border: none !important;
 box-shadow: none !important;}
-.chart-stage {
-background-color: #001A3E !important; }
+.main-container {
+background-color: #001A3E; }
 </style>
 </div>
-<div id="row" class="section level2" data-height="70">
+<div id="row" class="section level2" data-height="40">
+<h2>Row</h2>
+</div>
+<div id="row-1" class="section level2" data-height="70">
 <h2>Row</h2>
 <div id="section" class="section level3">
 <h3></h3>
@@ -2013,7 +2023,7 @@ ICCAT MSE for other species
 </div>
 </div>
 </div>
-<div id="row-1" class="section level2" data-height="380">
+<div id="row-2" class="section level2" data-height="380">
 <h2>Row</h2>
 <div id="Overview_eng" class="section level3">
 <h3></h3>
@@ -2036,7 +2046,7 @@ management procedures, and progress.
 </div>
 </div>
 </div>
-<div id="row-2" class="section level2" data-height="700">
+<div id="row-3" class="section level2" data-height="700">
 <h2>Row</h2>
 <div id="SALB_eng" class="section level3">
 <h3></h3>
@@ -2075,14 +2085,14 @@ Progress
 </h1>
 <h2 style="font-size:1.5em; color:#001A3E; ">
 Initial scoping conducted by the SCRS Albacore Species
-Group.<br>Operating model development is anticipated in coordination
-with updated assessments.<br>Performance metrics and stakeholder
-engagement will follow SCRS guidelines.
+Group<br>Operating model development is anticipated in coordination with
+updated assessments.<br>Performance metrics and stakeholder engagement
+will follow SCRS guidelines.
 </h2>
 </div>
 </div>
 </div>
-<div id="row-3" class="section level2" data-height="400">
+<div id="row-4" class="section level2" data-height="400">
 <h2>Row</h2>
 <div id="SSWO_eng" class="section level3">
 <h3></h3>
@@ -2107,14 +2117,14 @@ Progress
 </h1>
 <h2 style="font-size:1.5em; color:#ffffff; ">
 Initial scoping conducted by the SCRS Albacore Species
-Group.<br>Operating model development is anticipated in coordination
-with updated assessments.<br>Performance metrics and stakeholder
-engagement will follow SCRS guidelines.
+Group<br>Operating model development is anticipated in coordination with
+updated assessments.<br>Performance metrics and stakeholder engagement
+will follow SCRS guidelines.
 </h2>
 </div>
 </div>
 </div>
-<div id="row-4" class="section level2" data-height="760">
+<div id="row-5" class="section level2" data-height="760">
 <h2>Row</h2>
 <div id="BSH_eng" class="section level3">
 <h3></h3>
@@ -2167,7 +2177,7 @@ Commission by 2025.
 </div>
 </div>
 </div>
-<div id="row-5" class="section level2" data-height="580">
+<div id="row-6" class="section level2" data-height="580">
 <h2>Row</h2>
 <div id="NEPOR_eng" class="section level3">
 <h3></h3>
@@ -2210,7 +2220,7 @@ underway for Northeast Atlantic porbeagle shark.
 </div>
 </div>
 </div>
-<div id="row-6" class="section level2" data-height="70">
+<div id="row-7" class="section level2" data-height="70">
 <h2>Row</h2>
 <div id="References_eng" class="section level3">
 <h3></h3>
@@ -2224,7 +2234,7 @@ References
 </div>
 </div>
 </div>
-<div id="row-7" class="section level2" data-height="180">
+<div id="row-8" class="section level2" data-height="180">
 <h2>Row</h2>
 <div id="section-1" class="section level3" data-width="15%">
 <h3></h3>
@@ -2293,7 +2303,7 @@ character(0)
 <h3></h3>
 </div>
 </div>
-<div id="row-8" class="section level2" data-height="240">
+<div id="row-9" class="section level2" data-height="240">
 <h2>Row</h2>
 <div id="section-8" class="section level3">
 <h3></h3>
@@ -2324,17 +2334,18 @@ Copyright © 2025 ICCAT. All rights reserved
 <!-- Column 1 -->
 <div>
 <p><strong>ICCAT MSE pour d’autres espèces</strong><br />
-<a href="#Overview_fra">Aperçu</a><br /> <a href="#SALB_fra">South
-Atlantic Albacore</a><br /> <a href="#SSWO_fra">South Atlantic
-Swordfish</a><br /> <a href="#BSH_fra">Blue Sharks</a><br />
-<a href="#NEPOR_fra">Northeast Atlantic Porbeagle</a><br />
-<a href="#References_fra">Références</a><br /></p>
+<a href="#Overview_fra">Aperçu</a><br /> <a href="#SALB_fra">Germon de
+l’Atlantique Sud</a><br /> <a href="#SSWO_fra">Espadon de l’Atlantique
+Sud</a><br /> <a href="#BSH_fra">Requins bleus</a><br />
+<a href="#NEPOR_fra">Requin-taupe commun de l’Atlantique
+Nord-Est</a><br /> <a href="#References_fra">Références</a><br /></p>
 </div>
 <hr />
 <!-- Column 2 -->
 <div>
 <p><strong>Liens ICCAT MSE</strong><br />
-<a href="https://iccat.github.io/iccat-mse-web/"> Résumé de l’MSE</a><br />
+<a href="https://iccat.github.io/iccat-mse-web/#fra"> Résumé de
+l’MSE</a><br />
 <a href="https://iccat.github.io/iccat-mse-web/species/NALB/NALB_MSE.html#fra">
 Germon de l’Atlantique Nord</a><br />
 <a href="https://iccat.github.io/iccat-mse-web/species/BFT/BFT_MSE.html#fra">
@@ -2391,7 +2402,7 @@ box-shadow: none !important;}
 background-color: #001A3E !important; }
 </style>
 </div>
-<div id="row-9" class="section level2" data-height="70">
+<div id="row-10" class="section level2" data-height="70">
 <h2>Row</h2>
 <div id="section-9" class="section level3">
 <h3></h3>
@@ -2405,7 +2416,7 @@ ICCAT MSE pour d’autres espèces
 </div>
 </div>
 </div>
-<div id="row-10" class="section level2" data-height="380">
+<div id="row-11" class="section level2" data-height="380">
 <h2>Row</h2>
 <div id="Overview_fra" class="section level3">
 <h3></h3>
@@ -2418,17 +2429,18 @@ Aperçu
 </h1>
 <hr style="border: none; height: 1.5px; background-color: #ccc;" />
 <h2 style="font-size:1.5em; color:#ffffff; ">
-This page summarizes the development of closed-loop simulation and
-Management Strategy Evaluation (MSE) processes under ICCAT for four key
-species/stocks:<br><br>Southern Albacore <br>Southern Swordfish <br>Blue
-Sharks <br>North Atlantic Porbeagle<br><br>Each section outlines ICCAT
-recommendations (if applicable), operating model development, candidate
-management procedures, and progress.
+Cette page résume le développement des processus de simulation en boucle
+fermée et d’évaluation des stratégies de gestion (ESG) dans le cadre de
+la CICTA pour quatre espèces/stocks clés :<br><br>Germon du
+Sud<br>Espadon du Sud<br>Requin bleu<br>Requin-taupe commun de
+l’Atlantique Nord<br><br>Chaque section présente les recommandations de
+la CICTA (le cas échéant), le développement du modèle opérationnel, les
+procédures de gestion envisageables et les progrès réalisés.
 </h2>
 </div>
 </div>
 </div>
-<div id="row-11" class="section level2" data-height="700">
+<div id="row-12" class="section level2" data-height="700">
 <h2>Row</h2>
 <div id="SALB_fra" class="section level3">
 <h3></h3>
@@ -2437,44 +2449,48 @@ management procedures, and progress.
 </div>
 <div style="background-color:#f8f2e2; padding:10px 40px; text-align: left;">
 <h1 style="font-size:2em; color:#001A3E; font-weight: bold;">
-South Atlantic Albacore
+Germon de l’Atlantique Sud
 </h1>
 <hr style="border: none; height: 1.5px; background-color: #ccc;" />
 <h1 style="font-size:1.8em; color:#001A3E; font-weight: bold;">
-ICCAT Recommendations and Objectives
+Recommandations et objectifs de la CICTA
 </h1>
 <h2 style="font-size:1.5em; color:#001A3E; ">
-Rec. 24‑09 (2024) outlines the initial operational management objectives
-to support the development of a Management Strategy Evaluation (MSE) for
-South Atlantic albacore. Key elements include:<br><br>A call for ICCAT
-to adopt a candidate Management Procedure (MP) for Southern Albacore by
-2029, with an interim BLIM set at 40% of spawning stock biomass at MSY
-(SSBMSY), unless otherwise advised.<br>A set of operational objectives
-to guide MSE design:<br>Stock status: ≥ 60% probability of remaining in
-the green quadrant of the Kobe plot over a 30-year
-projection.<br>Safety: ≤ 15% probability of falling below BLIM at any
-point in the projection period.<br>Yield: Maximize overall catch
-levels.<br>Stability: TAC changes between management periods should not
-exceed ±20%.<br>A proposed 3‑year management cycle for initial
-implementation.<br>A provision for revising these objectives by Panel 3,
-in consultation with the SCRS Albacore Species Group, with final
-objectives to be submitted by 2029.<br>These objectives define a
-transparent decision-making framework for operating models and candidate
-MPs during the S‑ALB MSE process.
+La Rec. 24-09 (2024) définit les objectifs opérationnels initiaux de
+gestion visant à soutenir l’élaboration d’une évaluation de la stratégie
+de gestion (ESG) pour le germon de l’Atlantique Sud. Les principaux
+éléments comprennent :<br><br>Un appel à la CICTA pour qu’elle adopte
+une procédure de gestion (PG) pour le germon du Sud d’ici 2029, avec une
+BLIM provisoire fixée à 40 % de la biomasse du stock reproducteur à la
+PME (SSBPME), sauf avis contraire.<br>Un ensemble d’objectifs
+opérationnels pour guider la conception de l’ESG :<br>État du stock :
+probabilité ≥ 60 % de rester dans le quadrant vert du diagramme de Kobe
+sur une projection de 30 ans.<br>Sécurité : probabilité ≤ 15 % de passer
+sous la BLIM à tout moment de la période de projection.<br>Rendement :
+Optimiser les niveaux de capture globaux.<br>Stabilité : les variations
+du TAC entre les périodes de gestion ne devraient pas dépasser
+± 20 %.<br>Un cycle de gestion triennal proposé pour la mise en œuvre
+initiale.<br>Une disposition prévoyant la révision de ces objectifs par
+la Sous-commission 3, en consultation avec le SCRS sur les espèces de
+germon. Groupe, dont les objectifs définitifs seront soumis d’ici
+2029.<br>Ces objectifs définissent un cadre décisionnel transparent pour
+les modèles opérationnels et les candidats députés lors du processus
+S-ALB MSE.
 </h2>
 <h1 style="font-size:1.8em; color:#001A3E; font-weight: bold;">
-Progress
+Progrès
 </h1>
 <h2 style="font-size:1.5em; color:#001A3E; ">
-Initial scoping conducted by the SCRS Albacore Species
-Group.<br>Operating model development is anticipated in coordination
-with updated assessments.<br>Performance metrics and stakeholder
-engagement will follow SCRS guidelines.
+Étude initiale réalisée par le groupe d’espèces Albacore du SCRS.<br>Le
+développement du modèle opérationnel est prévu en coordination avec les
+évaluations actualisées.<br>Les indicateurs de performance et
+l’engagement des parties prenantes seront conformes aux directives du
+SCRS.
 </h2>
 </div>
 </div>
 </div>
-<div id="row-12" class="section level2" data-height="400">
+<div id="row-13" class="section level2" data-height="400">
 <h2>Row</h2>
 <div id="SSWO_fra" class="section level3">
 <h3></h3>
@@ -2483,30 +2499,32 @@ engagement will follow SCRS guidelines.
 </div>
 <div style="background-color:#001A3E; padding:10px 40px; text-align: left;">
 <h1 style="font-size:2em; color:#ffffff; font-weight: bold;">
-South Atlantic Swordfish
+Espadon de l’Atlantique Sud
 </h1>
 <hr style="border: none; height: 1.5px; background-color: #ccc;" />
 <h1 style="font-size:1.8em; color:#ffffff; font-weight: bold;">
-ICCAT Recommendations
+Recommandations de la CICTA
 </h1>
 <h2 style="font-size:1.5em; color:#ffffff; ">
-Although no formal MSE has been mandated for Southern Swordfish, the
-SCRS has acknowledged its potential utility and continues to evaluate
-stock status and management options.
+Bien qu’aucune évaluation de la performance des stocks (ESG) formelle
+n’ait été imposée pour l’espadon du Sud, le SCRS a reconnu son utilité
+potentielle et continue d’évaluer l’état du stock et les options de
+gestion.
 </h2>
 <h1 style="font-size:1.8em; color:#ffffff; font-weight: bold;">
-Progress
+Progrès
 </h1>
 <h2 style="font-size:1.5em; color:#ffffff; ">
-Initial scoping conducted by the SCRS Albacore Species
-Group.<br>Operating model development is anticipated in coordination
-with updated assessments.<br>Performance metrics and stakeholder
-engagement will follow SCRS guidelines.
+Étude initiale réalisée par le groupe d’espèces Albacore du SCRS.<br>Le
+développement du modèle opérationnel est prévu en coordination avec les
+évaluations actualisées.<br>Les indicateurs de performance et
+l’engagement des parties prenantes seront conformes aux directives du
+SCRS.
 </h2>
 </div>
 </div>
 </div>
-<div id="row-13" class="section level2" data-height="760">
+<div id="row-14" class="section level2" data-height="760">
 <h2>Row</h2>
 <div id="BSH_fra" class="section level3">
 <h3></h3>
@@ -2515,51 +2533,57 @@ engagement will follow SCRS guidelines.
 </div>
 <div style="background-color:#f8f2e2; padding:10px 40px; text-align: left;">
 <h1 style="font-size:2em; color:#001A3E; font-weight: bold;">
-Blue Sharks
+Requins bleus
 </h1>
 <hr style="border: none; height: 1.5px; background-color: #ccc;" />
 <h1 style="font-size:1.8em; color:#001A3E; font-weight: bold;">
-ICCAT Recommendations
+Recommandations de la CICTA
 </h1>
 <h2 style="font-size:1.5em; color:#001A3E; ">
-While a formal MSE process has not yet been launched for Blue Shark,
-several ICCAT recommendations call for the evaluation of
-feasibility:<br><br>Rec. 21-09: Requests the SCRS to explore the
-feasibility of developing an MSE for Blue Shark.<br>Rec. 22-08:
-Reiterates this request and establishes the basis for analytical
-development.
+Bien qu’aucun processus formel d’évaluation de la sécurité des mesures
+(ESG) n’ait encore été lancé pour le requin peau bleue, plusieurs
+recommandations de la CICTA préconisent une évaluation de sa
+faisabilité :<br><br>Rec. 21-09 : Demande au SCRS d’étudier la
+faisabilité de l’élaboration d’une ESG pour le requin peau
+bleue.<br>Rec. 22-08 : Réitère cette demande et établit les bases d’une
+analyse approfondie.
 </h2>
 <h1 style="font-size:1.8em; color:#001A3E; font-weight: bold;">
-MSE-Related Updates
+Mises à jour liées à MSE
 </h1>
 <h2 style="font-size:1.5em; color:#001A3E; ">
-The SCRS has advanced the outlook for Blue Shark MSE through two key
-documents prepared in 2024. These focus on developing code architecture,
-conducting preliminary closed-loop simulations for the northern stock,
-and assessing technical feasibility.<br><br>Taylor (2024) presents a
-compact closed-loop simulation framework for Blue Shark MSE that uses
-multivariate Bayesian priors for life-history parameters and tests
-ICCAT-relevant management procedures against minimum performance
-standards. Example simulations show that several MPs—both index- and
-model-based—achieve high probabilities (&gt;90%) of remaining above 40%
-BMSY, with green quadrant probabilities ranging from 60% to 90%, and
-greater catch variability observed in model-based MPs.<br><br>Carruthers
-(2024) introduces a streamlined simulation platform for Atlantic Blue
-Shark MSE, using operating models that incorporate uncertainty in
-life-history and productivity parameters. It evaluates both index- and
-model-based MPs, demonstrating that many exceed performance benchmarks
-such as maintaining biomass above 40% BMSY and achieving 60–90%
-probability of being in the Kobe green quadrant. The platform also
-explores algorithms to automatically tune MPs to minimum performance
-standards. The full source code is available at
-github.com/Blue-Matter/Blue_Shark_MSE.<br><br>The SCRS aims to submit a
-feasibility analysis for northern and southern Blue Shark MSE to the
-Commission by 2025.
+Le SCRS a fait progresser les perspectives de l’ESG du requin peau bleue
+grâce à deux documents clés préparés en 2024. Ces documents portent sur
+le développement de l’architecture du code, la réalisation de
+simulations préliminaires en boucle fermée pour le stock du nord et
+l’évaluation de la faisabilité technique.<br><br>Taylor (2024) présente
+un cadre de simulation compact en boucle fermée pour l’ESG du requin
+peau bleue. Ce cadre utilise des priors bayésiens multivariés pour les
+paramètres du cycle biologique et teste les procédures de gestion
+pertinentes de la CICTA par rapport aux normes de performance minimales.
+Des exemples de simulation montrent que plusieurs PG, qu’elles soient
+basées sur des indices ou sur des modèles, présentent de fortes
+probabilités (&gt; 90 %) de rester au-dessus de 40 % de la BPME, avec
+des probabilités dans le quadrant vert allant de 60 % à 90 %, et une
+plus grande variabilité des captures observée dans les PG basées sur des
+modèles.<br><br>Carruthers (2024) présente une plateforme de simulation
+simplifiée pour l’ESG du requin peau bleue de l’Atlantique, utilisant
+des modèles opérationnels qui intègrent l’incertitude des paramètres du
+cycle biologique et de la productivité. Il évalue les PG basées sur des
+indices et sur des modèles, démontrant que nombre d’entre elles
+dépassent les critères de performance tels que Maintenir la biomasse
+au-dessus de 40 % de la BMSY et atteindre une probabilité de 60 à 90 %
+d’être dans le quadrant vert de Kobe. La plateforme explore également
+des algorithmes permettant d’ajuster automatiquement les PM aux normes
+de performance minimales. Le code source complet est disponible sur
+github.com/Blue-Matter/Blue_Shark_MSE.<br><br>Le SCRS a pour objectif de
+soumettre à la Commission une analyse de faisabilité pour le MSE du
+requin bleu du nord et du sud d’ici 2025.
 </h2>
 </div>
 </div>
 </div>
-<div id="row-14" class="section level2" data-height="580">
+<div id="row-15" class="section level2" data-height="580">
 <h2>Row</h2>
 <div id="NEPOR_fra" class="section level3">
 <h3></h3>
@@ -2568,41 +2592,46 @@ Commission by 2025.
 </div>
 <div style="background-color:#001A3E; padding:10px 40px; text-align: left;">
 <h1 style="font-size:2em; color:#ffffff; font-weight: bold;">
-Northeast Atlantic Porbeagle
+Requin-taupe commun de l’Atlantique Nord-Est
 </h1>
 <hr style="border: none; height: 1.5px; background-color: #ccc;" />
 <h1 style="font-size:1.8em; color:#ffffff; font-weight: bold;">
-Preliminary MSE Work
+Travail préliminaire sur l’évaluation des performances microscopiques
 </h1>
 <h2 style="font-size:1.5em; color:#ffffff; ">
-Although a formal Management Strategy Evaluation (MSE) process has not
-been established, closed-loop simulation techniques have been applied to
-evaluate the implications of various data and assessment model
-configurations on the performance of candidate management procedures for
-Northeast Atlantic porbeagle shark. In the absence of a consistent time
-series of relative abundance for the stock, such simulation-based
-analyses are particularly valuable for exploring alternative assessment
-and management approaches.<br><br>Preliminary MSE work for Northeast
-Atlantic porbeagle has focused on simulation testing, the definition of
-operational objectives, and the influence of data availability on yield
-and conservation performance. Initial simulations, presented in
-SCRS/2022/090, applied closed-loop testing to a range of simple
-empirical management procedures. These early trials revealed that
-management performance varied considerably across candidate procedures,
-particularly with respect to yield and the risk of stock depletion. The
-analyses followed the structured MSE framework outlined by Punt et
-al. (2016), incorporating operating model specification, objective
-setting, and evaluation of performance metrics.<br><br>A complementary
-document, SCRS/2022/092, proposed a set of management objectives,
-associated performance metrics, and graphical tools intended to support
-stakeholder engagement and transparent evaluation of candidate
-management procedures.<br><br>At present, no active MSE development is
-underway for Northeast Atlantic porbeagle shark.
+Bien qu’aucun processus formel d’évaluation des stratégies de gestion
+(ESG) n’ait été établi, des techniques de simulation en boucle fermée
+ont été appliquées pour évaluer les implications de diverses
+configurations de données et de modèles d’évaluation sur la performance
+des procédures de gestion candidates pour le requin-taupe commun de
+l’Atlantique Nord-Est. En l’absence de séries chronologiques cohérentes
+sur l’abondance relative du stock, ces analyses par simulation sont
+particulièrement utiles pour explorer d’autres approches d’évaluation et
+de gestion.<br><br>Les travaux préliminaires d’ESG pour le requin-taupe
+commun de l’Atlantique Nord-Est se sont concentrés sur les tests de
+simulation, la définition d’objectifs opérationnels et l’influence de la
+disponibilité des données sur le rendement et les performances de
+conservation. Les premières simulations, présentées dans le document
+SCRS/2022/090, ont appliqué des tests en boucle fermée à une série de
+procédures de gestion empiriques simples. Ces premiers essais ont révélé
+que la performance de la gestion variait considérablement selon les
+procédures candidates, notamment en ce qui concerne le rendement et le
+risque d’épuisement du stock. Les analyses ont suivi le cadre structuré
+d’ESG décrit par Punt et al. (2016), intégrant la spécification du
+modèle opérationnel, la définition d’objectifs et l’évaluation des
+indicateurs de performance.<br><br>Un document complémentaire Le
+document SCRS/2022/092 propose un ensemble d’objectifs de gestion, des
+indicateurs de performance associés et des outils graphiques destinés à
+favoriser l’engagement des parties prenantes et une évaluation
+transparente des procédures de gestion candidates.<br><br>À l’heure
+actuelle, aucun développement actif d’une stratégie de gestion des
+risques n’est en cours pour le requin-taupe commun de l’Atlantique
+Nord-Est.
 </h2>
 </div>
 </div>
 </div>
-<div id="row-15" class="section level2" data-height="70">
+<div id="row-16" class="section level2" data-height="70">
 <h2>Row</h2>
 <div id="References_fra" class="section level3">
 <h3></h3>
@@ -2616,7 +2645,7 @@ Références
 </div>
 </div>
 </div>
-<div id="row-16" class="section level2" data-height="180">
+<div id="row-17" class="section level2" data-height="180">
 <h2>Row</h2>
 <div id="section-10" class="section level3" data-width="15%">
 <h3></h3>
@@ -2685,7 +2714,7 @@ character(0)
 <h3></h3>
 </div>
 </div>
-<div id="row-17" class="section level2" data-height="240">
+<div id="row-18" class="section level2" data-height="240">
 <h2>Row</h2>
 <div id="section-17" class="section level3">
 <h3></h3>
@@ -2716,17 +2745,18 @@ Copyright © 2025 ICCAT. Tous droits réservés
 <!-- Column 1 -->
 <div>
 <p><strong>ICCAT MSE para otras especies</strong><br />
-<a href="#Overview_esp">Resumen</a><br /> <a href="#SALB_esp">South
-Atlantic Albacore</a><br /> <a href="#SSWO_esp">South Atlantic
-Swordfish</a><br /> <a href="#BSH_esp">Blue Sharks</a><br />
-<a href="#NEPOR_esp">Northeast Atlantic Porbeagle</a><br />
+<a href="#Overview_esp">Resumen</a><br /> <a href="#SALB_esp">Atún blanco
+del Atlántico Sur</a><br /> <a href="#SSWO_esp">Pez espada del Atlántico
+Sur</a><br /> <a href="#BSH_esp">Tiburones azules</a><br />
+<a href="#NEPOR_esp">Marrajo sardinero del Atlántico Noreste</a><br />
 <a href="#References_esp">Referencias</a><br /></p>
 </div>
 <hr />
 <!-- Column 2 -->
 <div>
 <p><strong>Enlaces ICCAT MSE</strong><br />
-<a href="https://iccat.github.io/iccat-mse-web/"> Resumen de MSE</a><br />
+<a href="https://iccat.github.io/iccat-mse-web/#esp"> Resumen de
+MSE</a><br />
 <a href="https://iccat.github.io/iccat-mse-web/species/NALB/NALB_MSE.html#spa">
 Atún blanco del Atlántico Norte</a><br />
 <a href="https://iccat.github.io/iccat-mse-web/species/BFT/BFT_MSE.html#spa">
@@ -2783,7 +2813,7 @@ box-shadow: none !important;}
 background-color: #001A3E !important; }
 </style>
 </div>
-<div id="row-18" class="section level2" data-height="70">
+<div id="row-19" class="section level2" data-height="70">
 <h2>Row</h2>
 <div id="section-18" class="section level3">
 <h3></h3>
@@ -2797,7 +2827,7 @@ ICCAT MSE para otras especies
 </div>
 </div>
 </div>
-<div id="row-19" class="section level2" data-height="380">
+<div id="row-20" class="section level2" data-height="380">
 <h2>Row</h2>
 <div id="Overview_esp" class="section level3">
 <h3></h3>
@@ -2810,17 +2840,18 @@ Resumen
 </h1>
 <hr style="border: none; height: 1.5px; background-color: #ccc;" />
 <h2 style="font-size:1.5em; color:#ffffff; ">
-This page summarizes the development of closed-loop simulation and
-Management Strategy Evaluation (MSE) processes under ICCAT for four key
-species/stocks:<br><br>Southern Albacore <br>Southern Swordfish <br>Blue
-Sharks <br>North Atlantic Porbeagle<br><br>Each section outlines ICCAT
-recommendations (if applicable), operating model development, candidate
-management procedures, and progress.
+Esta página resume el desarrollo de los procesos de simulación de ciclo
+cerrado y Evaluación de Estrategias de Ordenación (EEO) en el marco de
+la CICAA para cuatro especies/stocks clave:<br><br>Atún blanco del
+sur<br>Pez espada del sur<br>Tiburón azul<br>Marrajo sardinero del
+Atlántico Norte<br><br>Cada sección describe las recomendaciones de la
+CICAA (si procede), el desarrollo del modelo operativo, los posibles
+procedimientos de ordenación y el progreso.
 </h2>
 </div>
 </div>
 </div>
-<div id="row-20" class="section level2" data-height="700">
+<div id="row-21" class="section level2" data-height="700">
 <h2>Row</h2>
 <div id="SALB_esp" class="section level3">
 <h3></h3>
@@ -2829,44 +2860,49 @@ management procedures, and progress.
 </div>
 <div style="background-color:#f8f2e2; padding:10px 40px; text-align: left;">
 <h1 style="font-size:2em; color:#001A3E; font-weight: bold;">
-South Atlantic Albacore
+Atún blanco del Atlántico Sur
 </h1>
 <hr style="border: none; height: 1.5px; background-color: #ccc;" />
 <h1 style="font-size:1.8em; color:#001A3E; font-weight: bold;">
-ICCAT Recommendations and Objectives
+Recomendaciones y objetivos de la CICAA
 </h1>
 <h2 style="font-size:1.5em; color:#001A3E; ">
-Rec. 24‑09 (2024) outlines the initial operational management objectives
-to support the development of a Management Strategy Evaluation (MSE) for
-South Atlantic albacore. Key elements include:<br><br>A call for ICCAT
-to adopt a candidate Management Procedure (MP) for Southern Albacore by
-2029, with an interim BLIM set at 40% of spawning stock biomass at MSY
-(SSBMSY), unless otherwise advised.<br>A set of operational objectives
-to guide MSE design:<br>Stock status: ≥ 60% probability of remaining in
-the green quadrant of the Kobe plot over a 30-year
-projection.<br>Safety: ≤ 15% probability of falling below BLIM at any
-point in the projection period.<br>Yield: Maximize overall catch
-levels.<br>Stability: TAC changes between management periods should not
-exceed ±20%.<br>A proposed 3‑year management cycle for initial
-implementation.<br>A provision for revising these objectives by Panel 3,
-in consultation with the SCRS Albacore Species Group, with final
-objectives to be submitted by 2029.<br>These objectives define a
-transparent decision-making framework for operating models and candidate
-MPs during the S‑ALB MSE process.
+La Rec. 24-09 (2024) describe los objetivos operativos iniciales de
+ordenación para respaldar el desarrollo de una Evaluación de la
+Estrategia de Ordenación (EEO) para el atún blanco del Atlántico Sur.
+Los elementos clave incluyen:<br><br>Un llamamiento a la CICAA para que
+adopte un Procedimiento de Ordenación (PM) propuesto para el atún blanco
+del sur para 2029, con un BLIM provisional establecido en el 40 % de la
+biomasa de la población reproductora en RMS (SSBRMS), salvo que se
+indique lo contrario.<br>Un conjunto de objetivos operativos para guiar
+el diseño de la EEO:<br>Estado de la población: ≥60 % de probabilidad de
+permanecer en el cuadrante verde del diagrama de Kobe durante una
+proyección de 30 años.<br>Seguridad: ≤15 % de probabilidad de caer por
+debajo del BLIM en cualquier momento del período de
+proyección.<br>Rendimiento: Maximizar los niveles generales de
+captura.<br>Estabilidad: Los cambios en el TAC entre períodos de
+ordenación no deben superar el ±20 %.<br>Un ciclo de ordenación trienal
+propuesto para la implementación inicial.<br>Una disposición para que la
+Panel3 revise estos objetivos, en consulta con el SCRS. Grupo de
+Especies de Albacora, cuyos objetivos finales se presentarán en
+2029.<br>Estos objetivos definen un marco transparente para la toma de
+decisiones de los modelos operativos y los candidatos a diputados
+durante el proceso de selección de especies de albacora S-ALB.
 </h2>
 <h1 style="font-size:1.8em; color:#001A3E; font-weight: bold;">
-Progress
+Progreso
 </h1>
 <h2 style="font-size:1.5em; color:#001A3E; ">
-Initial scoping conducted by the SCRS Albacore Species
-Group.<br>Operating model development is anticipated in coordination
-with updated assessments.<br>Performance metrics and stakeholder
-engagement will follow SCRS guidelines.
+El Grupo de Especies de Albacora del SCRS realizó una evaluación
+inicial.<br>Se prevé el desarrollo del modelo operativo en coordinación
+con las evaluaciones actualizadas.<br>Las métricas de rendimiento y la
+participación de las partes interesadas se ajustarán a las directrices
+del SCRS.
 </h2>
 </div>
 </div>
 </div>
-<div id="row-21" class="section level2" data-height="400">
+<div id="row-22" class="section level2" data-height="400">
 <h2>Row</h2>
 <div id="SSWO_esp" class="section level3">
 <h3></h3>
@@ -2875,30 +2911,32 @@ engagement will follow SCRS guidelines.
 </div>
 <div style="background-color:#001A3E; padding:10px 40px; text-align: left;">
 <h1 style="font-size:2em; color:#ffffff; font-weight: bold;">
-South Atlantic Swordfish
+Pez espada del Atlántico Sur
 </h1>
 <hr style="border: none; height: 1.5px; background-color: #ccc;" />
 <h1 style="font-size:1.8em; color:#ffffff; font-weight: bold;">
-ICCAT Recommendations
+Recomendaciones de la CICAA
 </h1>
 <h2 style="font-size:1.5em; color:#ffffff; ">
-Although no formal MSE has been mandated for Southern Swordfish, the
-SCRS has acknowledged its potential utility and continues to evaluate
-stock status and management options.
+Aunque no se ha exigido una evaluación formal del rendimiento de las
+poblaciones (SPA) para el pez espada del sur, el SCRS reconoció su
+utilidad potencial y continúa evaluando el estado de las poblaciones y
+las opciones de gestión.
 </h2>
 <h1 style="font-size:1.8em; color:#ffffff; font-weight: bold;">
-Progress
+Progreso
 </h1>
 <h2 style="font-size:1.5em; color:#ffffff; ">
-Initial scoping conducted by the SCRS Albacore Species
-Group.<br>Operating model development is anticipated in coordination
-with updated assessments.<br>Performance metrics and stakeholder
-engagement will follow SCRS guidelines.
+El Grupo de Especies de Albacora del SCRS realizó una evaluación
+inicial.<br>Se prevé el desarrollo del modelo operativo en coordinación
+con las evaluaciones actualizadas.<br>Las métricas de rendimiento y la
+participación de las partes interesadas se ajustarán a las directrices
+del SCRS.
 </h2>
 </div>
 </div>
 </div>
-<div id="row-22" class="section level2" data-height="760">
+<div id="row-23" class="section level2" data-height="760">
 <h2>Row</h2>
 <div id="BSH_esp" class="section level3">
 <h3></h3>
@@ -2907,51 +2945,55 @@ engagement will follow SCRS guidelines.
 </div>
 <div style="background-color:#f8f2e2; padding:10px 40px; text-align: left;">
 <h1 style="font-size:2em; color:#001A3E; font-weight: bold;">
-Blue Sharks
+Tiburones azules
 </h1>
 <hr style="border: none; height: 1.5px; background-color: #ccc;" />
 <h1 style="font-size:1.8em; color:#001A3E; font-weight: bold;">
-ICCAT Recommendations
+Recomendaciones de la CICAA
 </h1>
 <h2 style="font-size:1.5em; color:#001A3E; ">
-While a formal MSE process has not yet been launched for Blue Shark,
-several ICCAT recommendations call for the evaluation of
-feasibility:<br><br>Rec. 21-09: Requests the SCRS to explore the
-feasibility of developing an MSE for Blue Shark.<br>Rec. 22-08:
-Reiterates this request and establishes the basis for analytical
-development.
+Si bien aún no se ha puesto en marcha un proceso formal de evaluación de
+la viabilidad de la pesca para la tintorera, varias recomendaciones de
+la CICAA exigen la evaluación de su viabilidad:<br><br>Rec. 21-09:
+Solicita al SCRS que explore la viabilidad de desarrollar una evaluación
+de la viabilidad de la pesca para la tintorera.<br>Rec. 22-08: Reitera
+esta solicitud y establece las bases para el desarrollo analítico.
 </h2>
 <h1 style="font-size:1.8em; color:#001A3E; font-weight: bold;">
-MSE-Related Updates
+Actualizaciones relacionadas con MSE
 </h1>
 <h2 style="font-size:1.5em; color:#001A3E; ">
-The SCRS has advanced the outlook for Blue Shark MSE through two key
-documents prepared in 2024. These focus on developing code architecture,
-conducting preliminary closed-loop simulations for the northern stock,
-and assessing technical feasibility.<br><br>Taylor (2024) presents a
-compact closed-loop simulation framework for Blue Shark MSE that uses
-multivariate Bayesian priors for life-history parameters and tests
-ICCAT-relevant management procedures against minimum performance
-standards. Example simulations show that several MPs—both index- and
-model-based—achieve high probabilities (&gt;90%) of remaining above 40%
-BMSY, with green quadrant probabilities ranging from 60% to 90%, and
-greater catch variability observed in model-based MPs.<br><br>Carruthers
-(2024) introduces a streamlined simulation platform for Atlantic Blue
-Shark MSE, using operating models that incorporate uncertainty in
-life-history and productivity parameters. It evaluates both index- and
-model-based MPs, demonstrating that many exceed performance benchmarks
-such as maintaining biomass above 40% BMSY and achieving 60–90%
-probability of being in the Kobe green quadrant. The platform also
-explores algorithms to automatically tune MPs to minimum performance
-standards. The full source code is available at
-github.com/Blue-Matter/Blue_Shark_MSE.<br><br>The SCRS aims to submit a
-feasibility analysis for northern and southern Blue Shark MSE to the
-Commission by 2025.
+El SCRS ha avanzado en las perspectivas para la MSE del tiburón azul
+mediante dos documentos clave preparados en 2024. Estos se centran en el
+desarrollo de la arquitectura del código, la realización de simulaciones
+preliminares de ciclo cerrado para la población del norte y la
+evaluación de la viabilidad técnica.<br><br>Taylor (2024) presenta un
+marco compacto de simulación de ciclo cerrado para la MSE del tiburón
+azul que utiliza priores bayesianos multivariantes para los parámetros
+del ciclo vital y evalúa los procedimientos de ordenación relevantes
+para la CICAA con respecto a los estándares mínimos de rendimiento. Las
+simulaciones de ejemplo muestran que varias MSE, tanto basadas en
+índices como en modelos, alcanzan altas probabilidades (&gt;90%) de
+mantenerse por encima del 40% de BRMS, con probabilidades del cuadrante
+verde que oscilan entre el 60% y el 90%, y se observa una mayor
+variabilidad de las capturas en las MSE basadas en
+modelos.<br><br>Carruthers (2024) presenta una plataforma de simulación
+optimizada para la MSE del tiburón azul del Atlántico, utilizando
+modelos operativos que incorporan la incertidumbre en los parámetros del
+ciclo vital y la productividad. Evalúa las MSE basadas en índices y
+modelos, demostrando que muchas superan los parámetros de rendimiento.
+como mantener la biomasa por encima del 40 % de BRMS y alcanzar una
+probabilidad del 60 % al 90 % de estar en el cuadrante verde de Kobe. La
+plataforma también explora algoritmos para ajustar automáticamente los
+MP a los estándares mínimos de rendimiento. El código fuente completo
+está disponible en github.com/Blue-Matter/Blue_Shark_MSE.<br><br>El SCRS
+tiene como objetivo presentar a la Comisión un análisis de viabilidad
+para el MSE del Tiburón Azul del norte y del sur para 2025.
 </h2>
 </div>
 </div>
 </div>
-<div id="row-23" class="section level2" data-height="580">
+<div id="row-24" class="section level2" data-height="580">
 <h2>Row</h2>
 <div id="NEPOR_esp" class="section level3">
 <h3></h3>
@@ -2960,41 +3002,45 @@ Commission by 2025.
 </div>
 <div style="background-color:#001A3E; padding:10px 40px; text-align: left;">
 <h1 style="font-size:2em; color:#ffffff; font-weight: bold;">
-Northeast Atlantic Porbeagle
+Marrajo sardinero del Atlántico Noreste
 </h1>
 <hr style="border: none; height: 1.5px; background-color: #ccc;" />
 <h1 style="font-size:1.8em; color:#ffffff; font-weight: bold;">
-Preliminary MSE Work
+Trabajo preliminar de MSE
 </h1>
 <h2 style="font-size:1.5em; color:#ffffff; ">
-Although a formal Management Strategy Evaluation (MSE) process has not
-been established, closed-loop simulation techniques have been applied to
-evaluate the implications of various data and assessment model
-configurations on the performance of candidate management procedures for
-Northeast Atlantic porbeagle shark. In the absence of a consistent time
-series of relative abundance for the stock, such simulation-based
-analyses are particularly valuable for exploring alternative assessment
-and management approaches.<br><br>Preliminary MSE work for Northeast
-Atlantic porbeagle has focused on simulation testing, the definition of
-operational objectives, and the influence of data availability on yield
-and conservation performance. Initial simulations, presented in
-SCRS/2022/090, applied closed-loop testing to a range of simple
-empirical management procedures. These early trials revealed that
-management performance varied considerably across candidate procedures,
-particularly with respect to yield and the risk of stock depletion. The
-analyses followed the structured MSE framework outlined by Punt et
-al. (2016), incorporating operating model specification, objective
-setting, and evaluation of performance metrics.<br><br>A complementary
-document, SCRS/2022/092, proposed a set of management objectives,
-associated performance metrics, and graphical tools intended to support
-stakeholder engagement and transparent evaluation of candidate
-management procedures.<br><br>At present, no active MSE development is
-underway for Northeast Atlantic porbeagle shark.
+Aunque no se ha establecido un proceso formal de Evaluación de
+Estrategias de Gestión (EMG), se han aplicado técnicas de simulación de
+ciclo cerrado para evaluar las implicaciones de diversas configuraciones
+de datos y modelos de evaluación en el rendimiento de los procedimientos
+de gestión propuestos para el marrajo sardinero del Atlántico
+Nororiental. Ante la ausencia de una serie temporal consistente de la
+abundancia relativa de la población, estos análisis basados en
+simulación son particularmente valiosos para explorar enfoques
+alternativos de evaluación y gestión.<br><br>El trabajo preliminar de
+EMG para el marrajo sardinero del Atlántico Nororiental se ha centrado
+en las pruebas de simulación, la definición de objetivos operativos y la
+influencia de la disponibilidad de datos en el rendimiento y el
+rendimiento de la conservación. Las simulaciones iniciales, presentadas
+en el documento SCRS/2022/090, aplicaron pruebas de ciclo cerrado a una
+serie de procedimientos de gestión empíricos sencillos. Estos primeros
+ensayos revelaron que el rendimiento de la gestión variaba
+considerablemente entre los procedimientos propuestos, en particular con
+respecto al rendimiento y al riesgo de agotamiento de la población. Los
+análisis siguieron el marco estructurado de EMG descrito por Punt et
+al. (2016), que incorpora la especificación del modelo operativo, el
+establecimiento de objetivos y la evaluación de las métricas de
+rendimiento.<br><br>Un documento complementario, El SCRS/2022/092
+propuso un conjunto de objetivos de gestión, métricas de rendimiento
+asociadas y herramientas gráficas para apoyar la participación de las
+partes interesadas y la evaluación transparente de los procedimientos de
+gestión propuestos.<br><br>Actualmente, no se está desarrollando ninguna
+EEM activa para el tiburón cailón del Atlántico Nororiental.
 </h2>
 </div>
 </div>
 </div>
-<div id="row-24" class="section level2" data-height="70">
+<div id="row-25" class="section level2" data-height="70">
 <h2>Row</h2>
 <div id="References_esp" class="section level3">
 <h3></h3>
@@ -3008,7 +3054,7 @@ Referencias
 </div>
 </div>
 </div>
-<div id="row-25" class="section level2" data-height="180">
+<div id="row-26" class="section level2" data-height="180">
 <h2>Row</h2>
 <div id="section-19" class="section level3" data-width="15%">
 <h3></h3>
@@ -3077,7 +3123,7 @@ character(0)
 <h3></h3>
 </div>
 </div>
-<div id="row-26" class="section level2" data-height="240">
+<div id="row-27" class="section level2" data-height="240">
 <h2>Row</h2>
 <div id="section-26" class="section level3">
 <h3></h3>
