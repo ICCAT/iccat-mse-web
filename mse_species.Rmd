@@ -5,6 +5,7 @@ output:
   flexdashboard::flex_dashboard:
     vertical_layout: scroll
     self_contained: true
+    
 
 params:
   sp: "species"
@@ -91,20 +92,25 @@ Column {.sidebar}
 
 
 ```{css, echo=FALSE}
-/* Set sidebar background and text colors */
-nav.section.sidebar {
-  background-color: #001A3E !important;  /* dark blue */
+/* Top navigation bar background color */
+.navbar {
+  background-color: rgba(0, 26, 62, 0.8) !important;  
+  border: none !important;
+  backdrop-filter: blur(4px);  
+}
+
+/* Top navigation text color */
+.navbar .navbar-nav > li > a,
+.navbar .navbar-brand {
   color: #ffffff !important;
 }
 
-/* Make sidebar links white */
-nav.section.sidebar a {
+/* Active tab color (optional) */
+.navbar .navbar-nav > .active > a {
+  background-color: rgba(0, 51, 102, 0.9) !important;
   color: #ffffff !important;
 }
 
-/* Optional: make section headers (like Inputs) white too */
-nav.section.sidebar h3 {
-  color: #ffffff !important;
 ```
 
 ```{css, echo=FALSE}
@@ -112,11 +118,19 @@ nav.section.sidebar h3 {
 .section.level3 {
   margin: 0 !important;
   padding: 0 !important;
+  background-color: #f8f2e2 !important;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #f8f2e2 !important;
 }
 
 .chart-stage {
   margin: 0 !important;
   padding: 0 !important;
+  background-color: #001A3E !important;  
 }
 
 .chart-wrapper {
@@ -130,19 +144,20 @@ nav.section.sidebar h3 {
   border: none !important;
   box-shadow: none !important;}
 
-
-.chart-stage {
-  background-color: #001A3E !important;  
+.main-container {
+  background-color: #001A3E; 
 }
-
-
 ```
+
+Row {data-height=40}
+-------------------------------------
 
 Row {data-height=`r rowH1`}
 -------------------------------------
 ### 
 
 ```{r echo=FALSE, results='asis'}
+
 #title and species image
 cat(glue('
 <div style="background-color:#001A3E; padding:0px; text-align: center;">
