@@ -1964,17 +1964,19 @@ Other Species</a><br /></p>
 </div>
 <style type="text/css">
 
-nav.section.sidebar {
-background-color: #001A3E !important; 
+.navbar {
+background-color: rgba(0, 26, 62, 0.8) !important; border: none !important;
+backdrop-filter: blur(4px); }
+
+.navbar .navbar-nav > li > a,
+.navbar .navbar-brand {
 color: #ffffff !important;
 }
 
-nav.section.sidebar a {
+.navbar .navbar-nav > .active > a {
+background-color: rgba(0, 51, 102, 0.9) !important;
 color: #ffffff !important;
 }
-
-nav.section.sidebar h3 {
-color: #ffffff !important;
 </style>
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
@@ -1983,11 +1985,17 @@ color: #ffffff !important;
 .section.level3 {
 margin: 0 !important;
 padding: 0 !important;
+background-color: #f8f2e2 !important;
+}
+body {
+margin: 0 !important;
+padding: 0 !important;
+background-color: #f8f2e2 !important;
 }
 .chart-stage {
 margin: 0 !important;
 padding: 0 !important;
-}
+background-color: #001A3E !important; }
 .chart-wrapper {
 margin: 0 !important;
 padding: 0 !important;
@@ -1997,11 +2005,14 @@ padding: 0 !important;
 .section.level3 {
 border: none !important;
 box-shadow: none !important;}
-.chart-stage {
-background-color: #001A3E !important; }
+.main-container {
+background-color: #001A3E; }
 </style>
 </div>
-<div id="row" class="section level2" data-height="250">
+<div id="row" class="section level2" data-height="40">
+<h2>Row</h2>
+</div>
+<div id="row-1" class="section level2" data-height="250">
 <h2>Row</h2>
 <div id="section" class="section level3">
 <h3></h3>
@@ -2019,7 +2030,7 @@ North Atlantic Albacore MSE
 </div>
 </div>
 </div>
-<div id="row-1" class="section level2" data-height="75">
+<div id="row-2" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="Overview_eng" class="section level3">
 <h3></h3>
@@ -2033,7 +2044,7 @@ Overview
 </div>
 </div>
 </div>
-<div id="row-2" class="section level2" data-height="250">
+<div id="row-3" class="section level2" data-height="250">
 <h2>Row</h2>
 <div id="section-1" class="section level3">
 <h3></h3>
@@ -2043,24 +2054,25 @@ Overview
 <div style="background-color:#001A3E; padding:10px 50px; text-align: justify; line-height: 1.8; letter-spacing: 0.3px;">
 <h2 style="font-size:1.5em; color:#ffffff; ">
 MSE work for northern albacore started in 2013 (Kell et al., 2013) and
-began officially with Rec. 15-04. The development of the interim Harvest
-Controle Rule (HCR) at ICCAT was based on simulations conducted using a
-specifically designed (MSE) framework. The ICCAT Commission adopted in
-2017 (Rec. 17-04), which included an interim harvest control rule for
-North Atlantic albacore, representing the first harvest control rule
-adopted by ICCAT. The software for the simulations was reviewed in 2018
-(SCRS, 2019). In 2021, the Commission reviewed and adopted the interim
-HCR in 2021 (Rec. 21-04) as a long-term management procedure, and also
-adopted the Exceptional Circumstances protocol for North Atlantic
-albacore in 2021 (Rec. 21-04, Annex 2). The ICCAT Commission has set the
-TACs since 2017 by the HCR for northern Atlantic albacore (Rec. 17-04,
-21-04, and 23-05). The SCRS evaluate the EC every year and ECs have not
-been invoked since 2022.
+officially with Rec. 15-04 where management objectives were adopted and
+the development of a harvest control rule was requested by the
+Commission. The development of the interim Harvest Control Rule (HCR) at
+ICCAT was based on simulations conducted using a specifically designed
+(MSE) framework. The ICCAT Commission adopted an interim harvest control
+rule for North Atlantic albacore in 2017 (Rec. 17-04), , representing
+the first harvest control rule adopted by ICCAT. The software and code
+used for the simulations was reviewed in 2018 (SCRS, 2019). In 2021, the
+Commission adopted a full long-term management procedure, including the
+Exceptional Circumstances protocol for North Atlantic albacore (Rec.
+21-04, Annex 2). The ICCAT Commission has set the TACs since 2017 using
+the interim HCR and the management procedure for northern Atlantic
+albacore (Rec. 17-04, 21-04, and 23-05). The SCRS evaluates the
+existence of ECs every year and ECs have not been invoked since 2022.
 </h2>
 </div>
 </div>
 </div>
-<div id="row-3" class="section level2" data-height="270">
+<div id="row-4" class="section level2" data-height="270">
 <h2>Row</h2>
 <div id="section-2" class="section level3" data-width="23%">
 <h3></h3>
@@ -2114,7 +2126,7 @@ EC evaluation<br>No EC since 2021
 <h3></h3>
 </div>
 </div>
-<div id="row-4" class="section level2" data-height="75">
+<div id="row-5" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="History_eng" class="section level3">
 <h3></h3>
@@ -2128,7 +2140,7 @@ History
 </div>
 </div>
 </div>
-<div id="row-5" class="section level2" data-height="440">
+<div id="row-6" class="section level2" data-height="480">
 <h2>Row</h2>
 <div id="section-7" class="section level3">
 <h3></h3>
@@ -2141,32 +2153,33 @@ The Management Strategy Evaluation (MSE) process for Northern Albacore
 (NALB) has evolved through a series of ICCAT Recommendations and SCRS
 initiatives over more than a decade. The process was initiated following
 concerns about the sustainability of the stock and the need for more
-robust, precautionary management frameworks. Rec. 11-13 initiated the
+robust, precautionary management frameworks. Rec. 09-05 initiated the
 rebuilding plan for Northern Albacore, aiming to restore biomass to
-levels consistent with MSY. Rec. 13-05 called for the SCRS to begin
+levels consistent with MSY. Rec. 11-04 requested the SCRS to develop a
+Limit Reference point and Rec. 13-05 called for the SCRS to begin
 evaluating harvest control rules (HCRs), laying the groundwork for MSE
-development by requesting advice on the potential use of reference
-points and control rules for the stock. In 2015, the SCRS identified
-Northern Albacore as a priority candidate for the application of MSE,
-noting the availability of data and scientific interest. Rec. 15-04
-extended the rebuilding plan and explicitly requested the SCRS to
-develop HCRs and performance indicators to support the development of
-MSE. The 2017 stock assessment further motivated this work by confirming
-the rebuilding trajectory, while also emphasizing the importance of
-evaluating long-term strategies under uncertainty. From 2017 to 2021,
-iterative development of Operating Models (OMs), management objectives,
-and performance metrics progressed under the guidance of the SCRS
-Albacore Species Group. Early simulation frameworks were tested, and the
-group coordinated closely with Panel 2 and CPCs to refine priorities.
-These foundational steps culminated in a formal roadmap toward the
-adoption of a Management Procedure (MP) through Rec. 21-04, which set
-the objective of adopting an MP for Northern Albacore no later than
-2023.
+development. In 2015, the SCRS identified Northern Albacore as a
+priority candidate for the application of MSE, noting the availability
+of data and scientific interest. Rec. 15-04 stablished the management
+objectives for the stock and explicitly requested the SCRS to develop
+HCRs and a dialogue process with the Commission to support the
+development of a MSE process. <br><br>The 2016 stock assessment further
+motivated this work by confirming the rebuilding trajectory of the
+stock, while also emphasizing the need for evaluating long-term
+strategies under uncertainty before any TAC increase. Rec 16-06 provided
+the performance metrics that the SCRS used to evaluate alternative HCRs
+under uncertainty. In 2017, the Commission adopted an interim Harvest
+Control Rule (Rec 17-04) and increased the TAC based on it. From 2017 to
+2021, an iterative development and peer review of the MSE framework took
+place under the guidance of the SCRS Albacore Species Group and PA2,
+that culminated in a formal adoption of a Management Procedure (MP)
+through Rec. 21-04. Since then, this MP was used to set the TAC every 3
+years.
 </h2>
 </div>
 </div>
 </div>
-<div id="row-6" class="section level2" data-height="75">
+<div id="row-7" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="Contents_eng" class="section level3">
 <h3></h3>
@@ -2180,7 +2193,7 @@ Contents
 </div>
 </div>
 </div>
-<div id="row-7" class="section level2" data-height="230">
+<div id="row-8" class="section level2" data-height="230">
 <h2>Row</h2>
 <div id="section-8" class="section level3" data-width="14%">
 <h3></h3>
@@ -2268,7 +2281,7 @@ Procedure</a>
 <h3></h3>
 </div>
 </div>
-<div id="row-8" class="section level2" data-height="75">
+<div id="row-9" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="OM_eng" class="section level3">
 <h3></h3>
@@ -2282,7 +2295,7 @@ Operating Models
 </div>
 </div>
 </div>
-<div id="row-9" class="section level2" data-height="180">
+<div id="row-10" class="section level2" data-height="180">
 <h2>Row</h2>
 <div id="section-16" class="section level3">
 <h3></h3>
@@ -2292,18 +2305,19 @@ Operating Models
 <div style="background-color:#001A3E; padding:10px 50px; text-align: justify;">
 <h2 style="font-size:1.5em; color:#ffffff; ">
 The Operating Models (OMs) represent a range of plausible dynamics for
-the Northern Albacore stock. These include uncertainty in:
-Stock-recruitment relationship (steepness, variability). Natural
-mortality. Fishery selectivity. Observation error and time-series
-structure. Initial development and scoping of OMs are being conducted
-using tools from the openMSE and nalb-mse frameworks. Model conditioning
-draws on data from the most recent stock assessment and diagnostic
-testing of retrospective patterns and reference points.
+the Northern Albacore stock. The reference set of 132 Oms includes the
+main sources of uncertainty identified by the WG in the stock
+assessments. These include uncertainty in biology (steepness, natural
+mortality), data weighting (size, cpue, tagging), structure of the time
+series and fishery dynamics (selectivity and catchability). The outputs
+of Multifan-CL based stock assessment scenarios, updated with data up to
+2020, were used to condition the 132 OMs. The OMs were conditioned using
+libraries from the FLR-project (www.flr-project.org).
 </h2>
 </div>
 </div>
 </div>
-<div id="row-10" class="section level2" data-height="100">
+<div id="row-11" class="section level2" data-height="100">
 <h2>Row</h2>
 <div id="section-17" class="section level3">
 <h3></h3>
@@ -2321,7 +2335,7 @@ found in Reference </a>
 </div>
 </div>
 </div>
-<div id="row-11" class="section level2" data-height="150">
+<div id="row-12" class="section level2" data-height="150">
 <h2>Row</h2>
 <div id="section-18" class="section level3" data-width="20%">
 <h3></h3>
@@ -2371,7 +2385,7 @@ MSE Codes</a>
 <h3></h3>
 </div>
 </div>
-<div id="row-12" class="section level2" data-height="120">
+<div id="row-13" class="section level2" data-height="120">
 <h2>Row</h2>
 <div id="MO_eng" class="section level3">
 <h3></h3>
@@ -2389,7 +2403,7 @@ Management Objectives
 </div>
 </div>
 </div>
-<div id="row-13" class="section level2" data-height="270">
+<div id="row-14" class="section level2" data-height="270">
 <h2>Row</h2>
 <div id="section-23" class="section level3" data-width="10%">
 <h3></h3>
@@ -2420,7 +2434,7 @@ Safety
 </h2>
 <img role="img" src="data:image/png;base64,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" width="100" />
 <h2 style="font-size:1.5em; color:#ffffff;">
-Prob. &lt; 15% of stock falling below Blim
+Decrease F as soon as possible when B&lt;Bmsy
 </h2>
 </div>
 </div>
@@ -2450,7 +2464,7 @@ Stability
 </h2>
 <img role="img" src="data:image/png;base64,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" width="100" />
 <h2 style="font-size:1.5em; color:#ffffff;">
-TAC changes between periods +20%/-20%
+Minimize inter-annual fluctuations in TAC levels
 </h2>
 </div>
 </div>
@@ -2458,7 +2472,7 @@ TAC changes between periods +20%/-20%
 <h3></h3>
 </div>
 </div>
-<div id="row-14" class="section level2" data-height="75">
+<div id="row-15" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="CMP_eng" class="section level3">
 <h3></h3>
@@ -2472,7 +2486,7 @@ Candidate Management Procedure
 </div>
 </div>
 </div>
-<div id="row-15" class="section level2" data-height="100">
+<div id="row-16" class="section level2" data-height="100">
 <h2>Row</h2>
 <div id="section-29" class="section level3">
 <h3></h3>
@@ -2481,12 +2495,13 @@ Candidate Management Procedure
 </div>
 <div style="background-color:#001A3E; padding:10px; text-align: center;">
 <h2 style="font-size:1.5em; color:#ffffff; ">
-Only Model-based HCRs were considered
+Only Model-based HCRs were considered, with varying parameters of the
+hockey-stick HCR as well as alternative stability closures.
 </h2>
 </div>
 </div>
 </div>
-<div id="row-16" class="section level2" data-height="75">
+<div id="row-17" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="MP_eng" class="section level3">
 <h3></h3>
@@ -2500,7 +2515,7 @@ Management Procedure
 </div>
 </div>
 </div>
-<div id="row-17" class="section level2" data-height="75">
+<div id="row-18" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="section-30" class="section level3">
 <h3></h3>
@@ -2510,12 +2525,13 @@ Management Procedure
 <div style="background-color:#001A3E; padding:10px 20px; text-align: center;">
 <h2 style="font-size:1.5em; color:#ffffff; ">
 The Commission adopted an interim Harvest Control Rule (HCR) in 2017
-(Rec. 17-04) and formally adopted it in 2021 (Rec. 21-04).
+(Rec. 17-04) and formally adopted a full Management procedure in 2021
+(Rec. 21-04).
 </h2>
 </div>
 </div>
 </div>
-<div id="row-18" class="section level2" data-height="180">
+<div id="row-19" class="section level2" data-height="180">
 <h2>Row</h2>
 <div id="section-31" class="section level3" data-width="5%">
 <h3></h3>
@@ -2528,12 +2544,13 @@ The Commission adopted an interim Harvest Control Rule (HCR) in 2017
 <div style="background-color:#001A3E; padding:10px 50px; text-align: justify;">
 <h2 style="font-size:1.4em; color:#ffffff; ">
 The MP shall be applied to set a 3-year constant annual total allowable
-catch using the following three values estimated from each stock
-assessment. For each value the median values as reported in the summary
-table of the SCRS report shall be used: <br>a) The estimate of current
-stock biomass (BCURR). <br>b) The estimate of the stock biomass at
-Maximum Sustainable Yield (BMSY). <br>c) The estimate of the fishing
-mortality at MSY (FMSY).
+catch. A production model (with defined inputs and specifications) is
+applied and the hockey-stick type HCR determines the level of fishing
+mortality to apply in the next 3-year period, depending on the estimated
+stock status, with a maximum of 0.8*Fmsy, and decreasing fishing
+mortality as soon as B is estimated to be below Bmsy. The maximum TAC
+allowed is 50.000 t, and TAC variations are limited to +25%/-20% if
+B&gt;Bmsy.
 </h2>
 </div>
 </div>
@@ -2547,12 +2564,12 @@ mortality at MSY (FMSY).
 <img role="img" src="data:image/png;base64,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" width="100" /></a>
 <h2 style="font-size:1.3em; color:#ffffff; ">
 <a href="https://www.iccat.int/Documents/Recs/compendiopdf-e/2021-04-e.pdf" style="color: #ffffff;">
-Rec. 21-04 <br>Appendix B of Annex 1</a>
+Rec. 21-04 <br>Annex 1</a>
 </h2>
 </div>
 </div>
 </div>
-<div id="row-19" class="section level2" data-height="75">
+<div id="row-20" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="EC_eng" class="section level3">
 <h3></h3>
@@ -2566,7 +2583,7 @@ Exceptional Circumstances
 </div>
 </div>
 </div>
-<div id="row-20" class="section level2" data-height="120">
+<div id="row-21" class="section level2" data-height="120">
 <h2>Row</h2>
 <div id="section-34" class="section level3">
 <h3></h3>
@@ -2579,13 +2596,14 @@ The Commission adopted the Exceptional Circumstances Protocol in 2021
 (Rec.21-04 Annex 2).
 </h2>
 <h2 style="font-size:1.5em; color:#ffffff; ">
-Annually review, SCRS evaluated annually (2023-2024).<br>There have been
-no Exceptional Circumstances invoked since 2022
+The SCRS evaluates, annually, the existence of exceptional circumstances
+that would preclude the application of the MP.<br>There have been no
+Exceptional Circumstances invoked since 2022
 </h2>
 </div>
 </div>
 </div>
-<div id="row-21" class="section level2" data-height="240">
+<div id="row-22" class="section level2" data-height="240">
 <h2>Row</h2>
 <div id="section-35" class="section level3" data-width="5%">
 <h3></h3>
@@ -2624,7 +2642,7 @@ EC Protcol: <br>Rec. 21-04 Annex 2</a>
 </div>
 </div>
 </div>
-<div id="row-22" class="section level2" data-height="70">
+<div id="row-23" class="section level2" data-height="70">
 <h2>Row</h2>
 <div id="References_eng" class="section level3">
 <h3></h3>
@@ -2638,7 +2656,7 @@ References
 </div>
 </div>
 </div>
-<div id="row-23" class="section level2" data-height="180">
+<div id="row-24" class="section level2" data-height="180">
 <h2>Row</h2>
 <div id="section-38" class="section level3" data-width="15%">
 <h3></h3>
@@ -2712,7 +2730,7 @@ Others
 <h3></h3>
 </div>
 </div>
-<div id="row-24" class="section level2" data-height="240">
+<div id="row-25" class="section level2" data-height="240">
 <h2>Row</h2>
 <div id="section-45" class="section level3">
 <h3></h3>
@@ -2756,7 +2774,8 @@ opérationnels</a><br /> <a href="#MO_fra">Objectifs de gestion</a><br />
 <!-- Column 2 -->
 <div>
 <p><strong>Liens ICCAT MSE</strong><br />
-<a href="https://iccat.github.io/iccat-mse-web/"> Résumé de l’MSE</a><br />
+<a href="https://iccat.github.io/iccat-mse-web/#fra"> Résumé de
+l’MSE</a><br />
 <a href="https://iccat.github.io/iccat-mse-web/species/NALB/NALB_MSE.html#fra">
 Germon de l’Atlantique Nord</a><br />
 <a href="https://iccat.github.io/iccat-mse-web/species/BFT/BFT_MSE.html#fra">
@@ -2812,7 +2831,7 @@ box-shadow: none !important;}
 background-color: #001A3E !important; }
 </style>
 </div>
-<div id="row-25" class="section level2" data-height="250">
+<div id="row-26" class="section level2" data-height="250">
 <h2>Row</h2>
 <div id="section-46" class="section level3">
 <h3></h3>
@@ -2830,7 +2849,7 @@ Germon de l’Atlantique Nord MSE
 </div>
 </div>
 </div>
-<div id="row-26" class="section level2" data-height="75">
+<div id="row-27" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="Overview_fra" class="section level3">
 <h3></h3>
@@ -2844,7 +2863,7 @@ Aperçu
 </div>
 </div>
 </div>
-<div id="row-27" class="section level2" data-height="250">
+<div id="row-28" class="section level2" data-height="250">
 <h2>Row</h2>
 <div id="section-47" class="section level3">
 <h3></h3>
@@ -2853,27 +2872,30 @@ Aperçu
 </div>
 <div style="background-color:#001A3E; padding:10px 50px; text-align: justify; line-height: 1.8; letter-spacing: 0.3px;">
 <h2 style="font-size:1.5em; color:#ffffff; ">
-Les travaux sur l’EEM pour le germon de l’Atlantique Nord ont commencé
-en 2013 (Kell et al., 2013) et ont officiellement débuté avec la
-Recommandation 15-04. Le développement de la règle de contrôle des
-captures (HCR) provisoire à l’ICCAT s’est basé sur des simulations
-réalisées à l’aide d’un cadre EEM spécifiquement conçu. La Commission de
-l’ICCAT a adopté en 2017 (Rec. 17-04) une règle de contrôle des captures
-provisoire pour le germon de l’Atlantique Nord, représentant la première
-règle de ce type adoptée par l’ICCAT. Le logiciel utilisé pour les
-simulations a été examiné en 2018 (SCRS, 2019). En 2021, la Commission a
-révisé et adopté la HCR provisoire comme procédure de gestion à long
-terme (Rec. 21-04) et a également adopté le protocole de circonstances
-exceptionnelles pour le germon de l’Atlantique Nord (Rec. 21-04, Annexe
-2). Depuis 2017, la Commission fixe les TACs du germon de l’Atlantique
-Nord conformément à la HCR (Rec. 17-04, 21-04 et 23-05). Le SCRS évalue
-chaque année les circonstances exceptionnelles, lesquelles n’ont pas été
-invoquées depuis 2022.
+Les travaux d’évaluation de la sécurité des poissons (MSE) pour le
+germon du Nord ont débuté en 2013 (Kell et al., 2013) et sont
+officiellement menés avec la Rec. 15-04 où des objectifs de gestion ont
+été adoptés et l’élaboration d’une règle de contrôle des captures a été
+demandée par la Commission. L’élaboration de la règle de contrôle des
+captures provisoire (HCR) à la CICTA s’est basée sur des simulations
+réalisées à l’aide d’un cadre (MSE) spécialement conçu. La Commission de
+la CICTA a adopté une règle de contrôle des captures provisoire pour le
+germon de l’Atlantique Nord en 2017 (Rec. 17-04), ce qui représente la
+première règle de contrôle des captures adoptée par la CICTA. Le
+logiciel et le code utilisés pour les simulations ont été révisés en
+2018 (SCRS, 2019). En 2021, la Commission a adopté une procédure de
+gestion à long terme complète, y compris le protocole sur les
+circonstances exceptionnelles pour le germon de l’Atlantique Nord (Rec.
+21-04, annexe 2). La Commission CICTA fixe les TAC depuis 2017 en
+utilisant le HCR provisoire et la procédure de gestion pour le germon de
+l’Atlantique Nord (Rec. 17-04, 21-04 et 23-05). Le SCRS évalue chaque
+année l’existence des CE, et ces derniers n’ont plus été invoqués depuis
+2022.
 </h2>
 </div>
 </div>
 </div>
-<div id="row-28" class="section level2" data-height="270">
+<div id="row-29" class="section level2" data-height="270">
 <h2>Row</h2>
 <div id="section-48" class="section level3" data-width="23%">
 <h3></h3>
@@ -2928,7 +2950,7 @@ exceptionnelles depuis 2021
 <h3></h3>
 </div>
 </div>
-<div id="row-29" class="section level2" data-height="75">
+<div id="row-30" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="History_fra" class="section level3">
 <h3></h3>
@@ -2942,7 +2964,7 @@ Histoire
 </div>
 </div>
 </div>
-<div id="row-30" class="section level2" data-height="440">
+<div id="row-31" class="section level2" data-height="480">
 <h2>Row</h2>
 <div id="section-53" class="section level3">
 <h3></h3>
@@ -2951,40 +2973,39 @@ Histoire
 </div>
 <div style="background-color:#001A3E; padding:10px 50px; text-align: justify; line-height: 1.6; letter-spacing: 0.3px;">
 <h2 style="font-size:1.5em; color:#ffffff; ">
-Le processus d’évaluation de la stratégie de gestion (ESG) pour le
-germon de l’Atlantique Nord (NALB) a évolué au fil de plusieurs
-recommandations de l’ICCAT et d’initiatives du SCRS pendant plus d’une
-décennie. Ce processus a été lancé en réponse aux préoccupations
-concernant la durabilité du stock et la nécessité de cadres de gestion
-plus solides et précautionneux. La Recommandation 11-13 a initié un plan
-de reconstitution pour le germon de l’Atlantique Nord, visant à rétablir
-la biomasse à des niveaux compatibles avec le rendement maximal durable
-(RMD). La Recommandation 13-05 a demandé au SCRS de commencer à évaluer
-des règles de contrôle des captures (RCC), jetant les bases du
-développement de l’ESG en sollicitant des avis sur l’utilisation
-potentielle de points de référence et de règles de gestion pour le
-stock. En 2015, le SCRS a identifié le germon de l’Atlantique Nord comme
-une priorité pour l’application de l’ESG, en raison de la disponibilité
-des données et de l’intérêt scientifique. La Recommandation 15-04 a
-prolongé le plan de reconstitution et a explicitement demandé au SCRS de
-développer des RCC et des indicateurs de performance pour soutenir le
-développement de l’ESG. L’évaluation du stock en 2017 a renforcé cette
-orientation en confirmant la trajectoire de reconstitution, tout en
-soulignant l’importance d’évaluer des stratégies à long terme dans un
-contexte d’incertitude. De 2017 à 2021, le développement itératif des
-modèles opérationnels (MO), des objectifs de gestion et des métriques de
-performance s’est poursuivi sous la direction du Groupe d’espèces germon
-du SCRS. Des cadres de simulation initiaux ont été testés, et le groupe
-a travaillé en étroite coordination avec le Panel 2 et les CPC pour
-affiner les priorités. Ces étapes fondatrices ont conduit à une feuille
-de route formelle vers l’adoption d’une procédure de gestion (PG) à
-travers la Recommandation 21-04, qui fixait comme objectif l’adoption
-d’une PG pour le germon de l’Atlantique Nord au plus tard en 2023.
+Le processus d’évaluation de la stratégie de gestion (ESG) du germon du
+Nord (NALB) a évolué au fil d’une série de recommandations de la CICTA
+et d’initiatives du SCRS sur plus de dix ans. Ce processus a été lancé
+suite à des inquiétudes concernant la durabilité du stock et à la
+nécessité de cadres de gestion plus robustes et plus prudents. La Rec.
+09-05 a lancé le plan de rétablissement du germon du Nord, visant à
+rétablir la biomasse à des niveaux compatibles avec le RMD. La Rec.
+11-04 a demandé au SCRS d’élaborer un point de référence limite et la
+Rec. 13-05 a appelé le SCRS à commencer l’évaluation des règles de
+contrôle des captures (RCC), jetant ainsi les bases du développement de
+l’ESG. En 2015, le SCRS a identifié le germon du Nord comme un candidat
+prioritaire pour l’application de l’ESG, soulignant la disponibilité des
+données et l’intérêt scientifique. La Rec. 15-04 a établi les objectifs
+de gestion du stock et a explicitement demandé au SCRS d’élaborer des
+RCC et d’engager un dialogue avec la Commission afin de soutenir le
+développement d’un processus d’ESG. <br><br>L’évaluation du stock de
+2016 a davantage motivé ce travail en confirmant la trajectoire de
+rétablissement du stock, tout en soulignant la nécessité d’évaluer les
+stratégies à long terme dans des conditions d’incertitude avant toute
+augmentation du TAC. La recommandation 16-06 a fourni les indicateurs de
+performance utilisés par le SCRS pour évaluer les HCR alternatifs dans
+des conditions d’incertitude. En 2017, la Commission a adopté une règle
+provisoire de contrôle des prises (Rec. 17-04) et a augmenté le TAC sur
+cette base. De 2017 à 2021, un développement itératif et un examen par
+les pairs du cadre MSE ont eu lieu sous la direction du groupe d’espèces
+Albacore du SCRS et de l’AP2, qui ont abouti à l’adoption officielle
+d’une procédure de gestion (MP) par la recommandation 21-04. Depuis
+lors, cette MP a été utilisée pour fixer le TAC tous les 3 ans.
 </h2>
 </div>
 </div>
 </div>
-<div id="row-31" class="section level2" data-height="75">
+<div id="row-32" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="Contents_fra" class="section level3">
 <h3></h3>
@@ -2998,7 +3019,7 @@ Contenu
 </div>
 </div>
 </div>
-<div id="row-32" class="section level2" data-height="230">
+<div id="row-33" class="section level2" data-height="230">
 <h2>Row</h2>
 <div id="section-54" class="section level3" data-width="14%">
 <h3></h3>
@@ -3087,7 +3108,7 @@ exceptionnelles</a>
 <h3></h3>
 </div>
 </div>
-<div id="row-33" class="section level2" data-height="75">
+<div id="row-34" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="OM_fra" class="section level3">
 <h3></h3>
@@ -3101,7 +3122,7 @@ Modèles opérationnels
 </div>
 </div>
 </div>
-<div id="row-34" class="section level2" data-height="180">
+<div id="row-35" class="section level2" data-height="180">
 <h2>Row</h2>
 <div id="section-62" class="section level3">
 <h3></h3>
@@ -3110,21 +3131,22 @@ Modèles opérationnels
 </div>
 <div style="background-color:#001A3E; padding:10px 50px; text-align: justify;">
 <h2 style="font-size:1.5em; color:#ffffff; ">
-Les Modèles Opérationnels (MO) représentent un éventail de dynamiques
-plausibles pour le stock de germon de l’Atlantique Nord. Ceux-ci
-tiennent compte de l’incertitude liée à : la relation stock-recrutement
-(pente, variabilité), la mortalité naturelle, la sélectivité des
-pêcheries, l’erreur d’observation et la structure des séries
-chronologiques. Le développement initial et la définition du champ
-d’application des MO sont réalisés à l’aide des outils des cadres
-openMSE et nalb-mse. L’étalonnage des modèles s’appuie sur les données
-issues de la plus récente évaluation du stock ainsi que sur des tests
-diagnostiques des tendances rétrospectives et des points de référence.
+Les modèles opérationnels (MO) représentent une gamme de dynamiques
+plausibles pour le stock de germon du Nord. L’ensemble de référence de
+132 MO inclut les principales sources d’incertitude identifiées par le
+GT dans les évaluations de stock. Celles-ci incluent l’incertitude
+biologique (pente, mortalité naturelle), la pondération des données
+(taille, CPUE, marquage), la structure des séries chronologiques et la
+dynamique des pêcheries (sélectivité et capturabilité). Les résultats
+des scénarios d’évaluation de stock basés sur Multifan-CL, mis à jour
+avec des données jusqu’en 2020, ont été utilisés pour conditionner les
+132 MO. Ces derniers ont été conditionnés à l’aide des bibliothèques du
+projet FLR (www.flr-project.org).
 </h2>
 </div>
 </div>
 </div>
-<div id="row-35" class="section level2" data-height="100">
+<div id="row-36" class="section level2" data-height="100">
 <h2>Row</h2>
 <div id="section-63" class="section level3">
 <h3></h3>
@@ -3142,7 +3164,7 @@ sont disponibles dans les références </a>
 </div>
 </div>
 </div>
-<div id="row-36" class="section level2" data-height="150">
+<div id="row-37" class="section level2" data-height="150">
 <h2>Row</h2>
 <div id="section-64" class="section level3" data-width="20%">
 <h3></h3>
@@ -3192,7 +3214,7 @@ Codes MSE</a>
 <h3></h3>
 </div>
 </div>
-<div id="row-37" class="section level2" data-height="120">
+<div id="row-38" class="section level2" data-height="120">
 <h2>Row</h2>
 <div id="MO_fra" class="section level3">
 <h3></h3>
@@ -3210,7 +3232,7 @@ Objectifs de gestion
 </div>
 </div>
 </div>
-<div id="row-38" class="section level2" data-height="270">
+<div id="row-39" class="section level2" data-height="270">
 <h2>Row</h2>
 <div id="section-69" class="section level3" data-width="10%">
 <h3></h3>
@@ -3241,7 +3263,7 @@ Safety
 </h2>
 <img role="img" src="data:image/png;base64,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" width="100" />
 <h2 style="font-size:1.5em; color:#ffffff;">
-Prob. &lt; 15 % de probabilité que le stock tombe en dessous de Blim
+Diminuer F dès que possible lorsque B&lt;Bmsy
 </h2>
 </div>
 </div>
@@ -3271,7 +3293,7 @@ Stability
 </h2>
 <img role="img" src="data:image/png;base64,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" width="100" />
 <h2 style="font-size:1.5em; color:#ffffff;">
-Variations du TAC entre périodes : +20 % / -20 %
+Minimiser les fluctuations interannuelles des niveaux de TAC
 </h2>
 </div>
 </div>
@@ -3279,7 +3301,7 @@ Variations du TAC entre périodes : +20 % / -20 %
 <h3></h3>
 </div>
 </div>
-<div id="row-39" class="section level2" data-height="75">
+<div id="row-40" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="CMP_fra" class="section level3">
 <h3></h3>
@@ -3293,7 +3315,7 @@ Procédure de gestion candidate
 </div>
 </div>
 </div>
-<div id="row-40" class="section level2" data-height="100">
+<div id="row-41" class="section level2" data-height="100">
 <h2>Row</h2>
 <div id="section-75" class="section level3">
 <h3></h3>
@@ -3302,13 +3324,14 @@ Procédure de gestion candidate
 </div>
 <div style="background-color:#001A3E; padding:10px; text-align: center;">
 <h2 style="font-size:1.5em; color:#ffffff; ">
-Seules des règles de contrôle des captures basées sur des modèles ont
-été envisagées
+Seuls les HCR basés sur des modèles ont été pris en compte, avec des
+paramètres variables du HCR en forme de bâton de hockey ainsi que des
+fermetures de stabilité alternatives.
 </h2>
 </div>
 </div>
 </div>
-<div id="row-41" class="section level2" data-height="75">
+<div id="row-42" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="MP_fra" class="section level3">
 <h3></h3>
@@ -3322,7 +3345,7 @@ Procédure de gestion
 </div>
 </div>
 </div>
-<div id="row-42" class="section level2" data-height="75">
+<div id="row-43" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="section-76" class="section level3">
 <h3></h3>
@@ -3331,14 +3354,14 @@ Procédure de gestion
 </div>
 <div style="background-color:#001A3E; padding:10px 20px; text-align: center;">
 <h2 style="font-size:1.5em; color:#ffffff; ">
-La Commission a adopté une règle de contrôle des captures (RCC)
-provisoire en 2017 (Rec. 17-04) et l’a formellement adoptée en 2021
-(Rec. 21-04)
+La Commission a adopté une règle provisoire de contrôle des récoltes
+(HCR) en 2017 (Rec. 17-04) et a officiellement adopté une procédure de
+gestion complète en 2021 (Rec. 21-04).
 </h2>
 </div>
 </div>
 </div>
-<div id="row-43" class="section level2" data-height="180">
+<div id="row-44" class="section level2" data-height="180">
 <h2>Row</h2>
 <div id="section-77" class="section level3" data-width="5%">
 <h3></h3>
@@ -3350,14 +3373,15 @@ provisoire en 2017 (Rec. 17-04) et l’a formellement adoptée en 2021
 </div>
 <div style="background-color:#001A3E; padding:10px 50px; text-align: justify;">
 <h2 style="font-size:1.4em; color:#ffffff; ">
-La procédure de gestion (PG) doit être appliquée pour fixer un total
-admissible de captures (TAC) annuel constant sur trois ans, en utilisant
-les trois valeurs suivantes estimées à partir de chaque évaluation de
-stock. Pour chaque valeur, les valeurs médianes figurant dans le tableau
-récapitulatif du rapport du SCRS doivent être utilisées :<br>a)
-L’estimation de la biomasse actuelle du stock (BCURR).<br>b)
-L’estimation de la biomasse du stock au rendement maximal durable
-(BMSY).<br>c) L’estimation de la mortalité par pêche au RMD (FMSY).
+Le MP doit être appliqué pour fixer un total autorisé des captures
+annuel constant sur trois ans. Un modèle de production (avec des
+intrants et des spécifications définis) est appliqué et le HCR de type
+hockey-stick détermine le niveau de mortalité par pêche à appliquer pour
+les trois prochaines années, en fonction de l’état estimé du stock, avec
+un maximum de 0,8 * Fmsy, et une mortalité par pêche décroissante dès
+que B est estimé inférieur à Bmsy. Le TAC maximal autorisé est de
+50 000 t, et les variations du TAC sont limitées à +25 %/-20 % si B &gt;
+Bmsy.
 </h2>
 </div>
 </div>
@@ -3371,12 +3395,12 @@ L’estimation de la biomasse du stock au rendement maximal durable
 <img role="img" src="data:image/png;base64,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" width="100" /></a>
 <h2 style="font-size:1.3em; color:#ffffff; ">
 <a href="https://www.iccat.int/Documents/Recs/compendiopdf-f/2021-04-f.pdf" style="color: #ffffff;">
-Rec. 21-04<br>Annexe 1, Appendice B</a>
+Rec. 21-04<br>Annexe 1</a>
 </h2>
 </div>
 </div>
 </div>
-<div id="row-44" class="section level2" data-height="75">
+<div id="row-45" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="EC_fra" class="section level3">
 <h3></h3>
@@ -3390,7 +3414,7 @@ Circonstances exceptionnelles
 </div>
 </div>
 </div>
-<div id="row-45" class="section level2" data-height="120">
+<div id="row-46" class="section level2" data-height="120">
 <h2>Row</h2>
 <div id="section-80" class="section level3">
 <h3></h3>
@@ -3403,13 +3427,14 @@ La Commission a adopté le Protocole relatif aux Circonstances
 Exceptionnelles en 2021 (Rec. 21-04, Annexe 2).
 </h2>
 <h2 style="font-size:1.5em; color:#ffffff; ">
-Révision annuelle, évaluée chaque année par le SCRS
-(2023-2024).<br>Aucune Circonstance Exceptionnelle depuis 2022.
+Le SCRS évalue chaque année l’existence de circonstances exceptionnelles
+susceptibles d’empêcher l’application du PM. <br>Aucune circonstance
+exceptionnelle n’a été invoquée depuis 2022.
 </h2>
 </div>
 </div>
 </div>
-<div id="row-46" class="section level2" data-height="240">
+<div id="row-47" class="section level2" data-height="240">
 <h2>Row</h2>
 <div id="section-81" class="section level3" data-width="5%">
 <h3></h3>
@@ -3449,7 +3474,7 @@ Protocole CE :<br>Rec. 21-04, Annexe 2</a>
 </div>
 </div>
 </div>
-<div id="row-47" class="section level2" data-height="70">
+<div id="row-48" class="section level2" data-height="70">
 <h2>Row</h2>
 <div id="References_fra" class="section level3">
 <h3></h3>
@@ -3463,7 +3488,7 @@ Références
 </div>
 </div>
 </div>
-<div id="row-48" class="section level2" data-height="180">
+<div id="row-49" class="section level2" data-height="180">
 <h2>Row</h2>
 <div id="section-84" class="section level3" data-width="15%">
 <h3></h3>
@@ -3537,7 +3562,7 @@ Autres
 <h3></h3>
 </div>
 </div>
-<div id="row-49" class="section level2" data-height="240">
+<div id="row-50" class="section level2" data-height="240">
 <h2>Row</h2>
 <div id="section-91" class="section level3">
 <h3></h3>
@@ -3581,7 +3606,8 @@ operativos</a><br /> <a href="#MO_esp">Objetivos de gestión</a><br />
 <!-- Column 2 -->
 <div>
 <p><strong>Enlaces ICCAT MSE</strong><br />
-<a href="https://iccat.github.io/iccat-mse-web/"> Resumen de MSE</a><br />
+<a href="https://iccat.github.io/iccat-mse-web/#esp"> Resumen de
+MSE</a><br />
 <a href="https://iccat.github.io/iccat-mse-web/species/NALB/NALB_MSE.html#spa">
 Atún blanco del Atlántico Norte</a><br />
 <a href="https://iccat.github.io/iccat-mse-web/species/BFT/BFT_MSE.html#spa">
@@ -3637,7 +3663,7 @@ box-shadow: none !important;}
 background-color: #001A3E !important; }
 </style>
 </div>
-<div id="row-50" class="section level2" data-height="250">
+<div id="row-51" class="section level2" data-height="250">
 <h2>Row</h2>
 <div id="section-92" class="section level3">
 <h3></h3>
@@ -3655,7 +3681,7 @@ Atún blanco del norte MSE
 </div>
 </div>
 </div>
-<div id="row-51" class="section level2" data-height="75">
+<div id="row-52" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="Overview_esp" class="section level3">
 <h3></h3>
@@ -3669,7 +3695,7 @@ Resumen
 </div>
 </div>
 </div>
-<div id="row-52" class="section level2" data-height="250">
+<div id="row-53" class="section level2" data-height="250">
 <h2>Row</h2>
 <div id="section-93" class="section level3">
 <h3></h3>
@@ -3678,27 +3704,28 @@ Resumen
 </div>
 <div style="background-color:#001A3E; padding:10px 50px; text-align: justify; line-height: 1.8; letter-spacing: 0.3px;">
 <h2 style="font-size:1.5em; color:#ffffff; ">
-El trabajo sobre la EEM para el atún blanco del Atlántico Norte comenzó
-en 2013 (Kell et al., 2013) y se inició oficialmente con la
-Recomendación 15-04. El desarrollo de la regla de control de captura
-(HCR) provisional en ICCAT se basó en simulaciones realizadas con un
-marco de EEM diseñado específicamente. La Comisión de ICCAT adoptó en
-2017 (Rec. 17-04) una regla de control de captura provisional para el
-atún blanco del Atlántico Norte, siendo la primera regla de este tipo
-adoptada por ICCAT. El software utilizado para las simulaciones fue
-revisado en 2018 (SCRS, 2019). En 2021, la Comisión revisó y adoptó la
-HCR provisional como procedimiento de gestión a largo plazo (Rec. 21-04)
-y también adoptó el protocolo de Circunstancias Excepcionales para el
-atún blanco del Atlántico Norte (Rec. 21-04, Anexo 2). Desde 2017, la
-Comisión ha establecido los TACs para el atún blanco del Atlántico Norte
-con base en la HCR (Rec. 17-04, 21-04 y 23-05). El SCRS evalúa
-anualmente las circunstancias excepcionales, las cuales no han sido
-invocadas desde 2022.
+El trabajo de MSE para el atún blanco del norte comenzó en 2013 (Kell et
+al., 2013) y oficialmente con la Rec. 15-04 donde se adoptaron objetivos
+de ordenación y la Comisión solicitó el desarrollo de una norma de
+control de capturas. El desarrollo de la Norma de Control de Capturas
+(HCR) provisional en la CICAA se basó en simulaciones realizadas
+utilizando un marco (MSE) específicamente diseñado. La Comisión de la
+CICAA adoptó una norma de control de capturas provisional para el atún
+blanco del Atlántico norte en 2017 (Rec. 17-04), lo que representa la
+primera norma de control de capturas adoptada por la CICAA. El software
+y el código utilizados para las simulaciones se revisaron en 2018 (SCRS,
+2019). En 2021, la Comisión adoptó un procedimiento completo de
+ordenación a largo plazo, incluyendo el protocolo de Circunstancias
+Excepcionales para el atún blanco del Atlántico Norte (Rec. 21-04, Anexo
+2). La Comisión de la CICAA ha establecido los TAC desde 2017 utilizando
+la HCR provisional y el procedimiento de ordenación para el atún blanco
+del Atlántico norte (Rec. 17-04, 21-04 y 23-05). El SCRS evalúa la
+existencia de CE anualmente y no se han invocado desde 2022.
 </h2>
 </div>
 </div>
 </div>
-<div id="row-53" class="section level2" data-height="270">
+<div id="row-54" class="section level2" data-height="270">
 <h2>Row</h2>
 <div id="section-94" class="section level3" data-width="23%">
 <h3></h3>
@@ -3753,7 +3780,7 @@ circunstancias excepcionales desde 2021
 <h3></h3>
 </div>
 </div>
-<div id="row-54" class="section level2" data-height="75">
+<div id="row-55" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="History_esp" class="section level3">
 <h3></h3>
@@ -3767,7 +3794,7 @@ Historia
 </div>
 </div>
 </div>
-<div id="row-55" class="section level2" data-height="440">
+<div id="row-56" class="section level2" data-height="480">
 <h2>Row</h2>
 <div id="section-99" class="section level3">
 <h3></h3>
@@ -3776,40 +3803,40 @@ Historia
 </div>
 <div style="background-color:#001A3E; padding:10px 50px; text-align: justify; line-height: 1.6; letter-spacing: 0.3px;">
 <h2 style="font-size:1.5em; color:#ffffff; ">
-El proceso de Evaluación de Estrategias de Ordenación (EEM) para el atún
-blanco del Atlántico Norte (NALB) ha evolucionado a lo largo de una
-serie de Recomendaciones de ICCAT e iniciativas del SCRS durante más de
-una década. El proceso se inició ante la preocupación por la
-sostenibilidad del stock y la necesidad de marcos de gestión más sólidos
-y precautorios. La Recomendación 11-13 puso en marcha el plan de
-recuperación para el atún blanco del Atlántico Norte, con el objetivo de
-restaurar la biomasa a niveles compatibles con el rendimiento máximo
-sostenible (RMS). La Recomendación 13-05 solicitó al SCRS comenzar a
-evaluar reglas de control de captura (RCC), sentando las bases del
-desarrollo de la EEM al solicitar asesoramiento sobre el uso potencial
-de puntos de referencia y reglas de control para el stock. En 2015, el
-SCRS identificó al atún blanco del Atlántico Norte como un candidato
-prioritario para la aplicación de la EEM, señalando la disponibilidad de
-datos y el interés científico. La Recomendación 15-04 amplió el plan de
-recuperación y solicitó explícitamente al SCRS desarrollar RCC e
-indicadores de desempeño para apoyar el desarrollo de la EEM. La
-evaluación del stock en 2017 motivó aún más este trabajo al confirmar la
-trayectoria de recuperación y destacar la importancia de evaluar
-estrategias a largo plazo bajo incertidumbre. De 2017 a 2021, se avanzó
-en el desarrollo iterativo de Modelos Operativos (MO), objetivos de
-gestión y métricas de desempeño bajo la orientación del Grupo de
-especies de atún blanco del SCRS. Se probaron marcos de simulación
-iniciales y el grupo coordinó estrechamente con el Panel 2 y las CPC
-para refinar prioridades. Estos pasos fundamentales culminaron en una
-hoja de ruta formal hacia la adopción de un Procedimiento de Gestión
-(PG) a través de la Recomendación 21-04, que estableció como objetivo la
-adopción de un PG para el atún blanco del Atlántico Norte a más tardar
-en 2023.
+El proceso de Evaluación de la Estrategia de Ordenación (EEO) para el
+atún blanco del norte (NALB) ha evolucionado a través de una serie de
+Recomendaciones de la CICAA e iniciativas del SCRS a lo largo de más de
+una década. El proceso se inició a raíz de la preocupación por la
+sostenibilidad del stock y la necesidad de marcos de ordenación más
+sólidos y precautorios. La Rec. 09-05 inició el plan de recuperación del
+atún blanco del norte, con el objetivo de restaurar la biomasa a niveles
+compatibles con el RMS. La Rec. 11-04 solicitó al SCRS que desarrollara
+un Punto de Referencia Límite y la Rec. 13-05 le instó a comenzar a
+evaluar las normas de control de capturas (RCC), sentando las bases para
+el desarrollo de la EEO. En 2015, el SCRS identificó al atún blanco del
+norte como un candidato prioritario para la aplicación de la EEO,
+considerando la disponibilidad de datos y el interés científico. La Rec.
+15-04 estableció los objetivos de ordenación para el stock y solicitó
+explícitamente al SCRS que desarrollara RCC y un proceso de diálogo con
+la Comisión para apoyar el desarrollo de un proceso de EEO. <br><br>La
+evaluación de stock de 2016 motivó aún más este trabajo al confirmar la
+trayectoria de recuperación del stock, a la vez que enfatizó la
+necesidad de evaluar estrategias a largo plazo en condiciones de
+incertidumbre antes de cualquier aumento del TAC. La Rec. 16-06
+proporcionó las métricas de rendimiento que el SCRS utilizó para evaluar
+las HCR alternativas en condiciones de incertidumbre. En 2017, la
+Comisión adoptó una Norma de Control de Captura provisional (Rec. 17-04)
+y aumentó el TAC con base en ella. De 2017 a 2021, se llevó a cabo un
+desarrollo iterativo y una revisión por pares del marco MSE bajo la guía
+del Grupo de Especies de Albacora del SCRS y el PA2, que culminó en la
+adopción formal de un Procedimiento de Gestión (PM) mediante la Rec.
+21-04. Desde entonces, este PM se ha utilizado para establecer el TAC
+cada tres años.
 </h2>
 </div>
 </div>
 </div>
-<div id="row-56" class="section level2" data-height="75">
+<div id="row-57" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="Contents_esp" class="section level3">
 <h3></h3>
@@ -3823,7 +3850,7 @@ Contenido
 </div>
 </div>
 </div>
-<div id="row-57" class="section level2" data-height="230">
+<div id="row-58" class="section level2" data-height="230">
 <h2>Row</h2>
 <div id="section-100" class="section level3" data-width="14%">
 <h3></h3>
@@ -3912,7 +3939,7 @@ excepcionales</a>
 <h3></h3>
 </div>
 </div>
-<div id="row-58" class="section level2" data-height="75">
+<div id="row-59" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="OM_esp" class="section level3">
 <h3></h3>
@@ -3926,7 +3953,7 @@ Modelos operativos
 </div>
 </div>
 </div>
-<div id="row-59" class="section level2" data-height="180">
+<div id="row-60" class="section level2" data-height="180">
 <h2>Row</h2>
 <div id="section-108" class="section level3">
 <h3></h3>
@@ -3935,21 +3962,22 @@ Modelos operativos
 </div>
 <div style="background-color:#001A3E; padding:10px 50px; text-align: justify;">
 <h2 style="font-size:1.5em; color:#ffffff; ">
-Los Modelos Operativos (MO) representan una gama de dinámicas plausibles
-para el stock de atún blanco del Atlántico Norte. Estos incluyen
-incertidumbres en: la relación stock-reclutamiento (pendiente,
-variabilidad), la mortalidad natural, la selectividad pesquera, el error
-de observación y la estructura de las series temporales. El desarrollo
-inicial y la delimitación de los MO se están llevando a cabo utilizando
-herramientas de los marcos openMSE y nalb-mse. El acondicionamiento del
-modelo se basa en los datos de la evaluación de stock más reciente y en
-pruebas diagnósticas de los patrones retrospectivos y los puntos de
-referencia.
+Los Modelos Operativos (MO) representan un rango de dinámicas plausibles
+para la población de atún blanco del norte. El conjunto de referencia de
+132 MO incluye las principales fuentes de incertidumbre identificadas
+por el Grupo de Trabajo en las evaluaciones de la población. Estas
+incluyen incertidumbre biológica (inclinación, mortalidad natural),
+ponderación de datos (tamaño, CPUE, marcado), estructura de las series
+temporales y dinámica de la pesquería (selectividad y capturabilidad).
+Los resultados de los escenarios de evaluación de la población basados
+en Multifan-CL, actualizados con datos hasta 2020, se utilizaron para
+condicionar los 132 MO. Los MO se condicionaron utilizando bibliotecas
+del proyecto FLR (www.flr-project.org).
 </h2>
 </div>
 </div>
 </div>
-<div id="row-60" class="section level2" data-height="100">
+<div id="row-61" class="section level2" data-height="100">
 <h2>Row</h2>
 <div id="section-109" class="section level3">
 <h3></h3>
@@ -3967,7 +3995,7 @@ pueden encontrar en las referencias</a>
 </div>
 </div>
 </div>
-<div id="row-61" class="section level2" data-height="150">
+<div id="row-62" class="section level2" data-height="150">
 <h2>Row</h2>
 <div id="section-110" class="section level3" data-width="20%">
 <h3></h3>
@@ -4017,7 +4045,7 @@ Códigos MSE</a>
 <h3></h3>
 </div>
 </div>
-<div id="row-62" class="section level2" data-height="120">
+<div id="row-63" class="section level2" data-height="120">
 <h2>Row</h2>
 <div id="MO_esp" class="section level3">
 <h3></h3>
@@ -4035,7 +4063,7 @@ Objetivos de gestión
 </div>
 </div>
 </div>
-<div id="row-63" class="section level2" data-height="270">
+<div id="row-64" class="section level2" data-height="270">
 <h2>Row</h2>
 <div id="section-115" class="section level3" data-width="10%">
 <h3></h3>
@@ -4066,7 +4094,7 @@ Safety
 </h2>
 <img role="img" src="data:image/png;base64,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" width="100" />
 <h2 style="font-size:1.5em; color:#ffffff;">
-Prob. &lt; 15 % de probabilidad de que el stock caiga por debajo de Blim
+Disminuya F lo antes posible cuando B&lt;Bmsy
 </h2>
 </div>
 </div>
@@ -4096,7 +4124,7 @@ Stability
 </h2>
 <img role="img" src="data:image/png;base64,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" width="100" />
 <h2 style="font-size:1.5em; color:#ffffff;">
-Cambios en el TAC entre períodos: +20 % / -20 %
+Minimizar las fluctuaciones interanuales en los niveles de TAC
 </h2>
 </div>
 </div>
@@ -4104,7 +4132,7 @@ Cambios en el TAC entre períodos: +20 % / -20 %
 <h3></h3>
 </div>
 </div>
-<div id="row-64" class="section level2" data-height="75">
+<div id="row-65" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="CMP_esp" class="section level3">
 <h3></h3>
@@ -4118,7 +4146,7 @@ Procedimiento de gestión candidato
 </div>
 </div>
 </div>
-<div id="row-65" class="section level2" data-height="100">
+<div id="row-66" class="section level2" data-height="100">
 <h2>Row</h2>
 <div id="section-121" class="section level3">
 <h3></h3>
@@ -4127,12 +4155,14 @@ Procedimiento de gestión candidato
 </div>
 <div style="background-color:#001A3E; padding:10px; text-align: center;">
 <h2 style="font-size:1.5em; color:#ffffff; ">
-Solo se consideraron reglas de control de captura basadas en modelos
+Sólo se consideraron los HCR basados en modelos, con parámetros
+variables del HCR de palo de hockey, así como cierres de estabilidad
+alternativos.
 </h2>
 </div>
 </div>
 </div>
-<div id="row-66" class="section level2" data-height="75">
+<div id="row-67" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="MP_esp" class="section level3">
 <h3></h3>
@@ -4146,7 +4176,7 @@ Procedimiento de gestión
 </div>
 </div>
 </div>
-<div id="row-67" class="section level2" data-height="75">
+<div id="row-68" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="section-122" class="section level3">
 <h3></h3>
@@ -4155,13 +4185,14 @@ Procedimiento de gestión
 </div>
 <div style="background-color:#001A3E; padding:10px 20px; text-align: center;">
 <h2 style="font-size:1.5em; color:#ffffff; ">
-La Comisión adoptó una regla de control de captura (RCC) provisional en
-2017 (Rec. 17-04) y la adoptó formalmente en 2021 (Rec. 21-04)
+La Comisión adoptó una regla de control de cosecha provisional (HCR) en
+2017 (Rec. 17-04) y adoptó formalmente un procedimiento de gestión
+completo en 2021 (Rec. 21-04).
 </h2>
 </div>
 </div>
 </div>
-<div id="row-68" class="section level2" data-height="180">
+<div id="row-69" class="section level2" data-height="180">
 <h2>Row</h2>
 <div id="section-123" class="section level3" data-width="5%">
 <h3></h3>
@@ -4173,14 +4204,15 @@ La Comisión adoptó una regla de control de captura (RCC) provisional en
 </div>
 <div style="background-color:#001A3E; padding:10px 50px; text-align: justify;">
 <h2 style="font-size:1.4em; color:#ffffff; ">
-El procedimiento de gestión (PG) se aplicará para establecer una captura
-total permisible (TAC) anual constante durante tres años, utilizando los
-siguientes tres valores estimados a partir de cada evaluación del stock.
-Para cada valor, se utilizarán los valores medianos que figuran en la
-tabla resumen del informe del SCRS:<br>a) La estimación de la biomasa
-actual del stock (BCURR).<br>b) La estimación de la biomasa del stock en
-el rendimiento máximo sostenible (BMSY).<br>c) La estimación de la
-mortalidad por pesca en el RMS (FMSY).
+El MP se aplicará para establecer una captura total anual permisible
+constante durante tres años. Se aplica un modelo de producción (con
+entradas y especificaciones definidas) y el HCR, de tipo palo de hockey,
+determina el nivel de mortalidad por pesca que se aplicará en los
+próximos tres años, dependiendo del estado estimado de la población, con
+un máximo de 0,8*Fmsy y una mortalidad por pesca decreciente tan pronto
+como se estime que B es inferior a Brms. El TAC máximo permitido es de
+50.000 t, y las variaciones del TAC se limitan a +25 %/-20 % si B &gt;
+Bmsy.
 </h2>
 </div>
 </div>
@@ -4194,12 +4226,12 @@ mortalidad por pesca en el RMS (FMSY).
 <img role="img" src="data:image/png;base64,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" width="100" /></a>
 <h2 style="font-size:1.3em; color:#ffffff; ">
 <a href="https://www.iccat.int/Documents/Recs/compendiopdf-s/2021-04-s.pdf" style="color: #ffffff;">
-Rec. 21-04<br>Apéndice B del Anexo 1</a>
+Rec. 21-04<br>Anexo 1</a>
 </h2>
 </div>
 </div>
 </div>
-<div id="row-69" class="section level2" data-height="75">
+<div id="row-70" class="section level2" data-height="75">
 <h2>Row</h2>
 <div id="EC_esp" class="section level3">
 <h3></h3>
@@ -4213,7 +4245,7 @@ Circunstancias excepcionales
 </div>
 </div>
 </div>
-<div id="row-70" class="section level2" data-height="120">
+<div id="row-71" class="section level2" data-height="120">
 <h2>Row</h2>
 <div id="section-126" class="section level3">
 <h3></h3>
@@ -4226,13 +4258,14 @@ La Comisión adoptó el Protocolo de Circunstancias Excepcionales en 2021
 (Rec. 21-04, Anexo 2).
 </h2>
 <h2 style="font-size:1.5em; color:#ffffff; ">
-Revisión anual, evaluada anualmente por el SCRS (2023-2024).<br>No ha
-habido Circunstancias Excepcionales desde 2022.
+El SCRS evalúa anualmente la existencia de circunstancias excepcionales
+que impidan la aplicación de la MP.<br>No se han invocado circunstancias
+excepcionales desde 2022.
 </h2>
 </div>
 </div>
 </div>
-<div id="row-71" class="section level2" data-height="240">
+<div id="row-72" class="section level2" data-height="240">
 <h2>Row</h2>
 <div id="section-127" class="section level3" data-width="5%">
 <h3></h3>
@@ -4272,7 +4305,7 @@ Protocolo CE:<br>Rec. 21-04, Anexo 2</a>
 </div>
 </div>
 </div>
-<div id="row-72" class="section level2" data-height="70">
+<div id="row-73" class="section level2" data-height="70">
 <h2>Row</h2>
 <div id="References_esp" class="section level3">
 <h3></h3>
@@ -4286,7 +4319,7 @@ Referencias
 </div>
 </div>
 </div>
-<div id="row-73" class="section level2" data-height="180">
+<div id="row-74" class="section level2" data-height="180">
 <h2>Row</h2>
 <div id="section-130" class="section level3" data-width="15%">
 <h3></h3>
@@ -4360,7 +4393,7 @@ Otros
 <h3></h3>
 </div>
 </div>
-<div id="row-74" class="section level2" data-height="240">
+<div id="row-75" class="section level2" data-height="240">
 <h2>Row</h2>
 <div id="section-137" class="section level3">
 <h3></h3>
