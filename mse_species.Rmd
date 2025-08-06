@@ -87,6 +87,8 @@ Column {.sidebar}
     `r {na.omit(txt[txt$item=="sp5",lg+2])}`</a><br/>
   <a href=`r {na.omit(txt[txt$item=="sp6_link",lg+2])}`>
     `r {na.omit(txt[txt$item=="sp6",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="ref_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="Title10",lg+2])}`</a><br/>
 </div>
 
 
@@ -118,7 +120,7 @@ Column {.sidebar}
 .section.level3 {
   margin: 0 !important;
   padding: 0 !important;
-  background-color: #f8f2e2 !important;
+  background-color: #001A3E !important;
 }
 
 body {
@@ -969,6 +971,8 @@ Column {.sidebar}
     `r {na.omit(txt[txt$item=="sp5",lg+2])}`</a><br/>
   <a href=`r {na.omit(txt[txt$item=="sp6_link",lg+2])}`>
     `r {na.omit(txt[txt$item=="sp6",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="ref_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="Title10",lg+2])}`</a><br/>
 </div>
 
 
@@ -1000,7 +1004,7 @@ Column {.sidebar}
 .section.level3 {
   margin: 0 !important;
   padding: 0 !important;
-  background-color: #f8f2e2 !important;
+  background-color: #001A3E !important;
 }
 
 body {
@@ -1845,6 +1849,8 @@ Column {.sidebar}
     `r {na.omit(txt[txt$item=="sp5",lg+2])}`</a><br/>
   <a href=`r {na.omit(txt[txt$item=="sp6_link",lg+2])}`>
     `r {na.omit(txt[txt$item=="sp6",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="ref_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="Title10",lg+2])}`</a><br/>
 </div>
 
 
@@ -1876,7 +1882,7 @@ Column {.sidebar}
 .section.level3 {
   margin: 0 !important;
   padding: 0 !important;
-  background-color: #f8f2e2 !important;
+  background-color: #001A3E !important;
 }
 
 body {

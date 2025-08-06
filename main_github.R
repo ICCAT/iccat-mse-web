@@ -10,7 +10,7 @@ setwd(dir)
 rmarkdown::render("mse_general.Rmd",params = list(dir= dir), output_file = paste0(dir,"index.html"), run_pandoc = TRUE)
 
 #individual species
-sp_list <- c("NALB","BFT","NSWO","WSKJ","multiTT")
+sp_list <- c("NALB","BFT","NSWO","WSKJ","multiTT","Other Species")
 #nsp <- 1 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT"
 for (nsp in c(1:5)){
 sp <- sp_list[nsp]
