@@ -4819,15 +4819,19 @@ window.FlexDashboardComponents.push({
 
 <div id="dashboard-container">
 
-<div id="engfraesp" class="section level1" data-orientation="rows">
-<h1>ENG/FRA/ESP</h1>
+<div id="general-information" class="section level1" data-orientation="rows">
+<h1>General information</h1>
 <div id="column" class="section level2 sidebar">
 <h2 class="sidebar">Column</h2>
 <!-- Column 1 -->
 <div>
-<p><strong>North Atlantic Albacore MSE</strong><br />
-<a href="#Top">Top</a><br /> <a href="#Materials">References
-chose</a><br /></p>
+<p><strong>References</strong><br />
+<a href="#general-information">General information</a><br />
+<a href="#nalb">North Atlantic Albacore</a><br /> <a href="#bft">Atlantic
+Bluefin Tuna</a><br /> <a href="#nswo">North Atlantic Swordfish</a><br />
+<a href="#wskj">West Atlantic Skipjack</a><br />
+<a href="#multitt">Multi-stocks Tropical Tunas</a><br />
+<a href="#other-species">Other Species</a><br /></p>
 </div>
 <hr />
 <!-- Column 2 -->
@@ -4852,17 +4856,19 @@ Other Species</a><br /></p>
 </div>
 <style type="text/css">
 
-nav.section.sidebar {
-background-color: #001A3E !important; 
+.navbar {
+background-color: rgba(0, 26, 62, 0.8) !important; border: none !important;
+backdrop-filter: blur(4px); }
+
+.navbar .navbar-nav > li > a,
+.navbar .navbar-brand {
 color: #ffffff !important;
 }
 
-nav.section.sidebar a {
+.navbar .navbar-nav > .active > a {
+background-color: rgba(0, 51, 102, 0.9) !important;
 color: #ffffff !important;
 }
-
-nav.section.sidebar h3 {
-color: #ffffff !important;
 </style>
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
@@ -4871,11 +4877,17 @@ color: #ffffff !important;
 .section.level3 {
 margin: 0 !important;
 padding: 0 !important;
+background-color: #f8f2e2 !important;
+}
+body {
+margin: 0 !important;
+padding: 0 !important;
+background-color: #f8f2e2 !important;
 }
 .chart-stage {
 margin: 0 !important;
 padding: 0 !important;
-}
+background-color: #f8f2e2 !important; }
 .chart-wrapper {
 margin: 0 !important;
 padding: 0 !important;
@@ -4885,13 +4897,37 @@ padding: 0 !important;
 .section.level3 {
 border: none !important;
 box-shadow: none !important;}
-.chart-stage {
-background-color: #ffffff !important; }
+.main-container {
+background-color: #f8f2e2; }
+
+.dataTable tbody td {
+background-color: #f8f2e2 !important; 
+color: #001A3E !important; 
+}
+
+.dataTable thead th {
+background-color: #f8f2e2 !important;
+color: #001A3E !important;
+}
+
+.dataTables_wrapper .dataTables_filter input,
+.dataTables_wrapper .dataTables_length select {
+background-color: #f8f2e2 !important;
+color: #001A3E !important;
+border: 1px solid #ccc;
+}
+
+.dataTable thead select {
+background-color: #f8f2e2 !important;
+color: #001A3E !important;
 </style>
 </div>
-<div id="row" class="section level2" data-height="300">
+<div id="row" class="section level2" data-height="40">
 <h2>Row</h2>
-<div id="Top" class="section level3">
+</div>
+<div id="row-1" class="section level2" data-height="300">
+<h2>Row</h2>
+<div id="section" class="section level3">
 <h3></h3>
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
@@ -4901,7 +4937,7 @@ background-color: #ffffff !important; }
 References/ Références/ Referencias
 </h1>
 </div>
-<div style="background-color:#ffffff; padding:10px 30px; text-align: center;">
+<div style="background-color:#f8f2e2; padding:10px 30px; text-align: center;">
 <h2 style="font-size:1.4em; color:#001A3E;">
 <p>Please consult with the ICCAT Secretariat if links are not working
 nor available. Most of materials are in English, additional links are
@@ -4918,42 +4954,1512 @@ y español disponibles.
 </div>
 </div>
 </div>
-<div id="row-1" class="section level2" data-height="300">
+<div id="row-2" class="section level2" data-height="70">
 <h2>Row</h2>
-<div id="Materials" class="section level3">
+<div id="section-1" class="section level3">
 <h3></h3>
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
 <div style="background-color:#001A3E; padding:4px; text-align: center;">
 <h1 style="font-size:2em; color:#ffffff; font-weight: bold;">
-Materials/ Matériels/ Materiales
+General information/Informations générales/Información general
 </h1>
 </div>
-<div style="background-color:#ffffff; padding:10px 30px; text-align: center;">
-<h2 style="font-size:1.4em; color:#001A3E;">
-<p>Please find the necessary references by filtering the reference
-materials, species, or year using the first, second, or third
-columns.<br></p>
-<p>Veuillez trouver les références nécessaires en filtrant les documents
-de référence, les espèces ou l’année en utilisant la première, la
-deuxième ou la troisième colonne.<br></p>
-Encuentre las referencias necesarias filtrando los materiales de
-referencia, las especies o el año utilizando la primera, segunda o
-tercera columna.
-</h2>
 </div>
 </div>
-</div>
-<div id="row-2" class="section level2" data-height="auto">
+<div id="row-3" class="section level2" data-height="auto">
 <h2>Row</h2>
-<div id="section" class="section level3">
+<div id="GENMaterials" class="section level3">
 <h3></h3>
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<div class="datatables html-widget html-fill-item" id="htmlwidget-a315249d96c34694ce9a" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-a315249d96c34694ce9a">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","fillContainer":true,"data":[["SCRS Docs","SCRS Docs","SCRS Docs","SCRS Docs","Rec/Res","Rec/Res","Rec/Res","Rec/Res","Rec/Res","Rec/Res","Materials","Materials","Materials","Materials","Materials","Materials","Materials","Materials","Materials","Materials","Materials","Materials","Meetings","Others","Others","Others"],["ALL","NALB","BFT","NSWO","ALL","NALB","BFT","NSWO","WSKJ","multiTT","ALL","ALL","ALL","ALL","ALL","BFT","others","NALB","BFT","NSWO","WSKJ","multiTT","ALL","ALL","ALL","ALL"],["2025","2025","2025","2025","2015","2015","2015","2015","2015","2015","2018","2020-2025","2024","2019","2020-2025","2022","2019","2025","2025","2025","2025","2025","2018","2018","2021","2020-2025"],["SCRS/2025/019","SCRS/2025/019","SCRS/2025/019","SCRS/2025/019","Rec. 15-07","Rec. 15-07","Rec. 15-07","Rec. 15-07","Rec. 15-07","Rec. 15-07","tRFMO MSE Glossary","Harvest Strategies Glossary","SCRS/2024/149","ICCAT","IOTC","ICCAT/PA2","ADD","ICCAT","ICCAT","ICCAT","ICCAT","ICCAT","tRFMO MSE meeting","tRFMO MSE Working Group","IOTC","Harvest Strategies"],["REPORT OF THE PROJECT “EXTERNAL REVIEW OF THE OVERALL ICCAT MSE PROCESS","REPORT OF THE PROJECT “EXTERNAL REVIEW OF THE OVERALL ICCAT MSE PROCESS","REPORT OF THE PROJECT “EXTERNAL REVIEW OF THE OVERALL ICCAT MSE PROCESS","REPORT OF THE PROJECT “EXTERNAL REVIEW OF THE OVERALL ICCAT MSE PROCESS","RECOMMENDATION BY ICCAT ON THE DEVELOPMENT OF HARVEST CONTROL RULES AND OF MANAGEMENT STRATEGY EVALUATION","RECOMMENDATION BY ICCAT ON THE DEVELOPMENT OF HARVEST CONTROL RULES AND OF MANAGEMENT STRATEGY EVALUATION","RECOMMENDATION BY ICCAT ON THE DEVELOPMENT OF HARVEST CONTROL RULES AND OF MANAGEMENT STRATEGY EVALUATION","RECOMMENDATION BY ICCAT ON THE DEVELOPMENT OF HARVEST CONTROL RULES AND OF MANAGEMENT STRATEGY EVALUATION","RECOMMENDATION BY ICCAT ON THE DEVELOPMENT OF HARVEST CONTROL RULES AND OF MANAGEMENT STRATEGY EVALUATION","RECOMMENDATION BY ICCAT ON THE DEVELOPMENT OF HARVEST CONTROL RULES AND OF MANAGEMENT STRATEGY EVALUATION","Glossary of terms for harvest strategies, management procedures and management strategy evaluation","Harvest Strategies Glossary","An Updated Roadmap for MSE development by Carruthers T.R.","ICCAT MSE Introductory Workshop in 2019 by Taylor N. and Kimoto A.","IOTC MSE capacity building tools","BFT Ambassador 1","MORE (get BFT Ambassador 1 meeting contains basic, more SCRS docs)","NALB MSE Codes","BFT MSE Codes","NSWO MSE Codes","WSKJ MSE Codes","multiTT MSE Codes","REPORT OF THE 2018 JOINT TUNA RFMO MANAGEMENT STRATEGY EVALUATION WORKING GROUP MEETING (Seattle, USA – 13-15 June 2018)","Joint Tuna RFMO Management Strategy Evaluation Working Group","IOTC Management Strategy\r\nEvaluation (MSE)","harveststrategies.org"],["<a href=\"https://www.iccat.int/Documents/Recs/compendiopdf-e/2015-07-e.pdf\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a><a href=\"https://www.iccat.int/Documents/Recs/compendiopdf-f/2015-07-f.pdf\" target=\"_blank\"><img src=\"images/france.png\" width=\"40\" /><\/a><a href=\"https://www.iccat.int/Documents/Recs/compendiopdf-s/2015-07-s.pdf\" target=\"_blank\"><img src=\"images/spain.png\" width=\"40\" /><\/a>","<a href=\"https://www.iccat.int/Documents/Recs/compendiopdf-e/2015-07-e.pdf\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a><a href=\"https://www.iccat.int/Documents/Recs/compendiopdf-f/2015-07-f.pdf\" target=\"_blank\"><img src=\"images/france.png\" width=\"40\" /><\/a>","<a href=\"https://www.iccat.int/Documents/Recs/compendiopdf-e/2015-07-e.pdf\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a><a href=\"https://www.iccat.int/Documents/Recs/compendiopdf-f/2015-07-f.pdf\" target=\"_blank\"><img src=\"images/france.png\" width=\"40\" /><\/a>","<a href=\"https://www.iccat.int/Documents/Recs/compendiopdf-e/2015-07-e.pdf\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a>","<a href=\"https://www.iccat.int/Documents/Recs/compendiopdf-e/2015-07-e.pdf\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a>","<a href=\"https://www.iccat.int/Documents/Recs/compendiopdf-e/2015-07-e.pdf\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a>","<a href=\"https://www.iccat.int/Documents/Recs/compendiopdf-e/2015-07-e.pdf\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a>","<a href=\"https://www.iccat.int/Documents/Recs/compendiopdf-e/2015-07-e.pdf\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a>","<a href=\"https://www.iccat.int/Documents/Recs/compendiopdf-e/2015-07-e.pdf\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a>","<a href=\"https://www.iccat.int/Documents/Recs/compendiopdf-e/2015-07-e.pdf\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a>","<a href=\"https://tuna-org.org/Documents/MSEGlossary_tRFMO_MSEWG2018.pdf\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a>","<a href=\"https://harveststrategies.org/what-are-harvest-strategies/glossary/\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a><a href=\"https://www.iccat.int/Documents/Recs/compendiopdf-f/2015-07-f.pdf\" target=\"_blank\"><img src=\"images/france.png\" width=\"40\" /><\/a><a href=\"https://www.iccat.int/Documents/Recs/compendiopdf-s/2015-07-s.pdf\" target=\"_blank\"><img src=\"images/spain.png\" width=\"40\" /><\/a>","<a href=\"https://www.iccat.int/Documents/CVSP/CV081_2024/n_2/CV08102149.pdf\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a><a href=\"https://www.iccat.int/Documents/Recs/compendiopdf-f/2015-07-f.pdf\" target=\"_blank\"><img src=\"images/france.png\" width=\"40\" /><\/a>","<a href=\"https://github.com/ICCAT/iccat-mse/blob/main/assets/references/ref_oth/MSECourse2019_ENG.pdf\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a>","<a href=\"https://pl202.shinyapps.io/IOTC_MSE/\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a>","<a href=\"https://pl202.shinyapps.io/IOTC_MSE/\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a>","<a href=\"https://pl202.shinyapps.io/IOTC_MSE/\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a>","<a href=\"https://iccat.github.io/iccat-mse-web/species/NALB/NALB_readme.html\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a>","<a href=\"https://iccat.github.io/iccat-mse-web/species/BFT/BFT_readme.html\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a>","<a href=\"https://iccat.github.io/iccat-mse-web/species/NSWO/NSWO_readme.html\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a>","<a href=\"https://iccat.github.io/iccat-mse-web/species/WSKJ/WSKJ_readme.html\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a>","<a href=\"https://iccat.github.io/iccat-mse-web/species/multiTT/multiTT_readme.html\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a>","<a href=\"https://www.tuna-org.org/Documents/tRFMO_MSE_2018_TEXT_final.pdf\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a>","<a href=\"https://tuna-org.org/mse.htm\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a>","<a href=\"https://edu.iotc.org/\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a>","<a href=\"https://harveststrategies.org/\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a>"]],"container":"<table class=\"display fill-container\">\n  <thead>\n    <tr>\n      <th>Item<\/th>\n      <th>Species<\/th>\n      <th>Year<\/th>\n      <th>Ref<\/th>\n      <th>Title<\/th>\n      <th>Links<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":26,"scrollY":"400px","scrollCollapse":true,"autoWidth":false,"lengthChange":false,"columnDefs":[{"width":"50px","targets":0},{"width":"50px","targets":1},{"width":"50px","targets":2},{"width":"100px","targets":3},{"width":"300px","targets":4},{"width":"80px","targets":5},{"className":"dt-left","targets":"_all"},{"name":"Item","targets":0},{"name":"Species","targets":1},{"name":"Year","targets":2},{"name":"Ref","targets":3},{"name":"Title","targets":4},{"name":"Links","targets":5}],"initComplete":"function(settings, json) {\n  var api = this.api();\n  api.columns().every(function(i) {\n    if ([0, 1, 2].includes(i)) {\n      var column = this;\n      var select = $('<select><option value=\"\"><\/option><\/select>')\n        .appendTo($(column.header()).empty())\n        .on('change', function () {\n          var val = $.fn.dataTable.util.escapeRegex($(this).val());\n          column.search(val ? '^' + val + '$' : '', true, false).draw();\n        });\n      column.data().unique().sort().each(function (d) {\n        select.append('<option value=\"' + d + '\">' + d + '<\/option>');\n      });\n    }\n  });\n}","order":[],"orderClasses":false,"orderCellsTop":true}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+<hr style="border: none; height: 2px; background-color: #ccc;" />
+<h1 style="font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;">
+GEN : Materials/ Matériels/ Materiales
+</h1>
+</div>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-9c08646a328e864dd025" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-9c08646a328e864dd025">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","fillContainer":true,"data":[["GEN","GEN","GEN","GEN","GEN"],["Materials","Materials","Materials","Materials","Materials"],["2018","2020-2025","2024","2019","2020-2025"],["tRFMO MSE Glossary","Harvest Strategies Glossary","SCRS/2024/149","ICCAT","IOTC"],["Glossary of terms for harvest strategies, management procedures and management strategy evaluation","Harvest Strategies Glossary","An Updated Roadmap for MSE development by Carruthers T.R.","ICCAT MSE Introductory Workshop in 2019 by Taylor N. and Kimoto A.","IOTC MSE capacity building tools"],["<a href=\"https://tuna-org.org/Documents/MSEGlossary_tRFMO_MSEWG2018.pdf\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a>","<a href=\"https://harveststrategies.org/what-are-harvest-strategies/glossary/\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a><a href=\"https://www.iccat.int/Documents/Recs/compendiopdf-f/2015-07-f.pdf\" target=\"_blank\"><img src=\"images/france.png\" width=\"40\" /><\/a><a href=\"https://www.iccat.int/Documents/Recs/compendiopdf-s/2015-07-s.pdf\" target=\"_blank\"><img src=\"images/spain.png\" width=\"40\" /><\/a>","<a href=\"https://www.iccat.int/Documents/CVSP/CV081_2024/n_2/CV08102149.pdf\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a><a href=\"https://www.iccat.int/Documents/Recs/compendiopdf-f/2015-07-f.pdf\" target=\"_blank\"><img src=\"images/france.png\" width=\"40\" /><\/a>","<a href=\"https://github.com/ICCAT/iccat-mse/blob/main/assets/references/ref_oth/MSECourse2019_ENG.pdf\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a>","<a href=\"https://pl202.shinyapps.io/IOTC_MSE/\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a>"]],"container":"<table class=\"display fill-container\">\n  <thead>\n    <tr>\n      <th>Species<\/th>\n      <th>Item<\/th>\n      <th>Year<\/th>\n      <th>Ref<\/th>\n      <th>Title<\/th>\n      <th>Links<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"scrollY":"400px","scrollCollapse":true,"autoWidth":false,"lengthChange":false,"columnDefs":[{"width":"50px","targets":0},{"width":"50px","targets":1},{"width":"50px","targets":2},{"width":"100px","targets":3},{"width":"300px","targets":4},{"width":"80px","targets":5},{"className":"dt-left","targets":"_all"},{"name":"Species","targets":0},{"name":"Item","targets":1},{"name":"Year","targets":2},{"name":"Ref","targets":3},{"name":"Title","targets":4},{"name":"Links","targets":5}],"order":[],"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="row-4" class="section level2" data-height="auto">
+<h2>Row</h2>
+<div id="GENRecRes" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+<hr style="border: none; height: 2px; background-color: #ccc;" />
+<h1 style="font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;">
+GEN : Rec/Res/ Rec/Res/ Rec/Res
+</h1>
+</div>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-3eeaab8488e8c7d7f0ed" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-3eeaab8488e8c7d7f0ed">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","fillContainer":true,"data":[["GEN"],["Rec/Res"],["2015"],["Rec. 15-07"],["RECOMMENDATION BY ICCAT ON THE DEVELOPMENT OF HARVEST CONTROL RULES AND OF MANAGEMENT STRATEGY EVALUATION"],["<a href=\"https://www.iccat.int/Documents/Recs/compendiopdf-e/2015-07-e.pdf\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a>"]],"container":"<table class=\"display fill-container\">\n  <thead>\n    <tr>\n      <th>Species<\/th>\n      <th>Item<\/th>\n      <th>Year<\/th>\n      <th>Ref<\/th>\n      <th>Title<\/th>\n      <th>Links<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":1,"scrollY":"400px","scrollCollapse":true,"autoWidth":false,"lengthChange":false,"columnDefs":[{"width":"50px","targets":0},{"width":"50px","targets":1},{"width":"50px","targets":2},{"width":"100px","targets":3},{"width":"300px","targets":4},{"width":"80px","targets":5},{"className":"dt-left","targets":"_all"},{"name":"Species","targets":0},{"name":"Item","targets":1},{"name":"Year","targets":2},{"name":"Ref","targets":3},{"name":"Title","targets":4},{"name":"Links","targets":5}],"order":[],"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="row-5" class="section level2" data-height="auto">
+<h2>Row</h2>
+<div id="GENMeetings" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+<hr style="border: none; height: 2px; background-color: #ccc;" />
+<h1 style="font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;">
+GEN : Meetings/ Réunions/ Reuniones
+</h1>
+</div>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-a40958a92731ed15ea9e" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-a40958a92731ed15ea9e">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","fillContainer":true,"data":[["GEN"],["Meetings"],["2018"],["tRFMO MSE meeting"],["REPORT OF THE 2018 JOINT TUNA RFMO MANAGEMENT STRATEGY EVALUATION WORKING GROUP MEETING (Seattle, USA – 13-15 June 2018)"],["<a href=\"https://www.tuna-org.org/Documents/tRFMO_MSE_2018_TEXT_final.pdf\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a>"]],"container":"<table class=\"display fill-container\">\n  <thead>\n    <tr>\n      <th>Species<\/th>\n      <th>Item<\/th>\n      <th>Year<\/th>\n      <th>Ref<\/th>\n      <th>Title<\/th>\n      <th>Links<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":1,"scrollY":"400px","scrollCollapse":true,"autoWidth":false,"lengthChange":false,"columnDefs":[{"width":"50px","targets":0},{"width":"50px","targets":1},{"width":"50px","targets":2},{"width":"100px","targets":3},{"width":"300px","targets":4},{"width":"80px","targets":5},{"className":"dt-left","targets":"_all"},{"name":"Species","targets":0},{"name":"Item","targets":1},{"name":"Year","targets":2},{"name":"Ref","targets":3},{"name":"Title","targets":4},{"name":"Links","targets":5}],"order":[],"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="row-6" class="section level2" data-height="auto">
+<h2>Row</h2>
+<div id="GENSCRSdocs" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+<hr style="border: none; height: 2px; background-color: #ccc;" />
+<h1 style="font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;">
+GEN : SCRS Docs/ Documents SCRS/ Documentos SCRS
+</h1>
+</div>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-4d0c17e72a016b0ee25a" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-4d0c17e72a016b0ee25a">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","fillContainer":true,"data":[["GEN"],["SCRS Docs"],["2025"],["SCRS/2025/019"],["REPORT OF THE PROJECT “EXTERNAL REVIEW OF THE OVERALL ICCAT MSE PROCESS"],["<a href=\"https://www.iccat.int/Documents/Recs/compendiopdf-e/2015-07-e.pdf\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a><a href=\"https://www.iccat.int/Documents/Recs/compendiopdf-f/2015-07-f.pdf\" target=\"_blank\"><img src=\"images/france.png\" width=\"40\" /><\/a><a href=\"https://www.iccat.int/Documents/Recs/compendiopdf-s/2015-07-s.pdf\" target=\"_blank\"><img src=\"images/spain.png\" width=\"40\" /><\/a>"]],"container":"<table class=\"display fill-container\">\n  <thead>\n    <tr>\n      <th>Species<\/th>\n      <th>Item<\/th>\n      <th>Year<\/th>\n      <th>Ref<\/th>\n      <th>Title<\/th>\n      <th>Links<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":1,"scrollY":"400px","scrollCollapse":true,"autoWidth":false,"lengthChange":false,"columnDefs":[{"width":"50px","targets":0},{"width":"50px","targets":1},{"width":"50px","targets":2},{"width":"100px","targets":3},{"width":"300px","targets":4},{"width":"80px","targets":5},{"className":"dt-left","targets":"_all"},{"name":"Species","targets":0},{"name":"Item","targets":1},{"name":"Year","targets":2},{"name":"Ref","targets":3},{"name":"Title","targets":4},{"name":"Links","targets":5}],"order":[],"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="row-7" class="section level2" data-height="auto">
+<h2>Row</h2>
+<div id="GENOthers" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+<hr style="border: none; height: 2px; background-color: #ccc;" />
+<h1 style="font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;">
+GEN : Others/ Autres/ Otros
+</h1>
+</div>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-53a1f6fd9c24ee31c373" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-53a1f6fd9c24ee31c373">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","fillContainer":true,"data":[["GEN","GEN","GEN"],["Others","Others","Others"],["2018","2021","2020-2025"],["tRFMO MSE Working Group","IOTC","Harvest Strategies"],["Joint Tuna RFMO Management Strategy Evaluation Working Group","IOTC Management Strategy\r\nEvaluation (MSE)","harveststrategies.org"],["<a href=\"https://tuna-org.org/mse.htm\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a>","<a href=\"https://edu.iotc.org/\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a>","<a href=\"https://harveststrategies.org/\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a>"]],"container":"<table class=\"display fill-container\">\n  <thead>\n    <tr>\n      <th>Species<\/th>\n      <th>Item<\/th>\n      <th>Year<\/th>\n      <th>Ref<\/th>\n      <th>Title<\/th>\n      <th>Links<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":3,"scrollY":"400px","scrollCollapse":true,"autoWidth":false,"lengthChange":false,"columnDefs":[{"width":"50px","targets":0},{"width":"50px","targets":1},{"width":"50px","targets":2},{"width":"100px","targets":3},{"width":"300px","targets":4},{"width":"80px","targets":5},{"className":"dt-left","targets":"_all"},{"name":"Species","targets":0},{"name":"Item","targets":1},{"name":"Year","targets":2},{"name":"Ref","targets":3},{"name":"Title","targets":4},{"name":"Links","targets":5}],"order":[],"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="nalb" class="section level1" data-orientation="rows">
+<h1>NALB</h1>
+<div id="column-1" class="section level2 sidebar">
+<h2 class="sidebar">Column</h2>
+<!-- Column 1 -->
+<div>
+<p><strong>References</strong><br />
+<a href="#general-information">General information</a><br />
+<a href="#nalb">North Atlantic Albacore</a><br /> <a href="#bft">Atlantic
+Bluefin Tuna</a><br /> <a href="#nswo">North Atlantic Swordfish</a><br />
+<a href="#wskj">West Atlantic Skipjack</a><br />
+<a href="#multitt">Multi-stocks Tropical Tunas</a><br />
+<a href="#other-species">Other Species</a><br /></p>
+</div>
+<hr />
+<!-- Column 2 -->
+<div>
+<p><strong>ICCAT MSE links</strong><br />
+<a href="https://iccat.github.io/iccat-mse-web/"> MSE Summary</a><br />
+<a href="https://iccat.github.io/iccat-mse-web/species/NALB/NALB_MSE.html#eng">
+North Atlantic Albacore</a><br />
+<a href="https://iccat.github.io/iccat-mse-web/species/BFT/BFT_MSE.html#eng">
+Atlantic Bluefin Tuna</a><br />
+<a href="https://iccat.github.io/iccat-mse-web/species/NSWO/NSWO_MSE.html#eng">
+North Atlantic Swordfish</a><br />
+<a href="https://iccat.github.io/iccat-mse-web/species/WSKJ/WSKJ_MSE.html#eng">
+West Atlantic Skipjack</a><br />
+<a href="https://iccat.github.io/iccat-mse-web/species/multiTT/multiTT_MSE.html#eng">
+Multi-stocks Tropical Tunas</a><br />
+<a href="https://iccat.github.io/iccat-mse-web/species/others/Other_Species_MSE.html#eng">
+Other Species</a><br /></p>
+</div>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<style type="text/css">
+
+.navbar {
+background-color: rgba(0, 26, 62, 0.8) !important; border: none !important;
+backdrop-filter: blur(4px); }
+
+.navbar .navbar-nav > li > a,
+.navbar .navbar-brand {
+color: #ffffff !important;
+}
+
+.navbar .navbar-nav > .active > a {
+background-color: rgba(0, 51, 102, 0.9) !important;
+color: #ffffff !important;
+}
+</style>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<style type="text/css">
+.section.level3 {
+margin: 0 !important;
+padding: 0 !important;
+background-color: #f8f2e2 !important;
+}
+body {
+margin: 0 !important;
+padding: 0 !important;
+background-color: #f8f2e2 !important;
+}
+.chart-stage {
+margin: 0 !important;
+padding: 0 !important;
+background-color: #f8f2e2 !important; }
+.chart-wrapper {
+margin: 0 !important;
+padding: 0 !important;
+}
+.chart-stage,
+.chart-wrapper,
+.section.level3 {
+border: none !important;
+box-shadow: none !important;}
+.main-container {
+background-color: #f8f2e2; }
+
+.dataTable tbody td {
+background-color: #f8f2e2 !important; 
+color: #001A3E !important; 
+}
+
+.dataTable thead th {
+background-color: #f8f2e2 !important;
+color: #001A3E !important;
+}
+
+.dataTables_wrapper .dataTables_filter input,
+.dataTables_wrapper .dataTables_length select {
+background-color: #f8f2e2 !important;
+color: #001A3E !important;
+border: 1px solid #ccc;
+}
+
+.dataTable thead select {
+background-color: #f8f2e2 !important;
+color: #001A3E !important;
+</style>
+</div>
+<div id="row-8" class="section level2" data-height="40">
+<h2>Row</h2>
+</div>
+<div id="row-9" class="section level2" data-height="300">
+<h2>Row</h2>
+<div id="top" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#001A3E; padding:4px; text-align: center;">
+<h1 style="font-size:2em; color:#ffffff; font-weight: bold;">
+References/ Références/ Referencias
+</h1>
+</div>
+<div style="background-color:#f8f2e2; padding:10px 30px; text-align: center;">
+<h2 style="font-size:1.4em; color:#001A3E;">
+<p>Please consult with the ICCAT Secretariat if links are not working
+nor available. Most of materials are in English, additional links are
+provided if French and Spanish are available.<br></p>
+<p>Veuillez consulter le Secrétariat de l’ICCAT si les liens ne
+fonctionnent pas ou ne sont pas disponibles. La plupart des documents
+sont en anglais, des liens supplémentaires sont fournis si des versions
+en français et en espagnol sont disponibles.<br></p>
+Por favor, consulte con la Secretaría de la ICCAT si los enlaces no
+funcionan o no están disponibles. La mayoría de los materiales están en
+inglés; se proporcionan enlaces adicionales si hay versiones en francés
+y español disponibles.
+</h2>
+</div>
+</div>
+</div>
+<div id="row-10" class="section level2" data-height="70">
+<h2>Row</h2>
+<div id="section-2" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#001A3E; padding:4px; text-align: center;">
+<h1 style="font-size:2em; color:#ffffff; font-weight: bold;">
+North Atlantic Albacore/ Germon de l’Atlantique Nord/ Atún blanco del
+Atlántico Norte
+</h1>
+</div>
+</div>
+</div>
+<div id="row-11" class="section level2" data-height="auto">
+<h2>Row</h2>
+<div id="NALBMaterials" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+<h1 style="font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;">
+NALB : Materials/ Matériels/ Materiales
+</h1>
+</div>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-37a46490f36cece44c50" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-37a46490f36cece44c50">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","fillContainer":true,"data":[["NALB"],["Materials"],["2025"],["ICCAT"],["NALB MSE Codes"],["<a href=\"https://iccat.github.io/iccat-mse-web/species/NALB/NALB_readme.html\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a>"]],"container":"<table class=\"display fill-container\">\n  <thead>\n    <tr>\n      <th>Species<\/th>\n      <th>Item<\/th>\n      <th>Year<\/th>\n      <th>Ref<\/th>\n      <th>Title<\/th>\n      <th>Links<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":1,"scrollY":"400px","scrollCollapse":true,"autoWidth":false,"lengthChange":false,"columnDefs":[{"width":"50px","targets":0},{"width":"50px","targets":1},{"width":"50px","targets":2},{"width":"100px","targets":3},{"width":"300px","targets":4},{"width":"80px","targets":5},{"className":"dt-left","targets":"_all"},{"name":"Species","targets":0},{"name":"Item","targets":1},{"name":"Year","targets":2},{"name":"Ref","targets":3},{"name":"Title","targets":4},{"name":"Links","targets":5}],"order":[],"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="row-12" class="section level2" data-height="auto">
+<h2>Row</h2>
+<div id="NALBRecRes" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+<hr style="border: none; height: 2px; background-color: #ccc;" />
+<h1 style="font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;">
+NALB : Rec/Res/ Rec/Res/ Rec/Res
+</h1>
+</div>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-d6d5e3508248e64c132e" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-d6d5e3508248e64c132e">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","fillContainer":true,"data":[["NALB"],["Rec/Res"],["2015"],["Rec. 15-07"],["RECOMMENDATION BY ICCAT ON THE DEVELOPMENT OF HARVEST CONTROL RULES AND OF MANAGEMENT STRATEGY EVALUATION"],["<a href=\"https://www.iccat.int/Documents/Recs/compendiopdf-e/2015-07-e.pdf\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a>"]],"container":"<table class=\"display fill-container\">\n  <thead>\n    <tr>\n      <th>Species<\/th>\n      <th>Item<\/th>\n      <th>Year<\/th>\n      <th>Ref<\/th>\n      <th>Title<\/th>\n      <th>Links<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":1,"scrollY":"400px","scrollCollapse":true,"autoWidth":false,"lengthChange":false,"columnDefs":[{"width":"50px","targets":0},{"width":"50px","targets":1},{"width":"50px","targets":2},{"width":"100px","targets":3},{"width":"300px","targets":4},{"width":"80px","targets":5},{"className":"dt-left","targets":"_all"},{"name":"Species","targets":0},{"name":"Item","targets":1},{"name":"Year","targets":2},{"name":"Ref","targets":3},{"name":"Title","targets":4},{"name":"Links","targets":5}],"order":[],"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="row-13" class="section level2" data-height="auto">
+<h2>Row</h2>
+<div id="NALBMeetings" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+<hr style="border: none; height: 2px; background-color: #ccc;" />
+<h1 style="font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;">
+NALB : Meetings/ Réunions/ Reuniones
+</h1>
+</div>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-d7d667c76f6d4c4d5847" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-d7d667c76f6d4c4d5847">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","fillContainer":true,"data":[[],[],[],[],[],[]],"container":"<table class=\"display fill-container\">\n  <thead>\n    <tr>\n      <th>Species<\/th>\n      <th>Item<\/th>\n      <th>Year<\/th>\n      <th>Ref<\/th>\n      <th>Title<\/th>\n      <th>Links<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":0,"scrollY":"400px","scrollCollapse":true,"autoWidth":false,"lengthChange":false,"columnDefs":[{"width":"50px","targets":0},{"width":"50px","targets":1},{"width":"50px","targets":2},{"width":"100px","targets":3},{"width":"300px","targets":4},{"width":"80px","targets":5},{"className":"dt-left","targets":"_all"},{"name":"Species","targets":0},{"name":"Item","targets":1},{"name":"Year","targets":2},{"name":"Ref","targets":3},{"name":"Title","targets":4},{"name":"Links","targets":5}],"order":[],"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="row-14" class="section level2" data-height="auto">
+<h2>Row</h2>
+<div id="NALBSCRSdocs" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+<hr style="border: none; height: 2px; background-color: #ccc;" />
+<h1 style="font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;">
+NALB : SCRS Docs/ Documents SCRS/ Documentos SCRS
+</h1>
+</div>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-18d228ba23073daeede3" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-18d228ba23073daeede3">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","fillContainer":true,"data":[["NALB"],["SCRS Docs"],["2025"],["SCRS/2025/019"],["REPORT OF THE PROJECT “EXTERNAL REVIEW OF THE OVERALL ICCAT MSE PROCESS"],["<a href=\"https://www.iccat.int/Documents/Recs/compendiopdf-e/2015-07-e.pdf\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a><a href=\"https://www.iccat.int/Documents/Recs/compendiopdf-f/2015-07-f.pdf\" target=\"_blank\"><img src=\"images/france.png\" width=\"40\" /><\/a>"]],"container":"<table class=\"display fill-container\">\n  <thead>\n    <tr>\n      <th>Species<\/th>\n      <th>Item<\/th>\n      <th>Year<\/th>\n      <th>Ref<\/th>\n      <th>Title<\/th>\n      <th>Links<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":1,"scrollY":"400px","scrollCollapse":true,"autoWidth":false,"lengthChange":false,"columnDefs":[{"width":"50px","targets":0},{"width":"50px","targets":1},{"width":"50px","targets":2},{"width":"100px","targets":3},{"width":"300px","targets":4},{"width":"80px","targets":5},{"className":"dt-left","targets":"_all"},{"name":"Species","targets":0},{"name":"Item","targets":1},{"name":"Year","targets":2},{"name":"Ref","targets":3},{"name":"Title","targets":4},{"name":"Links","targets":5}],"order":[],"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="row-15" class="section level2" data-height="auto">
+<h2>Row</h2>
+<div id="NALBOthers" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+<hr style="border: none; height: 2px; background-color: #ccc;" />
+<h1 style="font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;">
+NALB : Others/ Autres/ Otros
+</h1>
+</div>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-385f90196b362277a5b7" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-385f90196b362277a5b7">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","fillContainer":true,"data":[[],[],[],[],[],[]],"container":"<table class=\"display fill-container\">\n  <thead>\n    <tr>\n      <th>Species<\/th>\n      <th>Item<\/th>\n      <th>Year<\/th>\n      <th>Ref<\/th>\n      <th>Title<\/th>\n      <th>Links<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":0,"scrollY":"400px","scrollCollapse":true,"autoWidth":false,"lengthChange":false,"columnDefs":[{"width":"50px","targets":0},{"width":"50px","targets":1},{"width":"50px","targets":2},{"width":"100px","targets":3},{"width":"300px","targets":4},{"width":"80px","targets":5},{"className":"dt-left","targets":"_all"},{"name":"Species","targets":0},{"name":"Item","targets":1},{"name":"Year","targets":2},{"name":"Ref","targets":3},{"name":"Title","targets":4},{"name":"Links","targets":5}],"order":[],"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="bft" class="section level1" data-orientation="rows">
+<h1>BFT</h1>
+<div id="column-2" class="section level2 sidebar">
+<h2 class="sidebar">Column</h2>
+<!-- Column 1 -->
+<div>
+<p><strong>References</strong><br />
+<a href="#general-information">General information</a><br />
+<a href="#nalb">North Atlantic Albacore</a><br /> <a href="#bft">Atlantic
+Bluefin Tuna</a><br /> <a href="#nswo">North Atlantic Swordfish</a><br />
+<a href="#wskj">West Atlantic Skipjack</a><br />
+<a href="#multitt">Multi-stocks Tropical Tunas</a><br />
+<a href="#other-species">Other Species</a><br /></p>
+</div>
+<hr />
+<!-- Column 2 -->
+<div>
+<p><strong>ICCAT MSE links</strong><br />
+<a href="https://iccat.github.io/iccat-mse-web/"> MSE Summary</a><br />
+<a href="https://iccat.github.io/iccat-mse-web/species/NALB/NALB_MSE.html#eng">
+North Atlantic Albacore</a><br />
+<a href="https://iccat.github.io/iccat-mse-web/species/BFT/BFT_MSE.html#eng">
+Atlantic Bluefin Tuna</a><br />
+<a href="https://iccat.github.io/iccat-mse-web/species/NSWO/NSWO_MSE.html#eng">
+North Atlantic Swordfish</a><br />
+<a href="https://iccat.github.io/iccat-mse-web/species/WSKJ/WSKJ_MSE.html#eng">
+West Atlantic Skipjack</a><br />
+<a href="https://iccat.github.io/iccat-mse-web/species/multiTT/multiTT_MSE.html#eng">
+Multi-stocks Tropical Tunas</a><br />
+<a href="https://iccat.github.io/iccat-mse-web/species/others/Other_Species_MSE.html#eng">
+Other Species</a><br /></p>
+</div>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<style type="text/css">
+
+.navbar {
+background-color: rgba(0, 26, 62, 0.8) !important; border: none !important;
+backdrop-filter: blur(4px); }
+
+.navbar .navbar-nav > li > a,
+.navbar .navbar-brand {
+color: #ffffff !important;
+}
+
+.navbar .navbar-nav > .active > a {
+background-color: rgba(0, 51, 102, 0.9) !important;
+color: #ffffff !important;
+}
+</style>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<style type="text/css">
+.section.level3 {
+margin: 0 !important;
+padding: 0 !important;
+background-color: #f8f2e2 !important;
+}
+body {
+margin: 0 !important;
+padding: 0 !important;
+background-color: #f8f2e2 !important;
+}
+.chart-stage {
+margin: 0 !important;
+padding: 0 !important;
+background-color: #f8f2e2 !important; }
+.chart-wrapper {
+margin: 0 !important;
+padding: 0 !important;
+}
+.chart-stage,
+.chart-wrapper,
+.section.level3 {
+border: none !important;
+box-shadow: none !important;}
+.main-container {
+background-color: #f8f2e2; }
+
+.dataTable tbody td {
+background-color: #f8f2e2 !important; 
+color: #001A3E !important; 
+}
+
+.dataTable thead th {
+background-color: #f8f2e2 !important;
+color: #001A3E !important;
+}
+
+.dataTables_wrapper .dataTables_filter input,
+.dataTables_wrapper .dataTables_length select {
+background-color: #f8f2e2 !important;
+color: #001A3E !important;
+border: 1px solid #ccc;
+}
+
+.dataTable thead select {
+background-color: #f8f2e2 !important;
+color: #001A3E !important;
+</style>
+</div>
+<div id="row-16" class="section level2" data-height="40">
+<h2>Row</h2>
+</div>
+<div id="row-17" class="section level2" data-height="300">
+<h2>Row</h2>
+<div id="section-3" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#001A3E; padding:4px; text-align: center;">
+<h1 style="font-size:2em; color:#ffffff; font-weight: bold;">
+References/ Références/ Referencias
+</h1>
+</div>
+<div style="background-color:#f8f2e2; padding:10px 30px; text-align: center;">
+<h2 style="font-size:1.4em; color:#001A3E;">
+<p>Please consult with the ICCAT Secretariat if links are not working
+nor available. Most of materials are in English, additional links are
+provided if French and Spanish are available.<br></p>
+<p>Veuillez consulter le Secrétariat de l’ICCAT si les liens ne
+fonctionnent pas ou ne sont pas disponibles. La plupart des documents
+sont en anglais, des liens supplémentaires sont fournis si des versions
+en français et en espagnol sont disponibles.<br></p>
+Por favor, consulte con la Secretaría de la ICCAT si los enlaces no
+funcionan o no están disponibles. La mayoría de los materiales están en
+inglés; se proporcionan enlaces adicionales si hay versiones en francés
+y español disponibles.
+</h2>
+</div>
+</div>
+</div>
+<div id="row-18" class="section level2" data-height="70">
+<h2>Row</h2>
+<div id="section-4" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#001A3E; padding:4px; text-align: center;">
+<h1 style="font-size:2em; color:#ffffff; font-weight: bold;">
+Atlantic Bluefin Tuna/ Thon rouge de l’Atlantique/ Atún rojo del
+Atlántico
+</h1>
+</div>
+</div>
+</div>
+<div id="row-19" class="section level2" data-height="auto">
+<h2>Row</h2>
+<div id="BFTMaterials" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+<h1 style="font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;">
+BFT : Materials/ Matériels/ Materiales
+</h1>
+</div>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-000a3bf6db14a84bfcd7" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-000a3bf6db14a84bfcd7">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","fillContainer":true,"data":[["BFT","BFT"],["Materials","Materials"],["2022","2025"],["ICCAT/PA2","ICCAT"],["BFT Ambassador 1","BFT MSE Codes"],["<a href=\"https://pl202.shinyapps.io/IOTC_MSE/\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a>","<a href=\"https://iccat.github.io/iccat-mse-web/species/BFT/BFT_readme.html\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a>"]],"container":"<table class=\"display fill-container\">\n  <thead>\n    <tr>\n      <th>Species<\/th>\n      <th>Item<\/th>\n      <th>Year<\/th>\n      <th>Ref<\/th>\n      <th>Title<\/th>\n      <th>Links<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":2,"scrollY":"400px","scrollCollapse":true,"autoWidth":false,"lengthChange":false,"columnDefs":[{"width":"50px","targets":0},{"width":"50px","targets":1},{"width":"50px","targets":2},{"width":"100px","targets":3},{"width":"300px","targets":4},{"width":"80px","targets":5},{"className":"dt-left","targets":"_all"},{"name":"Species","targets":0},{"name":"Item","targets":1},{"name":"Year","targets":2},{"name":"Ref","targets":3},{"name":"Title","targets":4},{"name":"Links","targets":5}],"order":[],"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="row-20" class="section level2" data-height="auto">
+<h2>Row</h2>
+<div id="BFTRecRes" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+<hr style="border: none; height: 2px; background-color: #ccc;" />
+<h1 style="font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;">
+BFT : Rec/Res/ Rec/Res/ Rec/Res
+</h1>
+</div>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-6bc891bc0716f0b3a9ea" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-6bc891bc0716f0b3a9ea">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","fillContainer":true,"data":[["BFT"],["Rec/Res"],["2015"],["Rec. 15-07"],["RECOMMENDATION BY ICCAT ON THE DEVELOPMENT OF HARVEST CONTROL RULES AND OF MANAGEMENT STRATEGY EVALUATION"],["<a href=\"https://www.iccat.int/Documents/Recs/compendiopdf-e/2015-07-e.pdf\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a>"]],"container":"<table class=\"display fill-container\">\n  <thead>\n    <tr>\n      <th>Species<\/th>\n      <th>Item<\/th>\n      <th>Year<\/th>\n      <th>Ref<\/th>\n      <th>Title<\/th>\n      <th>Links<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":1,"scrollY":"400px","scrollCollapse":true,"autoWidth":false,"lengthChange":false,"columnDefs":[{"width":"50px","targets":0},{"width":"50px","targets":1},{"width":"50px","targets":2},{"width":"100px","targets":3},{"width":"300px","targets":4},{"width":"80px","targets":5},{"className":"dt-left","targets":"_all"},{"name":"Species","targets":0},{"name":"Item","targets":1},{"name":"Year","targets":2},{"name":"Ref","targets":3},{"name":"Title","targets":4},{"name":"Links","targets":5}],"order":[],"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="row-21" class="section level2" data-height="auto">
+<h2>Row</h2>
+<div id="BFTMeetings" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+<hr style="border: none; height: 2px; background-color: #ccc;" />
+<h1 style="font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;">
+BFT : Meetings/ Réunions/ Reuniones
+</h1>
+</div>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-434fa1568050b4d08b98" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-434fa1568050b4d08b98">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","fillContainer":true,"data":[[],[],[],[],[],[]],"container":"<table class=\"display fill-container\">\n  <thead>\n    <tr>\n      <th>Species<\/th>\n      <th>Item<\/th>\n      <th>Year<\/th>\n      <th>Ref<\/th>\n      <th>Title<\/th>\n      <th>Links<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":0,"scrollY":"400px","scrollCollapse":true,"autoWidth":false,"lengthChange":false,"columnDefs":[{"width":"50px","targets":0},{"width":"50px","targets":1},{"width":"50px","targets":2},{"width":"100px","targets":3},{"width":"300px","targets":4},{"width":"80px","targets":5},{"className":"dt-left","targets":"_all"},{"name":"Species","targets":0},{"name":"Item","targets":1},{"name":"Year","targets":2},{"name":"Ref","targets":3},{"name":"Title","targets":4},{"name":"Links","targets":5}],"order":[],"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="row-22" class="section level2" data-height="auto">
+<h2>Row</h2>
+<div id="BFTSCRSdocs" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+<hr style="border: none; height: 2px; background-color: #ccc;" />
+<h1 style="font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;">
+BFT : SCRS Docs/ Documents SCRS/ Documentos SCRS
+</h1>
+</div>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-c3a5f3bc36859e81878c" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-c3a5f3bc36859e81878c">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","fillContainer":true,"data":[["BFT"],["SCRS Docs"],["2025"],["SCRS/2025/019"],["REPORT OF THE PROJECT “EXTERNAL REVIEW OF THE OVERALL ICCAT MSE PROCESS"],["<a href=\"https://www.iccat.int/Documents/Recs/compendiopdf-e/2015-07-e.pdf\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a><a href=\"https://www.iccat.int/Documents/Recs/compendiopdf-f/2015-07-f.pdf\" target=\"_blank\"><img src=\"images/france.png\" width=\"40\" /><\/a>"]],"container":"<table class=\"display fill-container\">\n  <thead>\n    <tr>\n      <th>Species<\/th>\n      <th>Item<\/th>\n      <th>Year<\/th>\n      <th>Ref<\/th>\n      <th>Title<\/th>\n      <th>Links<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":1,"scrollY":"400px","scrollCollapse":true,"autoWidth":false,"lengthChange":false,"columnDefs":[{"width":"50px","targets":0},{"width":"50px","targets":1},{"width":"50px","targets":2},{"width":"100px","targets":3},{"width":"300px","targets":4},{"width":"80px","targets":5},{"className":"dt-left","targets":"_all"},{"name":"Species","targets":0},{"name":"Item","targets":1},{"name":"Year","targets":2},{"name":"Ref","targets":3},{"name":"Title","targets":4},{"name":"Links","targets":5}],"order":[],"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="row-23" class="section level2" data-height="auto">
+<h2>Row</h2>
+<div id="BFTOthers" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+<hr style="border: none; height: 2px; background-color: #ccc;" />
+<h1 style="font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;">
+BFT : Others/ Autres/ Otros
+</h1>
+</div>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-98cbb4058b309b5bf3f6" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-98cbb4058b309b5bf3f6">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","fillContainer":true,"data":[[],[],[],[],[],[]],"container":"<table class=\"display fill-container\">\n  <thead>\n    <tr>\n      <th>Species<\/th>\n      <th>Item<\/th>\n      <th>Year<\/th>\n      <th>Ref<\/th>\n      <th>Title<\/th>\n      <th>Links<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":0,"scrollY":"400px","scrollCollapse":true,"autoWidth":false,"lengthChange":false,"columnDefs":[{"width":"50px","targets":0},{"width":"50px","targets":1},{"width":"50px","targets":2},{"width":"100px","targets":3},{"width":"300px","targets":4},{"width":"80px","targets":5},{"className":"dt-left","targets":"_all"},{"name":"Species","targets":0},{"name":"Item","targets":1},{"name":"Year","targets":2},{"name":"Ref","targets":3},{"name":"Title","targets":4},{"name":"Links","targets":5}],"order":[],"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="nswo" class="section level1" data-orientation="rows">
+<h1>NSWO</h1>
+<div id="column-3" class="section level2 sidebar">
+<h2 class="sidebar">Column</h2>
+<!-- Column 1 -->
+<div>
+<p><strong>References</strong><br />
+<a href="#general-information">General information</a><br />
+<a href="#nalb">North Atlantic Albacore</a><br /> <a href="#bft">Atlantic
+Bluefin Tuna</a><br /> <a href="#nswo">North Atlantic Swordfish</a><br />
+<a href="#wskj">West Atlantic Skipjack</a><br />
+<a href="#multitt">Multi-stocks Tropical Tunas</a><br />
+<a href="#other-species">Other Species</a><br /></p>
+</div>
+<hr />
+<!-- Column 2 -->
+<div>
+<p><strong>ICCAT MSE links</strong><br />
+<a href="https://iccat.github.io/iccat-mse-web/"> MSE Summary</a><br />
+<a href="https://iccat.github.io/iccat-mse-web/species/NALB/NALB_MSE.html#eng">
+North Atlantic Albacore</a><br />
+<a href="https://iccat.github.io/iccat-mse-web/species/BFT/BFT_MSE.html#eng">
+Atlantic Bluefin Tuna</a><br />
+<a href="https://iccat.github.io/iccat-mse-web/species/NSWO/NSWO_MSE.html#eng">
+North Atlantic Swordfish</a><br />
+<a href="https://iccat.github.io/iccat-mse-web/species/WSKJ/WSKJ_MSE.html#eng">
+West Atlantic Skipjack</a><br />
+<a href="https://iccat.github.io/iccat-mse-web/species/multiTT/multiTT_MSE.html#eng">
+Multi-stocks Tropical Tunas</a><br />
+<a href="https://iccat.github.io/iccat-mse-web/species/others/Other_Species_MSE.html#eng">
+Other Species</a><br /></p>
+</div>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<style type="text/css">
+
+.navbar {
+background-color: rgba(0, 26, 62, 0.8) !important; border: none !important;
+backdrop-filter: blur(4px); }
+
+.navbar .navbar-nav > li > a,
+.navbar .navbar-brand {
+color: #ffffff !important;
+}
+
+.navbar .navbar-nav > .active > a {
+background-color: rgba(0, 51, 102, 0.9) !important;
+color: #ffffff !important;
+}
+</style>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<style type="text/css">
+.section.level3 {
+margin: 0 !important;
+padding: 0 !important;
+background-color: #f8f2e2 !important;
+}
+body {
+margin: 0 !important;
+padding: 0 !important;
+background-color: #f8f2e2 !important;
+}
+.chart-stage {
+margin: 0 !important;
+padding: 0 !important;
+background-color: #f8f2e2 !important; }
+.chart-wrapper {
+margin: 0 !important;
+padding: 0 !important;
+}
+.chart-stage,
+.chart-wrapper,
+.section.level3 {
+border: none !important;
+box-shadow: none !important;}
+.main-container {
+background-color: #f8f2e2; }
+
+.dataTable tbody td {
+background-color: #f8f2e2 !important; 
+color: #001A3E !important; 
+}
+
+.dataTable thead th {
+background-color: #f8f2e2 !important;
+color: #001A3E !important;
+}
+
+.dataTables_wrapper .dataTables_filter input,
+.dataTables_wrapper .dataTables_length select {
+background-color: #f8f2e2 !important;
+color: #001A3E !important;
+border: 1px solid #ccc;
+}
+
+.dataTable thead select {
+background-color: #f8f2e2 !important;
+color: #001A3E !important;
+</style>
+</div>
+<div id="row-24" class="section level2" data-height="40">
+<h2>Row</h2>
+</div>
+<div id="row-25" class="section level2" data-height="300">
+<h2>Row</h2>
+<div id="section-5" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#001A3E; padding:4px; text-align: center;">
+<h1 style="font-size:2em; color:#ffffff; font-weight: bold;">
+References/ Références/ Referencias
+</h1>
+</div>
+<div style="background-color:#f8f2e2; padding:10px 30px; text-align: center;">
+<h2 style="font-size:1.4em; color:#001A3E;">
+<p>Please consult with the ICCAT Secretariat if links are not working
+nor available. Most of materials are in English, additional links are
+provided if French and Spanish are available.<br></p>
+<p>Veuillez consulter le Secrétariat de l’ICCAT si les liens ne
+fonctionnent pas ou ne sont pas disponibles. La plupart des documents
+sont en anglais, des liens supplémentaires sont fournis si des versions
+en français et en espagnol sont disponibles.<br></p>
+Por favor, consulte con la Secretaría de la ICCAT si los enlaces no
+funcionan o no están disponibles. La mayoría de los materiales están en
+inglés; se proporcionan enlaces adicionales si hay versiones en francés
+y español disponibles.
+</h2>
+</div>
+</div>
+</div>
+<div id="row-26" class="section level2" data-height="70">
+<h2>Row</h2>
+<div id="section-6" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#001A3E; padding:4px; text-align: center;">
+<h1 style="font-size:2em; color:#ffffff; font-weight: bold;">
+North Atlantic Swordfish/ Espadon de l’Atlantique Nord/ Pez espada del
+Atlántico Norte
+</h1>
+</div>
+</div>
+</div>
+<div id="row-27" class="section level2" data-height="auto">
+<h2>Row</h2>
+<div id="NSWOMaterials" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+<h1 style="font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;">
+NSWO : Materials/ Matériels/ Materiales
+</h1>
+</div>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-8f3c1971c39c4bac2731" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-8f3c1971c39c4bac2731">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","fillContainer":true,"data":[["NSWO"],["Materials"],["2025"],["ICCAT"],["NSWO MSE Codes"],["<a href=\"https://iccat.github.io/iccat-mse-web/species/NSWO/NSWO_readme.html\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a>"]],"container":"<table class=\"display fill-container\">\n  <thead>\n    <tr>\n      <th>Species<\/th>\n      <th>Item<\/th>\n      <th>Year<\/th>\n      <th>Ref<\/th>\n      <th>Title<\/th>\n      <th>Links<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":1,"scrollY":"400px","scrollCollapse":true,"autoWidth":false,"lengthChange":false,"columnDefs":[{"width":"50px","targets":0},{"width":"50px","targets":1},{"width":"50px","targets":2},{"width":"100px","targets":3},{"width":"300px","targets":4},{"width":"80px","targets":5},{"className":"dt-left","targets":"_all"},{"name":"Species","targets":0},{"name":"Item","targets":1},{"name":"Year","targets":2},{"name":"Ref","targets":3},{"name":"Title","targets":4},{"name":"Links","targets":5}],"order":[],"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="row-28" class="section level2" data-height="auto">
+<h2>Row</h2>
+<div id="NSWORecRes" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+<hr style="border: none; height: 2px; background-color: #ccc;" />
+<h1 style="font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;">
+NSWO : Rec/Res/ Rec/Res/ Rec/Res
+</h1>
+</div>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-ba15d0deb8b71aa1198f" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-ba15d0deb8b71aa1198f">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","fillContainer":true,"data":[["NSWO"],["Rec/Res"],["2015"],["Rec. 15-07"],["RECOMMENDATION BY ICCAT ON THE DEVELOPMENT OF HARVEST CONTROL RULES AND OF MANAGEMENT STRATEGY EVALUATION"],["<a href=\"https://www.iccat.int/Documents/Recs/compendiopdf-e/2015-07-e.pdf\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a>"]],"container":"<table class=\"display fill-container\">\n  <thead>\n    <tr>\n      <th>Species<\/th>\n      <th>Item<\/th>\n      <th>Year<\/th>\n      <th>Ref<\/th>\n      <th>Title<\/th>\n      <th>Links<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":1,"scrollY":"400px","scrollCollapse":true,"autoWidth":false,"lengthChange":false,"columnDefs":[{"width":"50px","targets":0},{"width":"50px","targets":1},{"width":"50px","targets":2},{"width":"100px","targets":3},{"width":"300px","targets":4},{"width":"80px","targets":5},{"className":"dt-left","targets":"_all"},{"name":"Species","targets":0},{"name":"Item","targets":1},{"name":"Year","targets":2},{"name":"Ref","targets":3},{"name":"Title","targets":4},{"name":"Links","targets":5}],"order":[],"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="row-29" class="section level2" data-height="auto">
+<h2>Row</h2>
+<div id="NSWOMeetings" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+<hr style="border: none; height: 2px; background-color: #ccc;" />
+<h1 style="font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;">
+NSWO : Meetings/ Réunions/ Reuniones
+</h1>
+</div>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-ed97bf11a0cec5ff8cd6" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-ed97bf11a0cec5ff8cd6">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","fillContainer":true,"data":[[],[],[],[],[],[]],"container":"<table class=\"display fill-container\">\n  <thead>\n    <tr>\n      <th>Species<\/th>\n      <th>Item<\/th>\n      <th>Year<\/th>\n      <th>Ref<\/th>\n      <th>Title<\/th>\n      <th>Links<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":0,"scrollY":"400px","scrollCollapse":true,"autoWidth":false,"lengthChange":false,"columnDefs":[{"width":"50px","targets":0},{"width":"50px","targets":1},{"width":"50px","targets":2},{"width":"100px","targets":3},{"width":"300px","targets":4},{"width":"80px","targets":5},{"className":"dt-left","targets":"_all"},{"name":"Species","targets":0},{"name":"Item","targets":1},{"name":"Year","targets":2},{"name":"Ref","targets":3},{"name":"Title","targets":4},{"name":"Links","targets":5}],"order":[],"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="row-30" class="section level2" data-height="auto">
+<h2>Row</h2>
+<div id="NSWOSCRSdocs" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+<hr style="border: none; height: 2px; background-color: #ccc;" />
+<h1 style="font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;">
+NSWO : SCRS Docs/ Documents SCRS/ Documentos SCRS
+</h1>
+</div>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-0c8df035385f7c83a36b" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-0c8df035385f7c83a36b">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","fillContainer":true,"data":[["NSWO"],["SCRS Docs"],["2025"],["SCRS/2025/019"],["REPORT OF THE PROJECT “EXTERNAL REVIEW OF THE OVERALL ICCAT MSE PROCESS"],["<a href=\"https://www.iccat.int/Documents/Recs/compendiopdf-e/2015-07-e.pdf\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a>"]],"container":"<table class=\"display fill-container\">\n  <thead>\n    <tr>\n      <th>Species<\/th>\n      <th>Item<\/th>\n      <th>Year<\/th>\n      <th>Ref<\/th>\n      <th>Title<\/th>\n      <th>Links<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":1,"scrollY":"400px","scrollCollapse":true,"autoWidth":false,"lengthChange":false,"columnDefs":[{"width":"50px","targets":0},{"width":"50px","targets":1},{"width":"50px","targets":2},{"width":"100px","targets":3},{"width":"300px","targets":4},{"width":"80px","targets":5},{"className":"dt-left","targets":"_all"},{"name":"Species","targets":0},{"name":"Item","targets":1},{"name":"Year","targets":2},{"name":"Ref","targets":3},{"name":"Title","targets":4},{"name":"Links","targets":5}],"order":[],"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="row-31" class="section level2" data-height="auto">
+<h2>Row</h2>
+<div id="NSWOOthers" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+<hr style="border: none; height: 2px; background-color: #ccc;" />
+<h1 style="font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;">
+NSWO : Others/ Autres/ Otros
+</h1>
+</div>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-33e9aca802f8d5190fb4" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-33e9aca802f8d5190fb4">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","fillContainer":true,"data":[[],[],[],[],[],[]],"container":"<table class=\"display fill-container\">\n  <thead>\n    <tr>\n      <th>Species<\/th>\n      <th>Item<\/th>\n      <th>Year<\/th>\n      <th>Ref<\/th>\n      <th>Title<\/th>\n      <th>Links<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":0,"scrollY":"400px","scrollCollapse":true,"autoWidth":false,"lengthChange":false,"columnDefs":[{"width":"50px","targets":0},{"width":"50px","targets":1},{"width":"50px","targets":2},{"width":"100px","targets":3},{"width":"300px","targets":4},{"width":"80px","targets":5},{"className":"dt-left","targets":"_all"},{"name":"Species","targets":0},{"name":"Item","targets":1},{"name":"Year","targets":2},{"name":"Ref","targets":3},{"name":"Title","targets":4},{"name":"Links","targets":5}],"order":[],"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="wskj" class="section level1" data-orientation="rows">
+<h1>WSKJ</h1>
+<div id="column-4" class="section level2 sidebar">
+<h2 class="sidebar">Column</h2>
+<!-- Column 1 -->
+<div>
+<p><strong>References</strong><br />
+<a href="#general-information">General information</a><br />
+<a href="#nalb">North Atlantic Albacore</a><br /> <a href="#bft">Atlantic
+Bluefin Tuna</a><br /> <a href="#nswo">North Atlantic Swordfish</a><br />
+<a href="#wskj">West Atlantic Skipjack</a><br />
+<a href="#multitt">Multi-stocks Tropical Tunas</a><br />
+<a href="#other-species">Other Species</a><br /></p>
+</div>
+<hr />
+<!-- Column 2 -->
+<div>
+<p><strong>ICCAT MSE links</strong><br />
+<a href="https://iccat.github.io/iccat-mse-web/"> MSE Summary</a><br />
+<a href="https://iccat.github.io/iccat-mse-web/species/NALB/NALB_MSE.html#eng">
+North Atlantic Albacore</a><br />
+<a href="https://iccat.github.io/iccat-mse-web/species/BFT/BFT_MSE.html#eng">
+Atlantic Bluefin Tuna</a><br />
+<a href="https://iccat.github.io/iccat-mse-web/species/NSWO/NSWO_MSE.html#eng">
+North Atlantic Swordfish</a><br />
+<a href="https://iccat.github.io/iccat-mse-web/species/WSKJ/WSKJ_MSE.html#eng">
+West Atlantic Skipjack</a><br />
+<a href="https://iccat.github.io/iccat-mse-web/species/multiTT/multiTT_MSE.html#eng">
+Multi-stocks Tropical Tunas</a><br />
+<a href="https://iccat.github.io/iccat-mse-web/species/others/Other_Species_MSE.html#eng">
+Other Species</a><br /></p>
+</div>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<style type="text/css">
+
+.navbar {
+background-color: rgba(0, 26, 62, 0.8) !important; border: none !important;
+backdrop-filter: blur(4px); }
+
+.navbar .navbar-nav > li > a,
+.navbar .navbar-brand {
+color: #ffffff !important;
+}
+
+.navbar .navbar-nav > .active > a {
+background-color: rgba(0, 51, 102, 0.9) !important;
+color: #ffffff !important;
+}
+</style>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<style type="text/css">
+.section.level3 {
+margin: 0 !important;
+padding: 0 !important;
+background-color: #f8f2e2 !important;
+}
+body {
+margin: 0 !important;
+padding: 0 !important;
+background-color: #f8f2e2 !important;
+}
+.chart-stage {
+margin: 0 !important;
+padding: 0 !important;
+background-color: #f8f2e2 !important; }
+.chart-wrapper {
+margin: 0 !important;
+padding: 0 !important;
+}
+.chart-stage,
+.chart-wrapper,
+.section.level3 {
+border: none !important;
+box-shadow: none !important;}
+.main-container {
+background-color: #f8f2e2; }
+
+.dataTable tbody td {
+background-color: #f8f2e2 !important; 
+color: #001A3E !important; 
+}
+
+.dataTable thead th {
+background-color: #f8f2e2 !important;
+color: #001A3E !important;
+}
+
+.dataTables_wrapper .dataTables_filter input,
+.dataTables_wrapper .dataTables_length select {
+background-color: #f8f2e2 !important;
+color: #001A3E !important;
+border: 1px solid #ccc;
+}
+
+.dataTable thead select {
+background-color: #f8f2e2 !important;
+color: #001A3E !important;
+</style>
+</div>
+<div id="row-32" class="section level2" data-height="40">
+<h2>Row</h2>
+</div>
+<div id="row-33" class="section level2" data-height="300">
+<h2>Row</h2>
+<div id="section-7" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#001A3E; padding:4px; text-align: center;">
+<h1 style="font-size:2em; color:#ffffff; font-weight: bold;">
+References/ Références/ Referencias
+</h1>
+</div>
+<div style="background-color:#f8f2e2; padding:10px 30px; text-align: center;">
+<h2 style="font-size:1.4em; color:#001A3E;">
+<p>Please consult with the ICCAT Secretariat if links are not working
+nor available. Most of materials are in English, additional links are
+provided if French and Spanish are available.<br></p>
+<p>Veuillez consulter le Secrétariat de l’ICCAT si les liens ne
+fonctionnent pas ou ne sont pas disponibles. La plupart des documents
+sont en anglais, des liens supplémentaires sont fournis si des versions
+en français et en espagnol sont disponibles.<br></p>
+Por favor, consulte con la Secretaría de la ICCAT si los enlaces no
+funcionan o no están disponibles. La mayoría de los materiales están en
+inglés; se proporcionan enlaces adicionales si hay versiones en francés
+y español disponibles.
+</h2>
+</div>
+</div>
+</div>
+<div id="row-34" class="section level2" data-height="70">
+<h2>Row</h2>
+<div id="section-8" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#001A3E; padding:4px; text-align: center;">
+<h1 style="font-size:2em; color:#ffffff; font-weight: bold;">
+West Atlantic Skipjack/ Listao de l’Atlantique Ouest/ Listado del
+Atlántico Oeste
+</h1>
+</div>
+</div>
+</div>
+<div id="row-35" class="section level2" data-height="auto">
+<h2>Row</h2>
+<div id="WSKJMaterials" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+<h1 style="font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;">
+WSKJ : Materials/ Matériels/ Materiales
+</h1>
+</div>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-092c0c0410925b85716f" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-092c0c0410925b85716f">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","fillContainer":true,"data":[["WSKJ"],["Materials"],["2025"],["ICCAT"],["WSKJ MSE Codes"],["<a href=\"https://iccat.github.io/iccat-mse-web/species/WSKJ/WSKJ_readme.html\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a>"]],"container":"<table class=\"display fill-container\">\n  <thead>\n    <tr>\n      <th>Species<\/th>\n      <th>Item<\/th>\n      <th>Year<\/th>\n      <th>Ref<\/th>\n      <th>Title<\/th>\n      <th>Links<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":1,"scrollY":"400px","scrollCollapse":true,"autoWidth":false,"lengthChange":false,"columnDefs":[{"width":"50px","targets":0},{"width":"50px","targets":1},{"width":"50px","targets":2},{"width":"100px","targets":3},{"width":"300px","targets":4},{"width":"80px","targets":5},{"className":"dt-left","targets":"_all"},{"name":"Species","targets":0},{"name":"Item","targets":1},{"name":"Year","targets":2},{"name":"Ref","targets":3},{"name":"Title","targets":4},{"name":"Links","targets":5}],"order":[],"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="row-36" class="section level2" data-height="auto">
+<h2>Row</h2>
+<div id="WSKJRecRes" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+<hr style="border: none; height: 2px; background-color: #ccc;" />
+<h1 style="font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;">
+WSKJ : Rec/Res/ Rec/Res/ Rec/Res
+</h1>
+</div>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-06d327638b3bc957d80a" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-06d327638b3bc957d80a">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","fillContainer":true,"data":[["WSKJ"],["Rec/Res"],["2015"],["Rec. 15-07"],["RECOMMENDATION BY ICCAT ON THE DEVELOPMENT OF HARVEST CONTROL RULES AND OF MANAGEMENT STRATEGY EVALUATION"],["<a href=\"https://www.iccat.int/Documents/Recs/compendiopdf-e/2015-07-e.pdf\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a>"]],"container":"<table class=\"display fill-container\">\n  <thead>\n    <tr>\n      <th>Species<\/th>\n      <th>Item<\/th>\n      <th>Year<\/th>\n      <th>Ref<\/th>\n      <th>Title<\/th>\n      <th>Links<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":1,"scrollY":"400px","scrollCollapse":true,"autoWidth":false,"lengthChange":false,"columnDefs":[{"width":"50px","targets":0},{"width":"50px","targets":1},{"width":"50px","targets":2},{"width":"100px","targets":3},{"width":"300px","targets":4},{"width":"80px","targets":5},{"className":"dt-left","targets":"_all"},{"name":"Species","targets":0},{"name":"Item","targets":1},{"name":"Year","targets":2},{"name":"Ref","targets":3},{"name":"Title","targets":4},{"name":"Links","targets":5}],"order":[],"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="row-37" class="section level2" data-height="auto">
+<h2>Row</h2>
+<div id="WSKJMeetings" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+<hr style="border: none; height: 2px; background-color: #ccc;" />
+<h1 style="font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;">
+WSKJ : Meetings/ Réunions/ Reuniones
+</h1>
+</div>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-702c1ac847a1c4f01a15" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-702c1ac847a1c4f01a15">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","fillContainer":true,"data":[[],[],[],[],[],[]],"container":"<table class=\"display fill-container\">\n  <thead>\n    <tr>\n      <th>Species<\/th>\n      <th>Item<\/th>\n      <th>Year<\/th>\n      <th>Ref<\/th>\n      <th>Title<\/th>\n      <th>Links<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":0,"scrollY":"400px","scrollCollapse":true,"autoWidth":false,"lengthChange":false,"columnDefs":[{"width":"50px","targets":0},{"width":"50px","targets":1},{"width":"50px","targets":2},{"width":"100px","targets":3},{"width":"300px","targets":4},{"width":"80px","targets":5},{"className":"dt-left","targets":"_all"},{"name":"Species","targets":0},{"name":"Item","targets":1},{"name":"Year","targets":2},{"name":"Ref","targets":3},{"name":"Title","targets":4},{"name":"Links","targets":5}],"order":[],"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="row-38" class="section level2" data-height="auto">
+<h2>Row</h2>
+<div id="WSKJSCRSdocs" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+<hr style="border: none; height: 2px; background-color: #ccc;" />
+<h1 style="font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;">
+WSKJ : SCRS Docs/ Documents SCRS/ Documentos SCRS
+</h1>
+</div>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-a3c53c041df8a170e6b3" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-a3c53c041df8a170e6b3">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","fillContainer":true,"data":[[],[],[],[],[],[]],"container":"<table class=\"display fill-container\">\n  <thead>\n    <tr>\n      <th>Species<\/th>\n      <th>Item<\/th>\n      <th>Year<\/th>\n      <th>Ref<\/th>\n      <th>Title<\/th>\n      <th>Links<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":0,"scrollY":"400px","scrollCollapse":true,"autoWidth":false,"lengthChange":false,"columnDefs":[{"width":"50px","targets":0},{"width":"50px","targets":1},{"width":"50px","targets":2},{"width":"100px","targets":3},{"width":"300px","targets":4},{"width":"80px","targets":5},{"className":"dt-left","targets":"_all"},{"name":"Species","targets":0},{"name":"Item","targets":1},{"name":"Year","targets":2},{"name":"Ref","targets":3},{"name":"Title","targets":4},{"name":"Links","targets":5}],"order":[],"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="row-39" class="section level2" data-height="auto">
+<h2>Row</h2>
+<div id="WSKJOthers" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+<hr style="border: none; height: 2px; background-color: #ccc;" />
+<h1 style="font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;">
+WSKJ : Others/ Autres/ Otros
+</h1>
+</div>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-17ad337ce832efd349d3" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-17ad337ce832efd349d3">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","fillContainer":true,"data":[[],[],[],[],[],[]],"container":"<table class=\"display fill-container\">\n  <thead>\n    <tr>\n      <th>Species<\/th>\n      <th>Item<\/th>\n      <th>Year<\/th>\n      <th>Ref<\/th>\n      <th>Title<\/th>\n      <th>Links<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":0,"scrollY":"400px","scrollCollapse":true,"autoWidth":false,"lengthChange":false,"columnDefs":[{"width":"50px","targets":0},{"width":"50px","targets":1},{"width":"50px","targets":2},{"width":"100px","targets":3},{"width":"300px","targets":4},{"width":"80px","targets":5},{"className":"dt-left","targets":"_all"},{"name":"Species","targets":0},{"name":"Item","targets":1},{"name":"Year","targets":2},{"name":"Ref","targets":3},{"name":"Title","targets":4},{"name":"Links","targets":5}],"order":[],"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="multitt" class="section level1" data-orientation="rows">
+<h1>multiTT</h1>
+<div id="column-5" class="section level2 sidebar">
+<h2 class="sidebar">Column</h2>
+<!-- Column 1 -->
+<div>
+<p><strong>References</strong><br />
+<a href="#general-information">General information</a><br />
+<a href="#nalb">North Atlantic Albacore</a><br /> <a href="#bft">Atlantic
+Bluefin Tuna</a><br /> <a href="#nswo">North Atlantic Swordfish</a><br />
+<a href="#wskj">West Atlantic Skipjack</a><br />
+<a href="#multitt">Multi-stocks Tropical Tunas</a><br />
+<a href="#other-species">Other Species</a><br /></p>
+</div>
+<hr />
+<!-- Column 2 -->
+<div>
+<p><strong>ICCAT MSE links</strong><br />
+<a href="https://iccat.github.io/iccat-mse-web/"> MSE Summary</a><br />
+<a href="https://iccat.github.io/iccat-mse-web/species/NALB/NALB_MSE.html#eng">
+North Atlantic Albacore</a><br />
+<a href="https://iccat.github.io/iccat-mse-web/species/BFT/BFT_MSE.html#eng">
+Atlantic Bluefin Tuna</a><br />
+<a href="https://iccat.github.io/iccat-mse-web/species/NSWO/NSWO_MSE.html#eng">
+North Atlantic Swordfish</a><br />
+<a href="https://iccat.github.io/iccat-mse-web/species/WSKJ/WSKJ_MSE.html#eng">
+West Atlantic Skipjack</a><br />
+<a href="https://iccat.github.io/iccat-mse-web/species/multiTT/multiTT_MSE.html#eng">
+Multi-stocks Tropical Tunas</a><br />
+<a href="https://iccat.github.io/iccat-mse-web/species/others/Other_Species_MSE.html#eng">
+Other Species</a><br /></p>
+</div>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<style type="text/css">
+
+.navbar {
+background-color: rgba(0, 26, 62, 0.8) !important; border: none !important;
+backdrop-filter: blur(4px); }
+
+.navbar .navbar-nav > li > a,
+.navbar .navbar-brand {
+color: #ffffff !important;
+}
+
+.navbar .navbar-nav > .active > a {
+background-color: rgba(0, 51, 102, 0.9) !important;
+color: #ffffff !important;
+}
+</style>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<style type="text/css">
+.section.level3 {
+margin: 0 !important;
+padding: 0 !important;
+background-color: #f8f2e2 !important;
+}
+body {
+margin: 0 !important;
+padding: 0 !important;
+background-color: #f8f2e2 !important;
+}
+.chart-stage {
+margin: 0 !important;
+padding: 0 !important;
+background-color: #f8f2e2 !important; }
+.chart-wrapper {
+margin: 0 !important;
+padding: 0 !important;
+}
+.chart-stage,
+.chart-wrapper,
+.section.level3 {
+border: none !important;
+box-shadow: none !important;}
+.main-container {
+background-color: #f8f2e2; }
+
+.dataTable tbody td {
+background-color: #f8f2e2 !important; 
+color: #001A3E !important; 
+}
+
+.dataTable thead th {
+background-color: #f8f2e2 !important;
+color: #001A3E !important;
+}
+
+.dataTables_wrapper .dataTables_filter input,
+.dataTables_wrapper .dataTables_length select {
+background-color: #f8f2e2 !important;
+color: #001A3E !important;
+border: 1px solid #ccc;
+}
+
+.dataTable thead select {
+background-color: #f8f2e2 !important;
+color: #001A3E !important;
+</style>
+</div>
+<div id="row-40" class="section level2" data-height="40">
+<h2>Row</h2>
+</div>
+<div id="row-41" class="section level2" data-height="300">
+<h2>Row</h2>
+<div id="section-9" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#001A3E; padding:4px; text-align: center;">
+<h1 style="font-size:2em; color:#ffffff; font-weight: bold;">
+References/ Références/ Referencias
+</h1>
+</div>
+<div style="background-color:#f8f2e2; padding:10px 30px; text-align: center;">
+<h2 style="font-size:1.4em; color:#001A3E;">
+<p>Please consult with the ICCAT Secretariat if links are not working
+nor available. Most of materials are in English, additional links are
+provided if French and Spanish are available.<br></p>
+<p>Veuillez consulter le Secrétariat de l’ICCAT si les liens ne
+fonctionnent pas ou ne sont pas disponibles. La plupart des documents
+sont en anglais, des liens supplémentaires sont fournis si des versions
+en français et en espagnol sont disponibles.<br></p>
+Por favor, consulte con la Secretaría de la ICCAT si los enlaces no
+funcionan o no están disponibles. La mayoría de los materiales están en
+inglés; se proporcionan enlaces adicionales si hay versiones en francés
+y español disponibles.
+</h2>
+</div>
+</div>
+</div>
+<div id="row-42" class="section level2" data-height="70">
+<h2>Row</h2>
+<div id="section-10" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#001A3E; padding:4px; text-align: center;">
+<h1 style="font-size:2em; color:#ffffff; font-weight: bold;">
+Multi-stocks Tropical Tunas/ Thonidés tropicaux multi-stocks/ Túnidos
+tropicales multistocks
+</h1>
+</div>
+</div>
+</div>
+<div id="row-43" class="section level2" data-height="auto">
+<h2>Row</h2>
+<div id="multiTTMaterials" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+<h1 style="font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;">
+multiTT : Materials/ Matériels/ Materiales
+</h1>
+</div>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-21bd89512aabbd709f5a" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-21bd89512aabbd709f5a">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","fillContainer":true,"data":[["multiTT"],["Materials"],["2025"],["ICCAT"],["multiTT MSE Codes"],["<a href=\"https://iccat.github.io/iccat-mse-web/species/multiTT/multiTT_readme.html\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a>"]],"container":"<table class=\"display fill-container\">\n  <thead>\n    <tr>\n      <th>Species<\/th>\n      <th>Item<\/th>\n      <th>Year<\/th>\n      <th>Ref<\/th>\n      <th>Title<\/th>\n      <th>Links<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":1,"scrollY":"400px","scrollCollapse":true,"autoWidth":false,"lengthChange":false,"columnDefs":[{"width":"50px","targets":0},{"width":"50px","targets":1},{"width":"50px","targets":2},{"width":"100px","targets":3},{"width":"300px","targets":4},{"width":"80px","targets":5},{"className":"dt-left","targets":"_all"},{"name":"Species","targets":0},{"name":"Item","targets":1},{"name":"Year","targets":2},{"name":"Ref","targets":3},{"name":"Title","targets":4},{"name":"Links","targets":5}],"order":[],"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="row-44" class="section level2" data-height="auto">
+<h2>Row</h2>
+<div id="multiTTRecRes" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+<hr style="border: none; height: 2px; background-color: #ccc;" />
+<h1 style="font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;">
+multiTT : Rec/Res/ Rec/Res/ Rec/Res
+</h1>
+</div>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-8e123e8996c0f0bc117a" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-8e123e8996c0f0bc117a">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","fillContainer":true,"data":[["multiTT"],["Rec/Res"],["2015"],["Rec. 15-07"],["RECOMMENDATION BY ICCAT ON THE DEVELOPMENT OF HARVEST CONTROL RULES AND OF MANAGEMENT STRATEGY EVALUATION"],["<a href=\"https://www.iccat.int/Documents/Recs/compendiopdf-e/2015-07-e.pdf\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a>"]],"container":"<table class=\"display fill-container\">\n  <thead>\n    <tr>\n      <th>Species<\/th>\n      <th>Item<\/th>\n      <th>Year<\/th>\n      <th>Ref<\/th>\n      <th>Title<\/th>\n      <th>Links<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":1,"scrollY":"400px","scrollCollapse":true,"autoWidth":false,"lengthChange":false,"columnDefs":[{"width":"50px","targets":0},{"width":"50px","targets":1},{"width":"50px","targets":2},{"width":"100px","targets":3},{"width":"300px","targets":4},{"width":"80px","targets":5},{"className":"dt-left","targets":"_all"},{"name":"Species","targets":0},{"name":"Item","targets":1},{"name":"Year","targets":2},{"name":"Ref","targets":3},{"name":"Title","targets":4},{"name":"Links","targets":5}],"order":[],"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="row-45" class="section level2" data-height="auto">
+<h2>Row</h2>
+<div id="multiTTMeetings" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+<hr style="border: none; height: 2px; background-color: #ccc;" />
+<h1 style="font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;">
+multiTT : Meetings/ Réunions/ Reuniones
+</h1>
+</div>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-4e6594f8a79a918e2536" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-4e6594f8a79a918e2536">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","fillContainer":true,"data":[[],[],[],[],[],[]],"container":"<table class=\"display fill-container\">\n  <thead>\n    <tr>\n      <th>Species<\/th>\n      <th>Item<\/th>\n      <th>Year<\/th>\n      <th>Ref<\/th>\n      <th>Title<\/th>\n      <th>Links<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":0,"scrollY":"400px","scrollCollapse":true,"autoWidth":false,"lengthChange":false,"columnDefs":[{"width":"50px","targets":0},{"width":"50px","targets":1},{"width":"50px","targets":2},{"width":"100px","targets":3},{"width":"300px","targets":4},{"width":"80px","targets":5},{"className":"dt-left","targets":"_all"},{"name":"Species","targets":0},{"name":"Item","targets":1},{"name":"Year","targets":2},{"name":"Ref","targets":3},{"name":"Title","targets":4},{"name":"Links","targets":5}],"order":[],"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="row-46" class="section level2" data-height="auto">
+<h2>Row</h2>
+<div id="multiTTSCRSdocs" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+<hr style="border: none; height: 2px; background-color: #ccc;" />
+<h1 style="font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;">
+multiTT : SCRS Docs/ Documents SCRS/ Documentos SCRS
+</h1>
+</div>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-e3eb00566d8f540fd5f2" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-e3eb00566d8f540fd5f2">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","fillContainer":true,"data":[[],[],[],[],[],[]],"container":"<table class=\"display fill-container\">\n  <thead>\n    <tr>\n      <th>Species<\/th>\n      <th>Item<\/th>\n      <th>Year<\/th>\n      <th>Ref<\/th>\n      <th>Title<\/th>\n      <th>Links<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":0,"scrollY":"400px","scrollCollapse":true,"autoWidth":false,"lengthChange":false,"columnDefs":[{"width":"50px","targets":0},{"width":"50px","targets":1},{"width":"50px","targets":2},{"width":"100px","targets":3},{"width":"300px","targets":4},{"width":"80px","targets":5},{"className":"dt-left","targets":"_all"},{"name":"Species","targets":0},{"name":"Item","targets":1},{"name":"Year","targets":2},{"name":"Ref","targets":3},{"name":"Title","targets":4},{"name":"Links","targets":5}],"order":[],"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="row-47" class="section level2" data-height="auto">
+<h2>Row</h2>
+<div id="multiTTOthers" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+<hr style="border: none; height: 2px; background-color: #ccc;" />
+<h1 style="font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;">
+multiTT : Others/ Autres/ Otros
+</h1>
+</div>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-ce2cc7e5aaf8f49f0869" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-ce2cc7e5aaf8f49f0869">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","fillContainer":true,"data":[[],[],[],[],[],[]],"container":"<table class=\"display fill-container\">\n  <thead>\n    <tr>\n      <th>Species<\/th>\n      <th>Item<\/th>\n      <th>Year<\/th>\n      <th>Ref<\/th>\n      <th>Title<\/th>\n      <th>Links<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":0,"scrollY":"400px","scrollCollapse":true,"autoWidth":false,"lengthChange":false,"columnDefs":[{"width":"50px","targets":0},{"width":"50px","targets":1},{"width":"50px","targets":2},{"width":"100px","targets":3},{"width":"300px","targets":4},{"width":"80px","targets":5},{"className":"dt-left","targets":"_all"},{"name":"Species","targets":0},{"name":"Item","targets":1},{"name":"Year","targets":2},{"name":"Ref","targets":3},{"name":"Title","targets":4},{"name":"Links","targets":5}],"order":[],"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="other-species" class="section level1" data-orientation="rows">
+<h1>Other Species</h1>
+<div id="column-6" class="section level2 sidebar">
+<h2 class="sidebar">Column</h2>
+<!-- Column 1 -->
+<div>
+<p><strong>References</strong><br />
+<a href="#general-information">General information</a><br />
+<a href="#nalb">North Atlantic Albacore</a><br /> <a href="#bft">Atlantic
+Bluefin Tuna</a><br /> <a href="#nswo">North Atlantic Swordfish</a><br />
+<a href="#wskj">West Atlantic Skipjack</a><br />
+<a href="#multitt">Multi-stocks Tropical Tunas</a><br />
+<a href="#other-species">Other Species</a><br /></p>
+</div>
+<hr />
+<!-- Column 2 -->
+<div>
+<p><strong>ICCAT MSE links</strong><br />
+<a href="https://iccat.github.io/iccat-mse-web/"> MSE Summary</a><br />
+<a href="https://iccat.github.io/iccat-mse-web/species/NALB/NALB_MSE.html#eng">
+North Atlantic Albacore</a><br />
+<a href="https://iccat.github.io/iccat-mse-web/species/BFT/BFT_MSE.html#eng">
+Atlantic Bluefin Tuna</a><br />
+<a href="https://iccat.github.io/iccat-mse-web/species/NSWO/NSWO_MSE.html#eng">
+North Atlantic Swordfish</a><br />
+<a href="https://iccat.github.io/iccat-mse-web/species/WSKJ/WSKJ_MSE.html#eng">
+West Atlantic Skipjack</a><br />
+<a href="https://iccat.github.io/iccat-mse-web/species/multiTT/multiTT_MSE.html#eng">
+Multi-stocks Tropical Tunas</a><br />
+<a href="https://iccat.github.io/iccat-mse-web/species/others/Other_Species_MSE.html#eng">
+Other Species</a><br /></p>
+</div>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<style type="text/css">
+
+.navbar {
+background-color: rgba(0, 26, 62, 0.8) !important; border: none !important;
+backdrop-filter: blur(4px); }
+
+.navbar .navbar-nav > li > a,
+.navbar .navbar-brand {
+color: #ffffff !important;
+}
+
+.navbar .navbar-nav > .active > a {
+background-color: rgba(0, 51, 102, 0.9) !important;
+color: #ffffff !important;
+}
+</style>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<style type="text/css">
+.section.level3 {
+margin: 0 !important;
+padding: 0 !important;
+background-color: #f8f2e2 !important;
+}
+body {
+margin: 0 !important;
+padding: 0 !important;
+background-color: #f8f2e2 !important;
+}
+.chart-stage {
+margin: 0 !important;
+padding: 0 !important;
+background-color: #f8f2e2 !important; }
+.chart-wrapper {
+margin: 0 !important;
+padding: 0 !important;
+}
+.chart-stage,
+.chart-wrapper,
+.section.level3 {
+border: none !important;
+box-shadow: none !important;}
+.main-container {
+background-color: #f8f2e2; }
+
+.dataTable tbody td {
+background-color: #f8f2e2 !important; 
+color: #001A3E !important; 
+}
+
+.dataTable thead th {
+background-color: #f8f2e2 !important;
+color: #001A3E !important;
+}
+
+.dataTables_wrapper .dataTables_filter input,
+.dataTables_wrapper .dataTables_length select {
+background-color: #f8f2e2 !important;
+color: #001A3E !important;
+border: 1px solid #ccc;
+}
+
+.dataTable thead select {
+background-color: #f8f2e2 !important;
+color: #001A3E !important;
+</style>
+</div>
+<div id="row-48" class="section level2" data-height="40">
+<h2>Row</h2>
+</div>
+<div id="row-49" class="section level2" data-height="300">
+<h2>Row</h2>
+<div id="section-11" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#001A3E; padding:4px; text-align: center;">
+<h1 style="font-size:2em; color:#ffffff; font-weight: bold;">
+References/ Références/ Referencias
+</h1>
+</div>
+<div style="background-color:#f8f2e2; padding:10px 30px; text-align: center;">
+<h2 style="font-size:1.4em; color:#001A3E;">
+<p>Please consult with the ICCAT Secretariat if links are not working
+nor available. Most of materials are in English, additional links are
+provided if French and Spanish are available.<br></p>
+<p>Veuillez consulter le Secrétariat de l’ICCAT si les liens ne
+fonctionnent pas ou ne sont pas disponibles. La plupart des documents
+sont en anglais, des liens supplémentaires sont fournis si des versions
+en français et en espagnol sont disponibles.<br></p>
+Por favor, consulte con la Secretaría de la ICCAT si los enlaces no
+funcionan o no están disponibles. La mayoría de los materiales están en
+inglés; se proporcionan enlaces adicionales si hay versiones en francés
+y español disponibles.
+</h2>
+</div>
+</div>
+</div>
+<div id="row-50" class="section level2" data-height="70">
+<h2>Row</h2>
+<div id="section-12" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#001A3E; padding:4px; text-align: center;">
+<h1 style="font-size:2em; color:#ffffff; font-weight: bold;">
+Other Species/ Autres espèces/ Otras especies
+</h1>
+</div>
+</div>
+</div>
+<div id="row-51" class="section level2" data-height="auto">
+<h2>Row</h2>
+<div id="OtherMaterials" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+<h1 style="font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;">
+Other Species : Materials/ Matériels/ Materiales
+</h1>
+</div>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-f586a8f9f94dd32b9b07" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-f586a8f9f94dd32b9b07">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","fillContainer":true,"data":[["Other Species"],["Materials"],["2025"],["ICCAT"],["Others MSE Codes"],["<a href=\"https://iccat.github.io/iccat-mse-web/species/NALB/NALB_readme.html\" target=\"_blank\"><img src=\"images/united-kingdom.png\" width=\"40\" /><\/a>"]],"container":"<table class=\"display fill-container\">\n  <thead>\n    <tr>\n      <th>Species<\/th>\n      <th>Item<\/th>\n      <th>Year<\/th>\n      <th>Ref<\/th>\n      <th>Title<\/th>\n      <th>Links<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":1,"scrollY":"400px","scrollCollapse":true,"autoWidth":false,"lengthChange":false,"columnDefs":[{"width":"50px","targets":0},{"width":"50px","targets":1},{"width":"50px","targets":2},{"width":"100px","targets":3},{"width":"300px","targets":4},{"width":"80px","targets":5},{"className":"dt-left","targets":"_all"},{"name":"Species","targets":0},{"name":"Item","targets":1},{"name":"Year","targets":2},{"name":"Ref","targets":3},{"name":"Title","targets":4},{"name":"Links","targets":5}],"order":[],"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="row-52" class="section level2" data-height="auto">
+<h2>Row</h2>
+<div id="OtherRecRes" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+<hr style="border: none; height: 2px; background-color: #ccc;" />
+<h1 style="font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;">
+Other Species : Rec/Res/ Rec/Res/ Rec/Res
+</h1>
+</div>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-852c7d11912e16e0b73c" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-852c7d11912e16e0b73c">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","fillContainer":true,"data":[[],[],[],[],[],[]],"container":"<table class=\"display fill-container\">\n  <thead>\n    <tr>\n      <th>Species<\/th>\n      <th>Item<\/th>\n      <th>Year<\/th>\n      <th>Ref<\/th>\n      <th>Title<\/th>\n      <th>Links<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":0,"scrollY":"400px","scrollCollapse":true,"autoWidth":false,"lengthChange":false,"columnDefs":[{"width":"50px","targets":0},{"width":"50px","targets":1},{"width":"50px","targets":2},{"width":"100px","targets":3},{"width":"300px","targets":4},{"width":"80px","targets":5},{"className":"dt-left","targets":"_all"},{"name":"Species","targets":0},{"name":"Item","targets":1},{"name":"Year","targets":2},{"name":"Ref","targets":3},{"name":"Title","targets":4},{"name":"Links","targets":5}],"order":[],"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="row-53" class="section level2" data-height="auto">
+<h2>Row</h2>
+<div id="OtherMeetings" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+<hr style="border: none; height: 2px; background-color: #ccc;" />
+<h1 style="font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;">
+Other Species : Meetings/ Réunions/ Reuniones
+</h1>
+</div>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-cf4b0732940ff553bdb8" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-cf4b0732940ff553bdb8">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","fillContainer":true,"data":[[],[],[],[],[],[]],"container":"<table class=\"display fill-container\">\n  <thead>\n    <tr>\n      <th>Species<\/th>\n      <th>Item<\/th>\n      <th>Year<\/th>\n      <th>Ref<\/th>\n      <th>Title<\/th>\n      <th>Links<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":0,"scrollY":"400px","scrollCollapse":true,"autoWidth":false,"lengthChange":false,"columnDefs":[{"width":"50px","targets":0},{"width":"50px","targets":1},{"width":"50px","targets":2},{"width":"100px","targets":3},{"width":"300px","targets":4},{"width":"80px","targets":5},{"className":"dt-left","targets":"_all"},{"name":"Species","targets":0},{"name":"Item","targets":1},{"name":"Year","targets":2},{"name":"Ref","targets":3},{"name":"Title","targets":4},{"name":"Links","targets":5}],"order":[],"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="row-54" class="section level2" data-height="auto">
+<h2>Row</h2>
+<div id="OtherSCRSdocs" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+<hr style="border: none; height: 2px; background-color: #ccc;" />
+<h1 style="font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;">
+Other Species : SCRS Docs/ Documents SCRS/ Documentos SCRS
+</h1>
+</div>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-b56616be36a2e4390820" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-b56616be36a2e4390820">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","fillContainer":true,"data":[[],[],[],[],[],[]],"container":"<table class=\"display fill-container\">\n  <thead>\n    <tr>\n      <th>Species<\/th>\n      <th>Item<\/th>\n      <th>Year<\/th>\n      <th>Ref<\/th>\n      <th>Title<\/th>\n      <th>Links<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":0,"scrollY":"400px","scrollCollapse":true,"autoWidth":false,"lengthChange":false,"columnDefs":[{"width":"50px","targets":0},{"width":"50px","targets":1},{"width":"50px","targets":2},{"width":"100px","targets":3},{"width":"300px","targets":4},{"width":"80px","targets":5},{"className":"dt-left","targets":"_all"},{"name":"Species","targets":0},{"name":"Item","targets":1},{"name":"Year","targets":2},{"name":"Ref","targets":3},{"name":"Title","targets":4},{"name":"Links","targets":5}],"order":[],"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="row-55" class="section level2" data-height="auto">
+<h2>Row</h2>
+<div id="OtherOthers" class="section level3">
+<h3></h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+<hr style="border: none; height: 2px; background-color: #ccc;" />
+<h1 style="font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;">
+Other Species : Others/ Autres/ Otros
+</h1>
+</div>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-cce11e131df1192b6846" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-cce11e131df1192b6846">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","fillContainer":true,"data":[[],[],[],[],[],[]],"container":"<table class=\"display fill-container\">\n  <thead>\n    <tr>\n      <th>Species<\/th>\n      <th>Item<\/th>\n      <th>Year<\/th>\n      <th>Ref<\/th>\n      <th>Title<\/th>\n      <th>Links<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":0,"scrollY":"400px","scrollCollapse":true,"autoWidth":false,"lengthChange":false,"columnDefs":[{"width":"50px","targets":0},{"width":"50px","targets":1},{"width":"50px","targets":2},{"width":"100px","targets":3},{"width":"300px","targets":4},{"width":"80px","targets":5},{"className":"dt-left","targets":"_all"},{"name":"Species","targets":0},{"name":"Item","targets":1},{"name":"Year","targets":2},{"name":"Ref","targets":3},{"name":"Title","targets":4},{"name":"Links","targets":5}],"order":[],"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
