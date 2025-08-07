@@ -33,7 +33,7 @@ txtref$Links <- paste0(
 )
 
 # reference list
-refs <- txtref[,c(1:5,9)]
+refs <- txtref[,c(1:6,10)]
 
 lg <- 1
 sp_list <- c("NALB","BFT","NSWO","WSKJ","multiTT","Other Species","GEN")
@@ -224,6 +224,7 @@ nsp <- 7 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species",7"GEN"
 nref <- 1 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
 rref <- paste0("ref",nref)
 refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
 
 #please select ref...for 3 languages
 cat(glue('
@@ -249,11 +250,10 @@ datatable(
     lengthChange = FALSE,  
     columnDefs = list(
       list(width = '50px', targets = 0),  
-      list(width = '50px', targets = 1),  
-      list(width = '50px', targets = 2),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
       list(width = '100px', targets = 3),  
-      list(width = '300px', targets = 4),  
-      list(width = '80px', targets = 5),  
+      list(width = '80px', targets = 4),  
       list(className = 'dt-left', targets = "_all")
     )
   ),
@@ -274,6 +274,7 @@ nsp <- 7 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species",7"GEN"
 nref <- 2 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
 rref <- paste0("ref",nref)
 refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
 
 #please select ref...for 3 languages
 cat(glue('
@@ -299,60 +300,10 @@ datatable(
     lengthChange = FALSE,  
     columnDefs = list(
       list(width = '50px', targets = 0),  
-      list(width = '50px', targets = 1),  
-      list(width = '50px', targets = 2),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
       list(width = '100px', targets = 3),  
-      list(width = '300px', targets = 4),  
-      list(width = '80px', targets = 5),  
-      list(className = 'dt-left', targets = "_all")
-    )
-  ),
-  rownames = FALSE
-)
-
-``` 
-  
-
-Row {data-height=auto}
--------------------------------------
-
-###  {#GENMeetings} 
-```{r echo=FALSE, results='asis'}
-#7"GEN",3"Meetings"
-nsp <- 7 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species",7"GEN"
-nref <- 3 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
-rref <- paste0("ref",nref)
-refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
-
-#please select ref...for 3 languages
-cat(glue('
-<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
-  <hr style="border: none; height: 2px; background-color: #ccc;" />
-  <h1 style= "font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;"> 
-      {paste(sp_list[nsp],":",na.omit(txt[txt$item==rref,1+2]))}/
-      {na.omit(txt[txt$item==rref,2+2])}/
-      {na.omit(txt[txt$item==rref,3+2])}</h1>
-
-</div>
-'))
-
-datatable(
-  refs1,
-  escape = FALSE,
-  filter = "top",
-  options = list(
-    pageLength = nrow(refs1),
-    scrollY = "400px",
-    scrollCollapse = TRUE,
-    autoWidth = FALSE,
-    lengthChange = FALSE,  
-    columnDefs = list(
-      list(width = '50px', targets = 0),  
-      list(width = '50px', targets = 1),  
-      list(width = '50px', targets = 2),  
-      list(width = '100px', targets = 3),  
-      list(width = '300px', targets = 4),  
-      list(width = '80px', targets = 5),  
+      list(width = '80px', targets = 4),  
       list(className = 'dt-left', targets = "_all")
     )
   ),
@@ -373,6 +324,7 @@ nsp <- 7 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species",7"GEN"
 nref <- 4 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
 rref <- paste0("ref",nref)
 refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
 
 #please select ref...for 3 languages
 cat(glue('
@@ -398,11 +350,10 @@ datatable(
     lengthChange = FALSE,  
     columnDefs = list(
       list(width = '50px', targets = 0),  
-      list(width = '50px', targets = 1),  
-      list(width = '50px', targets = 2),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
       list(width = '100px', targets = 3),  
-      list(width = '300px', targets = 4),  
-      list(width = '80px', targets = 5),  
+      list(width = '80px', targets = 4),  
       list(className = 'dt-left', targets = "_all")
     )
   ),
@@ -421,6 +372,7 @@ nsp <- 7 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species",7"GEN"
 nref <- 5 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
 rref <- paste0("ref",nref)
 refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
 
 #please select ref...for 3 languages
 cat(glue('
@@ -446,11 +398,10 @@ datatable(
     lengthChange = FALSE,  
     columnDefs = list(
       list(width = '50px', targets = 0),  
-      list(width = '50px', targets = 1),  
-      list(width = '50px', targets = 2),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
       list(width = '100px', targets = 3),  
-      list(width = '300px', targets = 4),  
-      list(width = '80px', targets = 5),  
+      list(width = '80px', targets = 4),  
       list(className = 'dt-left', targets = "_all")
     )
   ),
@@ -646,10 +597,12 @@ nsp <- 1 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
 nref <- 1 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
 rref <- paste0("ref",nref)
 refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
 
 #please select ref...for 3 languages
 cat(glue('
 <div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+  <hr style="border: none; height: 2px; background-color: #ccc;" />
   <h1 style= "font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;"> 
       {paste(sp_list[nsp],":",na.omit(txt[txt$item==rref,1+2]))}/
       {na.omit(txt[txt$item==rref,2+2])}/
@@ -670,11 +623,10 @@ datatable(
     lengthChange = FALSE,  
     columnDefs = list(
       list(width = '50px', targets = 0),  
-      list(width = '50px', targets = 1),  
-      list(width = '50px', targets = 2),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
       list(width = '100px', targets = 3),  
-      list(width = '300px', targets = 4),  
-      list(width = '80px', targets = 5),  
+      list(width = '80px', targets = 4),  
       list(className = 'dt-left', targets = "_all")
     )
   ),
@@ -693,6 +645,7 @@ nsp <- 1 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
 nref <- 2 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
 rref <- paste0("ref",nref)
 refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
 
 #please select ref...for 3 languages
 cat(glue('
@@ -718,11 +671,10 @@ datatable(
     lengthChange = FALSE,  
     columnDefs = list(
       list(width = '50px', targets = 0),  
-      list(width = '50px', targets = 1),  
-      list(width = '50px', targets = 2),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
       list(width = '100px', targets = 3),  
-      list(width = '300px', targets = 4),  
-      list(width = '80px', targets = 5),  
+      list(width = '80px', targets = 4),  
       list(className = 'dt-left', targets = "_all")
     )
   ),
@@ -741,6 +693,7 @@ nsp <- 1 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
 nref <- 3 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
 rref <- paste0("ref",nref)
 refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
 
 #please select ref...for 3 languages
 cat(glue('
@@ -766,11 +719,10 @@ datatable(
     lengthChange = FALSE,  
     columnDefs = list(
       list(width = '50px', targets = 0),  
-      list(width = '50px', targets = 1),  
-      list(width = '50px', targets = 2),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
       list(width = '100px', targets = 3),  
-      list(width = '300px', targets = 4),  
-      list(width = '80px', targets = 5),  
+      list(width = '80px', targets = 4),  
       list(className = 'dt-left', targets = "_all")
     )
   ),
@@ -789,6 +741,7 @@ nsp <- 1 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
 nref <- 4 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
 rref <- paste0("ref",nref)
 refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
 
 #please select ref...for 3 languages
 cat(glue('
@@ -814,11 +767,10 @@ datatable(
     lengthChange = FALSE,  
     columnDefs = list(
       list(width = '50px', targets = 0),  
-      list(width = '50px', targets = 1),  
-      list(width = '50px', targets = 2),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
       list(width = '100px', targets = 3),  
-      list(width = '300px', targets = 4),  
-      list(width = '80px', targets = 5),  
+      list(width = '80px', targets = 4),  
       list(className = 'dt-left', targets = "_all")
     )
   ),
@@ -837,6 +789,7 @@ nsp <- 1 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
 nref <- 5 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
 rref <- paste0("ref",nref)
 refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
 
 #please select ref...for 3 languages
 cat(glue('
@@ -862,11 +815,10 @@ datatable(
     lengthChange = FALSE,  
     columnDefs = list(
       list(width = '50px', targets = 0),  
-      list(width = '50px', targets = 1),  
-      list(width = '50px', targets = 2),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
       list(width = '100px', targets = 3),  
-      list(width = '300px', targets = 4),  
-      list(width = '80px', targets = 5),  
+      list(width = '80px', targets = 4),  
       list(className = 'dt-left', targets = "_all")
     )
   ),
@@ -1064,10 +1016,12 @@ nsp <- 2 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
 nref <- 1 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
 rref <- paste0("ref",nref)
 refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
 
 #please select ref...for 3 languages
 cat(glue('
 <div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+  <hr style="border: none; height: 2px; background-color: #ccc;" />
   <h1 style= "font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;"> 
       {paste(sp_list[nsp],":",na.omit(txt[txt$item==rref,1+2]))}/
       {na.omit(txt[txt$item==rref,2+2])}/
@@ -1088,11 +1042,10 @@ datatable(
     lengthChange = FALSE,  
     columnDefs = list(
       list(width = '50px', targets = 0),  
-      list(width = '50px', targets = 1),  
-      list(width = '50px', targets = 2),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
       list(width = '100px', targets = 3),  
-      list(width = '300px', targets = 4),  
-      list(width = '80px', targets = 5),  
+      list(width = '80px', targets = 4),  
       list(className = 'dt-left', targets = "_all")
     )
   ),
@@ -1111,6 +1064,7 @@ nsp <- 2 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
 nref <- 2 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
 rref <- paste0("ref",nref)
 refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
 
 #please select ref...for 3 languages
 cat(glue('
@@ -1136,11 +1090,10 @@ datatable(
     lengthChange = FALSE,  
     columnDefs = list(
       list(width = '50px', targets = 0),  
-      list(width = '50px', targets = 1),  
-      list(width = '50px', targets = 2),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
       list(width = '100px', targets = 3),  
-      list(width = '300px', targets = 4),  
-      list(width = '80px', targets = 5),  
+      list(width = '80px', targets = 4),  
       list(className = 'dt-left', targets = "_all")
     )
   ),
@@ -1159,6 +1112,7 @@ nsp <- 2 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
 nref <- 3 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
 rref <- paste0("ref",nref)
 refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
 
 #please select ref...for 3 languages
 cat(glue('
@@ -1184,11 +1138,10 @@ datatable(
     lengthChange = FALSE,  
     columnDefs = list(
       list(width = '50px', targets = 0),  
-      list(width = '50px', targets = 1),  
-      list(width = '50px', targets = 2),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
       list(width = '100px', targets = 3),  
-      list(width = '300px', targets = 4),  
-      list(width = '80px', targets = 5),  
+      list(width = '80px', targets = 4),  
       list(className = 'dt-left', targets = "_all")
     )
   ),
@@ -1207,6 +1160,7 @@ nsp <- 2 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
 nref <- 4 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
 rref <- paste0("ref",nref)
 refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
 
 #please select ref...for 3 languages
 cat(glue('
@@ -1232,11 +1186,10 @@ datatable(
     lengthChange = FALSE,  
     columnDefs = list(
       list(width = '50px', targets = 0),  
-      list(width = '50px', targets = 1),  
-      list(width = '50px', targets = 2),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
       list(width = '100px', targets = 3),  
-      list(width = '300px', targets = 4),  
-      list(width = '80px', targets = 5),  
+      list(width = '80px', targets = 4),  
       list(className = 'dt-left', targets = "_all")
     )
   ),
@@ -1255,6 +1208,7 @@ nsp <- 2 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
 nref <- 5 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
 rref <- paste0("ref",nref)
 refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
 
 #please select ref...for 3 languages
 cat(glue('
@@ -1280,11 +1234,10 @@ datatable(
     lengthChange = FALSE,  
     columnDefs = list(
       list(width = '50px', targets = 0),  
-      list(width = '50px', targets = 1),  
-      list(width = '50px', targets = 2),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
       list(width = '100px', targets = 3),  
-      list(width = '300px', targets = 4),  
-      list(width = '80px', targets = 5),  
+      list(width = '80px', targets = 4),  
       list(className = 'dt-left', targets = "_all")
     )
   ),
@@ -1482,10 +1435,12 @@ nsp <- 3 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
 nref <- 1 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
 rref <- paste0("ref",nref)
 refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
 
 #please select ref...for 3 languages
 cat(glue('
 <div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+  <hr style="border: none; height: 2px; background-color: #ccc;" />
   <h1 style= "font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;"> 
       {paste(sp_list[nsp],":",na.omit(txt[txt$item==rref,1+2]))}/
       {na.omit(txt[txt$item==rref,2+2])}/
@@ -1506,11 +1461,10 @@ datatable(
     lengthChange = FALSE,  
     columnDefs = list(
       list(width = '50px', targets = 0),  
-      list(width = '50px', targets = 1),  
-      list(width = '50px', targets = 2),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
       list(width = '100px', targets = 3),  
-      list(width = '300px', targets = 4),  
-      list(width = '80px', targets = 5),  
+      list(width = '80px', targets = 4),  
       list(className = 'dt-left', targets = "_all")
     )
   ),
@@ -1529,6 +1483,7 @@ nsp <- 3 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
 nref <- 2 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
 rref <- paste0("ref",nref)
 refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
 
 #please select ref...for 3 languages
 cat(glue('
@@ -1554,11 +1509,10 @@ datatable(
     lengthChange = FALSE,  
     columnDefs = list(
       list(width = '50px', targets = 0),  
-      list(width = '50px', targets = 1),  
-      list(width = '50px', targets = 2),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
       list(width = '100px', targets = 3),  
-      list(width = '300px', targets = 4),  
-      list(width = '80px', targets = 5),  
+      list(width = '80px', targets = 4),  
       list(className = 'dt-left', targets = "_all")
     )
   ),
@@ -1577,6 +1531,7 @@ nsp <- 3 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
 nref <- 3 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
 rref <- paste0("ref",nref)
 refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
 
 #please select ref...for 3 languages
 cat(glue('
@@ -1602,11 +1557,10 @@ datatable(
     lengthChange = FALSE,  
     columnDefs = list(
       list(width = '50px', targets = 0),  
-      list(width = '50px', targets = 1),  
-      list(width = '50px', targets = 2),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
       list(width = '100px', targets = 3),  
-      list(width = '300px', targets = 4),  
-      list(width = '80px', targets = 5),  
+      list(width = '80px', targets = 4),  
       list(className = 'dt-left', targets = "_all")
     )
   ),
@@ -1625,6 +1579,7 @@ nsp <- 3 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
 nref <- 4 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
 rref <- paste0("ref",nref)
 refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
 
 #please select ref...for 3 languages
 cat(glue('
@@ -1650,11 +1605,10 @@ datatable(
     lengthChange = FALSE,  
     columnDefs = list(
       list(width = '50px', targets = 0),  
-      list(width = '50px', targets = 1),  
-      list(width = '50px', targets = 2),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
       list(width = '100px', targets = 3),  
-      list(width = '300px', targets = 4),  
-      list(width = '80px', targets = 5),  
+      list(width = '80px', targets = 4),  
       list(className = 'dt-left', targets = "_all")
     )
   ),
@@ -1673,6 +1627,7 @@ nsp <- 3 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
 nref <- 5 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
 rref <- paste0("ref",nref)
 refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
 
 #please select ref...for 3 languages
 cat(glue('
@@ -1698,11 +1653,10 @@ datatable(
     lengthChange = FALSE,  
     columnDefs = list(
       list(width = '50px', targets = 0),  
-      list(width = '50px', targets = 1),  
-      list(width = '50px', targets = 2),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
       list(width = '100px', targets = 3),  
-      list(width = '300px', targets = 4),  
-      list(width = '80px', targets = 5),  
+      list(width = '80px', targets = 4),  
       list(className = 'dt-left', targets = "_all")
     )
   ),
@@ -1901,10 +1855,12 @@ nsp <- 4 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
 nref <- 1 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
 rref <- paste0("ref",nref)
 refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
 
 #please select ref...for 3 languages
 cat(glue('
 <div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+  <hr style="border: none; height: 2px; background-color: #ccc;" />
   <h1 style= "font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;"> 
       {paste(sp_list[nsp],":",na.omit(txt[txt$item==rref,1+2]))}/
       {na.omit(txt[txt$item==rref,2+2])}/
@@ -1925,11 +1881,10 @@ datatable(
     lengthChange = FALSE,  
     columnDefs = list(
       list(width = '50px', targets = 0),  
-      list(width = '50px', targets = 1),  
-      list(width = '50px', targets = 2),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
       list(width = '100px', targets = 3),  
-      list(width = '300px', targets = 4),  
-      list(width = '80px', targets = 5),  
+      list(width = '80px', targets = 4),  
       list(className = 'dt-left', targets = "_all")
     )
   ),
@@ -1948,6 +1903,7 @@ nsp <- 4 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
 nref <- 2 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
 rref <- paste0("ref",nref)
 refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
 
 #please select ref...for 3 languages
 cat(glue('
@@ -1973,11 +1929,10 @@ datatable(
     lengthChange = FALSE,  
     columnDefs = list(
       list(width = '50px', targets = 0),  
-      list(width = '50px', targets = 1),  
-      list(width = '50px', targets = 2),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
       list(width = '100px', targets = 3),  
-      list(width = '300px', targets = 4),  
-      list(width = '80px', targets = 5),  
+      list(width = '80px', targets = 4),  
       list(className = 'dt-left', targets = "_all")
     )
   ),
@@ -1996,6 +1951,7 @@ nsp <- 4 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
 nref <- 3 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
 rref <- paste0("ref",nref)
 refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
 
 #please select ref...for 3 languages
 cat(glue('
@@ -2021,11 +1977,10 @@ datatable(
     lengthChange = FALSE,  
     columnDefs = list(
       list(width = '50px', targets = 0),  
-      list(width = '50px', targets = 1),  
-      list(width = '50px', targets = 2),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
       list(width = '100px', targets = 3),  
-      list(width = '300px', targets = 4),  
-      list(width = '80px', targets = 5),  
+      list(width = '80px', targets = 4),  
       list(className = 'dt-left', targets = "_all")
     )
   ),
@@ -2044,6 +1999,7 @@ nsp <- 4 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
 nref <- 4 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
 rref <- paste0("ref",nref)
 refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
 
 #please select ref...for 3 languages
 cat(glue('
@@ -2069,11 +2025,10 @@ datatable(
     lengthChange = FALSE,  
     columnDefs = list(
       list(width = '50px', targets = 0),  
-      list(width = '50px', targets = 1),  
-      list(width = '50px', targets = 2),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
       list(width = '100px', targets = 3),  
-      list(width = '300px', targets = 4),  
-      list(width = '80px', targets = 5),  
+      list(width = '80px', targets = 4),  
       list(className = 'dt-left', targets = "_all")
     )
   ),
@@ -2092,6 +2047,7 @@ nsp <- 4 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
 nref <- 5 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
 rref <- paste0("ref",nref)
 refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
 
 #please select ref...for 3 languages
 cat(glue('
@@ -2117,11 +2073,10 @@ datatable(
     lengthChange = FALSE,  
     columnDefs = list(
       list(width = '50px', targets = 0),  
-      list(width = '50px', targets = 1),  
-      list(width = '50px', targets = 2),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
       list(width = '100px', targets = 3),  
-      list(width = '300px', targets = 4),  
-      list(width = '80px', targets = 5),  
+      list(width = '80px', targets = 4),  
       list(className = 'dt-left', targets = "_all")
     )
   ),
@@ -2320,10 +2275,12 @@ nsp <- 5 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
 nref <- 1 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
 rref <- paste0("ref",nref)
 refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
 
 #please select ref...for 3 languages
 cat(glue('
 <div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+  <hr style="border: none; height: 2px; background-color: #ccc;" />
   <h1 style= "font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;"> 
       {paste(sp_list[nsp],":",na.omit(txt[txt$item==rref,1+2]))}/
       {na.omit(txt[txt$item==rref,2+2])}/
@@ -2344,11 +2301,10 @@ datatable(
     lengthChange = FALSE,  
     columnDefs = list(
       list(width = '50px', targets = 0),  
-      list(width = '50px', targets = 1),  
-      list(width = '50px', targets = 2),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
       list(width = '100px', targets = 3),  
-      list(width = '300px', targets = 4),  
-      list(width = '80px', targets = 5),  
+      list(width = '80px', targets = 4),  
       list(className = 'dt-left', targets = "_all")
     )
   ),
@@ -2367,6 +2323,7 @@ nsp <- 5 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
 nref <- 2 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
 rref <- paste0("ref",nref)
 refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
 
 #please select ref...for 3 languages
 cat(glue('
@@ -2392,11 +2349,10 @@ datatable(
     lengthChange = FALSE,  
     columnDefs = list(
       list(width = '50px', targets = 0),  
-      list(width = '50px', targets = 1),  
-      list(width = '50px', targets = 2),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
       list(width = '100px', targets = 3),  
-      list(width = '300px', targets = 4),  
-      list(width = '80px', targets = 5),  
+      list(width = '80px', targets = 4),  
       list(className = 'dt-left', targets = "_all")
     )
   ),
@@ -2415,6 +2371,7 @@ nsp <- 5 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
 nref <- 3 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
 rref <- paste0("ref",nref)
 refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
 
 #please select ref...for 3 languages
 cat(glue('
@@ -2440,11 +2397,10 @@ datatable(
     lengthChange = FALSE,  
     columnDefs = list(
       list(width = '50px', targets = 0),  
-      list(width = '50px', targets = 1),  
-      list(width = '50px', targets = 2),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
       list(width = '100px', targets = 3),  
-      list(width = '300px', targets = 4),  
-      list(width = '80px', targets = 5),  
+      list(width = '80px', targets = 4),  
       list(className = 'dt-left', targets = "_all")
     )
   ),
@@ -2463,6 +2419,7 @@ nsp <- 5 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
 nref <- 4 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
 rref <- paste0("ref",nref)
 refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
 
 #please select ref...for 3 languages
 cat(glue('
@@ -2488,11 +2445,10 @@ datatable(
     lengthChange = FALSE,  
     columnDefs = list(
       list(width = '50px', targets = 0),  
-      list(width = '50px', targets = 1),  
-      list(width = '50px', targets = 2),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
       list(width = '100px', targets = 3),  
-      list(width = '300px', targets = 4),  
-      list(width = '80px', targets = 5),  
+      list(width = '80px', targets = 4),  
       list(className = 'dt-left', targets = "_all")
     )
   ),
@@ -2511,6 +2467,7 @@ nsp <- 5 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
 nref <- 5 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
 rref <- paste0("ref",nref)
 refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
 
 #please select ref...for 3 languages
 cat(glue('
@@ -2536,11 +2493,10 @@ datatable(
     lengthChange = FALSE,  
     columnDefs = list(
       list(width = '50px', targets = 0),  
-      list(width = '50px', targets = 1),  
-      list(width = '50px', targets = 2),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
       list(width = '100px', targets = 3),  
-      list(width = '300px', targets = 4),  
-      list(width = '80px', targets = 5),  
+      list(width = '80px', targets = 4),  
       list(className = 'dt-left', targets = "_all")
     )
   ),
@@ -2740,10 +2696,12 @@ nsp <- 6 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
 nref <- 1 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
 rref <- paste0("ref",nref)
 refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
 
 #please select ref...for 3 languages
 cat(glue('
 <div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+  <hr style="border: none; height: 2px; background-color: #ccc;" />
   <h1 style= "font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;"> 
       {paste(sp_list[nsp],":",na.omit(txt[txt$item==rref,1+2]))}/
       {na.omit(txt[txt$item==rref,2+2])}/
@@ -2764,11 +2722,10 @@ datatable(
     lengthChange = FALSE,  
     columnDefs = list(
       list(width = '50px', targets = 0),  
-      list(width = '50px', targets = 1),  
-      list(width = '50px', targets = 2),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
       list(width = '100px', targets = 3),  
-      list(width = '300px', targets = 4),  
-      list(width = '80px', targets = 5),  
+      list(width = '80px', targets = 4),  
       list(className = 'dt-left', targets = "_all")
     )
   ),
@@ -2787,6 +2744,7 @@ nsp <- 6 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
 nref <- 2 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
 rref <- paste0("ref",nref)
 refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
 
 #please select ref...for 3 languages
 cat(glue('
@@ -2812,11 +2770,10 @@ datatable(
     lengthChange = FALSE,  
     columnDefs = list(
       list(width = '50px', targets = 0),  
-      list(width = '50px', targets = 1),  
-      list(width = '50px', targets = 2),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
       list(width = '100px', targets = 3),  
-      list(width = '300px', targets = 4),  
-      list(width = '80px', targets = 5),  
+      list(width = '80px', targets = 4),  
       list(className = 'dt-left', targets = "_all")
     )
   ),
@@ -2835,6 +2792,7 @@ nsp <- 6 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
 nref <- 3 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
 rref <- paste0("ref",nref)
 refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
 
 #please select ref...for 3 languages
 cat(glue('
@@ -2860,11 +2818,10 @@ datatable(
     lengthChange = FALSE,  
     columnDefs = list(
       list(width = '50px', targets = 0),  
-      list(width = '50px', targets = 1),  
-      list(width = '50px', targets = 2),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
       list(width = '100px', targets = 3),  
-      list(width = '300px', targets = 4),  
-      list(width = '80px', targets = 5),  
+      list(width = '80px', targets = 4),  
       list(className = 'dt-left', targets = "_all")
     )
   ),
@@ -2883,6 +2840,7 @@ nsp <- 6 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
 nref <- 4 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
 rref <- paste0("ref",nref)
 refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
 
 #please select ref...for 3 languages
 cat(glue('
@@ -2908,11 +2866,10 @@ datatable(
     lengthChange = FALSE,  
     columnDefs = list(
       list(width = '50px', targets = 0),  
-      list(width = '50px', targets = 1),  
-      list(width = '50px', targets = 2),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
       list(width = '100px', targets = 3),  
-      list(width = '300px', targets = 4),  
-      list(width = '80px', targets = 5),  
+      list(width = '80px', targets = 4),  
       list(className = 'dt-left', targets = "_all")
     )
   ),
@@ -2931,6 +2888,7 @@ nsp <- 6 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
 nref <- 5 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
 rref <- paste0("ref",nref)
 refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
 
 #please select ref...for 3 languages
 cat(glue('
@@ -2956,11 +2914,10 @@ datatable(
     lengthChange = FALSE,  
     columnDefs = list(
       list(width = '50px', targets = 0),  
-      list(width = '50px', targets = 1),  
-      list(width = '50px', targets = 2),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
       list(width = '100px', targets = 3),  
-      list(width = '300px', targets = 4),  
-      list(width = '80px', targets = 5),  
+      list(width = '80px', targets = 4),  
       list(className = 'dt-left', targets = "_all")
     )
   ),
