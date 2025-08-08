@@ -21,15 +21,17 @@ library(glue)
 
 #dir <- "C:/Users/Ai Kimoto/Documents/GitHub/iccat-mse-web/"
 txtref = data.frame(read_excel(paste0(dir,"ICCAT MSE Web TEXT_read.xlsx"), sheet = "references", col_names = TRUE))
+txtref <- txtref[,c(1:9)]
+
 txt = read_excel(paste0(dir,"ICCAT MSE Web TEXT_read.xlsx"), sheet = "GEN", col_names = TRUE)
 
 txtref$Links <- paste0(
   #ENG
-  paste0('<a href="', txtref$ENGlink, '" target="_blank">',  '<img src="images/united-kingdom.png" width="40" /></a>'),
+  paste0('<a href="', txtref$ENGlink, '">',  '<img src="https://iccat.github.io/iccat-mse-web/images/united-kingdom.png" width="40" /></a>'),
   #FRA
-  ifelse(is.na(txtref$FRAlink),"",paste0('<a href="', txtref$FRAlink, '" target="_blank">',  '<img src="images/france.png" width="40" /></a>')),
+  ifelse(is.na(txtref$FRAlink),"",paste0('<a href="', txtref$FRAlink, '" target="_blank">',  '<img src="https://iccat.github.io/iccat-mse-web/images/france.png" width="40" /></a>')),
   #ESP
-  ifelse(is.na(txtref$ESPlink),"",paste0('<a href="', txtref$ESPlink, '" target="_blank">',  '<img src="images/spain.png" width="40" /></a>'))
+  ifelse(is.na(txtref$ESPlink),"",paste0('<a href="', txtref$ESPlink, '" target="_blank">',  '<img src="https://iccat.github.io/iccat-mse-web/images/spain.png" width="40" /></a>'))
 )
 
 # reference list
