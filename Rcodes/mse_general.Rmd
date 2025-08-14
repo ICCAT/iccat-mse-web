@@ -1,0 +1,655 @@
+---
+title: "ICCAT MSE"
+output:
+  flexdashboard::flex_dashboard:
+    vertical_layout: scroll
+
+params:
+  dir: "directory"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(knitr)
+library(readxl)
+
+#dir <- "C:/Users/Ai Kimoto/Documents/GitHub/iccat-mse-web/"
+txt = read_excel(paste0(dir,"ICCAT MSE Web TEXT_read.xlsx"), sheet = "GEN", col_names = TRUE)
+
+txt$ENG <- gsub("\r\n", "<br>", txt$ENG)
+txt$FRA <- gsub("\r\n", "<br>", txt$FRA)
+txt$ESP <- gsub("\r\n", "<br>", txt$ESP)
+
+library(glue)
+
+```
+
+
+ENG {data-orientation=rows}
+=====================================  
+
+```{r echo=FALSE, results='asis'}
+
+#chose language
+lg <- 1 #1:ENG, 2:FRA, 3:ESP
+lg2 <- c("ENG", "FRA", "ESP")[lg]
+
+#decide space ..mannually decided in Excel.
+rowH1 <- as.integer(na.omit(txt[txt$item=="rowH1",lg+2])) 
+rowH2 <- as.integer(na.omit(txt[txt$item=="rowH2",lg+2])) 
+rowH3 <- as.integer(na.omit(txt[txt$item=="rowH3",lg+2])) 
+rowH4 <- as.integer(na.omit(txt[txt$item=="rowH4",lg+2])) 
+rowH5 <- as.integer(na.omit(txt[txt$item=="rowH5",lg+2])) 
+rowH6 <- as.integer(na.omit(txt[txt$item=="rowH6",lg+2])) 
+rowH7 <- as.integer(na.omit(txt[txt$item=="rowH7",lg+2])) 
+rowH8 <- as.integer(na.omit(txt[txt$item=="rowH8",lg+2])) 
+rowH9 <- as.integer(na.omit(txt[txt$item=="rowH9",lg+2])) 
+rowH10 <- as.integer(na.omit(txt[txt$item=="rowH10",lg+2])) 
+
+```
+
+Column {.sidebar}
+-----------------------------------------------------------------------
+
+<!-- Column 2 -->
+<div>
+  <strong>`r {na.omit(txt[txt$item=="Title11",lg+2])}`</strong><br/>
+  <a href=`r {na.omit(txt[txt$item=="gen_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="gen",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp1_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp1",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp2_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp2",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp3_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp3",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp4_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp4",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp5_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp5",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp6_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp6",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp7_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp7",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp8_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp8",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="ref_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="Title10",lg+2])}`</a><br/>
+</div>
+
+```{css, echo=FALSE}
+/* Top navigation bar background color */
+.navbar {
+  background-color: rgba(0, 26, 62, 0.8) !important;  
+  border: none !important;
+  backdrop-filter: blur(4px);  
+}
+
+/* Top navigation text color */
+.navbar .navbar-nav > li > a,
+.navbar .navbar-brand {
+  color: #ffffff !important;
+}
+
+/* Active tab color (optional) */
+.navbar .navbar-nav > .active > a {
+  background-color: rgba(0, 51, 102, 0.9) !important;
+  color: #ffffff !important;
+}
+```
+
+```{css, echo=FALSE}
+
+.section.level3 {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #001A3E !important;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #f8f2e2 !important;
+}
+
+.chart-stage {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #001A3E !important;  
+}
+
+.chart-wrapper {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.chart-stage,
+.chart-wrapper,
+.section.level3 {
+  border: none !important;
+  box-shadow: none !important;}
+
+.main-container {
+  background-color: #001A3E; 
+}
+```
+
+Row {data-height=40}
+-------------------------------------
+
+Row {data-height=100}
+-------------------------------------
+### {#title1}
+
+```{r echo=FALSE, results='asis'}
+#title1
+
+cat(glue('
+<div style="background-color:#001A3E; padding:10px; text-align: center;">
+  <h1 style= "font-size:2.5em; color:#ffffff; font-weight: bold;">
+      {na.omit(txt[txt$item=="Title1",lg+2])}</h1><br>
+</div>
+  
+'))
+
+```
+
+
+Row {data-height=150}
+-------------------------------------
+###
+```{r echo=FALSE, results='asis'}
+# general title
+cat(glue('
+<div style="background-color:#f8f2e2; padding:10px; text-align: center; line-height: 1.8; letter-spacing: 0.3px;">
+  <h1 style= "font-size:2em; color:#001A3E; font-weight: bold;"> 
+      {na.omit(txt[txt$item=="gen_txt1",lg+2])}</h1>
+  <h2 style= "font-size:1.8em; color:#001A3E; ">
+      {na.omit(txt[txt$item=="gen_txt2",lg+2])} </h2>
+</div>
+'))
+
+```
+
+Row {data-height=`r rowH1`}
+-------------------------------------
+
+### 
+```{r echo=FALSE, results='asis'}
+# general text
+cat(glue('
+
+<div style="background-color:#001A3E; padding:10px 40px; text-align: center; line-height: 1.8; letter-spacing: 0.3px;">
+  <h3 style= "font-size:1.5em; color:#ffffff; ">
+      {na.omit(txt[txt$item=="gen_txt3",lg+2])} </h3>    
+</div>
+
+'))
+
+```   
+
+Row {data-height=150}
+-------------------------------------
+###
+```{r echo=FALSE, results='asis'}
+# news title
+cat(glue('
+<div style="background-color:#f8f2e2; padding:10px; text-align: center; line-height: 1.8; letter-spacing: 0.3px;">
+  <h1 style= "font-size:2em; color:#001A3E; font-weight: bold;"> 
+      {na.omit(txt[txt$item=="news1",lg+2])}</h1>
+  <h2 style= "font-size:1.8em; color:#001A3E; ">
+      {na.omit(txt[txt$item=="news2",lg+2])} </h2>
+</div>
+'))
+
+```
+
+
+Row {data-height=`r rowH2`}
+-------------------------------------
+### {data-width=30%}
+```{r echo=FALSE, results='asis'}
+# news text with image
+cat(glue('
+<div style="background-color:#001A3E; padding:20px; text-align: center; line-height: 1.8; letter-spacing: 0.3px;">
+  <img src="images/{na.omit(txt[txt$item=="img2",lg+2])}" width="450" />
+</div>
+'))
+```
+
+### {data-width=70%}
+
+```{r echo=FALSE, results='asis'}
+# news text with image
+cat(glue('
+<div style="background-color:#001A3E; padding:20px; text-align: center; line-height: 1.8; letter-spacing: 0.3px;">
+  <h3 style= "font-size:1.5em; color:#ffffff; ">
+      {na.omit(txt[txt$item=="news3",lg+2])} </h3>    
+</div>
+
+'))
+
+```   
+
+
+
+Row {data-height=150}
+-------------------------------------
+###
+```{r echo=FALSE, results='asis'}
+# NALB title
+cat(glue('
+<div style="background-color:#f8f2e2; padding:10px; text-align: center; line-height: 1.8; letter-spacing: 0.3px;">
+  <h1 style= "font-size:2em; color:#001A3E; font-weight: bold;"> 
+      {na.omit(txt[txt$item=="nalb1",lg+2])}</h1>
+  <h2 style= "font-size:1.8em; color:#001A3E; ">
+      {na.omit(txt[txt$item=="nalb2",lg+2])} </h2>
+</div>
+'))
+
+```
+
+
+Row {data-height=`r rowH3`}
+-------------------------------------
+### {data-width=30%}
+```{r echo=FALSE, results='asis'}
+# NALB text with image
+
+cat(glue('
+<div style="background-color:#001A3E; padding:20px; text-align: center; line-height: 1.8; letter-spacing: 0.3px;">
+  <img src="images/{na.omit(txt[txt$item=="img3",lg+2])}" width="450" />
+</div>
+'))
+
+```
+
+### {data-width=70%}
+
+```{r echo=FALSE, results='asis'}
+# NALB text with image
+cat(glue('
+<div style="background-color:#001A3E; padding:20px; text-align: center; line-height: 1.8; letter-spacing: 0.3px;">
+  <h3 style= "font-size:1.5em; color:#ffffff; ">
+      {na.omit(txt[txt$item=="nalb3",lg+2])} </h3> 
+   <h3 style= "font-size:1.5em; color:#ffbf00; font-weight: bold;">
+      <a href= {na.omit(txt[txt$item=="nalb_link",lg+2])} target="_blank" style="color: #ffffff;">
+      {na.omit(txt[txt$item=="more",lg+2])} </h3> </a>        
+</div>
+
+'))
+
+```   
+
+
+
+Row {data-height=150}
+-------------------------------------
+###
+```{r echo=FALSE, results='asis'}
+# BFT title
+cat(glue('
+<div style="background-color:#f8f2e2; padding:10px; text-align: center; line-height: 1.8; letter-spacing: 0.3px;">
+  <h1 style= "font-size:2em; color:#001A3E; font-weight: bold;"> 
+      {na.omit(txt[txt$item=="bft1",lg+2])}</h1>
+  <h2 style= "font-size:1.8em; color:#001A3E; ">
+      {na.omit(txt[txt$item=="bft2",lg+2])} </h2>
+</div>
+'))
+
+```
+
+
+Row {data-height=`r rowH4`}
+-------------------------------------
+### {data-width=30%}
+```{r echo=FALSE, results='asis'}
+# NALB text with image
+
+cat(glue('
+<div style="background-color:#001A3E; padding:20px; text-align: center; line-height: 1.8; letter-spacing: 0.3px;">
+  <img src="images/{na.omit(txt[txt$item=="img4",lg+2])}" width="450" />
+</div>
+'))
+
+```
+
+### {data-width=70%}
+
+```{r echo=FALSE, results='asis'}
+# NALB text with image
+cat(glue('
+<div style="background-color:#001A3E; padding:20px; text-align: center; line-height: 1.8; letter-spacing: 0.3px;">
+  <h3 style= "font-size:1.5em; color:#ffffff; ">
+      {na.omit(txt[txt$item=="bft3",lg+2])} </h3> 
+   <h3 style= "font-size:1.5em; color:#ffbf00; font-weight: bold;">
+      <a href= {na.omit(txt[txt$item=="bft_link",lg+2])} target="_blank" style="color: #ffffff;">
+      {na.omit(txt[txt$item=="more",lg+2])} </h3> </a>        
+</div>
+
+'))
+
+```   
+
+
+
+Row {data-height=150}
+-------------------------------------
+###
+```{r echo=FALSE, results='asis'}
+# NSWO title
+cat(glue('
+<div style="background-color:#f8f2e2; padding:10px; text-align: center; line-height: 1.8; letter-spacing: 0.3px;">
+  <h1 style= "font-size:2em; color:#001A3E; font-weight: bold;"> 
+      {na.omit(txt[txt$item=="nswo1",lg+2])}</h1>
+  <h2 style= "font-size:1.8em; color:#001A3E; ">
+      {na.omit(txt[txt$item=="nswo2",lg+2])} </h2>
+</div>
+'))
+
+```
+
+
+Row {data-height=`r rowH5`}
+-------------------------------------
+### {data-width=30%}
+```{r echo=FALSE, results='asis'}
+# NSWO text with image
+
+cat(glue('
+<div style="background-color:#001A3E; padding:20px; text-align: center; line-height: 1.8; letter-spacing: 0.3px;">
+  <img src="images/{na.omit(txt[txt$item=="img5",lg+2])}" width="450" />
+</div>
+'))
+
+```
+
+### {data-width=70%}
+
+```{r echo=FALSE, results='asis'}
+# NSWO text with image
+cat(glue('
+<div style="background-color:#001A3E; padding:20px; text-align: center; line-height: 1.8; letter-spacing: 0.3px;">
+  <h3 style= "font-size:1.5em; color:#ffffff; ">
+      {na.omit(txt[txt$item=="nswo3",lg+2])} </h3> 
+   <h3 style= "font-size:1.5em; color:#ffbf00; font-weight: bold;">
+      <a href= {na.omit(txt[txt$item=="nswo_link",lg+2])} target="_blank" style="color: #ffffff;">
+      {na.omit(txt[txt$item=="more",lg+2])} </h3> </a>        
+</div>
+
+'))
+
+```   
+
+
+
+Row {data-height=150}
+-------------------------------------
+###
+```{r echo=FALSE, results='asis'}
+# WSKJ title
+cat(glue('
+<div style="background-color:#f8f2e2; padding:10px; text-align: center; line-height: 1.8; letter-spacing: 0.3px;">
+  <h1 style= "font-size:2em; color:#001A3E; font-weight: bold;"> 
+      {na.omit(txt[txt$item=="wskj1",lg+2])}</h1>
+  <h2 style= "font-size:1.8em; color:#001A3E; ">
+      {na.omit(txt[txt$item=="wskj2",lg+2])} </h2>
+</div>
+'))
+
+```
+
+
+Row {data-height=`r rowH6`}
+-------------------------------------
+### {data-width=30%}
+```{r echo=FALSE, results='asis'}
+# WSKJ text with image
+
+cat(glue('
+<div style="background-color:#001A3E; padding:20px; text-align: center; line-height: 1.8; letter-spacing: 0.3px;">
+  <img src="images/{na.omit(txt[txt$item=="img6",lg+2])}" width="450" />
+</div>
+'))
+
+```
+
+### {data-width=70%}
+
+```{r echo=FALSE, results='asis'}
+# WSKJ text with image
+cat(glue('
+<div style="background-color:#001A3E; padding:20px; text-align: center; line-height: 1.8; letter-spacing: 0.3px;">
+  <h3 style= "font-size:1.5em; color:#ffffff; ">
+      {na.omit(txt[txt$item=="wskj3",lg+2])} </h3> 
+   <h3 style= "font-size:1.5em; color:#ffbf00; font-weight: bold;">
+      <a href= {na.omit(txt[txt$item=="wskj_link",lg+2])} target="_blank" style="color: #ffffff;">
+      {na.omit(txt[txt$item=="more",lg+2])} </h3> </a>        
+</div>
+
+'))
+
+```   
+
+
+
+Row {data-height=150}
+-------------------------------------
+###
+```{r echo=FALSE, results='asis'}
+# multiTT title
+cat(glue('
+<div style="background-color:#f8f2e2; padding:10px; text-align: center; line-height: 1.8; letter-spacing: 0.3px;">
+  <h1 style= "font-size:2em; color:#001A3E; font-weight: bold;"> 
+      {na.omit(txt[txt$item=="multiTT1",lg+2])}</h1>
+  <h2 style= "font-size:1.8em; color:#001A3E; ">
+      {na.omit(txt[txt$item=="multiTT2",lg+2])} </h2>
+</div>
+'))
+
+```
+
+
+Row {data-height=`r rowH7`}
+-------------------------------------
+### {data-width=30%}
+```{r echo=FALSE, results='asis'}
+# multiTT text with image
+
+cat(glue('
+<div style="background-color:#001A3E; padding:20px; text-align: center; line-height: 1.8; letter-spacing: 0.3px;">
+  <img src="images/{na.omit(txt[txt$item=="img7",lg+2])}" width="450" />
+</div>
+'))
+
+```
+
+### {data-width=70%}
+
+```{r echo=FALSE, results='asis'}
+# multiTT text with image
+cat(glue('
+<div style="background-color:#001A3E; padding:20px; text-align: center; line-height: 1.8; letter-spacing: 0.3px;">
+  <h3 style= "font-size:1.5em; color:#ffffff; ">
+      {na.omit(txt[txt$item=="multiTT3",lg+2])} </h3> 
+   <h3 style= "font-size:1.5em; color:#ffbf00; font-weight: bold;">
+      <a href= {na.omit(txt[txt$item=="multiTT_link",lg+2])} target="_blank" style="color: #ffffff;">
+      {na.omit(txt[txt$item=="more",lg+2])} </h3> </a>        
+</div>
+
+'))
+
+```   
+
+Row {data-height=150}
+-------------------------------------
+###
+```{r echo=FALSE, results='asis'}
+# SALB title
+cat(glue('
+<div style="background-color:#f8f2e2; padding:10px; text-align: center; line-height: 1.8; letter-spacing: 0.3px;">
+  <h1 style= "font-size:2em; color:#001A3E; font-weight: bold;"> 
+      {na.omit(txt[txt$item=="salb1",lg+2])}</h1>
+  <h2 style= "font-size:1.8em; color:#001A3E; ">
+      {na.omit(txt[txt$item=="salb2",lg+2])} </h2>
+</div>
+'))
+
+```
+
+
+Row {data-height=`r rowH8`}
+-------------------------------------
+### {data-width=30%}
+```{r echo=FALSE, results='asis'}
+# SALB text with image
+
+cat(glue('
+<div style="background-color:#001A3E; padding:20px; text-align: center; line-height: 1.8; letter-spacing: 0.3px;">
+  <img src="images/{na.omit(txt[txt$item=="img8",lg+2])}" width="450" />
+</div>
+'))
+
+```
+
+### {data-width=70%}
+
+```{r echo=FALSE, results='asis'}
+# SALB text with image
+cat(glue('
+<div style="background-color:#001A3E; padding:20px; text-align: center; line-height: 1.8; letter-spacing: 0.3px;">
+  <h3 style= "font-size:1.5em; color:#ffffff; ">
+      {na.omit(txt[txt$item=="salb3",lg+2])} </h3> 
+   <h3 style= "font-size:1.5em; color:#ffbf00; font-weight: bold;">
+      <a href= {na.omit(txt[txt$item=="salb_link",lg+2])} target="_blank" style="color: #ffffff;">
+      {na.omit(txt[txt$item=="more",lg+2])} </h3> </a>        
+</div>
+
+'))
+
+```   
+
+
+Row {data-height=150}
+-------------------------------------
+###
+```{r echo=FALSE, results='asis'}
+# BSH title
+cat(glue('
+<div style="background-color:#f8f2e2; padding:10px; text-align: center; line-height: 1.8; letter-spacing: 0.3px;">
+  <h1 style= "font-size:2em; color:#001A3E; font-weight: bold;"> 
+      {na.omit(txt[txt$item=="bsh1",lg+2])}</h1>
+  <h2 style= "font-size:1.8em; color:#001A3E; ">
+      {na.omit(txt[txt$item=="bsh2",lg+2])} </h2>
+</div>
+'))
+
+```
+
+
+Row {data-height=`r rowH9`}
+-------------------------------------
+### {data-width=30%}
+```{r echo=FALSE, results='asis'}
+# bsh text with image
+
+cat(glue('
+<div style="background-color:#001A3E; padding:20px; text-align: center; line-height: 1.8; letter-spacing: 0.3px;">
+  <img src="images/{na.omit(txt[txt$item=="img9",lg+2])}" width="450" />
+</div>
+'))
+
+```
+
+### {data-width=70%}
+
+```{r echo=FALSE, results='asis'}
+# bsh text with image
+cat(glue('
+<div style="background-color:#001A3E; padding:20px; text-align: center; line-height: 1.8; letter-spacing: 0.3px;">
+  <h3 style= "font-size:1.5em; color:#ffffff; ">
+      {na.omit(txt[txt$item=="bsh3",lg+2])} </h3> 
+   <h3 style= "font-size:1.5em; color:#ffbf00; font-weight: bold;">
+      <a href= {na.omit(txt[txt$item=="bsh_link",lg+2])} target="_blank" style="color: #ffffff;">
+      {na.omit(txt[txt$item=="more",lg+2])} </h3> </a>        
+</div>
+
+'))
+
+```   
+
+
+
+Row {data-height=150}
+-------------------------------------
+###
+```{r echo=FALSE, results='asis'}
+# Others title
+cat(glue('
+<div style="background-color:#f8f2e2; padding:10px; text-align: center; line-height: 1.8; letter-spacing: 0.3px;">
+  <h1 style= "font-size:2em; color:#001A3E; font-weight: bold;"> 
+      {na.omit(txt[txt$item=="others1",lg+2])}</h1>
+  <h2 style= "font-size:1.8em; color:#001A3E; ">
+      {na.omit(txt[txt$item=="others2",lg+2])} </h2>
+</div>
+'))
+
+```
+
+
+Row {data-height=`r rowH8`}
+-------------------------------------
+### {data-width=30%}
+```{r echo=FALSE, results='asis'}
+# Others text with image
+
+cat(glue('
+<div style="background-color:#001A3E; padding:20px; text-align: center; line-height: 1.8; letter-spacing: 0.3px;">
+  <img src="images/{na.omit(txt[txt$item=="img8",lg+2])}" width="450" />
+</div>
+'))
+
+```
+
+### {data-width=70%}
+
+```{r echo=FALSE, results='asis'}
+# Others text with image
+cat(glue('
+<div style="background-color:#001A3E; padding:20px; text-align: center; line-height: 1.8; letter-spacing: 0.3px;">
+  <h3 style= "font-size:1.5em; color:#ffffff; ">
+      {na.omit(txt[txt$item=="others3",lg+2])} </h3> 
+   <h3 style= "font-size:1.5em; color:#ffbf00; font-weight: bold;">
+      <a href= {na.omit(txt[txt$item=="others_link",lg+2])} target="_blank" style="color: #ffffff;">
+      {na.omit(txt[txt$item=="more",lg+2])} </h3> </a>        
+</div>
+
+'))
+
+```   
+
+
+
+
+
+Row {data-height=240}
+-------------------------------------
+   
+### 
+
+```{r echo=FALSE, results='asis'}
+#CopyRight
+
+cat(glue('
+<div style="background-color:#001A3E; padding:10px; text-align: center; margin: 0px;">
+  <hr style="border: none; height: 2px; background-color: #ccc;" />
+  <h2 style="font-size:1.4em; color:#ffffff; ">
+      {na.omit(txt[txt$item=="date",lg+2])}</h2>
+  <img src="images/logoICCAT.png" width="100" />
+  <img src="images/github.png" width="100" />
+  <h2 style="font-size:1.4em; color:#ffffff; ">
+    {na.omit(txt[txt$item=="fin",lg+2])}</h2>
+</div>
+'))
+```   
+   
+

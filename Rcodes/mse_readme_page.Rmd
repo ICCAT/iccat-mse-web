@@ -1,0 +1,151 @@
+---
+title: "Important Message: ICCAT MSE" 
+
+output:
+  flexdashboard::flex_dashboard:
+    vertical_layout: scroll
+    self_contained: true
+    
+params:
+  sp: "species"
+  dir: "directory"
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(knitr)
+library(readxl)
+
+txt = read_excel(paste0(dir,"ICCAT MSE Web TEXT_read.xlsx"), sheet = sp, col_names = TRUE)
+
+library(glue)
+
+```
+
+
+```{css, echo=FALSE}
+/* Set sidebar background and text colors */
+nav.section.sidebar {
+  background-color: #001A3E !important;  /* dark blue */
+  color: #ffffff !important;
+}
+
+/* Make sidebar links white */
+nav.section.sidebar a {
+  color: #ffffff !important;
+}
+
+/* Optional: make section headers (like Inputs) white too */
+nav.section.sidebar h3 {
+  color: #ffffff !important;
+```
+
+```{css, echo=FALSE}
+
+.section.level3 {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.chart-stage {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.chart-wrapper {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.chart-stage,
+.chart-wrapper,
+.section.level3 {
+  border: none !important;
+  box-shadow: none !important;}
+
+
+.chart-stage {
+  background-color: #001A3E !important;  
+}
+
+
+```
+
+
+Row {data-height=auto}
+-------------------------------------
+### 
+
+```{r echo=FALSE, results='asis'}
+
+#chose language
+lg <- 1 #1:ENG, 2:FRA, 3:ESP
+lg2 <- c("ENG", "FRA", "ESP")[lg]
+
+#ENG
+cat(glue('
+<div style="background-color:#001A3E; padding:10px 20px; text-align: left;">
+  <h1 style= "font-size:2.5em; color:#ffffff; font-weight: bold;">
+      {lg2}</h1>
+  <h2 style= "font-size:1.8em; color:#ffffff; ">
+      {na.omit(txt[txt$item=="note_use1",lg+2])}</h2>
+  <h2 style= "font-size:2em; color:#ffffff; ">
+      {na.omit(txt[txt$item=="note_use2",lg+2])}</h2>
+  <h2 style= "font-size:1.8em; color:#ffffff; ">
+      {na.omit(txt[txt$item=="note_use3",lg+2])}</h2>
+
+</div>
+'))
+
+```
+
+
+```{r echo=FALSE, results='asis'}
+
+#chose language
+lg <- 2 #1:ENG, 2:FRA, 3:ESP
+lg2 <- c("ENG", "FRA", "ESP")[lg]
+
+#FRA
+cat(glue('
+<div style="background-color:#ffffff; padding:10px 20px; text-align: left;">
+  <h1 style= "font-size:2.5em; color:#001A3E; font-weight: bold;">
+      {lg2}</h1>
+  <h2 style= "font-size:1.8em; color:#001A3E; ">
+      {na.omit(txt[txt$item=="note_use1",lg+2])}</h2>
+  <h2 style= "font-size:2em; color:#001A3E; ">
+      {na.omit(txt[txt$item=="note_use2",lg+2])}</h2>
+  <h2 style= "font-size:1.8em; color:#001A3E; ">
+      {na.omit(txt[txt$item=="note_use3",lg+2])}</h2>
+
+</div>
+'))
+
+```
+
+```{r echo=FALSE, results='asis'}
+
+#chose language
+lg <- 3 #1:ENG, 2:FRA, 3:ESP
+lg2 <- c("ENG", "FRA", "ESP")[lg]
+
+#ESP
+cat(glue('
+<div style="background-color:#001A3E; padding:10px 20px; text-align: left;">
+  <h1 style= "font-size:2.5em; color:#ffffff; font-weight: bold;">
+      {lg2}</h1>
+  <h2 style= "font-size:1.8em; color:#ffffff; ">
+      {na.omit(txt[txt$item=="note_use1",lg+2])}</h2>
+  <h2 style= "font-size:2em; color:#ffffff; ">
+      {na.omit(txt[txt$item=="note_use2",lg+2])}</h2>
+  <h2 style= "font-size:1.8em; color:#ffffff; ">
+      {na.omit(txt[txt$item=="note_use3",lg+2])}</h2>
+
+</div>
+'))
+
+
+```
+   
+

@@ -1,0 +1,2937 @@
+---
+title: "ICCAT MSE References" 
+
+output:
+  flexdashboard::flex_dashboard:
+    vertical_layout: scroll
+    self_contained: true
+  
+params:
+  dir: "directory"    
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(DT)
+library(dplyr)
+library(knitr)
+library(readxl)
+library(glue)
+
+
+#dir <- "C:/Users/Ai Kimoto/Documents/GitHub/iccat-mse-web/"
+txtref = data.frame(read_excel(paste0(dir,"ICCAT MSE Web TEXT_read.xlsx"), sheet = "references", col_names = TRUE))
+txtref <- txtref[,c(1:9)]
+
+txt = read_excel(paste0(dir,"ICCAT MSE Web TEXT_read.xlsx"), sheet = "GEN", col_names = TRUE)
+
+txtref$Links <- paste0(
+  #ENG
+  paste0('<a href="', txtref$ENGlink, '">',  '<img src="https://iccat.github.io/iccat-mse-web/images/united-kingdom.png" width="40" /></a>'),
+  #FRA
+  ifelse(is.na(txtref$FRAlink),"",paste0('<a href="', txtref$FRAlink, '" target="_blank">',  '<img src="https://iccat.github.io/iccat-mse-web/images/france.png" width="40" /></a>')),
+  #ESP
+  ifelse(is.na(txtref$ESPlink),"",paste0('<a href="', txtref$ESPlink, '" target="_blank">',  '<img src="https://iccat.github.io/iccat-mse-web/images/spain.png" width="40" /></a>'))
+)
+
+# reference list
+refs <- txtref[,c(1:6,10)]
+
+lg <- 1
+sp_list <- c("NALB","BFT","NSWO","WSKJ","multiTT","SALB","BSH","Other Species","GEN")
+ref_list <- c("Materials","Rec/Res","Meetings","SCRS Docs","Others")
+
+```
+
+General information {data-orientation=rows}
+=====================================  
+
+Column {.sidebar}
+-----------------------------------------------------------------------
+
+<!-- Column 1 -->
+<div>
+  <strong>References</strong><br/>
+  <a href="#general-information">General information</a><br/>
+  <a href="#nalb">`r {na.omit(txt[txt$item=="sp1",lg+2])}`</a><br/>
+  <a href="#bft">`r {na.omit(txt[txt$item=="sp2",lg+2])}`</a><br/>
+  <a href="#nswo">`r {na.omit(txt[txt$item=="sp3",lg+2])}`</a><br/>
+  <a href="#wskj">`r {na.omit(txt[txt$item=="sp4",lg+2])}`</a><br/>
+  <a href="#multitt">`r {na.omit(txt[txt$item=="sp5",lg+2])}`</a><br/>
+  <a href="#salb">`r {na.omit(txt[txt$item=="sp6",lg+2])}`</a><br/>
+  <a href="#bsh">`r {na.omit(txt[txt$item=="sp7",lg+2])}`</a><br/>
+  <a href="#other-species">`r {na.omit(txt[txt$item=="sp8",lg+2])}`</a><br/>
+</div>
+
+<hr/>
+
+<!-- Column 2 -->
+<div>
+  <strong>`r {na.omit(txt[txt$item=="Title11",lg+2])}`</strong><br/>
+  <a href=`r {na.omit(txt[txt$item=="gen_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="gen",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp1_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp1",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp2_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp2",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp3_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp3",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp4_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp4",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp5_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp5",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp6_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp6",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp7_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp7",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp8_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp8",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="ref_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="Title10",lg+2])}`</a><br/>
+</div>
+
+
+```{css, echo=FALSE}
+/* Top navigation bar background color */
+.navbar {
+  background-color: rgba(0, 26, 62, 0.8) !important;  
+  border: none !important;
+  backdrop-filter: blur(4px);  
+}
+
+/* Top navigation text color */
+.navbar .navbar-nav > li > a,
+.navbar .navbar-brand {
+  color: #ffffff !important;
+}
+
+/* Active tab color (optional) */
+.navbar .navbar-nav > .active > a {
+  background-color: rgba(0, 51, 102, 0.9) !important;
+  color: #ffffff !important;
+}
+
+```
+
+```{css, echo=FALSE}
+
+.section.level3 {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #f8f2e2 !important;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #f8f2e2 !important;
+}
+
+.chart-stage {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #f8f2e2 !important;  
+}
+
+.chart-wrapper {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.chart-stage,
+.chart-wrapper,
+.section.level3 {
+  border: none !important;
+  box-shadow: none !important;}
+
+.main-container {
+  background-color: #f8f2e2; 
+}
+
+/* Set background color for entire DataTable */
+.dataTable tbody td {
+  background-color: #f8f2e2 !important;  /* background */
+  color: #001A3E !important;             /*  text */
+}
+
+/* Optional: Change header background */
+.dataTable thead th {
+  background-color: #f8f2e2 !important;
+  color: #001A3E !important;
+}
+
+/* Optional: Change filter box background */
+.dataTables_wrapper .dataTables_filter input,
+.dataTables_wrapper .dataTables_length select {
+  background-color: #f8f2e2 !important;
+  color: #001A3E !important;
+  border: 1px solid #ccc;
+}
+
+/* Optional: style the select dropdown you added via JS */
+.dataTable thead select {
+  background-color: #f8f2e2 !important;
+  color: #001A3E !important;
+```
+
+Row {data-height=40}
+-------------------------------------
+
+Row {data-height=300}
+-------------------------------------
+   
+### 
+```{r echo=FALSE, results='asis'}
+#Reference title
+
+cat(glue('
+<div style="background-color:#001A3E; padding:4px; text-align: center;">
+  <h1 style= "font-size:2em; color:#ffffff; font-weight: bold;"> 
+      {na.omit(txt[txt$item=="Title10",1+2])}/
+      {na.omit(txt[txt$item=="Title10",2+2])}/
+      {na.omit(txt[txt$item=="Title10",3+2])}</h1>
+</div>
+
+<div style="background-color:#f8f2e2; padding:10px 30px; text-align: center;">
+  <h2 style= "font-size:1.4em; color:#001A3E;"> 
+      {na.omit(txt[txt$item=="note1",1+2])}<br>
+
+      {na.omit(txt[txt$item=="note1",2+2])}<br>
+
+      {na.omit(txt[txt$item=="note1",3+2])}</h2>
+</div>
+
+'))
+
+``` 
+
+
+Row {data-height=70}
+-------------------------------------
+
+### 
+```{r echo=FALSE, results='asis'}
+#GEN title
+
+cat(glue('
+<div style="background-color:#001A3E; padding:4px; text-align: center;">
+  <h1 style= "font-size:2em; color:#ffffff; font-weight: bold;"> 
+      General information/Informations générales/Información general</h1>
+</div>
+'))
+
+``` 
+
+Row {data-height=auto}
+-------------------------------------
+
+###  {#GENMaterials} 
+```{r echo=FALSE, results='asis'}
+#7"GEN",2"Rec/Res"
+nsp <- 7 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species",7"GEN"
+nref <- 1 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
+rref <- paste0("ref",nref)
+refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
+
+#please select ref...for 3 languages
+cat(glue('
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+  <hr style="border: none; height: 2px; background-color: #ccc;" />
+  <h1 style= "font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;"> 
+      {paste(sp_list[nsp],":",na.omit(txt[txt$item==rref,1+2]))}/
+      {na.omit(txt[txt$item==rref,2+2])}/
+      {na.omit(txt[txt$item==rref,3+2])}</h1>
+
+</div>
+'))
+
+datatable(
+  refs1,
+  escape = FALSE,
+  filter = "top",
+  options = list(
+    pageLength = nrow(refs1),
+    scrollY = "400px",
+    scrollCollapse = TRUE,
+    autoWidth = FALSE,
+    lengthChange = FALSE,  
+    columnDefs = list(
+      list(width = '50px', targets = 0),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
+      list(width = '100px', targets = 3),  
+      list(width = '80px', targets = 4),  
+      list(className = 'dt-left', targets = "_all")
+    )
+  ),
+  rownames = FALSE
+)
+
+``` 
+
+
+
+Row {data-height=auto}
+-------------------------------------
+
+###  {#GENRecRes} 
+```{r echo=FALSE, results='asis'}
+#7"GEN",2"Rec/Res"
+nsp <- 7 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species",7"GEN"
+nref <- 2 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
+rref <- paste0("ref",nref)
+refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
+
+#please select ref...for 3 languages
+cat(glue('
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+  <hr style="border: none; height: 2px; background-color: #ccc;" />
+  <h1 style= "font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;"> 
+      {paste(sp_list[nsp],":",na.omit(txt[txt$item==rref,1+2]))}/
+      {na.omit(txt[txt$item==rref,2+2])}/
+      {na.omit(txt[txt$item==rref,3+2])}</h1>
+
+</div>
+'))
+
+datatable(
+  refs1,
+  escape = FALSE,
+  filter = "top",
+  options = list(
+    pageLength = nrow(refs1),
+    scrollY = "400px",
+    scrollCollapse = TRUE,
+    autoWidth = FALSE,
+    lengthChange = FALSE,  
+    columnDefs = list(
+      list(width = '50px', targets = 0),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
+      list(width = '100px', targets = 3),  
+      list(width = '80px', targets = 4),  
+      list(className = 'dt-left', targets = "_all")
+    )
+  ),
+  rownames = FALSE
+)
+
+```   
+
+
+
+Row {data-height=auto}
+-------------------------------------
+
+###  {#GENSCRSdocs} 
+```{r echo=FALSE, results='asis'}
+#7"GEN",4"SCRS Docs"
+nsp <- 7 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species",7"GEN"
+nref <- 4 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
+rref <- paste0("ref",nref)
+refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
+
+#please select ref...for 3 languages
+cat(glue('
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+  <hr style="border: none; height: 2px; background-color: #ccc;" />
+  <h1 style= "font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;"> 
+      {paste(sp_list[nsp],":",na.omit(txt[txt$item==rref,1+2]))}/
+      {na.omit(txt[txt$item==rref,2+2])}/
+      {na.omit(txt[txt$item==rref,3+2])}</h1>
+
+</div>
+'))
+
+datatable(
+  refs1,
+  escape = FALSE,
+  filter = "top",
+  options = list(
+    pageLength = nrow(refs1),
+    scrollY = "400px",
+    scrollCollapse = TRUE,
+    autoWidth = FALSE,
+    lengthChange = FALSE,  
+    columnDefs = list(
+      list(width = '50px', targets = 0),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
+      list(width = '100px', targets = 3),  
+      list(width = '80px', targets = 4),  
+      list(className = 'dt-left', targets = "_all")
+    )
+  ),
+  rownames = FALSE
+)
+
+```   
+
+Row {data-height=auto}
+-------------------------------------
+
+###  {#GENOthers} 
+```{r echo=FALSE, results='asis'}
+#7"GEN",5"Others"
+nsp <- 7 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species",7"GEN"
+nref <- 5 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
+rref <- paste0("ref",nref)
+refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
+
+#please select ref...for 3 languages
+cat(glue('
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+  <hr style="border: none; height: 2px; background-color: #ccc;" />
+  <h1 style= "font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;"> 
+      {paste(sp_list[nsp],":",na.omit(txt[txt$item==rref,1+2]))}/
+      {na.omit(txt[txt$item==rref,2+2])}/
+      {na.omit(txt[txt$item==rref,3+2])}</h1>
+
+</div>
+'))
+
+datatable(
+  refs1,
+  escape = FALSE,
+  filter = "top",
+  options = list(
+    pageLength = nrow(refs1),
+    scrollY = "400px",
+    scrollCollapse = TRUE,
+    autoWidth = FALSE,
+    lengthChange = FALSE,  
+    columnDefs = list(
+      list(width = '50px', targets = 0),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
+      list(width = '100px', targets = 3),  
+      list(width = '80px', targets = 4),  
+      list(className = 'dt-left', targets = "_all")
+    )
+  ),
+  rownames = FALSE
+)
+
+```   
+
+
+
+NALB {data-orientation=rows}
+=====================================  
+
+Column {.sidebar}
+-----------------------------------------------------------------------
+
+<!-- Column 1 -->
+<div>
+  <strong>References</strong><br/>
+  <a href="#general-information">General information</a><br/>
+  <a href="#nalb">`r {na.omit(txt[txt$item=="sp1",lg+2])}`</a><br/>
+  <a href="#bft">`r {na.omit(txt[txt$item=="sp2",lg+2])}`</a><br/>
+  <a href="#nswo">`r {na.omit(txt[txt$item=="sp3",lg+2])}`</a><br/>
+  <a href="#wskj">`r {na.omit(txt[txt$item=="sp4",lg+2])}`</a><br/>
+  <a href="#multitt">`r {na.omit(txt[txt$item=="sp5",lg+2])}`</a><br/>
+  <a href="#other-species">`r {na.omit(txt[txt$item=="sp6",lg+2])}`</a><br/>
+</div>
+
+<hr/>
+
+<!-- Column 2 -->
+<div>
+  <strong>`r {na.omit(txt[txt$item=="Title11",lg+2])}`</strong><br/>
+  <a href=`r {na.omit(txt[txt$item=="gen_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="gen",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp1_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp1",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp2_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp2",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp3_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp3",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp4_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp4",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp5_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp5",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp6_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp6",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="ref_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="Title10",lg+2])}`</a><br/>
+</div>
+
+
+```{css, echo=FALSE}
+/* Top navigation bar background color */
+.navbar {
+  background-color: rgba(0, 26, 62, 0.8) !important;  
+  border: none !important;
+  backdrop-filter: blur(4px);  
+}
+
+/* Top navigation text color */
+.navbar .navbar-nav > li > a,
+.navbar .navbar-brand {
+  color: #ffffff !important;
+}
+
+/* Active tab color (optional) */
+.navbar .navbar-nav > .active > a {
+  background-color: rgba(0, 51, 102, 0.9) !important;
+  color: #ffffff !important;
+}
+
+```
+
+```{css, echo=FALSE}
+
+.section.level3 {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #f8f2e2 !important;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #f8f2e2 !important;
+}
+
+.chart-stage {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #f8f2e2 !important;  
+}
+
+.chart-wrapper {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.chart-stage,
+.chart-wrapper,
+.section.level3 {
+  border: none !important;
+  box-shadow: none !important;}
+
+.main-container {
+  background-color: #f8f2e2; 
+}
+
+/* Set background color for entire DataTable */
+.dataTable tbody td {
+  background-color: #f8f2e2 !important;  /* background */
+  color: #001A3E !important;             /*  text */
+}
+
+/* Optional: Change header background */
+.dataTable thead th {
+  background-color: #f8f2e2 !important;
+  color: #001A3E !important;
+}
+
+/* Optional: Change filter box background */
+.dataTables_wrapper .dataTables_filter input,
+.dataTables_wrapper .dataTables_length select {
+  background-color: #f8f2e2 !important;
+  color: #001A3E !important;
+  border: 1px solid #ccc;
+}
+
+/* Optional: style the select dropdown you added via JS */
+.dataTable thead select {
+  background-color: #f8f2e2 !important;
+  color: #001A3E !important;
+```
+
+Row {data-height=40}
+-------------------------------------
+
+Row {data-height=300}
+-------------------------------------
+   
+###  {#top} 
+```{r echo=FALSE, results='asis'}
+#Reference title
+
+cat(glue('
+<div style="background-color:#001A3E; padding:4px; text-align: center;">
+  <h1 style= "font-size:2em; color:#ffffff; font-weight: bold;"> 
+      {na.omit(txt[txt$item=="Title10",1+2])}/
+      {na.omit(txt[txt$item=="Title10",2+2])}/
+      {na.omit(txt[txt$item=="Title10",3+2])}</h1>
+</div>
+
+<div style="background-color:#f8f2e2; padding:10px 30px; text-align: center;">
+  <h2 style= "font-size:1.4em; color:#001A3E;"> 
+      {na.omit(txt[txt$item=="note1",1+2])}<br>
+
+      {na.omit(txt[txt$item=="note1",2+2])}<br>
+
+      {na.omit(txt[txt$item=="note1",3+2])}</h2>
+</div>
+
+'))
+
+``` 
+
+Row {data-height=70}
+-------------------------------------
+
+### 
+```{r echo=FALSE, results='asis'}
+#NALB title
+spref <- "sp1"
+
+cat(glue('
+<div style="background-color:#001A3E; padding:4px; text-align: center;">
+  <h1 style= "font-size:2em; color:#ffffff; font-weight: bold;"> 
+      {na.omit(txt[txt$item==spref,1+2])}/
+      {na.omit(txt[txt$item==spref,2+2])}/
+      {na.omit(txt[txt$item==spref,3+2])}</h1>
+</div>
+'))
+
+``` 
+
+Row {data-height=auto}
+-------------------------------------
+
+###  {#NALBMaterials} 
+```{r echo=FALSE, results='asis'}
+#1"NALB",1"Materials"
+nsp <- 1 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
+nref <- 1 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
+rref <- paste0("ref",nref)
+refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
+
+#please select ref...for 3 languages
+cat(glue('
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+  <hr style="border: none; height: 2px; background-color: #ccc;" />
+  <h1 style= "font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;"> 
+      {paste(sp_list[nsp],":",na.omit(txt[txt$item==rref,1+2]))}/
+      {na.omit(txt[txt$item==rref,2+2])}/
+      {na.omit(txt[txt$item==rref,3+2])}</h1>
+
+</div>
+'))
+
+datatable(
+  refs1,
+  escape = FALSE,
+  filter = "top",
+  options = list(
+    pageLength = nrow(refs1),
+    scrollY = "400px",
+    scrollCollapse = TRUE,
+    autoWidth = FALSE,
+    lengthChange = FALSE,  
+    columnDefs = list(
+      list(width = '50px', targets = 0),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
+      list(width = '100px', targets = 3),  
+      list(width = '80px', targets = 4),  
+      list(className = 'dt-left', targets = "_all")
+    )
+  ),
+  rownames = FALSE
+)
+
+```   
+
+Row {data-height=auto}
+-------------------------------------
+
+###  {#NALBRecRes} 
+```{r echo=FALSE, results='asis'}
+#1"NALB",2"Rec/Res"
+nsp <- 1 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
+nref <- 2 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
+rref <- paste0("ref",nref)
+refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
+
+#please select ref...for 3 languages
+cat(glue('
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+  <hr style="border: none; height: 2px; background-color: #ccc;" />
+  <h1 style= "font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;"> 
+      {paste(sp_list[nsp],":",na.omit(txt[txt$item==rref,1+2]))}/
+      {na.omit(txt[txt$item==rref,2+2])}/
+      {na.omit(txt[txt$item==rref,3+2])}</h1>
+
+</div>
+'))
+
+datatable(
+  refs1,
+  escape = FALSE,
+  filter = "top",
+  options = list(
+    pageLength = nrow(refs1),
+    scrollY = "400px",
+    scrollCollapse = TRUE,
+    autoWidth = FALSE,
+    lengthChange = FALSE,  
+    columnDefs = list(
+      list(width = '50px', targets = 0),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
+      list(width = '100px', targets = 3),  
+      list(width = '80px', targets = 4),  
+      list(className = 'dt-left', targets = "_all")
+    )
+  ),
+  rownames = FALSE
+)
+
+```   
+
+Row {data-height=auto}
+-------------------------------------
+
+###  {#NALBMeetings} 
+```{r echo=FALSE, results='asis'}
+#1"NALB",3"Meetings"
+nsp <- 1 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
+nref <- 3 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
+rref <- paste0("ref",nref)
+refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
+
+#please select ref...for 3 languages
+cat(glue('
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+  <hr style="border: none; height: 2px; background-color: #ccc;" />
+  <h1 style= "font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;"> 
+      {paste(sp_list[nsp],":",na.omit(txt[txt$item==rref,1+2]))}/
+      {na.omit(txt[txt$item==rref,2+2])}/
+      {na.omit(txt[txt$item==rref,3+2])}</h1>
+
+</div>
+'))
+
+datatable(
+  refs1,
+  escape = FALSE,
+  filter = "top",
+  options = list(
+    pageLength = nrow(refs1),
+    scrollY = "400px",
+    scrollCollapse = TRUE,
+    autoWidth = FALSE,
+    lengthChange = FALSE,  
+    columnDefs = list(
+      list(width = '50px', targets = 0),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
+      list(width = '100px', targets = 3),  
+      list(width = '80px', targets = 4),  
+      list(className = 'dt-left', targets = "_all")
+    )
+  ),
+  rownames = FALSE
+)
+
+```   
+
+Row {data-height=auto}
+-------------------------------------
+
+###  {#NALBSCRSdocs} 
+```{r echo=FALSE, results='asis'}
+#1"NALB",4"SCRS Docs"
+nsp <- 1 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
+nref <- 4 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
+rref <- paste0("ref",nref)
+refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
+
+#please select ref...for 3 languages
+cat(glue('
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+  <hr style="border: none; height: 2px; background-color: #ccc;" />
+  <h1 style= "font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;"> 
+      {paste(sp_list[nsp],":",na.omit(txt[txt$item==rref,1+2]))}/
+      {na.omit(txt[txt$item==rref,2+2])}/
+      {na.omit(txt[txt$item==rref,3+2])}</h1>
+
+</div>
+'))
+
+datatable(
+  refs1,
+  escape = FALSE,
+  filter = "top",
+  options = list(
+    pageLength = nrow(refs1),
+    scrollY = "400px",
+    scrollCollapse = TRUE,
+    autoWidth = FALSE,
+    lengthChange = FALSE,  
+    columnDefs = list(
+      list(width = '50px', targets = 0),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
+      list(width = '100px', targets = 3),  
+      list(width = '80px', targets = 4),  
+      list(className = 'dt-left', targets = "_all")
+    )
+  ),
+  rownames = FALSE
+)
+
+```   
+
+Row {data-height=auto}
+-------------------------------------
+
+###  {#NALBOthers} 
+```{r echo=FALSE, results='asis'}
+#1"NALB",5"Others"
+nsp <- 1 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
+nref <- 5 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
+rref <- paste0("ref",nref)
+refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
+
+#please select ref...for 3 languages
+cat(glue('
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+  <hr style="border: none; height: 2px; background-color: #ccc;" />
+  <h1 style= "font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;"> 
+      {paste(sp_list[nsp],":",na.omit(txt[txt$item==rref,1+2]))}/
+      {na.omit(txt[txt$item==rref,2+2])}/
+      {na.omit(txt[txt$item==rref,3+2])}</h1>
+
+</div>
+'))
+
+datatable(
+  refs1,
+  escape = FALSE,
+  filter = "top",
+  options = list(
+    pageLength = nrow(refs1),
+    scrollY = "400px",
+    scrollCollapse = TRUE,
+    autoWidth = FALSE,
+    lengthChange = FALSE,  
+    columnDefs = list(
+      list(width = '50px', targets = 0),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
+      list(width = '100px', targets = 3),  
+      list(width = '80px', targets = 4),  
+      list(className = 'dt-left', targets = "_all")
+    )
+  ),
+  rownames = FALSE
+)
+
+```   
+
+
+
+
+
+BFT {data-orientation=rows}
+=====================================  
+
+Column {.sidebar}
+-----------------------------------------------------------------------
+
+<!-- Column 1 -->
+<div>
+  <strong>References</strong><br/>
+  <a href="#general-information">General information</a><br/>
+  <a href="#nalb">`r {na.omit(txt[txt$item=="sp1",lg+2])}`</a><br/>
+  <a href="#bft">`r {na.omit(txt[txt$item=="sp2",lg+2])}`</a><br/>
+  <a href="#nswo">`r {na.omit(txt[txt$item=="sp3",lg+2])}`</a><br/>
+  <a href="#wskj">`r {na.omit(txt[txt$item=="sp4",lg+2])}`</a><br/>
+  <a href="#multitt">`r {na.omit(txt[txt$item=="sp5",lg+2])}`</a><br/>
+  <a href="#other-species">`r {na.omit(txt[txt$item=="sp6",lg+2])}`</a><br/>
+</div>
+
+<hr/>
+
+<!-- Column 2 -->
+<div>
+  <strong>`r {na.omit(txt[txt$item=="Title11",lg+2])}`</strong><br/>
+  <a href=`r {na.omit(txt[txt$item=="gen_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="gen",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp1_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp1",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp2_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp2",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp3_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp3",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp4_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp4",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp5_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp5",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp6_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp6",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="ref_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="Title10",lg+2])}`</a><br/>
+</div>
+
+
+```{css, echo=FALSE}
+/* Top navigation bar background color */
+.navbar {
+  background-color: rgba(0, 26, 62, 0.8) !important;  
+  border: none !important;
+  backdrop-filter: blur(4px);  
+}
+
+/* Top navigation text color */
+.navbar .navbar-nav > li > a,
+.navbar .navbar-brand {
+  color: #ffffff !important;
+}
+
+/* Active tab color (optional) */
+.navbar .navbar-nav > .active > a {
+  background-color: rgba(0, 51, 102, 0.9) !important;
+  color: #ffffff !important;
+}
+
+```
+
+```{css, echo=FALSE}
+
+.section.level3 {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #f8f2e2 !important;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #f8f2e2 !important;
+}
+
+.chart-stage {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #f8f2e2 !important;  
+}
+
+.chart-wrapper {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.chart-stage,
+.chart-wrapper,
+.section.level3 {
+  border: none !important;
+  box-shadow: none !important;}
+
+.main-container {
+  background-color: #f8f2e2; 
+}
+
+/* Set background color for entire DataTable */
+.dataTable tbody td {
+  background-color: #f8f2e2 !important;  /* background */
+  color: #001A3E !important;             /*  text */
+}
+
+/* Optional: Change header background */
+.dataTable thead th {
+  background-color: #f8f2e2 !important;
+  color: #001A3E !important;
+}
+
+/* Optional: Change filter box background */
+.dataTables_wrapper .dataTables_filter input,
+.dataTables_wrapper .dataTables_length select {
+  background-color: #f8f2e2 !important;
+  color: #001A3E !important;
+  border: 1px solid #ccc;
+}
+
+/* Optional: style the select dropdown you added via JS */
+.dataTable thead select {
+  background-color: #f8f2e2 !important;
+  color: #001A3E !important;
+```
+
+Row {data-height=40}
+-------------------------------------
+
+Row {data-height=300}
+-------------------------------------
+   
+###
+```{r echo=FALSE, results='asis'}
+#Reference title
+
+cat(glue('
+<div style="background-color:#001A3E; padding:4px; text-align: center;">
+  <h1 style= "font-size:2em; color:#ffffff; font-weight: bold;"> 
+      {na.omit(txt[txt$item=="Title10",1+2])}/
+      {na.omit(txt[txt$item=="Title10",2+2])}/
+      {na.omit(txt[txt$item=="Title10",3+2])}</h1>
+</div>
+
+<div style="background-color:#f8f2e2; padding:10px 30px; text-align: center;">
+  <h2 style= "font-size:1.4em; color:#001A3E;"> 
+      {na.omit(txt[txt$item=="note1",1+2])}<br>
+
+      {na.omit(txt[txt$item=="note1",2+2])}<br>
+
+      {na.omit(txt[txt$item=="note1",3+2])}</h2>
+</div>
+
+'))
+
+``` 
+
+Row {data-height=70}
+-------------------------------------
+
+### 
+```{r echo=FALSE, results='asis'}
+#BFT title
+spref <- "sp2"
+
+cat(glue('
+<div style="background-color:#001A3E; padding:4px; text-align: center;">
+  <h1 style= "font-size:2em; color:#ffffff; font-weight: bold;"> 
+      {na.omit(txt[txt$item==spref,1+2])}/
+      {na.omit(txt[txt$item==spref,2+2])}/
+      {na.omit(txt[txt$item==spref,3+2])}</h1>
+</div>
+'))
+
+``` 
+
+Row {data-height=auto}
+-------------------------------------
+
+###  {#BFTMaterials} 
+```{r echo=FALSE, results='asis'}
+#2"BFT",1"Materials"
+nsp <- 2 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
+nref <- 1 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
+rref <- paste0("ref",nref)
+refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
+
+#please select ref...for 3 languages
+cat(glue('
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+  <hr style="border: none; height: 2px; background-color: #ccc;" />
+  <h1 style= "font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;"> 
+      {paste(sp_list[nsp],":",na.omit(txt[txt$item==rref,1+2]))}/
+      {na.omit(txt[txt$item==rref,2+2])}/
+      {na.omit(txt[txt$item==rref,3+2])}</h1>
+
+</div>
+'))
+
+datatable(
+  refs1,
+  escape = FALSE,
+  filter = "top",
+  options = list(
+    pageLength = nrow(refs1),
+    scrollY = "400px",
+    scrollCollapse = TRUE,
+    autoWidth = FALSE,
+    lengthChange = FALSE,  
+    columnDefs = list(
+      list(width = '50px', targets = 0),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
+      list(width = '100px', targets = 3),  
+      list(width = '80px', targets = 4),  
+      list(className = 'dt-left', targets = "_all")
+    )
+  ),
+  rownames = FALSE
+)
+
+```   
+
+Row {data-height=auto}
+-------------------------------------
+
+###  {#BFTRecRes} 
+```{r echo=FALSE, results='asis'}
+#2"BFT",2"Rec/Res"
+nsp <- 2 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
+nref <- 2 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
+rref <- paste0("ref",nref)
+refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
+
+#please select ref...for 3 languages
+cat(glue('
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+  <hr style="border: none; height: 2px; background-color: #ccc;" />
+  <h1 style= "font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;"> 
+      {paste(sp_list[nsp],":",na.omit(txt[txt$item==rref,1+2]))}/
+      {na.omit(txt[txt$item==rref,2+2])}/
+      {na.omit(txt[txt$item==rref,3+2])}</h1>
+
+</div>
+'))
+
+datatable(
+  refs1,
+  escape = FALSE,
+  filter = "top",
+  options = list(
+    pageLength = nrow(refs1),
+    scrollY = "400px",
+    scrollCollapse = TRUE,
+    autoWidth = FALSE,
+    lengthChange = FALSE,  
+    columnDefs = list(
+      list(width = '50px', targets = 0),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
+      list(width = '100px', targets = 3),  
+      list(width = '80px', targets = 4),  
+      list(className = 'dt-left', targets = "_all")
+    )
+  ),
+  rownames = FALSE
+)
+
+```   
+
+Row {data-height=auto}
+-------------------------------------
+
+###  {#BFTMeetings} 
+```{r echo=FALSE, results='asis'}
+#2"BFT",3"Meetings"
+nsp <- 2 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
+nref <- 3 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
+rref <- paste0("ref",nref)
+refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
+
+#please select ref...for 3 languages
+cat(glue('
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+  <hr style="border: none; height: 2px; background-color: #ccc;" />
+  <h1 style= "font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;"> 
+      {paste(sp_list[nsp],":",na.omit(txt[txt$item==rref,1+2]))}/
+      {na.omit(txt[txt$item==rref,2+2])}/
+      {na.omit(txt[txt$item==rref,3+2])}</h1>
+
+</div>
+'))
+
+datatable(
+  refs1,
+  escape = FALSE,
+  filter = "top",
+  options = list(
+    pageLength = nrow(refs1),
+    scrollY = "400px",
+    scrollCollapse = TRUE,
+    autoWidth = FALSE,
+    lengthChange = FALSE,  
+    columnDefs = list(
+      list(width = '50px', targets = 0),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
+      list(width = '100px', targets = 3),  
+      list(width = '80px', targets = 4),  
+      list(className = 'dt-left', targets = "_all")
+    )
+  ),
+  rownames = FALSE
+)
+
+```   
+
+Row {data-height=auto}
+-------------------------------------
+
+###  {#BFTSCRSdocs} 
+```{r echo=FALSE, results='asis'}
+#2"BFT",4"SCRS Docs"
+nsp <- 2 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
+nref <- 4 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
+rref <- paste0("ref",nref)
+refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
+
+#please select ref...for 3 languages
+cat(glue('
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+  <hr style="border: none; height: 2px; background-color: #ccc;" />
+  <h1 style= "font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;"> 
+      {paste(sp_list[nsp],":",na.omit(txt[txt$item==rref,1+2]))}/
+      {na.omit(txt[txt$item==rref,2+2])}/
+      {na.omit(txt[txt$item==rref,3+2])}</h1>
+
+</div>
+'))
+
+datatable(
+  refs1,
+  escape = FALSE,
+  filter = "top",
+  options = list(
+    pageLength = nrow(refs1),
+    scrollY = "400px",
+    scrollCollapse = TRUE,
+    autoWidth = FALSE,
+    lengthChange = FALSE,  
+    columnDefs = list(
+      list(width = '50px', targets = 0),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
+      list(width = '100px', targets = 3),  
+      list(width = '80px', targets = 4),  
+      list(className = 'dt-left', targets = "_all")
+    )
+  ),
+  rownames = FALSE
+)
+
+```   
+
+Row {data-height=auto}
+-------------------------------------
+
+###  {#BFTOthers} 
+```{r echo=FALSE, results='asis'}
+#2"BFT",5"Others"
+nsp <- 2 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
+nref <- 5 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
+rref <- paste0("ref",nref)
+refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
+
+#please select ref...for 3 languages
+cat(glue('
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+  <hr style="border: none; height: 2px; background-color: #ccc;" />
+  <h1 style= "font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;"> 
+      {paste(sp_list[nsp],":",na.omit(txt[txt$item==rref,1+2]))}/
+      {na.omit(txt[txt$item==rref,2+2])}/
+      {na.omit(txt[txt$item==rref,3+2])}</h1>
+
+</div>
+'))
+
+datatable(
+  refs1,
+  escape = FALSE,
+  filter = "top",
+  options = list(
+    pageLength = nrow(refs1),
+    scrollY = "400px",
+    scrollCollapse = TRUE,
+    autoWidth = FALSE,
+    lengthChange = FALSE,  
+    columnDefs = list(
+      list(width = '50px', targets = 0),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
+      list(width = '100px', targets = 3),  
+      list(width = '80px', targets = 4),  
+      list(className = 'dt-left', targets = "_all")
+    )
+  ),
+  rownames = FALSE
+)
+
+```   
+
+
+
+
+
+NSWO {data-orientation=rows}
+=====================================  
+
+Column {.sidebar}
+-----------------------------------------------------------------------
+
+<!-- Column 1 -->
+<div>
+  <strong>References</strong><br/>
+  <a href="#general-information">General information</a><br/>
+  <a href="#nalb">`r {na.omit(txt[txt$item=="sp1",lg+2])}`</a><br/>
+  <a href="#bft">`r {na.omit(txt[txt$item=="sp2",lg+2])}`</a><br/>
+  <a href="#nswo">`r {na.omit(txt[txt$item=="sp3",lg+2])}`</a><br/>
+  <a href="#wskj">`r {na.omit(txt[txt$item=="sp4",lg+2])}`</a><br/>
+  <a href="#multitt">`r {na.omit(txt[txt$item=="sp5",lg+2])}`</a><br/>
+  <a href="#other-species">`r {na.omit(txt[txt$item=="sp6",lg+2])}`</a><br/>
+</div>
+
+<hr/>
+
+<!-- Column 2 -->
+<div>
+  <strong>`r {na.omit(txt[txt$item=="Title11",lg+2])}`</strong><br/>
+  <a href=`r {na.omit(txt[txt$item=="gen_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="gen",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp1_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp1",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp2_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp2",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp3_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp3",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp4_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp4",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp5_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp5",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp6_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp6",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="ref_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="Title10",lg+2])}`</a><br/>
+</div>
+
+
+```{css, echo=FALSE}
+/* Top navigation bar background color */
+.navbar {
+  background-color: rgba(0, 26, 62, 0.8) !important;  
+  border: none !important;
+  backdrop-filter: blur(4px);  
+}
+
+/* Top navigation text color */
+.navbar .navbar-nav > li > a,
+.navbar .navbar-brand {
+  color: #ffffff !important;
+}
+
+/* Active tab color (optional) */
+.navbar .navbar-nav > .active > a {
+  background-color: rgba(0, 51, 102, 0.9) !important;
+  color: #ffffff !important;
+}
+
+```
+
+```{css, echo=FALSE}
+
+.section.level3 {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #f8f2e2 !important;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #f8f2e2 !important;
+}
+
+.chart-stage {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #f8f2e2 !important;  
+}
+
+.chart-wrapper {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.chart-stage,
+.chart-wrapper,
+.section.level3 {
+  border: none !important;
+  box-shadow: none !important;}
+
+.main-container {
+  background-color: #f8f2e2; 
+}
+
+/* Set background color for entire DataTable */
+.dataTable tbody td {
+  background-color: #f8f2e2 !important;  /* background */
+  color: #001A3E !important;             /*  text */
+}
+
+/* Optional: Change header background */
+.dataTable thead th {
+  background-color: #f8f2e2 !important;
+  color: #001A3E !important;
+}
+
+/* Optional: Change filter box background */
+.dataTables_wrapper .dataTables_filter input,
+.dataTables_wrapper .dataTables_length select {
+  background-color: #f8f2e2 !important;
+  color: #001A3E !important;
+  border: 1px solid #ccc;
+}
+
+/* Optional: style the select dropdown you added via JS */
+.dataTable thead select {
+  background-color: #f8f2e2 !important;
+  color: #001A3E !important;
+```
+
+Row {data-height=40}
+-------------------------------------
+
+Row {data-height=300}
+-------------------------------------
+   
+###  
+```{r echo=FALSE, results='asis'}
+#Reference title
+
+cat(glue('
+<div style="background-color:#001A3E; padding:4px; text-align: center;">
+  <h1 style= "font-size:2em; color:#ffffff; font-weight: bold;"> 
+      {na.omit(txt[txt$item=="Title10",1+2])}/
+      {na.omit(txt[txt$item=="Title10",2+2])}/
+      {na.omit(txt[txt$item=="Title10",3+2])}</h1>
+</div>
+
+<div style="background-color:#f8f2e2; padding:10px 30px; text-align: center;">
+  <h2 style= "font-size:1.4em; color:#001A3E;"> 
+      {na.omit(txt[txt$item=="note1",1+2])}<br>
+
+      {na.omit(txt[txt$item=="note1",2+2])}<br>
+
+      {na.omit(txt[txt$item=="note1",3+2])}</h2>
+</div>
+
+'))
+
+``` 
+
+Row {data-height=70}
+-------------------------------------
+
+###  
+```{r echo=FALSE, results='asis'}
+#NSWO title
+spref <- "sp3"
+
+cat(glue('
+<div style="background-color:#001A3E; padding:4px; text-align: center;">
+  <h1 style= "font-size:2em; color:#ffffff; font-weight: bold;"> 
+      {na.omit(txt[txt$item==spref,1+2])}/
+      {na.omit(txt[txt$item==spref,2+2])}/
+      {na.omit(txt[txt$item==spref,3+2])}</h1>
+</div>
+'))
+
+``` 
+
+Row {data-height=auto}
+-------------------------------------
+
+###  {#NSWOMaterials} 
+```{r echo=FALSE, results='asis'}
+#3"NSWO",1"Materials"
+nsp <- 3 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
+nref <- 1 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
+rref <- paste0("ref",nref)
+refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
+
+#please select ref...for 3 languages
+cat(glue('
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+  <hr style="border: none; height: 2px; background-color: #ccc;" />
+  <h1 style= "font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;"> 
+      {paste(sp_list[nsp],":",na.omit(txt[txt$item==rref,1+2]))}/
+      {na.omit(txt[txt$item==rref,2+2])}/
+      {na.omit(txt[txt$item==rref,3+2])}</h1>
+
+</div>
+'))
+
+datatable(
+  refs1,
+  escape = FALSE,
+  filter = "top",
+  options = list(
+    pageLength = nrow(refs1),
+    scrollY = "400px",
+    scrollCollapse = TRUE,
+    autoWidth = FALSE,
+    lengthChange = FALSE,  
+    columnDefs = list(
+      list(width = '50px', targets = 0),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
+      list(width = '100px', targets = 3),  
+      list(width = '80px', targets = 4),  
+      list(className = 'dt-left', targets = "_all")
+    )
+  ),
+  rownames = FALSE
+)
+
+```   
+
+Row {data-height=auto}
+-------------------------------------
+
+###  {#NSWORecRes} 
+```{r echo=FALSE, results='asis'}
+#3"NSWO",2"Rec/Res"
+nsp <- 3 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
+nref <- 2 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
+rref <- paste0("ref",nref)
+refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
+
+#please select ref...for 3 languages
+cat(glue('
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+  <hr style="border: none; height: 2px; background-color: #ccc;" />
+  <h1 style= "font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;"> 
+      {paste(sp_list[nsp],":",na.omit(txt[txt$item==rref,1+2]))}/
+      {na.omit(txt[txt$item==rref,2+2])}/
+      {na.omit(txt[txt$item==rref,3+2])}</h1>
+
+</div>
+'))
+
+datatable(
+  refs1,
+  escape = FALSE,
+  filter = "top",
+  options = list(
+    pageLength = nrow(refs1),
+    scrollY = "400px",
+    scrollCollapse = TRUE,
+    autoWidth = FALSE,
+    lengthChange = FALSE,  
+    columnDefs = list(
+      list(width = '50px', targets = 0),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
+      list(width = '100px', targets = 3),  
+      list(width = '80px', targets = 4),  
+      list(className = 'dt-left', targets = "_all")
+    )
+  ),
+  rownames = FALSE
+)
+
+```   
+
+Row {data-height=auto}
+-------------------------------------
+
+###  {#NSWOMeetings} 
+```{r echo=FALSE, results='asis'}
+#3"NSWO",3"Meetings"
+nsp <- 3 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
+nref <- 3 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
+rref <- paste0("ref",nref)
+refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
+
+#please select ref...for 3 languages
+cat(glue('
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+  <hr style="border: none; height: 2px; background-color: #ccc;" />
+  <h1 style= "font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;"> 
+      {paste(sp_list[nsp],":",na.omit(txt[txt$item==rref,1+2]))}/
+      {na.omit(txt[txt$item==rref,2+2])}/
+      {na.omit(txt[txt$item==rref,3+2])}</h1>
+
+</div>
+'))
+
+datatable(
+  refs1,
+  escape = FALSE,
+  filter = "top",
+  options = list(
+    pageLength = nrow(refs1),
+    scrollY = "400px",
+    scrollCollapse = TRUE,
+    autoWidth = FALSE,
+    lengthChange = FALSE,  
+    columnDefs = list(
+      list(width = '50px', targets = 0),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
+      list(width = '100px', targets = 3),  
+      list(width = '80px', targets = 4),  
+      list(className = 'dt-left', targets = "_all")
+    )
+  ),
+  rownames = FALSE
+)
+
+```   
+
+Row {data-height=auto}
+-------------------------------------
+
+###  {#NSWOSCRSdocs} 
+```{r echo=FALSE, results='asis'}
+#3"NSWO",4"SCRS Docs"
+nsp <- 3 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
+nref <- 4 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
+rref <- paste0("ref",nref)
+refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
+
+#please select ref...for 3 languages
+cat(glue('
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+  <hr style="border: none; height: 2px; background-color: #ccc;" />
+  <h1 style= "font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;"> 
+      {paste(sp_list[nsp],":",na.omit(txt[txt$item==rref,1+2]))}/
+      {na.omit(txt[txt$item==rref,2+2])}/
+      {na.omit(txt[txt$item==rref,3+2])}</h1>
+
+</div>
+'))
+
+datatable(
+  refs1,
+  escape = FALSE,
+  filter = "top",
+  options = list(
+    pageLength = nrow(refs1),
+    scrollY = "400px",
+    scrollCollapse = TRUE,
+    autoWidth = FALSE,
+    lengthChange = FALSE,  
+    columnDefs = list(
+      list(width = '50px', targets = 0),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
+      list(width = '100px', targets = 3),  
+      list(width = '80px', targets = 4),  
+      list(className = 'dt-left', targets = "_all")
+    )
+  ),
+  rownames = FALSE
+)
+
+```   
+
+Row {data-height=auto}
+-------------------------------------
+
+###  {#NSWOOthers} 
+```{r echo=FALSE, results='asis'}
+#3"NSWO",5"Others"
+nsp <- 3 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
+nref <- 5 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
+rref <- paste0("ref",nref)
+refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
+
+#please select ref...for 3 languages
+cat(glue('
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+  <hr style="border: none; height: 2px; background-color: #ccc;" />
+  <h1 style= "font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;"> 
+      {paste(sp_list[nsp],":",na.omit(txt[txt$item==rref,1+2]))}/
+      {na.omit(txt[txt$item==rref,2+2])}/
+      {na.omit(txt[txt$item==rref,3+2])}</h1>
+
+</div>
+'))
+
+datatable(
+  refs1,
+  escape = FALSE,
+  filter = "top",
+  options = list(
+    pageLength = nrow(refs1),
+    scrollY = "400px",
+    scrollCollapse = TRUE,
+    autoWidth = FALSE,
+    lengthChange = FALSE,  
+    columnDefs = list(
+      list(width = '50px', targets = 0),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
+      list(width = '100px', targets = 3),  
+      list(width = '80px', targets = 4),  
+      list(className = 'dt-left', targets = "_all")
+    )
+  ),
+  rownames = FALSE
+)
+
+```   
+
+
+
+
+
+
+WSKJ {data-orientation=rows}
+=====================================  
+
+Column {.sidebar}
+-----------------------------------------------------------------------
+
+<!-- Column 1 -->
+<div>
+  <strong>References</strong><br/>
+  <a href="#general-information">General information</a><br/>
+  <a href="#nalb">`r {na.omit(txt[txt$item=="sp1",lg+2])}`</a><br/>
+  <a href="#bft">`r {na.omit(txt[txt$item=="sp2",lg+2])}`</a><br/>
+  <a href="#nswo">`r {na.omit(txt[txt$item=="sp3",lg+2])}`</a><br/>
+  <a href="#wskj">`r {na.omit(txt[txt$item=="sp4",lg+2])}`</a><br/>
+  <a href="#multitt">`r {na.omit(txt[txt$item=="sp5",lg+2])}`</a><br/>
+  <a href="#other-species">`r {na.omit(txt[txt$item=="sp6",lg+2])}`</a><br/>
+</div>
+
+<hr/>
+
+<!-- Column 2 -->
+<div>
+  <strong>`r {na.omit(txt[txt$item=="Title11",lg+2])}`</strong><br/>
+  <a href=`r {na.omit(txt[txt$item=="gen_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="gen",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp1_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp1",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp2_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp2",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp3_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp3",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp4_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp4",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp5_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp5",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp6_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp6",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="ref_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="Title10",lg+2])}`</a><br/>
+</div>
+
+
+```{css, echo=FALSE}
+/* Top navigation bar background color */
+.navbar {
+  background-color: rgba(0, 26, 62, 0.8) !important;  
+  border: none !important;
+  backdrop-filter: blur(4px);  
+}
+
+/* Top navigation text color */
+.navbar .navbar-nav > li > a,
+.navbar .navbar-brand {
+  color: #ffffff !important;
+}
+
+/* Active tab color (optional) */
+.navbar .navbar-nav > .active > a {
+  background-color: rgba(0, 51, 102, 0.9) !important;
+  color: #ffffff !important;
+}
+
+```
+
+```{css, echo=FALSE}
+
+.section.level3 {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #f8f2e2 !important;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #f8f2e2 !important;
+}
+
+.chart-stage {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #f8f2e2 !important;  
+}
+
+.chart-wrapper {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.chart-stage,
+.chart-wrapper,
+.section.level3 {
+  border: none !important;
+  box-shadow: none !important;}
+
+.main-container {
+  background-color: #f8f2e2; 
+}
+
+/* Set background color for entire DataTable */
+.dataTable tbody td {
+  background-color: #f8f2e2 !important;  /* background */
+  color: #001A3E !important;             /*  text */
+}
+
+/* Optional: Change header background */
+.dataTable thead th {
+  background-color: #f8f2e2 !important;
+  color: #001A3E !important;
+}
+
+/* Optional: Change filter box background */
+.dataTables_wrapper .dataTables_filter input,
+.dataTables_wrapper .dataTables_length select {
+  background-color: #f8f2e2 !important;
+  color: #001A3E !important;
+  border: 1px solid #ccc;
+}
+
+/* Optional: style the select dropdown you added via JS */
+.dataTable thead select {
+  background-color: #f8f2e2 !important;
+  color: #001A3E !important;
+```
+
+Row {data-height=40}
+-------------------------------------
+
+Row {data-height=300}
+-------------------------------------
+   
+###  
+```{r echo=FALSE, results='asis'}
+#Reference title
+
+cat(glue('
+<div style="background-color:#001A3E; padding:4px; text-align: center;">
+  <h1 style= "font-size:2em; color:#ffffff; font-weight: bold;"> 
+      {na.omit(txt[txt$item=="Title10",1+2])}/
+      {na.omit(txt[txt$item=="Title10",2+2])}/
+      {na.omit(txt[txt$item=="Title10",3+2])}</h1>
+</div>
+
+<div style="background-color:#f8f2e2; padding:10px 30px; text-align: center;">
+  <h2 style= "font-size:1.4em; color:#001A3E;"> 
+      {na.omit(txt[txt$item=="note1",1+2])}<br>
+
+      {na.omit(txt[txt$item=="note1",2+2])}<br>
+
+      {na.omit(txt[txt$item=="note1",3+2])}</h2>
+</div>
+
+'))
+
+``` 
+
+Row {data-height=70}
+-------------------------------------
+
+###  
+```{r echo=FALSE, results='asis'}
+#WSKJ title
+spref <- "sp4"
+
+cat(glue('
+<div style="background-color:#001A3E; padding:4px; text-align: center;">
+  <h1 style= "font-size:2em; color:#ffffff; font-weight: bold;"> 
+      {na.omit(txt[txt$item==spref,1+2])}/
+      {na.omit(txt[txt$item==spref,2+2])}/
+      {na.omit(txt[txt$item==spref,3+2])}</h1>
+</div>
+'))
+
+``` 
+
+Row {data-height=auto}
+-------------------------------------
+
+###  {#WSKJMaterials} 
+```{r echo=FALSE, results='asis'}
+#4"WSKJ",1"Materials"
+nsp <- 4 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
+nref <- 1 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
+rref <- paste0("ref",nref)
+refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
+
+#please select ref...for 3 languages
+cat(glue('
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+  <hr style="border: none; height: 2px; background-color: #ccc;" />
+  <h1 style= "font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;"> 
+      {paste(sp_list[nsp],":",na.omit(txt[txt$item==rref,1+2]))}/
+      {na.omit(txt[txt$item==rref,2+2])}/
+      {na.omit(txt[txt$item==rref,3+2])}</h1>
+
+</div>
+'))
+
+datatable(
+  refs1,
+  escape = FALSE,
+  filter = "top",
+  options = list(
+    pageLength = nrow(refs1),
+    scrollY = "400px",
+    scrollCollapse = TRUE,
+    autoWidth = FALSE,
+    lengthChange = FALSE,  
+    columnDefs = list(
+      list(width = '50px', targets = 0),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
+      list(width = '100px', targets = 3),  
+      list(width = '80px', targets = 4),  
+      list(className = 'dt-left', targets = "_all")
+    )
+  ),
+  rownames = FALSE
+)
+
+```   
+
+Row {data-height=auto}
+-------------------------------------
+
+###  {#WSKJRecRes} 
+```{r echo=FALSE, results='asis'}
+#4"WSKJ",2"Rec/Res"
+nsp <- 4 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
+nref <- 2 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
+rref <- paste0("ref",nref)
+refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
+
+#please select ref...for 3 languages
+cat(glue('
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+  <hr style="border: none; height: 2px; background-color: #ccc;" />
+  <h1 style= "font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;"> 
+      {paste(sp_list[nsp],":",na.omit(txt[txt$item==rref,1+2]))}/
+      {na.omit(txt[txt$item==rref,2+2])}/
+      {na.omit(txt[txt$item==rref,3+2])}</h1>
+
+</div>
+'))
+
+datatable(
+  refs1,
+  escape = FALSE,
+  filter = "top",
+  options = list(
+    pageLength = nrow(refs1),
+    scrollY = "400px",
+    scrollCollapse = TRUE,
+    autoWidth = FALSE,
+    lengthChange = FALSE,  
+    columnDefs = list(
+      list(width = '50px', targets = 0),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
+      list(width = '100px', targets = 3),  
+      list(width = '80px', targets = 4),  
+      list(className = 'dt-left', targets = "_all")
+    )
+  ),
+  rownames = FALSE
+)
+
+```   
+
+Row {data-height=auto}
+-------------------------------------
+
+###  {#WSKJMeetings} 
+```{r echo=FALSE, results='asis'}
+#4"WSKJ",3"Meetings"
+nsp <- 4 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
+nref <- 3 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
+rref <- paste0("ref",nref)
+refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
+
+#please select ref...for 3 languages
+cat(glue('
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+  <hr style="border: none; height: 2px; background-color: #ccc;" />
+  <h1 style= "font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;"> 
+      {paste(sp_list[nsp],":",na.omit(txt[txt$item==rref,1+2]))}/
+      {na.omit(txt[txt$item==rref,2+2])}/
+      {na.omit(txt[txt$item==rref,3+2])}</h1>
+
+</div>
+'))
+
+datatable(
+  refs1,
+  escape = FALSE,
+  filter = "top",
+  options = list(
+    pageLength = nrow(refs1),
+    scrollY = "400px",
+    scrollCollapse = TRUE,
+    autoWidth = FALSE,
+    lengthChange = FALSE,  
+    columnDefs = list(
+      list(width = '50px', targets = 0),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
+      list(width = '100px', targets = 3),  
+      list(width = '80px', targets = 4),  
+      list(className = 'dt-left', targets = "_all")
+    )
+  ),
+  rownames = FALSE
+)
+
+```   
+
+Row {data-height=auto}
+-------------------------------------
+
+###  {#WSKJSCRSdocs} 
+```{r echo=FALSE, results='asis'}
+#4"WSKJ",4"SCRS Docs"
+nsp <- 4 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
+nref <- 4 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
+rref <- paste0("ref",nref)
+refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
+
+#please select ref...for 3 languages
+cat(glue('
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+  <hr style="border: none; height: 2px; background-color: #ccc;" />
+  <h1 style= "font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;"> 
+      {paste(sp_list[nsp],":",na.omit(txt[txt$item==rref,1+2]))}/
+      {na.omit(txt[txt$item==rref,2+2])}/
+      {na.omit(txt[txt$item==rref,3+2])}</h1>
+
+</div>
+'))
+
+datatable(
+  refs1,
+  escape = FALSE,
+  filter = "top",
+  options = list(
+    pageLength = nrow(refs1),
+    scrollY = "400px",
+    scrollCollapse = TRUE,
+    autoWidth = FALSE,
+    lengthChange = FALSE,  
+    columnDefs = list(
+      list(width = '50px', targets = 0),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
+      list(width = '100px', targets = 3),  
+      list(width = '80px', targets = 4),  
+      list(className = 'dt-left', targets = "_all")
+    )
+  ),
+  rownames = FALSE
+)
+
+```   
+
+Row {data-height=auto}
+-------------------------------------
+
+###  {#WSKJOthers} 
+```{r echo=FALSE, results='asis'}
+#4"WSKJ",5"Others"
+nsp <- 4 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
+nref <- 5 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
+rref <- paste0("ref",nref)
+refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
+
+#please select ref...for 3 languages
+cat(glue('
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+  <hr style="border: none; height: 2px; background-color: #ccc;" />
+  <h1 style= "font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;"> 
+      {paste(sp_list[nsp],":",na.omit(txt[txt$item==rref,1+2]))}/
+      {na.omit(txt[txt$item==rref,2+2])}/
+      {na.omit(txt[txt$item==rref,3+2])}</h1>
+
+</div>
+'))
+
+datatable(
+  refs1,
+  escape = FALSE,
+  filter = "top",
+  options = list(
+    pageLength = nrow(refs1),
+    scrollY = "400px",
+    scrollCollapse = TRUE,
+    autoWidth = FALSE,
+    lengthChange = FALSE,  
+    columnDefs = list(
+      list(width = '50px', targets = 0),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
+      list(width = '100px', targets = 3),  
+      list(width = '80px', targets = 4),  
+      list(className = 'dt-left', targets = "_all")
+    )
+  ),
+  rownames = FALSE
+)
+
+```   
+
+
+
+
+
+
+multiTT {data-orientation=rows}
+=====================================  
+
+Column {.sidebar}
+-----------------------------------------------------------------------
+
+<!-- Column 1 -->
+<div>
+  <strong>References</strong><br/>
+  <a href="#general-information">General information</a><br/>
+  <a href="#nalb">`r {na.omit(txt[txt$item=="sp1",lg+2])}`</a><br/>
+  <a href="#bft">`r {na.omit(txt[txt$item=="sp2",lg+2])}`</a><br/>
+  <a href="#nswo">`r {na.omit(txt[txt$item=="sp3",lg+2])}`</a><br/>
+  <a href="#wskj">`r {na.omit(txt[txt$item=="sp4",lg+2])}`</a><br/>
+  <a href="#multitt">`r {na.omit(txt[txt$item=="sp5",lg+2])}`</a><br/>
+  <a href="#other-species">`r {na.omit(txt[txt$item=="sp6",lg+2])}`</a><br/>
+</div>
+
+<hr/>
+
+<!-- Column 2 -->
+<div>
+  <strong>`r {na.omit(txt[txt$item=="Title11",lg+2])}`</strong><br/>
+  <a href=`r {na.omit(txt[txt$item=="gen_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="gen",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp1_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp1",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp2_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp2",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp3_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp3",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp4_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp4",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp5_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp5",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp6_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp6",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="ref_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="Title10",lg+2])}`</a><br/>
+</div>
+
+
+```{css, echo=FALSE}
+/* Top navigation bar background color */
+.navbar {
+  background-color: rgba(0, 26, 62, 0.8) !important;  
+  border: none !important;
+  backdrop-filter: blur(4px);  
+}
+
+/* Top navigation text color */
+.navbar .navbar-nav > li > a,
+.navbar .navbar-brand {
+  color: #ffffff !important;
+}
+
+/* Active tab color (optional) */
+.navbar .navbar-nav > .active > a {
+  background-color: rgba(0, 51, 102, 0.9) !important;
+  color: #ffffff !important;
+}
+
+```
+
+```{css, echo=FALSE}
+
+.section.level3 {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #f8f2e2 !important;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #f8f2e2 !important;
+}
+
+.chart-stage {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #f8f2e2 !important;  
+}
+
+.chart-wrapper {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.chart-stage,
+.chart-wrapper,
+.section.level3 {
+  border: none !important;
+  box-shadow: none !important;}
+
+.main-container {
+  background-color: #f8f2e2; 
+}
+
+/* Set background color for entire DataTable */
+.dataTable tbody td {
+  background-color: #f8f2e2 !important;  /* background */
+  color: #001A3E !important;             /*  text */
+}
+
+/* Optional: Change header background */
+.dataTable thead th {
+  background-color: #f8f2e2 !important;
+  color: #001A3E !important;
+}
+
+/* Optional: Change filter box background */
+.dataTables_wrapper .dataTables_filter input,
+.dataTables_wrapper .dataTables_length select {
+  background-color: #f8f2e2 !important;
+  color: #001A3E !important;
+  border: 1px solid #ccc;
+}
+
+/* Optional: style the select dropdown you added via JS */
+.dataTable thead select {
+  background-color: #f8f2e2 !important;
+  color: #001A3E !important;
+```
+
+Row {data-height=40}
+-------------------------------------
+
+Row {data-height=300}
+-------------------------------------
+   
+###  
+```{r echo=FALSE, results='asis'}
+#Reference title
+
+cat(glue('
+<div style="background-color:#001A3E; padding:4px; text-align: center;">
+  <h1 style= "font-size:2em; color:#ffffff; font-weight: bold;"> 
+      {na.omit(txt[txt$item=="Title10",1+2])}/
+      {na.omit(txt[txt$item=="Title10",2+2])}/
+      {na.omit(txt[txt$item=="Title10",3+2])}</h1>
+</div>
+
+<div style="background-color:#f8f2e2; padding:10px 30px; text-align: center;">
+  <h2 style= "font-size:1.4em; color:#001A3E;"> 
+      {na.omit(txt[txt$item=="note1",1+2])}<br>
+
+      {na.omit(txt[txt$item=="note1",2+2])}<br>
+
+      {na.omit(txt[txt$item=="note1",3+2])}</h2>
+</div>
+
+'))
+
+``` 
+
+Row {data-height=70}
+-------------------------------------
+
+### 
+```{r echo=FALSE, results='asis'}
+#multiTT title
+spref <- "sp5"
+
+cat(glue('
+<div style="background-color:#001A3E; padding:4px; text-align: center;">
+  <h1 style= "font-size:2em; color:#ffffff; font-weight: bold;"> 
+      {na.omit(txt[txt$item==spref,1+2])}/
+      {na.omit(txt[txt$item==spref,2+2])}/
+      {na.omit(txt[txt$item==spref,3+2])}</h1>
+</div>
+'))
+
+``` 
+
+Row {data-height=auto}
+-------------------------------------
+
+###  {#multiTTMaterials} 
+```{r echo=FALSE, results='asis'}
+#5"multiTT",1"Materials"
+nsp <- 5 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
+nref <- 1 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
+rref <- paste0("ref",nref)
+refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
+
+#please select ref...for 3 languages
+cat(glue('
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+  <hr style="border: none; height: 2px; background-color: #ccc;" />
+  <h1 style= "font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;"> 
+      {paste(sp_list[nsp],":",na.omit(txt[txt$item==rref,1+2]))}/
+      {na.omit(txt[txt$item==rref,2+2])}/
+      {na.omit(txt[txt$item==rref,3+2])}</h1>
+
+</div>
+'))
+
+datatable(
+  refs1,
+  escape = FALSE,
+  filter = "top",
+  options = list(
+    pageLength = nrow(refs1),
+    scrollY = "400px",
+    scrollCollapse = TRUE,
+    autoWidth = FALSE,
+    lengthChange = FALSE,  
+    columnDefs = list(
+      list(width = '50px', targets = 0),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
+      list(width = '100px', targets = 3),  
+      list(width = '80px', targets = 4),  
+      list(className = 'dt-left', targets = "_all")
+    )
+  ),
+  rownames = FALSE
+)
+
+```   
+
+Row {data-height=auto}
+-------------------------------------
+
+###  {#multiTTRecRes} 
+```{r echo=FALSE, results='asis'}
+#5"multiTT",2"Rec/Res"
+nsp <- 5 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
+nref <- 2 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
+rref <- paste0("ref",nref)
+refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
+
+#please select ref...for 3 languages
+cat(glue('
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+  <hr style="border: none; height: 2px; background-color: #ccc;" />
+  <h1 style= "font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;"> 
+      {paste(sp_list[nsp],":",na.omit(txt[txt$item==rref,1+2]))}/
+      {na.omit(txt[txt$item==rref,2+2])}/
+      {na.omit(txt[txt$item==rref,3+2])}</h1>
+
+</div>
+'))
+
+datatable(
+  refs1,
+  escape = FALSE,
+  filter = "top",
+  options = list(
+    pageLength = nrow(refs1),
+    scrollY = "400px",
+    scrollCollapse = TRUE,
+    autoWidth = FALSE,
+    lengthChange = FALSE,  
+    columnDefs = list(
+      list(width = '50px', targets = 0),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
+      list(width = '100px', targets = 3),  
+      list(width = '80px', targets = 4),  
+      list(className = 'dt-left', targets = "_all")
+    )
+  ),
+  rownames = FALSE
+)
+
+```   
+
+Row {data-height=auto}
+-------------------------------------
+
+###  {#multiTTMeetings} 
+```{r echo=FALSE, results='asis'}
+#5"multiTT",3"Meetings"
+nsp <- 5 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
+nref <- 3 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
+rref <- paste0("ref",nref)
+refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
+
+#please select ref...for 3 languages
+cat(glue('
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+  <hr style="border: none; height: 2px; background-color: #ccc;" />
+  <h1 style= "font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;"> 
+      {paste(sp_list[nsp],":",na.omit(txt[txt$item==rref,1+2]))}/
+      {na.omit(txt[txt$item==rref,2+2])}/
+      {na.omit(txt[txt$item==rref,3+2])}</h1>
+
+</div>
+'))
+
+datatable(
+  refs1,
+  escape = FALSE,
+  filter = "top",
+  options = list(
+    pageLength = nrow(refs1),
+    scrollY = "400px",
+    scrollCollapse = TRUE,
+    autoWidth = FALSE,
+    lengthChange = FALSE,  
+    columnDefs = list(
+      list(width = '50px', targets = 0),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
+      list(width = '100px', targets = 3),  
+      list(width = '80px', targets = 4),  
+      list(className = 'dt-left', targets = "_all")
+    )
+  ),
+  rownames = FALSE
+)
+
+```   
+
+Row {data-height=auto}
+-------------------------------------
+
+###  {#multiTTSCRSdocs} 
+```{r echo=FALSE, results='asis'}
+#5"multiTT",4"SCRS Docs"
+nsp <- 5 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
+nref <- 4 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
+rref <- paste0("ref",nref)
+refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
+
+#please select ref...for 3 languages
+cat(glue('
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+  <hr style="border: none; height: 2px; background-color: #ccc;" />
+  <h1 style= "font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;"> 
+      {paste(sp_list[nsp],":",na.omit(txt[txt$item==rref,1+2]))}/
+      {na.omit(txt[txt$item==rref,2+2])}/
+      {na.omit(txt[txt$item==rref,3+2])}</h1>
+
+</div>
+'))
+
+datatable(
+  refs1,
+  escape = FALSE,
+  filter = "top",
+  options = list(
+    pageLength = nrow(refs1),
+    scrollY = "400px",
+    scrollCollapse = TRUE,
+    autoWidth = FALSE,
+    lengthChange = FALSE,  
+    columnDefs = list(
+      list(width = '50px', targets = 0),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
+      list(width = '100px', targets = 3),  
+      list(width = '80px', targets = 4),  
+      list(className = 'dt-left', targets = "_all")
+    )
+  ),
+  rownames = FALSE
+)
+
+```   
+
+Row {data-height=auto}
+-------------------------------------
+
+###  {#multiTTOthers} 
+```{r echo=FALSE, results='asis'}
+#5"multiTT",5"Others"
+nsp <- 5 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
+nref <- 5 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
+rref <- paste0("ref",nref)
+refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
+
+#please select ref...for 3 languages
+cat(glue('
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+  <hr style="border: none; height: 2px; background-color: #ccc;" />
+  <h1 style= "font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;"> 
+      {paste(sp_list[nsp],":",na.omit(txt[txt$item==rref,1+2]))}/
+      {na.omit(txt[txt$item==rref,2+2])}/
+      {na.omit(txt[txt$item==rref,3+2])}</h1>
+
+</div>
+'))
+
+datatable(
+  refs1,
+  escape = FALSE,
+  filter = "top",
+  options = list(
+    pageLength = nrow(refs1),
+    scrollY = "400px",
+    scrollCollapse = TRUE,
+    autoWidth = FALSE,
+    lengthChange = FALSE,  
+    columnDefs = list(
+      list(width = '50px', targets = 0),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
+      list(width = '100px', targets = 3),  
+      list(width = '80px', targets = 4),  
+      list(className = 'dt-left', targets = "_all")
+    )
+  ),
+  rownames = FALSE
+)
+
+```   
+
+
+
+
+
+
+
+Other Species {data-orientation=rows}
+=====================================  
+
+Column {.sidebar}
+-----------------------------------------------------------------------
+
+<!-- Column 1 -->
+<div>
+  <strong>References</strong><br/>
+  <a href="#general-information">General information</a><br/>
+  <a href="#nalb">`r {na.omit(txt[txt$item=="sp1",lg+2])}`</a><br/>
+  <a href="#bft">`r {na.omit(txt[txt$item=="sp2",lg+2])}`</a><br/>
+  <a href="#nswo">`r {na.omit(txt[txt$item=="sp3",lg+2])}`</a><br/>
+  <a href="#wskj">`r {na.omit(txt[txt$item=="sp4",lg+2])}`</a><br/>
+  <a href="#multitt">`r {na.omit(txt[txt$item=="sp5",lg+2])}`</a><br/>
+  <a href="#other-species">`r {na.omit(txt[txt$item=="sp6",lg+2])}`</a><br/>
+</div>
+
+<hr/>
+
+<!-- Column 2 -->
+<div>
+  <strong>`r {na.omit(txt[txt$item=="Title11",lg+2])}`</strong><br/>
+  <a href=`r {na.omit(txt[txt$item=="gen_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="gen",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp1_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp1",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp2_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp2",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp3_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp3",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp4_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp4",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp5_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp5",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="sp6_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="sp6",lg+2])}`</a><br/>
+  <a href=`r {na.omit(txt[txt$item=="ref_link",lg+2])}`>
+    `r {na.omit(txt[txt$item=="Title10",lg+2])}`</a><br/>
+</div>
+
+
+```{css, echo=FALSE}
+/* Top navigation bar background color */
+.navbar {
+  background-color: rgba(0, 26, 62, 0.8) !important;  
+  border: none !important;
+  backdrop-filter: blur(4px);  
+}
+
+/* Top navigation text color */
+.navbar .navbar-nav > li > a,
+.navbar .navbar-brand {
+  color: #ffffff !important;
+}
+
+/* Active tab color (optional) */
+.navbar .navbar-nav > .active > a {
+  background-color: rgba(0, 51, 102, 0.9) !important;
+  color: #ffffff !important;
+}
+
+```
+
+```{css, echo=FALSE}
+
+.section.level3 {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #f8f2e2 !important;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #f8f2e2 !important;
+}
+
+.chart-stage {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #f8f2e2 !important;  
+}
+
+.chart-wrapper {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.chart-stage,
+.chart-wrapper,
+.section.level3 {
+  border: none !important;
+  box-shadow: none !important;}
+
+.main-container {
+  background-color: #f8f2e2; 
+}
+
+/* Set background color for entire DataTable */
+.dataTable tbody td {
+  background-color: #f8f2e2 !important;  /* background */
+  color: #001A3E !important;             /*  text */
+}
+
+/* Optional: Change header background */
+.dataTable thead th {
+  background-color: #f8f2e2 !important;
+  color: #001A3E !important;
+}
+
+/* Optional: Change filter box background */
+.dataTables_wrapper .dataTables_filter input,
+.dataTables_wrapper .dataTables_length select {
+  background-color: #f8f2e2 !important;
+  color: #001A3E !important;
+  border: 1px solid #ccc;
+}
+
+/* Optional: style the select dropdown you added via JS */
+.dataTable thead select {
+  background-color: #f8f2e2 !important;
+  color: #001A3E !important;
+```
+
+Row {data-height=40}
+-------------------------------------
+
+Row {data-height=300}
+-------------------------------------
+   
+###  
+```{r echo=FALSE, results='asis'}
+#Reference title
+
+cat(glue('
+<div style="background-color:#001A3E; padding:4px; text-align: center;">
+  <h1 style= "font-size:2em; color:#ffffff; font-weight: bold;"> 
+      {na.omit(txt[txt$item=="Title10",1+2])}/
+      {na.omit(txt[txt$item=="Title10",2+2])}/
+      {na.omit(txt[txt$item=="Title10",3+2])}</h1>
+</div>
+
+<div style="background-color:#f8f2e2; padding:10px 30px; text-align: center;">
+  <h2 style= "font-size:1.4em; color:#001A3E;"> 
+      {na.omit(txt[txt$item=="note1",1+2])}<br>
+
+      {na.omit(txt[txt$item=="note1",2+2])}<br>
+
+      {na.omit(txt[txt$item=="note1",3+2])}</h2>
+</div>
+
+'))
+
+``` 
+
+Row {data-height=70}
+-------------------------------------
+
+###  
+```{r echo=FALSE, results='asis'}
+#Other Species title
+spref <- "sp6"
+
+cat(glue('
+<div style="background-color:#001A3E; padding:4px; text-align: center;">
+  <h1 style= "font-size:2em; color:#ffffff; font-weight: bold;"> 
+      {na.omit(txt[txt$item==spref,1+2])}/
+      {na.omit(txt[txt$item==spref,2+2])}/
+      {na.omit(txt[txt$item==spref,3+2])}</h1>
+</div>
+'))
+
+``` 
+
+Row {data-height=auto}
+-------------------------------------
+
+###  {#OtherMaterials} 
+```{r echo=FALSE, results='asis'}
+#6"Other Species",1"Materials"
+nsp <- 6 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
+nref <- 1 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
+rref <- paste0("ref",nref)
+refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
+
+#please select ref...for 3 languages
+cat(glue('
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+  <hr style="border: none; height: 2px; background-color: #ccc;" />
+  <h1 style= "font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;"> 
+      {paste(sp_list[nsp],":",na.omit(txt[txt$item==rref,1+2]))}/
+      {na.omit(txt[txt$item==rref,2+2])}/
+      {na.omit(txt[txt$item==rref,3+2])}</h1>
+
+</div>
+'))
+
+datatable(
+  refs1,
+  escape = FALSE,
+  filter = "top",
+  options = list(
+    pageLength = nrow(refs1),
+    scrollY = "400px",
+    scrollCollapse = TRUE,
+    autoWidth = FALSE,
+    lengthChange = FALSE,  
+    columnDefs = list(
+      list(width = '50px', targets = 0),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
+      list(width = '100px', targets = 3),  
+      list(width = '80px', targets = 4),  
+      list(className = 'dt-left', targets = "_all")
+    )
+  ),
+  rownames = FALSE
+)
+
+```   
+
+Row {data-height=auto}
+-------------------------------------
+
+###  {#OtherRecRes} 
+```{r echo=FALSE, results='asis'}
+#6"Other Species",2"Rec/Res"
+nsp <- 6 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
+nref <- 2 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
+rref <- paste0("ref",nref)
+refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
+
+#please select ref...for 3 languages
+cat(glue('
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+  <hr style="border: none; height: 2px; background-color: #ccc;" />
+  <h1 style= "font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;"> 
+      {paste(sp_list[nsp],":",na.omit(txt[txt$item==rref,1+2]))}/
+      {na.omit(txt[txt$item==rref,2+2])}/
+      {na.omit(txt[txt$item==rref,3+2])}</h1>
+
+</div>
+'))
+
+datatable(
+  refs1,
+  escape = FALSE,
+  filter = "top",
+  options = list(
+    pageLength = nrow(refs1),
+    scrollY = "400px",
+    scrollCollapse = TRUE,
+    autoWidth = FALSE,
+    lengthChange = FALSE,  
+    columnDefs = list(
+      list(width = '50px', targets = 0),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
+      list(width = '100px', targets = 3),  
+      list(width = '80px', targets = 4),  
+      list(className = 'dt-left', targets = "_all")
+    )
+  ),
+  rownames = FALSE
+)
+
+```   
+
+Row {data-height=auto}
+-------------------------------------
+
+###  {#OtherMeetings} 
+```{r echo=FALSE, results='asis'}
+#6"Other Species",3"Meetings"
+nsp <- 6 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
+nref <- 3 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
+rref <- paste0("ref",nref)
+refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
+
+#please select ref...for 3 languages
+cat(glue('
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+  <hr style="border: none; height: 2px; background-color: #ccc;" />
+  <h1 style= "font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;"> 
+      {paste(sp_list[nsp],":",na.omit(txt[txt$item==rref,1+2]))}/
+      {na.omit(txt[txt$item==rref,2+2])}/
+      {na.omit(txt[txt$item==rref,3+2])}</h1>
+
+</div>
+'))
+
+datatable(
+  refs1,
+  escape = FALSE,
+  filter = "top",
+  options = list(
+    pageLength = nrow(refs1),
+    scrollY = "400px",
+    scrollCollapse = TRUE,
+    autoWidth = FALSE,
+    lengthChange = FALSE,  
+    columnDefs = list(
+      list(width = '50px', targets = 0),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
+      list(width = '100px', targets = 3),  
+      list(width = '80px', targets = 4),  
+      list(className = 'dt-left', targets = "_all")
+    )
+  ),
+  rownames = FALSE
+)
+
+```   
+
+Row {data-height=auto}
+-------------------------------------
+
+###  {#OtherSCRSdocs} 
+```{r echo=FALSE, results='asis'}
+#6"Other Species",4"SCRS Docs"
+nsp <- 6 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
+nref <- 4 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
+rref <- paste0("ref",nref)
+refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
+
+#please select ref...for 3 languages
+cat(glue('
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+  <hr style="border: none; height: 2px; background-color: #ccc;" />
+  <h1 style= "font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;"> 
+      {paste(sp_list[nsp],":",na.omit(txt[txt$item==rref,1+2]))}/
+      {na.omit(txt[txt$item==rref,2+2])}/
+      {na.omit(txt[txt$item==rref,3+2])}</h1>
+
+</div>
+'))
+
+datatable(
+  refs1,
+  escape = FALSE,
+  filter = "top",
+  options = list(
+    pageLength = nrow(refs1),
+    scrollY = "400px",
+    scrollCollapse = TRUE,
+    autoWidth = FALSE,
+    lengthChange = FALSE,  
+    columnDefs = list(
+      list(width = '50px', targets = 0),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
+      list(width = '100px', targets = 3),  
+      list(width = '80px', targets = 4),  
+      list(className = 'dt-left', targets = "_all")
+    )
+  ),
+  rownames = FALSE
+)
+
+```   
+
+Row {data-height=auto}
+-------------------------------------
+
+###  {#OtherOthers} 
+```{r echo=FALSE, results='asis'}
+#6"Other Species",5"Others"
+nsp <- 6 #1"NALB",2"BFT",3"NSWO",4"WSKJ",5"multiTT",6"Other Species"
+nref <- 5 #1"Materials",2"Rec/Res",3"Meetings",4"SCRS Docs",5"Others"
+rref <- paste0("ref",nref)
+refs1 <- refs[refs$Species==sp_list[nsp] & refs$Item==ref_list[nref],]
+refs1 <- refs1[,-c(1:2)]
+
+#please select ref...for 3 languages
+cat(glue('
+<div style="background-color:#f8f2e2; padding:0px; text-align: center;">
+  <hr style="border: none; height: 2px; background-color: #ccc;" />
+  <h1 style= "font-size:1.7em; color:#001A3E; font-weight: bold; text-decoration: underline;"> 
+      {paste(sp_list[nsp],":",na.omit(txt[txt$item==rref,1+2]))}/
+      {na.omit(txt[txt$item==rref,2+2])}/
+      {na.omit(txt[txt$item==rref,3+2])}</h1>
+
+</div>
+'))
+
+datatable(
+  refs1,
+  escape = FALSE,
+  filter = "top",
+  options = list(
+    pageLength = nrow(refs1),
+    scrollY = "400px",
+    scrollCollapse = TRUE,
+    autoWidth = FALSE,
+    lengthChange = FALSE,  
+    columnDefs = list(
+      list(width = '50px', targets = 0),  
+      list(width = '100px', targets = 1),  
+      list(width = '300px', targets = 2),  
+      list(width = '100px', targets = 3),  
+      list(width = '80px', targets = 4),  
+      list(className = 'dt-left', targets = "_all")
+    )
+  ),
+  rownames = FALSE
+)
+
+```   
+
